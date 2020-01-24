@@ -8,6 +8,9 @@ theme = 'book'
 disablePathToLower = true
 # enableGitInfo = true
 
+# This command below is cleaning the unused content of ./public folder.
+cleanDestinationDir = true
+
 # Needed for mermaid/katex shortcodes
 [markup]
 [markup.goldmark.renderer]
