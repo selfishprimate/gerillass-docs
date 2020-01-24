@@ -1,6 +1,6 @@
 # hugo server --minify --themesDir ... --baseURL=http://localhost:1313/theme/book/
 
-baseURL = 'https://gerillass-documentation.netlify.com'
+baseURL = ''
 title = 'Hugo Book'
 theme = 'book'
 
@@ -59,7 +59,7 @@ cleanDestinationDir = true
 
   # Set source repository location.
   # Used for 'Last Modified' and 'Edit this page' links.
-  # BookRepo = 'https://github.com/alex-shpak/hugo-book'
+  BookRepo = 'https://github.com/babilkuyusu/gerillass-doc.git'
 
   # Enable "Edit this page" links for 'doc' page type.
   # Disabled by default. Uncomment to enable. Requires 'BookRepo' param.
