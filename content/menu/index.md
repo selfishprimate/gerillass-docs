@@ -19,3 +19,6 @@ bookMenuLevels: 1
  - [Mermaid]({{< relref "/docs/shortcodes/mermaid" >}})
  - [Tabs]({{< relref "/docs/shortcodes/tabs" >}})  
  - [**Blog**]({{< relref "/posts" >}})
+
+ - [Page One]({{< relref "/docs/page-one" >}})
+ - [Page Two]({{< relref "/docs/page-two" >}})
