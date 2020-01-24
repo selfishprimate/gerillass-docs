@@ -10,6 +10,7 @@ disablePathToLower = true
 
 # This command below is cleaning the unused content of ./public folder.
 cleanDestinationDir = true
+ignoreCache = true
 
 # Needed for mermaid/katex shortcodes
 [markup]
@@ -59,7 +60,7 @@ cleanDestinationDir = true
 
   # Set source repository location.
   # Used for 'Last Modified' and 'Edit this page' links.
-  BookRepo = 'https://github.com/babilkuyusu/gerillass-doc.git'
+  # BookRepo = 'https://github.com/alex-shpak/hugo-book'
 
   # Enable "Edit this page" links for 'doc' page type.
   # Disabled by default. Uncomment to enable. Requires 'BookRepo' param.
