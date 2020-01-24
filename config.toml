@@ -1,5 +1,6 @@
-hugo server --minify --themesDir ... --baseURL=http://localhost:1313/theme/book/
+# hugo server --minify --themesDir ... --baseURL=http://localhost:1313/theme/book/
 
+baseURL = 'https://gerillass.com/documentation'
 title = 'Hugo Book'
 theme = 'book'
 
