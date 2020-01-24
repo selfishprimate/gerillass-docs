@@ -1,6 +1,6 @@
 # hugo server --minify --themesDir ... --baseURL=http://localhost:1313/theme/book/
 
-baseURL = ''
+baseURL = 'https://gerillass-documentation.netlify.com'
 title = 'Hugo Book'
 theme = 'book'
 
@@ -10,7 +10,6 @@ disablePathToLower = true
 
 # This command below is cleaning the unused content of ./public folder.
 cleanDestinationDir = true
-ignoreCache = true
 
 # Needed for mermaid/katex shortcodes
 [markup]
