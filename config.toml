@@ -10,7 +10,6 @@ disablePathToLower = true
 
 # This command below is cleaning the unused content of ./public folder.
 cleanDestinationDir = true
-ignoreCache = true
 
 # Needed for mermaid/katex shortcodes
 [markup]
