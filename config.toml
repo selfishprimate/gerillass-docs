@@ -2,7 +2,7 @@
 
 baseURL = ''
 title = 'Hugo Book'
-theme = 'hugo-book-master'
+theme = 'hugo-book'
 
 # Book configuration
 disablePathToLower = true
