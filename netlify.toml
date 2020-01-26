@@ -1,6 +1,6 @@
 [build]
 publish = "public"
-command = "hugo"
+command = "hugo --gc --minify"
 
 [context.production.environment]
 HUGO_VERSION = "0.63.1"
@@ -28,9 +28,3 @@ HUGO_VERSION = "0.63.1"
 
 [context.next.environment]
 HUGO_ENABLEGITINFO = "true"
-
-[[headers]]
-  for = "*"
-  
-  [headers.values]
-    cache-control = "public, max-age=300"
