@@ -25,7 +25,22 @@ solebat [litore](http://lacrimas-ab.net/); noctes. *Hostem haerentem* circuit
 Locum nullus nisi vomentes. Ab Persea sermone vela, miratur aratro; eandem
 Argolicas gener.
 
+{{< highlight html >}}
+<div class="main-container">
+    <div class="inner-container">
+        <ul>
+            <li>Item 01</li>
+            <li>Item 02</li>
+            <li>Item 03</li>
+        <ul>
+    </div>
+</div>
+{{< /highlight >}}
+
+
 ## Me sol
+
+    Osman abi nerelerdesin?
 
 Nec dis certa fuit socer, Nonacria **dies** manet tacitaque sibi? Sucis est
 iactata Castrumque iudex, et iactato quoque terraeque es tandem et maternos
@@ -34,30 +49,16 @@ cadunt genus, et pleno nunc in quod. Anumque crescentesque sanguinis
 [progenies](http://www.late.net/alimentavirides) nuribus rustica tinguet. Pater
 omnes liquido creditis noctem.
 
-    if (mirrored(icmp_dvd_pim, 3, smbMirroredHard) != lion(clickImportQueue,
-            viralItunesBalancing, bankruptcy_file_pptp)) {
-        file += ip_cybercrime_suffix;
+    .main-wrapper{
+        display: block;
+        .inner-wrapper{
+            display: flex;
+        }
     }
-    if (runtimeSmartRom == netMarketingWord) {
-        virusBalancingWin *= scriptPromptBespoke + raster(post_drive,
-                windowsSli);
-        cd = address_hertz_trojan;
-        soap_ccd.pcbServerGigahertz(asp_hardware_isa, offlinePeopleware, nui);
-    } else {
-        megabyte.api = modem_flowchart - web + syntaxHalftoneAddress;
+
+    .container{
+        margin: 0 auto;
     }
-    if (3 < mebibyteNetworkAnimated) {
-        pharming_regular_error *= jsp_ribbon + algorithm * recycleMediaKindle(
-                dvrSyntax, cdma);
-        adf_sla *= hoverCropDrive;
-        templateNtfs = -1 - vertical;
-    } else {
-        expressionCompressionVariable.bootMulti = white_eup_javascript(
-                table_suffix);
-        guidPpiPram.tracerouteLinux += rtfTerabyteQuicktime(1,
-                managementRosetta(webcamActivex), 740874);
-    }
-    var virusTweetSsl = nullGigo;
 
 ## Trepident sitimque
 
@@ -65,7 +66,44 @@ Sentiet et ferali errorem fessam, coercet superbus, Ascaniumque in pennis
 mediis; dolor? Vidit imi **Aeacon** perfida propositos adde, tua Somni Fluctibus
 errante lustrat non.
 
+## Bu da deneme başlığıdır
+
 Tamen inde, vos videt e flammis Scythica parantem rupisque pectora umbras. Haec
 ficta canistris repercusso simul ego aris Dixit! Esse Fama trepidare hunc
 crescendo vigor ululasse vertice *exspatiantur* celer tepidique petita aversata
 oculis iussa est me ferro.
+
+{{< highlight css >}}
+.inner-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+{{< /highlight >}}
+
+Locum nullus nisi vomentes. Ab Persea sermone vela, miratur aratro; eandem
+Argolicas gener.
+
+{{< highlight scss >}}
+.inner-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+{{< /highlight >}}
+
+Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.
+
+{{< highlight scss "linenos=table,hl_lines=8 15-17,linenostart=199" >}}
+.main-wrapper{
+    display: block;
+    margin: 0 auto;
+    .inner-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+{{< / highlight >}}
+
+The purpose of lorem ipsum is to create a natural looking block of text (sentence, paragraph, page, etc.) that doesn't distract from the layout. A practice not without controversy, laying out pages with meaningless filler text can be very useful when the focus is meant to be on design, not content.
