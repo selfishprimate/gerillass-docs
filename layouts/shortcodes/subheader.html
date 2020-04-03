@@ -1,0 +1,15 @@
+<div class="subheader">
+    <div class="subheader__item">
+        <span class="subheader__item__key">Type:</span>
+        {{ with .Get "value" }}
+            <span class="subheader__item__value">{{.}}</span>
+        {{ end }}
+    </div>
+
+    <div class="subheader__item">
+        {{ with .Get "href" }}
+            <a href="{{.}}" target="_blank">View Source Code on Github</a>
+        {{ end }}
+    </div>
+
+</div>

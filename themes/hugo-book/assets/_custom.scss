@@ -1,10 +1,12 @@
 /* You can add custom styles here. */
+*,
+*:before,
+*:after{
+    box-sizing: border-box;
+}
 
 $body-background: #F0F0ED;
-
-body{
-    background-color: $body-background;
-}
+$border-color: rgb(230,230,230);
 
 h1{
     font-weight: bold !important;
@@ -24,3 +26,40 @@ h1{
         }
     }
 }
+
+.highlight{
+    position: relative;
+    pre{
+        code{
+            &[class^="language"]{
+                &:after{
+                    content: attr(data-lang);
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    background-color: rgba(255,255,255,.1);
+                    border-top-right-radius: .15rem;
+                    border-bottom-left-radius: .15rem;
+                    padding: 5px 15px;
+                }
+            }
+        }
+    }
+}
+
+.subheader{
+    padding: 15px 0;
+    border-width: 1px 0;
+    border-style: solid;
+    border-color: $border-color;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__item{
+        &__key{
+            font-weight: bold;
+        }
+    }
+}
+
+

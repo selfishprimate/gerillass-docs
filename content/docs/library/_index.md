@@ -20,6 +20,20 @@ solebat [litore](http://lacrimas-ab.net/); noctes. *Hostem haerentem* circuit
 - Velit posses summoque
 - De fumos illa foret
 
+
+## Shoercode Import
+
+// The shortcode templates are in the /layout/shortcodes folder.
+
+{{< myshortcode class="osman" title="Shity title" >}}
+
+{{< featured-text >}}
+    This is the featured text.
+{{< /featured-text >}}
+
+{{< bold content="Lorem fucking ipsum" >}}
+
+
 ## Est simul fameque tauri qua ad
 
 Locum nullus nisi vomentes. Ab Persea sermone vela, miratur aratro; eandem
@@ -36,6 +50,32 @@ Argolicas gener.
     </div>
 </div>
 {{< /highlight >}}
+
+
+
+{{< columns >}} <!-- begin columns block -->
+# Left Content
+
+{{< instagram B6bmYeSlL4R >}}
+
+<---> <!-- magic sparator, between columns -->
+
+# Right Content
+
+
+{{< tweet 1223303045062283267 >}}
+
+Lumina litus bene poenamque animos callem ne tuas in leones illam dea
+cadunt genus, et pleno nunc in quod. Anumque crescentesque sanguinis.
+
+{{< youtube pjS4pOLyB7c >}}
+
+Nonacria **dies** manet tacitaque sibi? Sucis est
+iactata Castrumque iudex, et iactato quoque terraeque es tandem et maternos
+vittis. Lumina litus bene poenamque animos callem ne tuas in leones illam dea
+cadunt genus, et pleno nunc in quod. Anumque crescentesque sanguinis.
+
+{{< /columns >}}
 
 
 ## Me sol

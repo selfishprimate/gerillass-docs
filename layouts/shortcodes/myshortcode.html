@@ -1,0 +1,11 @@
+<div class="shortcode-wrapper {{ with .Get "class"}}{{.}}{{ end }}">
+
+    {{ with .Get "title"}}
+        <div class="title">{{.}}</div>
+    {{end}}
+
+    {{ with .Get "content"}}
+        <div class="content">{{.}}</div>
+    {{end}}
+
+</div>
