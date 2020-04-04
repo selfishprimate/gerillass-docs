@@ -27,12 +27,7 @@ solebat [litore](http://lacrimas-ab.net/); noctes. *Hostem haerentem* circuit
 
 {{< myshortcode class="osman" title="Shity title" >}}
 
-{{< featured-text >}}
-    This is the featured text.
-{{< /featured-text >}}
-
 {{< bold content="Lorem fucking ipsum" >}}
-
 
 ## Est simul fameque tauri qua ad
 

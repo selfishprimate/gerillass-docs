@@ -1,8 +1,16 @@
-<h2 class="book-brand">
-  <a href="{{ .Site.BaseURL | relLangURL }}">
-    {{- with .Site.Params.BookLogo -}}
-    <img src="{{ . | relURL }}" alt="Logo" />
-    {{- end -}}
-    <span>{{ .Site.Title }}</span>
-  </a>
+<h2 class="brand-logo">
+    <a href="{{ .Site.BaseURL | relLangURL }}">
+
+        {{ with .Site.Params.LogoLink }}
+            <img src="{{ . | relURL }}" alt="Logo"/>
+        {{ end }}
+
+        {{ with .Site.Params.LogoTitle}}
+            <span class="logo-title">{{.}}</span>
+        {{ end }}
+
+        {{ with .Site.Params.LogoDescription}}
+            <span class="logo-description">{{.}}</span>
+        {{ end }}
+    </a>
 </h2>

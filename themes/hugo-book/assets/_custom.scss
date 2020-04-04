@@ -5,24 +5,72 @@
     box-sizing: border-box;
 }
 
-$body-background: #F0F0ED;
-$border-color: rgb(230,230,230);
+$steal-teal: #668F80;
+$charleston-green: #222C25;
+$light-gray: rgb(230,230,230);
+$bus-yellow: #ffd900;   
 
-h1{
-    font-weight: bold !important;
+$link-color: $steal-teal;
+$active-link-color: $bus-yellow;
+$body-text-color: $charleston-green;
+$border-color: $light-gray;
+
+$body-background: #F0F0ED;
+
+
+body{
+    color: $body-text-color;
 }
 
-.book-brand{
-    a{
-        img{
-            width: 200px;
-            height: auto;
+a,
+a:visited{
+    color: $body-text-color;
+}
+
+
+.markdown {
+    padding: 30px 50px 100px;
+    h1, h2, h3, h4, h5, h6{
+        margin-top: 0;
+    }
+
+    h1{
+        font-weight: bold;
+        margin-bottom: 40px;
+    }
+
+    h2{
+        font-size: 1.2em;
+        font-weight: bold !important;
+        margin-bottom: 20px !important;
+    }
+
+    .table{
+        margin: 0 0 80px;
+
+        &__footnote{
+            font-size: 80%;
+            line-height: 1.2;
         }
-        span{
-            display: block;
-            width: 0;
-            height: 0;
-            overflow: hidden;
+
+        table{
+            display: table;
+            width: 100%;
+            border-collapse: collapse;
+            border-spacing: 0;
+            thead{
+                th{
+                    text-align: left;
+                }
+                tr{
+                    border-bottom: 2px solid $border-color;
+                }
+            }
+            tbody{
+                tr{
+                    border-bottom: 1px solid $border-color;
+                }
+            }
         }
     }
 }
@@ -56,10 +104,163 @@ h1{
     justify-content: space-between;
     align-items: center;
     &__item{
+        a{
+            text-decoration: underline;
+        }
         &__key{
             font-weight: bold;
         }
     }
+    & + p{
+        margin-bottom: 80px;
+    }
 }
 
+
+
+.book-menu nav,
+.book-toc nav{
+    padding: 50px 0;
+    top: 80px;
+}
+
+.book-menu{
+    a{
+        display: inline-block;
+        font-size: 16px;
+        &.active{
+            position: relative;
+            font-weight: bold;
+            color: $body-text-color;
+            &:after{
+                content: "";
+                position: absolute;
+                display: block;
+                height: 10px;
+                width: 100%;
+                left: 0;
+                bottom: 0;
+                background-color: transparentize($active-link-color, .5);
+                z-index: -1;
+            }
+        }
+    }
+}
+
+.main-container{
+    padding-top: 120px;
+}
+
+.book-page{
+    padding: 0;
+}
+
+.main-header{
+    height: 100px;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    position: fixed;
+    width: 100%;
+    z-index: 200;
+    box-shadow: 0 2px 2px rgba(0,0,0,.1);
+    display: flex;
+    justify-content: center;
+    .inner{
+        position: relative;
+        height: 100%;
+        display: flex;
+        flex: 0 1 80rem;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.brand-logo{
+    margin: 0;
+    position: absolute;
+    left: 0;
+    a{
+        position: relative;
+        display: block;
+        img{
+            position: relative;
+            left: -8px;
+            width: 200px;
+            height: auto;
+        }
+        .logo-title{
+            display: block;
+            width: 0;
+            height: 0;
+            overflow: hidden;
+        }
+        .logo-description{
+            position: absolute;
+            bottom: -5px;
+            right: 0;
+            display: block;
+            font-size: 13px;
+            font-style: italic;
+            white-space: nowrap;
+            color: $body-text-color;
+        }
+    }
+}
+
+.book-search{
+    width: 100%;
+    max-width: 600px;
+    .search-wrapper{
+        position: relative;
+        input{
+            height: 48px;
+            padding: 10px 15px;
+            background-color: white;
+            border: 1.2px solid $border-color;
+        }
+        ion-icon{
+            position: absolute;
+            top: 50%;
+            right: 15px;
+            font-size: 20px;
+            transform: translateY(-50%);
+            opacity: .5;
+        }
+    }
+    ul{
+        position: absolute;
+        width: 100%;
+        background-color: white;
+        bottom: 5px;
+        margin: 0;
+        transform: translateY(100%);
+        list-style: none;
+        border-radius: 5px;
+        box-shadow: 0 0 5px rgba(0,0,0,.2);
+        li{
+            padding: 5px 0;
+            margin-bottom: 10px;
+            &:first-of-type{
+                margin-top: 30px;
+            }
+            &:last-of-type{
+                margin-bottom: 30px;
+            }
+        }
+    }
+}
+
+.book-toc{
+    nav{
+        ul{
+            li{
+                a{
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
 

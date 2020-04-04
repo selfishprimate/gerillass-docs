@@ -1,4 +1,5 @@
 <div class="subheader">
+
     <div class="subheader__item">
         <span class="subheader__item__key">Type:</span>
         {{ with .Get "value" }}
@@ -7,8 +8,8 @@
     </div>
 
     <div class="subheader__item">
-        {{ with .Get "href" }}
-            <a href="{{.}}" target="_blank">View Source Code on Github</a>
+        {{ with .Get "link" }}
+            <a href="https://github.com/babilkuyusu/gerillass/blob/master/gerillass/library/_{{.}}.scss" target="_blank">View Source Code on Github</a>
         {{ end }}
     </div>
 

@@ -1,0 +1,22 @@
+<div class="table">
+
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {{.Inner}}
+        </tbody>
+
+    </table>
+
+    {{ with .Get "footnote"}}
+        <p class="table__footnote">* {{.}}</p>
+    {{end}}
+
+</div>
