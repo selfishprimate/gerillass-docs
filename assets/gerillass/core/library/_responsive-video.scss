@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+@mixin gls-responsive-video($params...){
+    position: relative;
+    > *,
+    > iframe,
+    > embed, 
+    > object{
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+    } @if length($params) == 0{
+        padding-top: 56.25%;
+    } @else if length($params) == 1 {
+        $ratio: nth($params, 1);
+        $colon-index: str-index($ratio, ":");
+        $width: __convertToNumber(str-slice($ratio, 1, $colon-index - 1));
+        $height: __convertToNumber(str-slice($ratio, $colon-index + 1));
+        $calc: ($height / $width) * 100;
+        padding-top: #{$calc + "%"};
+    } @else if length($params) == 2 {
+        $width: nth($params, 1); 
+        $height: nth($params, 2);
+        $calc: ($height / $width) * 100;
+        padding-top: #{$calc + "%"};
+    }
+}

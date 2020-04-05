@@ -1,0 +1,3 @@
+[submodule "gls"]
+	path = gls
+	url = https://github.com/babilkuyusu/gerillass.git
