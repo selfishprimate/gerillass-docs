@@ -1,15 +1,15 @@
 <div class="featured-content">
 
     <div class="subheader">
-        {{ with .Get "value" }}
+        {{ with .Get "type" }}
             <div class="item">
                 <span class="key">Type:</span>
                 <span class="value">{{.}}</span>
             </div>
         {{ end }}
-        {{ with .Get "mixin-call" }}
+        {{ with .Get "name" }}
             <div class="item">
-                <span class="value">
+                <span class="mixin-call">
                     <span class="method">@include</span>
                     <span class="name">gls-{{.}}();</span>
                 </span>
@@ -18,5 +18,12 @@
     </div>
 
     <div class="description">{{.Inner | markdownify}}</div>
+
+    {{with .Get "name"}}
+        <div class="github-link">
+            <ion-icon name="logo-github"></ion-icon>
+            <a href="https://github.com/babilkuyusu/gerillass/blob/master/gerillass/library/_{{.}}.scss" target="_blank">Github Source Code</a>
+        </div>
+    {{end}}
 
 </div>

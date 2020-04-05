@@ -58,6 +58,11 @@ a:visited{
         margin-bottom: 80px !important;
     }
 
+    code{
+        background-color: $snow;
+        padding: 2px 4px;
+    }
+
     .table{
         margin: 0 0 80px;
 
@@ -125,13 +130,10 @@ a:visited{
             .key{
                 font-weight: bold;
             }
-            .value{
-                .method{
-                    color: $primary-color;
-                }
-                .name{
-                    color: $primary-color;
-                }
+            .value{}
+            .mixin-call{
+                .method{}
+                .name{}
             }
             &.source-link{
                 margin-left: auto;
@@ -246,8 +248,11 @@ a:visited{
             border: 1.2px solid $border-color;
             &:focus{
                 outline: 0;
-                box-shadow: 0 0 0 4px transparentize($primary-color, .5);
+                box-shadow: 0 0 0 4px transparentize($primary-color, .8);
                 border-color: transparent;
+                & + ion-icon{
+                    color: $primary-color;
+                }
             }
         }
         ion-icon{

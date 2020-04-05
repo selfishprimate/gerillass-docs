@@ -1,14 +1,12 @@
 # Adaptive Container
 
-{{< github link="adaptive-container" >}}
-
-{{< subheader value="Mixin" mixin-call="adaptive-container" >}}
+{{< featured type="Mixin" name="adaptive-container" >}}
 
 The passage experienced a surge in popularity during the 1960s when Letraset used it on their dry-transfer sheets, and again during the 90s as desktop publishers bundled the text with their software.
 
 During the 1960s when Letraset used it on their dry-transfer sheets, and again during the 90s as desktop publishers bundled the text with their software.
 
-{{< /subheader >}}
+{{< /featured >}}
 
 ## Arguments
 
