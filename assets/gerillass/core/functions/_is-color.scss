@@ -1,9 +1,0 @@
-@charset "UTF-8";
-
-@function __isColor($value) {
-  @if type-of($value) == 'color' {
-    @return $value;
-  } @else {
-    @warn "Please make sure you pass a valid color value!";
-  }
-}
