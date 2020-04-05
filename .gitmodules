@@ -1,0 +1,3 @@
+[submodule "assets/grls"]
+	path = assets/grls
+	url = https://github.com/babilkuyusu/gerillass.git
