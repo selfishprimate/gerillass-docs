@@ -1,16 +1,22 @@
-<div class="subheader">
+<div class="featured-content">
 
-    <div class="subheader__item">
-        <span class="subheader__item__key">Type:</span>
+    <div class="subheader">
         {{ with .Get "value" }}
-            <span class="subheader__item__value">{{.}}</span>
+            <div class="item">
+                <span class="key">Type:</span>
+                <span class="value">{{.}}</span>
+            </div>
+        {{ end }}
+        {{ with .Get "mixin-call" }}
+            <div class="item">
+                <span class="value">
+                    <span class="method">@include</span>
+                    <span class="name">gls-{{.}}();</span>
+                </span>
+            </div>
         {{ end }}
     </div>
 
-    <div class="subheader__item">
-        {{ with .Get "link" }}
-            <a href="https://github.com/babilkuyusu/gerillass/blob/master/gerillass/library/_{{.}}.scss" target="_blank">View Source Code on Github</a>
-        {{ end }}
-    </div>
+    <div class="description">{{.Inner | markdownify}}</div>
 
 </div>

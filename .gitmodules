@@ -1,0 +1,3 @@
+[submodule "static/gerillass"]
+	path = static/gerillass
+	url = https://github.com/babilkuyusu/gerillass.git

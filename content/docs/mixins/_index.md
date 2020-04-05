@@ -1,7 +1,7 @@
 ---
 weight: 1
 bookFlatSection: true
-title: "Library"
+title: "Mixins"
 ---
 
 # Introduction
