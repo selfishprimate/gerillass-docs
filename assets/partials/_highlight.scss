@@ -1,0 +1,20 @@
+.highlight{
+    font-family: "Roboto Mono", monospace;
+    position: relative;
+    pre{
+        code{
+            &[class^="language"]{
+                &:after{
+                    content: attr(data-lang);
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    background-color: rgba(255,255,255,.1);
+                    border-top-right-radius: .15rem;
+                    border-bottom-left-radius: .15rem;
+                    padding: 5px 15px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,50 @@
+.book-search{
+    width: 100%;
+    max-width: 600px;
+    .search-wrapper{
+        position: relative;
+        input{
+            height: 48px;
+            padding: 10px 15px;
+            background-color: white;
+            border: 1.2px solid $border-color;
+            &:focus{
+                outline: 0;
+                box-shadow: 0 0 0 4px transparentize($primary-color, .8);
+                border-color: transparent;
+                & + ion-icon{
+                    color: $primary-color;
+                }
+            }
+        }
+        ion-icon{
+            position: absolute;
+            top: 50%;
+            right: 15px;
+            font-size: 20px;
+            transform: translateY(-50%);
+            opacity: .5;
+        }
+    }
+    ul{
+        position: absolute;
+        width: 100%;
+        background-color: white;
+        bottom: 5px;
+        margin: 0;
+        transform: translateY(100%);
+        list-style: none;
+        border-radius: 5px;
+        box-shadow: 0 0 5px rgba(0,0,0,.2);
+        li{
+            padding: 5px 0;
+            margin-bottom: 10px;
+            &:first-of-type{
+                margin-top: 30px;
+            }
+            &:last-of-type{
+                margin-bottom: 30px;
+            }
+        }
+    }
+}
