@@ -1,0 +1,7 @@
+@charset "UTF-8";
+
+@mixin gls-except-last{
+    &:not(:last-of-type){
+        @content;
+    }
+}

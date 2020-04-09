@@ -1,0 +1,14 @@
+@charset "UTF-8";
+
+@function __pseudoSelector(
+    $elements,
+    $pseudo: null
+){
+    $list: ();
+    @each $element in $elements {
+        $element: unquote($element);
+        $element: if($pseudo, $element + ":" + $pseudo, $element);
+        $list: append($list, $element, comma);
+    }
+    @return $list;
+}

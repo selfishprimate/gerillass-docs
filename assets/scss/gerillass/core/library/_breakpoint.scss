@@ -1,0 +1,57 @@
+@charset "UTF-8";
+
+@mixin gls-breakpoint-only($value){
+    @if map-has-key($map-for-breakpoints, $value){
+        @media (width: map-get($map-for-breakpoints, $value)) {
+            @content;
+        }
+    } @else {
+        @media (width: $value) {
+            @content;
+        }
+    }
+}
+
+@mixin gls-breakpoint-min($value){
+    @if map-has-key($map-for-breakpoints, $value){
+        @media (min-width: map-get($map-for-breakpoints, $value)) {
+            @content;
+        }
+    } @else {
+        @media (min-width: $value) {
+            @content;
+        }
+    }
+}
+
+@mixin gls-breakpoint-max($value){
+    @if map-has-key($map-for-breakpoints, $value){
+        @media (max-width: map-get($map-for-breakpoints, $value)) {
+            @content;
+        }
+    } @else {
+        @media (max-width: $value) {
+            @content;
+        }
+    }
+}
+
+@mixin gls-breakpoint-between($params...){
+    $start: __validateBreakpoint(nth($params, 1));
+    $end: __validateBreakpoint(nth($params, 2));
+    @if map-has-key($map-for-breakpoints, nth($params, 1)) and map-has-key($map-for-breakpoints, nth($params, 2)){
+        @media (min-width: $start) and (max-width:  $end - 1) {
+            @content;
+        }
+    } @else {
+        @if map-has-key($map-for-breakpoints, nth($params, 2)){
+            @media (min-width: $start) and (max-width:  $end - 1) {
+                @content;
+            }
+        } @else {
+            @media (min-width: $start) and (max-width:  $end) {
+                @content;
+            }
+        }
+    }
+}

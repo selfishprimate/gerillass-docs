@@ -1,0 +1,32 @@
+.featured-content{
+    margin-bottom: 80px;
+    .subheader{
+        padding: 15px 0;
+        border-width: 1px 0;
+        border-style: solid;
+        border-color: $border-color;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: $global-space;
+        .item{
+            &:not(:last-of-type){
+                margin-right: 15px;
+            }
+            .key{
+                font-weight: bold;
+            }
+            .value{}
+            .mixin-call{
+                .method{}
+                .name{
+                    font-family: "Roboto Mono", monospace;
+                    font-weight: bold;
+                }
+            }
+            &.source-link{
+                margin-left: auto;
+            }
+        }
+    }
+}

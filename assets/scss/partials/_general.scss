@@ -1,0 +1,61 @@
+@include gls-antialias;
+@include gls-reset-css;
+@include gls-border-box;
+
+html {
+  font-size: $font-size-base;
+  letter-spacing: 0.33px;
+  scroll-behavior: smooth;
+}
+
+html,
+body{
+    font-family: Roboto, sans-serif;
+    text-rendering: optimizeLegibility;
+    color: $body-text-color;
+}
+
+body{
+    background-color: $body-background;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+code {
+  font-family: 'Roboto Mono', monospace;
+}
+
+a {
+  text-decoration: underline;
+  color: $body-text-color;
+
+  &:visited {
+    color: $body-text-color;
+  }
+}
+
+img {
+  vertical-align: baseline;
+}
+
+p{
+    margin-bottom: $global-space;
+    table &{
+        margin: 0;
+    }
+}
+
+ table {
+    overflow: auto;
+    display: block;
+    border-spacing: 0;
+    border-collapse: collapse;
+    margin-top: $padding-16;
+    margin-bottom: $padding-16;
+  
+    tr th, tr td {
+      padding: 1rem 0;
+    }
+  }

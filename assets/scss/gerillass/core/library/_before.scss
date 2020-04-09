@@ -1,0 +1,14 @@
+@charset "UTF-8";
+
+@mixin gls-before(
+    $content: null
+) {
+    &::before{
+        @if $content != null{
+            content: "#{$content}";
+        }
+        @else if $content == null {
+            @content;
+        }
+    }
+}

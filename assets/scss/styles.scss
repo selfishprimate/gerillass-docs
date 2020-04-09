@@ -1,0 +1,190 @@
+//Libraries
+@import "gerillass/core/gerillass";
+
+@import "partials/defaults";
+@import "partials/utils";
+@import "partials/main";
+@import "partials/print";
+
+@import "partials/markdown";
+@import "partials/shortcodes";
+
+
+//Abstract
+@import "partials/variables";
+
+@import "partials/general";
+@import "partials/highlight";
+@import "partials/featured-content";
+@import "partials/search";
+@import "partials/fonts";
+@import "partials/toc";
+
+
+.markdown {
+    padding: 30px 50px 100px;
+    
+    h1{
+        font-size: 2.5em;
+        margin-bottom: 40px;
+    }
+
+    h2{
+        font-size: 1.8em;
+        margin-bottom: 20px !important;
+    }
+
+    h1, h2, h3, h4, h5, h6{
+        font-family: jumble, sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    code{
+        background-color: $snow;
+        padding: 2px 4px;
+    }
+
+    .table{
+        margin: 0 0 80px;
+
+        &__footnote{
+            font-size: 80%;
+            line-height: 1.2;
+        }
+
+        table{
+            display: table;
+            width: 100%;
+            border-collapse: collapse;
+            border-spacing: 0;
+            thead{
+                th{
+                    text-align: left;
+                }
+                tr{
+                    border-bottom: 2px solid $border-color;
+                }
+            }
+            tbody{
+                tr{
+                    border-bottom: 1px solid $border-color;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+.book-menu nav,
+.book-toc nav{
+    padding: 50px 0;
+    top: 80px;
+}
+
+.book-menu{
+    a{
+        display: inline-block;
+        font-size: 16px;
+        text-decoration: none !important;
+        &.active{
+            position: relative;
+            font-weight: bold;
+            color: $body-text-color;
+            &:after{
+                content: "";
+                position: absolute;
+                display: block;
+                height: 10px;
+                width: 100%;
+                left: 0;
+                bottom: 0;
+                background-color: transparentize($primary-color, .7);
+                z-index: -1;
+            }
+        }
+    }
+}
+
+.main-container{
+    padding-top: 120px;
+}
+
+.book-page{
+    padding: 0;
+}
+
+.main-header{
+    height: 100px;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    background-color: $body-background;
+    border-bottom: 1px solid $border-color;
+    position: fixed;
+    width: 100%;
+    z-index: 200;
+    display: flex;
+    justify-content: center;
+    .inner{
+        position: relative;
+        height: 100%;
+        display: flex;
+        flex: 0 1 80rem;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.brand-logo{
+    margin: 0;
+    position: absolute;
+    left: 0;
+    a{
+        position: relative;
+        display: block;
+        img{
+            position: relative;
+            left: -8px;
+            width: 210px;
+            height: auto;
+        }
+        .logo-title{
+            display: block;
+            width: 0;
+            height: 0;
+            overflow: hidden;
+        }
+        .logo-description{
+            position: absolute;
+            bottom: -5px;
+            right: 0;
+            display: block;
+            font-size: 13px;
+            font-style: italic;
+            white-space: nowrap;
+            color: $body-text-color;
+        }
+    }
+}
+
+
+
+
+
+.github-link{
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    ion-icon{
+        font-size: 16px;
+        margin-right: 5px;
+    }
+}
+

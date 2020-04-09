@@ -1,0 +1,18 @@
+@charset "UTF-8";
+
+// This means that the edge of the browser can get as closer as $gutter paramater's value to the edge of the container. 
+
+// Willbefixed!
+
+@mixin gls-adaptive-container(
+    $gutter: 30px,
+){
+    margin: 0 auto;
+    $actual-breakpoints: map-remove($map-for-breakpoints, "xsmall");
+    @each $item, $value in $actual-breakpoints{
+        @media (min-width: #{$value}){
+            max-width: calc(#{$value} - (#{$gutter} * 2));
+        }
+    }
+}
+
