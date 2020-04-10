@@ -1,0 +1,26 @@
+.book-menu{
+    flex: 0 0 $menu-width;
+    a{
+        display: inline-block;
+        font-size: 16px;
+        text-decoration: none;
+        &.active{
+            position: relative;
+            font-weight: bold;
+            color: $link-color-active;
+            &:before{
+                content: "";
+                position: absolute;
+                display: block;
+                height: 100%;
+                width: 4px;
+                left: -15px;
+                background-color: $link-color-active;
+                border-radius: $border-radius;
+            }
+            &:hover{
+                text-decoration: none;
+            }
+        }
+    }
+}

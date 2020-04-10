@@ -1,9 +1,11 @@
 //Color Library
+$white: #FFFFFF;
+$black: 000000;
 $steal-teal: #668F80;
 $charleston-green: #222C25;
 $light-gray: rgb(230,230,230);
 $bus-yellow: #ffd900;
-$light-sea-green: #20b2aa;
+$light-sea-green: #5BC0BB;
 $granite-green: #657167;
 $copper: #B77434;
 $snow: #FAFAF8;
@@ -12,9 +14,24 @@ $primary-color: $light-sea-green;
 $secondary-color: $bus-yellow;
 
 $link-color: $steal-teal;
-$active-link-color: $bus-yellow;
+$link-color-active: $primary-color;
+$link-color-visited: $primary-color;
+
 $body-text-color: $charleston-green;
+$body-background: $white;
+
+$label-color: transparentize($body-text-color, .5);
+
+$border-width: 1px;
 $border-color: $light-gray;
-$body-background: white;
+$border-style: solid;
+$border-radius: 5px;
+
+$placeholder-color: transparentize($body-text-color, .5);
 
 $global-space: 1rem;
+
+$font-size-base: 16px !default;
+$font-size-12: 0.75rem !default;
+$font-size-14: 0.875rem !default;
+$font-size-16: 1rem !default;

@@ -1,6 +1,9 @@
 //Libraries
 @import "gerillass/core/gerillass";
 
+//Abstract
+@import "partials/variables";
+
 @import "partials/defaults";
 @import "partials/utils";
 @import "partials/main";
@@ -9,10 +12,7 @@
 @import "partials/markdown";
 @import "partials/shortcodes";
 
-
-//Abstract
-@import "partials/variables";
-
+@import "partials/book-menu";
 @import "partials/general";
 @import "partials/highlight";
 @import "partials/featured-content";
@@ -87,29 +87,7 @@
     top: 80px;
 }
 
-.book-menu{
-    a{
-        display: inline-block;
-        font-size: 16px;
-        text-decoration: none !important;
-        &.active{
-            position: relative;
-            font-weight: bold;
-            color: $body-text-color;
-            &:after{
-                content: "";
-                position: absolute;
-                display: block;
-                height: 10px;
-                width: 100%;
-                left: 0;
-                bottom: 0;
-                background-color: transparentize($primary-color, .7);
-                z-index: -1;
-            }
-        }
-    }
-}
+
 
 .main-container{
     padding-top: 120px;

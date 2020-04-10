@@ -1,20 +1,31 @@
 .book-search{
+    position: relative;
     width: 100%;
     max-width: 600px;
     .search-wrapper{
         position: relative;
         input{
+            width: 100%;
             height: 48px;
             padding: 10px 15px;
             background-color: white;
-            border: 1.2px solid $border-color;
+            border: $border-width solid $border-color;
+            border-radius: $border-radius;
+            font-size: $font-size-base;
             &:focus{
                 outline: 0;
-                box-shadow: 0 0 0 4px transparentize($primary-color, .8);
-                border-color: transparent;
+                box-shadow: 0 0 0 4px transparentize($body-text-color, .9);
+                border-width: $border-width;
                 & + ion-icon{
-                    color: $primary-color;
+                    color: transparentize($body-text-color, .2);
                 }
+            }
+            &:required + .book-search-spinner {
+                display: block;
+            }
+            @include gls-placeholder{
+                padding-left: 5px;
+                color: $placeholder-color;
             }
         }
         ion-icon{
@@ -24,20 +35,28 @@
             font-size: 20px;
             transform: translateY(-50%);
             opacity: .5;
+            color: $placeholder-color;
         }
     }
     ul{
-        position: absolute;
-        width: 100%;
-        background-color: white;
-        bottom: 5px;
-        margin: 0;
-        transform: translateY(100%);
-        list-style: none;
-        border-radius: 5px;
-        box-shadow: 0 0 5px rgba(0,0,0,.2);
+        &:not(:empty){
+            position: absolute;
+            width: 100%;
+            background-color: white;
+            bottom: 5px;
+            margin: 0;
+            transform: translateY(100%);
+            list-style: none;
+            border-bottom-left-radius: $border-radius;
+            border-bottom-right-radius: $border-radius;
+            border-width: 0 $border-width $border-width $border-width;
+            border-color: $border-color;
+            border-style: $border-style;    
+            box-shadow: 0 5px 5px rgba(0,0,0,.1);
+        }
+
         li{
-            padding: 5px 0;
+            padding: 0;
             margin-bottom: 10px;
             &:first-of-type{
                 margin-top: 30px;
@@ -45,6 +64,28 @@
             &:last-of-type{
                 margin-bottom: 30px;
             }
+            a{
+                display: block;
+                padding: 15px 30px;
+                text-decoration: none;
+            }
+            &:hover{
+                a{
+                    background-color: transparentize($body-text-color, .9);
+                }
+            }
         }
+    }
+    .book-search-spinner {
+        position: absolute;
+        margin: $padding-8;
+        right: 0;
+        top: 0;
+        width: $padding-16;
+        height: $padding-16;
+        border: $padding-1 solid transparent;
+        border-top-color: $body-font-color;
+        border-radius: 50%;
+        @include spin(1s);
     }
 }

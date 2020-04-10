@@ -1,25 +1,3 @@
-aside nav ul {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-
-  li {
-    margin: 1em 0;
-  }
-
-  a {
-    display: block;
-  }
-
-  a:hover {
-    opacity: 0.5;
-  }
-
-  ul {
-    padding-left: $padding-16;
-  }
-}
-
 // Classes to hide nested levels of ToC/Menu
 .levels-1 ul ul,
 .levels-2 ul ul ul,
@@ -60,26 +38,6 @@ ul.pagination {
   }
 }
 
-.book-menu {
-  flex: 0 0 $menu-width;
-  font-size: $font-size-14;
-
-  nav {
-    width: $menu-width;
-    padding: $padding-16;
-
-    @include fixed;
-  }
-
-  a {
-    color: inherit;
-  }
-
-  a.active {
-    color: $color-link;
-  }
-}
-
 .book-section-flat {
   margin-bottom: $padding-16 * 2;
 
@@ -116,48 +74,7 @@ ul.pagination {
   }
 }
 
-.book-search {
-  position: relative;
-  margin: $padding-16 0;
-  border-bottom: 1px solid transparent;
 
-  &::after {
-    display: block;
-    content: "";
-    clear: both;
-  }
-
-  input {
-    width: 100%;
-    padding: $padding-8;
-
-    border: 0;
-    border-radius: $padding-4;
-
-    background: rgb(245,245,245);
-    color: $body-font-color;
-
-    &:required + .book-search-spinner {
-      display: block;
-    }
-  }
-
-  .book-search-spinner {
-    position: absolute;
-    margin: $padding-8;
-    right: 0;
-    top: 0;
-
-    width: $padding-16;
-    height: $padding-16;
-
-    border: $padding-1 solid transparent;
-    border-top-color: $body-font-color;
-    border-radius: 50%;
-
-    @include spin(1s);
-  }
-}
 
 
 
