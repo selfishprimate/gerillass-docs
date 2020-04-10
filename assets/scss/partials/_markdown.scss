@@ -1,64 +1,47 @@
 .markdown {
-  line-height: 1.6em;
+    padding: 0 50px 100px;
+    line-height: 1.6em;
 
-  // remove padding at the beginning of page
-  > :first-child {
-    margin-top: 0;
-  }
-
-  h1, h2, h3, h4, h5, h6 {
-    font-weight: bold;
-    line-height: 1em;
-    margin-top: 1.5em;
-    margin-bottom: $padding-16;
-  }
-
-  h4, h5, h6 {
-    font-weight: bolder;
-  }
-
-  h5 {
-    font-size: .875em;
-  }
-
-  h6 {
-    font-size: .75em;
-  }
-
-  b, optgroup, strong {
-    font-weight: bolder;
-  }
-  
-  a {
-    text-decoration: none;
-
-    &:hover {
-      text-decoration: underline;
+    // remove padding at the beginning of page
+    > :first-child {
+        margin-top: 0;
     }
-  }
 
-  img {
-    max-width: 100%;
-  }
+    h1{
+        font-size: 2.5em;
+        margin-bottom: $global-space * 2;
+    }
 
-  code {
-    padding: 0 $padding-4;
-    background: $gray-200;
-    border-radius: $border-radius;
-    font-size: .875em;
-  }
+    h2{
+        font-size: 1.8em;
+        margin-bottom: $global-space;
+    }
 
-  pre {
-    padding: $padding-16;
-    background: $gray-100;
-    border-radius: $border-radius;
-    overflow-x: auto;
+    h1, h2, h3, h4, h5, h6{
+        margin-top: $global-space * 3;
+        font-family: "Jumble", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        line-height: 1.2;
+    }
 
     code {
-      padding: 0;
-      background: none;
+        padding: 2px 4px;
+        background: $code-background-color;
+        border-radius: $border-radius;
+        font-size: .875em;
     }
-  }
+
+    pre {
+        padding: $padding-16;
+        background: $gray-100;
+        border-radius: $border-radius;
+        overflow-x: auto;
+        code {
+            padding: 0;
+            background: none;
+        }
+    }
 
   blockquote {
     margin: $padding-16 0;
@@ -114,4 +97,32 @@
       cursor: pointer;
     }
   }
+    .table{
+        margin: 0 0 80px;
+
+        &__footnote{
+            font-size: 80%;
+            line-height: 1.2;
+        }
+
+        table{
+            display: table;
+            width: 100%;
+            border-collapse: collapse;
+            border-spacing: 0;
+            thead{
+                th{
+                    text-align: left;
+                }
+                tr{
+                    border-bottom: 2px solid $border-color;
+                }
+            }
+            tbody{
+                tr{
+                    border-bottom: 1px solid $border-color;
+                }
+            }
+        }
+    }
 }

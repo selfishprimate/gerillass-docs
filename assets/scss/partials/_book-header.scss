@@ -1,0 +1,21 @@
+.book-header{
+    height: 100px;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    background-color: $body-background-color;
+    border-bottom: 1px solid $border-color;
+    position: fixed;
+    width: 100%;
+    z-index: 200;
+    display: flex;
+    justify-content: center;
+    .inner{
+        position: relative;
+        height: 100%;
+        display: flex;
+        flex: 0 1 80rem;
+        align-items: center;
+        justify-content: center;
+    }
+}

@@ -1,0 +1,46 @@
+.book-languages {
+  position: relative;
+  overflow: visible;
+
+  padding: $padding-16;
+  margin: -$padding-16;
+
+  &:hover .book-languages-list {
+    display: block;
+  }
+
+  .book-languages-list {
+    display: none;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: $padding-8 0;
+
+    background: $body-background-color;
+    box-shadow: 0 0 $padding-4 rgba(0, 0, 0, 0.1);
+
+    li {
+      padding: $padding-8 $padding-16;
+      white-space: nowrap;
+    }
+
+    img {
+      opacity: 0.1;
+    }
+
+    li.active img {
+      opacity: 1;
+    }
+
+    a {
+      color: inherit;
+    }
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+}

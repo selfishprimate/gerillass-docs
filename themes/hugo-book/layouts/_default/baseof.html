@@ -7,12 +7,11 @@
     </head>
 
     <body>
-        <div class="main-header">
+        <div class="book-header">
             <div class="inner">
                 {{ partial "docs/brand" . }}
                 {{ partial "docs/search" . }}
             </div>
-
         </div>
         <input type="checkbox" class="hidden" id="menu-control"/>
         <main class="main-container container flex">
@@ -22,10 +21,11 @@
             </aside>
 
             <div class="book-page">
-                <header class="book-header">
+
+                <!-- Mobile Layout Header -->
+                <!--<header class="book-header">
                     {{ template "header" . }}
-                    <!-- Mobile layout header -->
-                </header>
+                </header>-->
 
                 {{ template "main" . }}
                 <!-- Page Content -->

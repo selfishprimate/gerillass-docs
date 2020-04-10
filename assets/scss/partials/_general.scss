@@ -76,3 +76,45 @@ table {
         margin: 0;
     }
 }
+
+.main-container{
+    padding-top: 150px;
+}
+
+.container {
+  max-width: $container-max-width;
+  margin: 0 auto;
+}
+
+aside nav,
+.book-page,
+.book-header aside,
+.markdown {
+  transition: 0.2s ease-in-out;
+  transition-property: transform, margin, opacity;
+  will-change: transform, margin;
+}
+
+// Classes to hide nested levels of ToC/Menu
+.levels-1 ul ul,
+.levels-2 ul ul ul,
+.levels-3 ul ul ul ul,
+.levels-4 ul ul ul ul ul,
+.levels-5 ul ul ul ul ul ul,
+.levels-6 ul ul ul ul ul ul ul {
+  display: none;
+}
+
+ul.pagination {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+
+  .page-item a {
+    padding: $padding-16;
+  }
+}
+
+.book-icon {
+  filter: $icon-filter;
+}
