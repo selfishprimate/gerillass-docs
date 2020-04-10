@@ -1,0 +1,32 @@
+.btn-wrapper{
+    .btn{
+        height: 44px;
+        padding: 0 12px;
+        border: $border-width $border-style $body-text-color;
+        border-radius: $border-radius;
+        display: inline-flex;
+        align-items: center;
+        .btn-icon{
+            font-size: 18px;
+            &.left{
+                margin-left: -3px;
+                margin-right: 6px;
+            }
+            &.right{
+                margin-left: 6px;
+                margin-right: -3px;
+            }
+        }
+
+        .btn-text{
+            padding: 0 10px;
+        }
+        &.small{
+            height: 34px;
+        }
+        &:hover{
+            border-color: $link-color-hover;
+            text-decoration: none;
+        }
+    }    
+}

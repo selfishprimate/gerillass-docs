@@ -185,10 +185,10 @@ aside nav,
 }
 
 // Extra space for big screens
-@media screen and (min-width: $container-max-width) {
-  .book-page,
-  .book-menu nav,
-  .book-toc nav {
-    padding: $padding-16 * 2 $padding-16;
-  }
-}
+// @media screen and (min-width: $container-max-width) {
+//   .book-page,
+//   .book-menu nav,
+//   .book-toc nav {
+//     padding: $padding-16 * 2 $padding-16;
+//   }
+// }

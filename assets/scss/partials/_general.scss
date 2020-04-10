@@ -3,9 +3,9 @@
 @include gls-border-box;
 
 html {
-  font-size: $font-size-base;
-  letter-spacing: 0.33px;
-  scroll-behavior: smooth;
+    font-size: $font-size-base;
+    letter-spacing: 0.33px;
+    scroll-behavior: smooth;
 }
 
 html,
@@ -21,59 +21,58 @@ body{
 }
 
 code {
-  font-family: 'Roboto Mono', monospace;
+    font-family: 'Roboto Mono', monospace;
 }
 
 a {
     text-decoration: underline;
     color: $body-text-color;
-    &:hover{
-        text-decoration: underline;
-    }
     &:visited {
         color: $body-text-color;
     }
+    &:hover{
+        text-decoration: underline;
+        color: $primary-color;
+    }
 }
 
-aside nav ul {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    li {
-        margin: 1em 0;
-        &.book-section-flat{
-            & > a{
-                font-weight: normal !important;
+aside{
+    .label{
+        font-weight: normal !important;
+        margin-bottom: $global-space * 2;
+        color: $label-color;
+    }
+    nav{
+        ul{
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            li{
                 margin-bottom: $global-space;
-                color: $label-color;
-                &:before{
-                    display: none !important;
-                }
             }
         }
     }
 }
 
 img {
-  vertical-align: baseline;
+    vertical-align: baseline;
 }
 
 p{
     margin-bottom: $global-space;
-    table &{
-        margin: 0;
-    }
 }
 
- table {
+table {
     overflow: auto;
     display: block;
     border-spacing: 0;
     border-collapse: collapse;
     margin-top: $padding-16;
     margin-bottom: $padding-16;
-  
     tr th, tr td {
-      padding: 1rem 0;
+        padding: 1rem 0;
     }
-  }
+    p{
+        margin: 0;
+    }
+}

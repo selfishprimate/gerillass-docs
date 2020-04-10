@@ -1,6 +1,7 @@
 .highlight{
     font-family: "Roboto Mono", monospace;
     position: relative;
+    margin-bottom: $global-space;
     pre{
         code{
             &[class^="language"]{

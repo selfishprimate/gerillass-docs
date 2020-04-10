@@ -68,10 +68,18 @@
                 display: block;
                 padding: 15px 30px;
                 text-decoration: none;
+                &:focus{
+                    background-color: $primary-color;
+                    color: $white;
+                    font-weight: bold;
+                    outline: 0;
+                }
             }
             &:hover{
                 a{
-                    background-color: transparentize($body-text-color, .9);
+                    background-color: $primary-color;
+                    color: $white;
+                    font-weight: bold;
                 }
             }
         }

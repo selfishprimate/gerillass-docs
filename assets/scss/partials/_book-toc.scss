@@ -1,0 +1,33 @@
+.book-toc {
+    flex: 0 0 $toc-width;
+    .book-toc-label{
+        text-align: right;
+    }
+    nav {
+        width: $toc-width;
+        ul{
+            padding-left: $global-space * 3;
+            li{
+                text-align: right;
+                a{
+                    font-size: 13px;
+                    line-height: 1.3;
+                    &:not(:hover){
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+    img {
+        height: 1em;
+    }
+
+    nav > ul > li:first-child {
+        margin-top: 0;
+    }
+
+    @include gls-breakpoint-max($mobile-breakpoint){
+        display: none;
+    }
+}

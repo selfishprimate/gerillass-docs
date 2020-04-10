@@ -41,6 +41,9 @@
 
             {{ if default true (default .Site.Params.BookToC .Params.BookToC) }}
                 <aside class="book-toc">
+                    {{ with .Site.Params.BookTocLabel }}
+                        <div class="book-toc-label label">{{.}}</div>
+                    {{ end }}
                     {{ template "toc" . }}
                     <!-- Table of Contents -->
                 </aside>

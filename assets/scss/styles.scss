@@ -4,7 +4,6 @@
 //Abstract
 @import "partials/variables";
 
-@import "partials/defaults";
 @import "partials/utils";
 @import "partials/main";
 @import "partials/print";
@@ -13,12 +12,17 @@
 @import "partials/shortcodes";
 
 @import "partials/book-menu";
+@import "partials/book-toc";
+@import "partials/book-page";
+
+@import "partials/brand-logo";
+@import "partials/buttons";
 @import "partials/general";
 @import "partials/highlight";
 @import "partials/featured-content";
 @import "partials/search";
 @import "partials/fonts";
-@import "partials/toc";
+
 
 
 .markdown {
@@ -76,19 +80,6 @@
 }
 
 
-
-
-
-
-
-.book-menu nav,
-.book-toc nav{
-    padding: 50px 0;
-    top: 80px;
-}
-
-
-
 .main-container{
     padding-top: 120px;
 }
@@ -116,53 +107,6 @@
         flex: 0 1 80rem;
         align-items: center;
         justify-content: center;
-    }
-}
-
-.brand-logo{
-    margin: 0;
-    position: absolute;
-    left: 0;
-    a{
-        position: relative;
-        display: block;
-        img{
-            position: relative;
-            left: -8px;
-            width: 210px;
-            height: auto;
-        }
-        .logo-title{
-            display: block;
-            width: 0;
-            height: 0;
-            overflow: hidden;
-        }
-        .logo-description{
-            position: absolute;
-            bottom: -5px;
-            right: 0;
-            display: block;
-            font-size: 13px;
-            font-style: italic;
-            white-space: nowrap;
-            color: $body-text-color;
-        }
-    }
-}
-
-
-
-
-
-.github-link{
-    position: relative;
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-    ion-icon{
-        font-size: 16px;
-        margin-right: 5px;
     }
 }
 

@@ -20,9 +20,11 @@
     <div class="description">{{.Inner | markdownify}}</div>
 
     {{with .Get "name"}}
-        <div class="github-link">
-            <ion-icon name="logo-github"></ion-icon>
-            <a href="https://github.com/babilkuyusu/gerillass/tree/master/core/library/_{{.}}.scss" target="_blank">Github Source Code</a>
+        <div class="btn-wrapper">
+            <a class="btn small" href="https://github.com/babilkuyusu/gerillass/tree/master/core/library/_{{.}}.scss" target="_blank">
+                <ion-icon name="logo-github" class="btn-icon left"></ion-icon>
+                <span>Github Source Code</span>
+            </a>
         </div>
     {{end}}
 
