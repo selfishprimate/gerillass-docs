@@ -19,7 +19,7 @@ $link-color-active: $primary-color;
 $link-color-visited: $primary-color;
 
 $body-text-color: $charleston-green;
-$body-background: $white;
+$body-background-color: $white;
 
 $label-color: transparentize($body-text-color, .5);
 
@@ -64,7 +64,7 @@ $black: #000 !default;
 
 $color-link: #05b !default;
 
-$body-background: white !default;
+$body-background-color: white !default;
 $body-font-color: $gray-800 !default;
 $body-font-weight: normal !default;
 

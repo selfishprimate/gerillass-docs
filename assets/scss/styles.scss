@@ -26,7 +26,7 @@
 
 
 .markdown {
-    padding: 30px 50px 100px;
+    padding: 0 50px 100px;
     
     h1{
         font-size: 2.5em;
@@ -81,7 +81,7 @@
 
 
 .main-container{
-    padding-top: 120px;
+    padding-top: 150px;
 }
 
 .book-page{
@@ -93,7 +93,7 @@
     padding: 0 30px;
     display: flex;
     align-items: center;
-    background-color: $body-background;
+    background-color: $body-background-color;
     border-bottom: 1px solid $border-color;
     position: fixed;
     width: 100%;
