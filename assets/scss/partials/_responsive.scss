@@ -1,0 +1,36 @@
+    
+
+
+@include gls-breakpoint-max(large){
+
+    .book-menu,
+    .book-toc{
+        display: none;
+    }
+
+    .book-header{
+        position: relative;
+        margin-bottom: $global-space * 2;
+        height: auto;
+        padding: $global-space;
+        .inner{
+            flex-direction: column;
+            .left,
+            .middle,
+            .right{
+                flex: 0 1 auto;
+                width: 100%;
+                text-align: center;
+            }
+            .left{
+                margin-bottom: $global-space;
+            }
+        }
+    }
+
+    .main-container{
+        padding-top: 0;
+    }
+
+
+}

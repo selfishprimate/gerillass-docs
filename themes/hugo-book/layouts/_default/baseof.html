@@ -7,17 +7,24 @@
     </head>
 
     <body>
-        <div class="book-header">
+
+        <header class="book-header">
             <div class="inner">
-                {{ partial "docs/brand" . }}
-                {{ partial "docs/search" . }}
+                <div class="left">
+                    {{ partial "docs/brand" . }}
+                </div>
+                <div class="middle">
+                    {{ partial "docs/search" . }}
+                </div>
+                <div class="right"></div>
             </div>
-        </div>
+        </header>
+
         <input type="checkbox" class="hidden" id="menu-control"/>
         <main class="main-container container flex">
+
             <aside class="book-menu">
                 {{ template "menu" . }}
-                <!-- Left menu Content -->
             </aside>
 
             <div class="book-page">

@@ -1,11 +1,10 @@
 .book-brand{
     margin: 0;
-    position: absolute;
-    left: 0;
     a{
         position: relative;
-        display: block;
         text-decoration: none;
+        display: inline-flex;
+        flex-direction: column;
         &:hover{
             text-decoration: none;
             color: inherit;

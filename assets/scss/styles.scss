@@ -4,11 +4,11 @@
 //Abstract
 @import "partials/variables";
 
+
 @import "partials/utils";
 @import "partials/print";
 @import "partials/markdown";
 @import "partials/shortcodes";
-
 
 @import "partials/book-brand";
 @import "partials/book-footer";
@@ -21,8 +21,12 @@
 @import "partials/book-toc";
 
 @import "partials/buttons";
-@import "partials/general";
 @import "partials/featured-content";
 @import "partials/fonts";
+
+@import "partials/general";
+
+@import "partials/responsive";
+
 
 

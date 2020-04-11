@@ -1,5 +1,6 @@
 .book-page {
   min-width: $body-min-width;
   flex-grow: 1;
-  padding: 0 $global-space $global-space;
+  padding: 0 $global-space * 2;
+  .book-footer{}
 }

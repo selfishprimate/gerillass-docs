@@ -17,5 +17,16 @@
         flex: 0 1 80rem;
         align-items: center;
         justify-content: center;
+        .left{
+            flex: 0 0 $menu-width;
+        }
+        .middle{
+            flex: 1;
+            padding: 0 $global-space * 2;
+        }
+        .right{
+            flex: 0 0 $menu-width;
+        }
+            
     }
 }
