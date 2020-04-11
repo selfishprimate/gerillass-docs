@@ -96,32 +96,4 @@
       cursor: pointer;
     }
   }
-    .table{
-        margin: 0 0 80px;
-
-        &__footnote{
-            font-size: 80%;
-            line-height: 1.2;
-        }
-
-        table{
-            display: table;
-            width: 100%;
-            border-collapse: collapse;
-            border-spacing: 0;
-            thead{
-                th{
-                    text-align: left;
-                }
-                tr{
-                    border-bottom: 2px solid $border-color;
-                }
-            }
-            tbody{
-                tr{
-                    border-bottom: 1px solid $border-color;
-                }
-            }
-        }
-    }
 }

@@ -2,11 +2,9 @@
 
 
 @include gls-breakpoint-max(large){
-
     .book-toc{
         display: none;
     }
-
     .book-header{
         position: relative;
         margin-bottom: $global-space * 2;
@@ -26,11 +24,9 @@
             }
         }
     }
-
     .main-container{
         padding-top: 0;
     }
-
     .book-search{
         width: 100%;
         ul{
@@ -46,5 +42,23 @@
 @include gls-breakpoint-max(medium){
     .book-menu{
         display: none;
+    }
+}
+
+@include gls-breakpoint-max(small){
+    body{
+        font-size: .9rem;
+    }
+    .featured-content{
+        .subheader{
+            padding: $global-space / 2 0;
+            flex-direction: column;
+            align-items: flex-start;
+            .item{
+                &:not(:last-child){
+                    margin-right: 0;
+                }
+            }
+        }
     }
 }

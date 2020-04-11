@@ -1,9 +1,9 @@
 .featured-content{
     margin-bottom: 80px;
     .subheader{
-        padding: 15px 0;
-        border-width: 1px 0;
-        border-style: solid;
+        padding: $global-space 0;
+        border-width: $border-width 0;
+        border-style: $border-style;
         border-color: $border-color;
         display: flex;
         justify-content: space-between;
@@ -11,7 +11,7 @@
         margin-bottom: $global-space;
         .item{
             &:not(:last-of-type){
-                margin-right: 15px;
+                margin-right: $global-space;
             }
             .key{
                 font-weight: bold;

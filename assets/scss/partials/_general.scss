@@ -64,20 +64,7 @@ p{
     margin-bottom: $global-space;
 }
 
-table {
-    overflow: auto;
-    display: block;
-    border-spacing: 0;
-    border-collapse: collapse;
-    margin-top: $padding-16;
-    margin-bottom: $padding-16;
-    tr th, tr td {
-        padding: 1rem 0;
-    }
-    p{
-        margin: 0;
-    }
-}
+
 
 
 
