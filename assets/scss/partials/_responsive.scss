@@ -77,17 +77,16 @@
 .menu-toggler{
     position: absolute;
     display: block;
-    left: 0;
+    left: 10px;
     top: 20px;
     width: 34px;
     height: 34px;
     z-index: 20;
     display: flex;
+    justify-content: center;
     align-items: center;
     ion-icon{
-        position: relative;
         font-size: 26px;
-        left: -8px;
     }
     @include gls-breakpoint-min(medium){
         display: none;
