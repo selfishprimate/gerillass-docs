@@ -3,7 +3,6 @@
 
 @include gls-breakpoint-max(large){
 
-    .book-menu,
     .book-toc{
         display: none;
     }
@@ -12,7 +11,7 @@
         position: relative;
         margin-bottom: $global-space * 2;
         height: auto;
-        padding: $global-space $global-space * 2;
+        padding: $global-space 0;
         .inner{
             flex-direction: column;
             .left,
@@ -42,10 +41,10 @@
             }
         }
     }
+}
 
-    .book-page{
-        min-width: 100%;
+@include gls-breakpoint-max(medium){
+    .book-menu{
+        display: none;
     }
-
-
 }

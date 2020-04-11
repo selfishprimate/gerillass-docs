@@ -79,13 +79,16 @@ table {
     }
 }
 
-.main-container{
-    padding-top: 150px;
-}
+
 
 .container {
   max-width: $container-max-width;
   margin: 0 auto;
+  padding: 0 $global-space * 2;
+}
+
+.main-container{
+    padding-top: 150px;
 }
 
 aside nav,
@@ -119,14 +122,4 @@ ul.pagination {
 
 .book-icon {
   filter: $icon-filter;
-}
-
-// will be deleted
-
-.book-menu{
-    background-color: blue;
-}
-
-.book-toc{
-    background-color: green;
 }
