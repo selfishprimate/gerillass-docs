@@ -12,7 +12,7 @@
         position: relative;
         margin-bottom: $global-space * 2;
         height: auto;
-        padding: $global-space;
+        padding: $global-space $global-space * 2;
         .inner{
             flex-direction: column;
             .left,
@@ -41,6 +41,10 @@
                 }
             }
         }
+    }
+
+    .book-page{
+        min-width: 100%;
     }
 
 
