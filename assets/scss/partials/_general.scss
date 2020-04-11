@@ -64,10 +64,6 @@ p{
     margin-bottom: $global-space;
 }
 
-
-
-
-
 .container {
   max-width: $container-max-width;
   margin: 0 auto;
@@ -79,6 +75,7 @@ p{
 }
 
 aside nav,
+.book-menu,
 .book-page,
 .book-header aside,
 .markdown {
