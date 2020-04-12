@@ -54,7 +54,7 @@ You can only target the `::after` pseudo-element and then pass a decleration blo
 {{< highlight-wrapper class="html">}}
 You can fetch a given value by using custom property. One thing important to remember here is the name of the property must start with 'data-' prefix.
 {{< highlight html>}}
-<div class="element" data-currency="USD">
+<div class="element" data-currency="TL">200</div>
 {{< /highlight >}}
 {{< highlight scss >}}
 .element{
