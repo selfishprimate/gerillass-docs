@@ -16,7 +16,7 @@ The **gls-after()** mixin helps you to generate some content or a style element 
 
 ## Examples
 
-{{< highlight-wrapper >}}
+{{< highlight-wrapper class="example">}}
 Simply pass a value as a string.
 {{< highlight scss >}}
 .element{
@@ -31,7 +31,7 @@ Simply pass a value as a string.
 {{< /highlight-wrapper >}}
 
 
-{{< highlight-wrapper >}}
+{{< highlight-wrapper class="example">}}
 You can only target the `::after` pseudo-element and then pass a decleration block.
 {{< highlight scss >}}
 .element{
@@ -51,7 +51,7 @@ You can only target the `::after` pseudo-element and then pass a decleration blo
 {{< /highlight-wrapper >}}
 
 
-{{< highlight-wrapper class="html">}}
+{{< highlight-wrapper class="example">}}
 You can fetch a given value by using custom property. One thing important to remember here is the name of the property must start with 'data-' prefix.
 {{< highlight html>}}
 <div class="element" data-currency="TL">200</div>
@@ -67,7 +67,7 @@ You can fetch a given value by using custom property. One thing important to rem
 {{< /highlight >}}
 {{< /highlight-wrapper >}}
 
-{{< highlight-wrapper >}}
+{{< highlight-wrapper class="example">}}
 You can pass a value for CSS content property as a string and a decleration block between the opening and closing curly braces.
 {{< highlight scss >}}
 .element{

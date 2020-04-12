@@ -45,7 +45,7 @@ cleanDestinationDir = true
 
     # (Optional, default none) Set the path to a logo for the book. If the logo is
     # /static/logo.png then the path would be logo.png
-    LogoLink = 'gerillass-logo.svg'
+    LogoLink = 'images/gerillass-logo.svg'
 
     # LogoTitle = "Gerillass Documentation"
     LogoDescription = "Gerillass Documentation"

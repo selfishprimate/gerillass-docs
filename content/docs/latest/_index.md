@@ -1,7 +1,7 @@
 ---
-weight: 1
+weight: 2
 bookFlatSection: true
-title: "Latest v1.0.0"
+title: "Version Notes"
 ---
 
 # Latest Version
