@@ -1,6 +1,7 @@
 .book-menu{
     flex: 0 0 $menu-width;
-    padding-right: $global-space * 2;
+    max-width: $menu-width;
+    padding-right: $global-space * 3;
     nav{
         ul{
             li{
