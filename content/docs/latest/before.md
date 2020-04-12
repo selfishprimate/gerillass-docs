@@ -2,7 +2,7 @@
 
 {{< featured type="Mixin" name="before" >}}
 
-The **gls-before()** mixin helps you to generate content before the actual content of a selected element(s).
+The **gls-before()** mixin helps you to generate some content or a style element before the actual content of a selected element(s).
 
 {{< /featured >}}
 

@@ -18,7 +18,6 @@
         border-collapse: collapse;
         border-spacing: 0;
         overflow: auto;
-        margin-top: $global-space;
         margin-bottom: $global-space / 2;
         thead{
             th{
@@ -36,6 +35,7 @@
         }
         tr th, tr td{
             padding: 1rem 1rem 1rem 0;
+            vertical-align: middle;
         }
     }
 }

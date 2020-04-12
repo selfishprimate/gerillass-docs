@@ -2,7 +2,7 @@
 
 {{< featured type="Mixin" name="after" >}}
 
-The **gls-after()** mixin helps you to generate content after the actual content of a selected element(s).
+The **gls-after()** mixin helps you to generate some content or a style element after the actual content of a selected element(s).
 
 {{< /featured >}}
 

@@ -5,8 +5,9 @@
     margin-bottom: $global-space * 4;
     p:first-of-type{
         &::before{
+            display: block;
             counter-increment: section;
-            content: "Example " counter(section) ": ";
+            content: "Example " counter(section);
             font-weight: bold;
             margin-bottom: 5px;
         }
