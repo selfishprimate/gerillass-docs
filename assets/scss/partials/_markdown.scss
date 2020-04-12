@@ -6,42 +6,6 @@
         margin-top: 0;
     }
 
-    h1{
-        font-size: 2.5em;
-        margin-bottom: $global-space * 2;
-    }
-
-    h2{
-        font-size: 1.8em;
-        margin-bottom: $global-space;
-    }
-
-    h1, h2, h3, h4, h5, h6{
-        margin-top: $global-space * 3;
-        font-family: "Jumble", sans-serif;
-        font-weight: 400;
-        font-style: normal;
-        line-height: 1.2;
-    }
-
-    code {
-        padding: 2px 4px;
-        background: $code-background-color;
-        border-radius: $border-radius;
-        font-size: .875em;
-    }
-
-    pre {
-        padding: $padding-16;
-        background: $gray-100;
-        border-radius: $border-radius;
-        overflow-x: auto;
-        code {
-            padding: 0;
-            background: none;
-        }
-    }
-
   blockquote {
     margin: $padding-16 0;
     padding: $padding-8 $padding-16 $padding-8 ($padding-16 - $padding-4); //to keep total left space 16dp

@@ -1,14 +1,11 @@
 .book-toc {
     flex: 0 0 $toc-width;
-    .book-toc-label{
-        text-align: right;
-    }
+    padding-left: $global-space * 3;
+    .book-toc-label{}
     nav {
         width: $toc-width;
         ul{
-            padding-left: $global-space * 3;
             li{
-                text-align: right;
                 margin-bottom: $global-space / 2;
                 a{
                     font-size: 13px;
