@@ -26,6 +26,10 @@ code {
     font-family: 'Roboto Mono', monospace;
 }
 
+strong{
+    font-weight: bold;
+}
+
 a {
     text-decoration: underline;
     color: $body-text-color;

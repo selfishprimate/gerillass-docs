@@ -1,7 +1,10 @@
+.highlight-wrapper{
+    margin-bottom: $global-space * 4;
+}
 .highlight{
     font-family: "Roboto Mono", monospace;
     position: relative;
-    margin-bottom: $global-space;
+    margin-bottom: $global-space * 1;
     pre{
         code{
             &[class^="language"]{

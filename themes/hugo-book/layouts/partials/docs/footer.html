@@ -1,24 +1,26 @@
 <div class="flex justify-between">
-{{ if .Site.IsMultiLingual }}
-  {{ partial "docs/languages" . }}
-{{ end }}
+    {{ if .Site.IsMultiLingual }}
+        {{ partial "docs/languages" . }}
+    {{ end }}
 
-{{ if and .GitInfo .Site.Params.BookRepo }}
-  <div>
-    {{ $date := .GitInfo.AuthorDate.Local.Format (default "January 2, 2006" .Site.Params.BookDateFormat) }}
-    <a class="flex align-center" href="{{ .Site.Params.BookRepo }}/commit/{{ .GitInfo.Hash }}" title='{{ i18n "Last modified by" }} {{ .GitInfo.AuthorName }} | {{ $date }}' target="_blank" rel="noopener">
-      <img src="{{ "svg/calendar.svg" | relURL }}" class="book-icon" alt="Calendar" />
-      <span>{{ $date }}</span>
-    </a>
-  </div>
-{{ end }}
+    {{ if and .GitInfo .Site.Params.BookRepo }}
+        <div class="btn-wrapper">
+            {{ $date := .GitInfo.AuthorDate.Local.Format (default "January 2, 2006" .Site.Params.BookDateFormat) }}
+            <a class="btn" class="flex align-center" href="{{ .Site.Params.BookRepo }}/commit/{{ .GitInfo.Hash }}" title='{{ i18n "Last modified by" }} {{ .GitInfo.AuthorName }} | {{ $date }}' target="_blank" rel="noopener">
+                <ion-icon class="btn-icon left" name="today-outline"></ion-icon>
+                <!-- <img src="{{ "svg/calendar.svg" | relURL }}" class="book-icon" alt="Calendar"/> -->
+                <span class="btn-text">{{ $date }}</span>
+            </a>
+        </div>
+    {{ end }}
 
-{{ if and .File .Site.Params.BookRepo .Site.Params.BookEditPath }}
-  <div>
-    <a class="flex align-center" href="{{ .Site.Params.BookRepo }}/{{ .Site.Params.BookEditPath }}/{{ replace .File.Path "\\" "/" }}" target="_blank" rel="noopener">
-      <img src="{{ "svg/edit.svg" | relURL }}" class="book-icon" alt="Edit" />
-      <span>{{ i18n "Edit this page" }}</span>
-    </a>
-  </div>
-{{ end }}
+    {{ if and .File .Site.Params.BookRepo .Site.Params.BookEditPath }}
+        <div class="btn-wrapper">
+            <a class="btn small" href="{{ .Site.Params.BookRepo }}/{{ .Site.Params.BookEditPath }}/{{ replace .File.Path "\\" "/" }}" target="_blank" rel="noopener">
+                <ion-icon class="btn-icon left" name="create-outline"></ion-icon>
+                <!-- <img src="{{ "svg/edit.svg" | relURL }}" class="book-icon" alt="Edit" /> -->
+                <span class="btn-text">{{ i18n "Edit this page" }}</span>
+            </a>
+        </div>
+    {{ end }}
 </div>

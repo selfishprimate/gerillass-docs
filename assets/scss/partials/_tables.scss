@@ -1,9 +1,16 @@
 .table{
     margin: 0 0 80px;
 
-    &__footnote{
+    p{
+        font-size: 14px;
+        line-height: 1.4;
+        margin-bottom: 0;
+    }
+
+    .footnote{
         font-size: 80%;
         line-height: 1.2;
+        padding: 0;
     }
 
     table{
@@ -12,26 +19,23 @@
         border-spacing: 0;
         overflow: auto;
         margin-top: $global-space;
-        margin-bottom: $global-space;
+        margin-bottom: $global-space / 2;
         thead{
             th{
                 text-align: left;
+                font-weight: bold;
             }
             tr{
-                border-bottom: 2px solid $border-color;
+                border-bottom: ($border-width * 2) $border-style $border-color;
             }
         }
         tbody{
             tr{
-                border-bottom: 1px solid $border-color;
+                border-bottom: $border-width $border-style $border-color;
             }
         }
         tr th, tr td{
-            padding: 1rem 5px;
-        }
-        p{
-            line-height: 1.3;
-            margin-bottom: 0;
+            padding: 1rem 1rem 1rem 0;
         }
     }
 }
