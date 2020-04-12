@@ -1,5 +1,6 @@
 .book-toc {
     flex: 0 0 $toc-width;
+    max-width: $toc-width;
     padding-left: $global-space * 3;
     .book-toc-label{}
     nav {
