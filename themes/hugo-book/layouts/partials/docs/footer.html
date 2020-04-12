@@ -6,7 +6,7 @@
     {{ if and .GitInfo .Site.Params.BookRepo }}
         <div class="btn-wrapper">
             {{ $date := .GitInfo.AuthorDate.Local.Format (default "January 2, 2006" .Site.Params.BookDateFormat) }}
-            <a class="btn" class="flex align-center" href="{{ .Site.Params.BookRepo }}/commit/{{ .GitInfo.Hash }}" title='{{ i18n "Last modified by" }} {{ .GitInfo.AuthorName }} | {{ $date }}' target="_blank" rel="noopener">
+            <a class="btn small" class="flex align-center" href="{{ .Site.Params.BookRepo }}/commit/{{ .GitInfo.Hash }}" title='{{ i18n "Last modified by" }} {{ .GitInfo.AuthorName }} | {{ $date }}' target="_blank" rel="noopener">
                 <ion-icon class="btn-icon left" name="today-outline"></ion-icon>
                 <!-- <img src="{{ "svg/calendar.svg" | relURL }}" class="book-icon" alt="Calendar"/> -->
                 <span class="btn-text">{{ $date }}</span>

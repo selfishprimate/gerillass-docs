@@ -1,1 +1,1 @@
-<div class="highlight-wrapper">{{.Inner | markdownify}}</div>
+<div class="highlight-wrapper {{with .Get "class"}}{{.}}{{end}}">{{.Inner | markdownify}}</div>
