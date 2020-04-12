@@ -17,9 +17,22 @@ Many of the utilities that come with Gerillass are the solutions I have come up 
 
 Gerillass is currently live with version 1.0.0 and it is the latest right now.
 
-## Installation
+## Manuel Installation
 
-You can easily install the Gerillass Sass library via [**npm (Node Package Manager)**](https://www.npmjs.com/), [**Yarn**](https://yarnpkg.com/), [**Bower**](https://bower.io/). Package files don’t include documentation. So please check out the documentation page to learn how to use Gerillass.
+You can easily download and attach the library directly into your local computer.
+
+## Terminal Installation
+
+{{< highlight-wrapper >}}
+Open the terminal window. Target the folder that you want Gerillass to be installed. Copy and past the command below and hit the enter to install the library into your local computer.
+{{< highlight go >}}
+$ git clone https://github.com/babilkuyusu/gerillass.git
+{{< /highlight >}}
+{{< /highlight-wrapper >}}
+
+## Node.js Installation
+
+If you are working on a Node project install Gerillass via [**npm (Node Package Manager)**](https://www.npmjs.com/), [**Yarn**](https://yarnpkg.com/), [**Bower**](https://bower.io/). Package files don’t include documentation. So please check out this site to learn how to use Gerillass.
 
 {{< highlight-wrapper >}}
 npm installation:
