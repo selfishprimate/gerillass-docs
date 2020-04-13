@@ -5,7 +5,7 @@
     margin-bottom: $global-space * 2;
     &.example{
         margin-bottom: $global-space * 4;
-        p:first-of-type{
+        & > p:first-of-type{
             &::before{
                 display: block;
                 counter-increment: section;
@@ -22,18 +22,22 @@
     margin-bottom: $global-space * 1;
     pre{
         code{
-            // &[class^="language"]{
-            //     &:after{
-            //         content: attr(data-lang);
-            //         position: absolute;
-            //         top: 0;
-            //         right: 0;
-            //         background-color: rgba(255,255,255,.1);
-            //         border-top-right-radius: .15rem;
-            //         border-bottom-left-radius: .15rem;
-            //         padding: 5px 15px;
-            //     }
-            // }
+            &[class^="language"]{
+                &:after{
+                    content: attr(data-lang);
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    min-width: 70px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: rgba(255,255,255,.05);
+                    border-top-right-radius: .15rem;
+                    border-bottom-left-radius: .15rem;
+                    padding: 10px;
+                }
+            }
         }
     }
 }

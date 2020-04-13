@@ -22,6 +22,9 @@
         display: inline-block;
         font-size: 16px;
         text-decoration: none;
+        &:hover{
+            text-decoration: none;
+        }
         &.active{
             position: relative;
             font-weight: bold;

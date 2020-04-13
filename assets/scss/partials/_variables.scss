@@ -9,6 +9,7 @@ $light-sea-green: #5BC0BB;
 $granite-green: #657167;
 $copper: #B77434;
 $snow: #FAFAF8;
+$jelly-bean: #DB504A;
 
 $primary-color: $light-sea-green;
 $secondary-color: $bus-yellow;
@@ -20,7 +21,9 @@ $link-color-visited: $primary-color;
 
 $body-text-color: $charleston-green;
 $body-background-color: $white;
+
 $code-background-color: $snow;
+$code-text-color: $body-text-color;
 
 $label-color: transparentize($body-text-color, .5);
 

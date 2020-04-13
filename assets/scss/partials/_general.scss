@@ -44,11 +44,11 @@ h1, h2, h3, h4, h5, h6{
 }
 
 code {
-    font-family: 'Roboto Mono', monospace;
-    padding: 2px 4px;
     background: $code-background-color;
     border-radius: $border-radius;
+    font-family: 'Roboto Mono', monospace;
     font-size: .875em;
+    padding: 2px 4px;
 }
 
 pre {
