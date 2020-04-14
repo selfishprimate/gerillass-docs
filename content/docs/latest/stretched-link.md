@@ -131,6 +131,3 @@ Don't forget that the containing block must have `position: relative;` style rul
 {{< /highlight >}}
 
 {{< /highlight-wrapper >}}
-
-
-
