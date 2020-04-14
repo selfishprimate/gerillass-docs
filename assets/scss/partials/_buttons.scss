@@ -1,29 +1,39 @@
 .btn-wrapper{
-    display: flex;
-    justify-content: space-between;
-}
-.btn{
-    height: 44px;
-    padding: 0 12px;
-    border: $border-width $border-style $body-text-color;
-    border-radius: $border-radius;
-    display: inline-flex;
-    align-items: center;
-    text-decoration: none;
-    &:hover{
-        border-color: $link-color-hover;
+    .btn{
+        height: 44px;
+        padding: 0 12px;
+        border: $border-width $border-style $body-text-color;
+        border-radius: $border-radius;
+        display: inline-flex;
+        align-items: center;
         text-decoration: none;
+        &:hover{
+            border-color: $link-color-hover;
+            text-decoration: none;
+        }
+        &:not(:last-of-type){
+            margin-right: $global-space;
+        }
+        .btn-icon{
+            font-size: 18px;
+        }
+        .btn-text{
+            padding: 0 10px;
+        }
+        &.small{
+            height: 34px;
+        }
     }
-    &:not(:last-of-type){
-        margin-right: $global-space;
+    @include gls-breakpoint-max(small){
+        flex-wrap: wrap;
+        .btn{
+            flex: 1 0 auto;
+            justify-content: center;
+            &:not(:last-of-type){
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
+        }
+
     }
-    .btn-icon{
-        font-size: 18px;
-    }
-    .btn-text{
-        padding: 0 10px;
-    }
-    &.small{
-        height: 34px;
-    }
-} 
+}

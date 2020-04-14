@@ -9,6 +9,17 @@ Hi developers, designers and the other enthusiasts of the open-source community!
 
 I am proud to present to you a brand new toolkit for Sass: [**Gerillass**](https://gerillass.com/). It is an open-source toolkit that contains a set of Sass mixins to help you avoid code repetition and write better, faster and consistent CSS code.
 
+<div class="btn-wrapper flex flex-wrap" style="margin-bottom: 80px;">
+    <a class="btn small" href="https://github.com/babilkuyusu/gerillass" target="_blank">
+        <ion-icon name="download-outline"></ion-icon>
+        <span class="btn-text">Download Library</span>
+    </a>
+    <a class="btn small" href="https://gerillass.com/" target="_blank">
+        <ion-icon name="link-outline"></ion-icon>
+        <span class="btn-text">Visit Gerillass Site!</span>
+    </a>
+</div>
+
 ## What is Gerillass?
 
 Many of the utilities that come with Gerillass are the solutions I have come up with for the challenges I have faced as a frontend developer over the years. These solutions have been shaped by the inspiration of other popular libraries and frameworks like [**Bourbon**](https://www.bourbon.io/), [**Scut**](https://davidtheclark.github.io/scut/), [**Compass**](http://compass-style.org/), [**Bootstrap**](https://getbootstrap.com/), etc. over time and helped me create Gerillass.
