@@ -12,7 +12,7 @@ I am proud to present to you a brand new toolkit for Sass: [**Gerillass**](https
 <div class="btn-wrapper flex flex-wrap" style="margin-bottom: 80px;">
     <a class="btn small" href="https://github.com/babilkuyusu/gerillass" target="_blank">
         <ion-icon name="download-outline"></ion-icon>
-        <span class="btn-text">Download Library</span>
+        <span class="btn-text">Download the Library</span>
     </a>
     <a class="btn small" href="https://gerillass.com/" target="_blank">
         <ion-icon name="link-outline"></ion-icon>
@@ -23,6 +23,8 @@ I am proud to present to you a brand new toolkit for Sass: [**Gerillass**](https
 ## What is Gerillass?
 
 Many of the utilities that come with Gerillass are the solutions I have come up with for the challenges I have faced as a frontend developer over the years. These solutions have been shaped by the inspiration of other popular libraries and frameworks like [**Bourbon**](https://www.bourbon.io/), [**Scut**](https://davidtheclark.github.io/scut/), [**Compass**](http://compass-style.org/), [**Bootstrap**](https://getbootstrap.com/), etc. over time and helped me create Gerillass.
+
+Hope you'll enjoy using it!
 
 ## Latest Version
 
@@ -35,10 +37,11 @@ You can easily download and attach the library directly into your local computer
 ## Terminal Installation
 
 {{< highlight-wrapper >}}
+
 Open the terminal window. Target the folder that you want Gerillass to be installed. Copy and past the command below and hit the enter to install the library into your local computer.
-{{< highlight go >}}
-$ git clone https://github.com/babilkuyusu/gerillass.git
-{{< /highlight >}}
+    
+    $ git clone https://github.com/babilkuyusu/gerillass.git
+
 {{< /highlight-wrapper >}}
 
 ## Node.js Installation
@@ -47,23 +50,23 @@ If you are working on a Node project install Gerillass via [**npm (Node Package 
 
 {{< highlight-wrapper >}}
 npm installation:
-{{< highlight go >}}
-$ npm install gerillass
-{{< /highlight >}}
+
+    $ npm install gerillass
+
 {{< /highlight-wrapper >}}
 
 {{< highlight-wrapper >}}
 Yarn installation:
-{{< highlight go >}}
-$ yarn add gerillass
-{{< /highlight >}}
+
+    $ yarn add gerillass
+
 {{< /highlight-wrapper >}}
 
 {{< highlight-wrapper >}}
 Bower installation:
-{{< highlight go >}}
-$ bower install gerillass
-{{< /highlight >}}
+
+    $ bower install gerillass
+
 {{< /highlight-wrapper >}}
 
 ## Contribution

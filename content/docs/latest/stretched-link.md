@@ -1,8 +1,9 @@
 # Stretched Link
 
 {{< featured type="Mixin" name="stretched-link" >}}
+Suppose you have a containing element and a link inside of it. You want entire surface of this containing block to be clickable with this link. How can you do that?
 
-The **gls-stretched-link()** helps you to spread clickability of a link to the entire area of its containing block. To achieve that the containing block must have `position: relative;` style rule and the mixin must be apply to the anchor element.
+This Sass mixin helps you to achieve that. It spreads the clickability of a link to the entire area of its containing block. Note that the containing block must have `position: relative;` style rule and the mixin must be apply to the anchor element.
 
 **Note:** You can apply this mixin to an HTML `<label>` element as well!
 {{< /featured >}}
@@ -95,10 +96,19 @@ Using both `::before` and `::after` pseudo-elements of a selected link.
 
 {{< highlight-wrapper class="example">}}
 Don't forget that the containing block must have `position: relative;` style rule.
+
+{{< highlight html >}}
+<div class="containing-element">
+    <a class="element" href="https://sample-site.com/">Stretched Link</a>
+</div>
+{{< /highlight >}}
+
 {{< highlight scss >}}
 .containing-element{
     position: relative;
-    @include gls-stretched-link(after);
+    .element{
+        @include gls-stretched-link(after);
+    }
 }
 {{< /highlight >}}
 

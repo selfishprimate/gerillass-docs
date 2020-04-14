@@ -23,6 +23,9 @@
         &.small{
             height: 34px;
         }
+        &.medium{
+            height: 40px;
+        }
     }
     @include gls-breakpoint-max(small){
         flex-wrap: wrap;

@@ -53,12 +53,13 @@ code {
 
 pre {
     padding: $padding-16;
-    background: $gray-100;
+    background: #282a36;
     border-radius: $border-radius;
     overflow-x: auto;
     code {
         padding: 0;
         background: none;
+        color: #f8f8f2;
     }
 }
 
