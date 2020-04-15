@@ -26,17 +26,24 @@
         &.medium{
             height: 40px;
         }
+        &.large{
+            height: 44px;
+        }
     }
+}
+
+.download-buttons{
+    display: flex;
     @include gls-breakpoint-max(small){
         flex-wrap: wrap;
         .btn{
             flex: 1 0 auto;
             justify-content: center;
+            height: 44px !important;
             &:not(:last-of-type){
                 margin-right: 0;
                 margin-bottom: 15px;
             }
         }
-
     }
 }

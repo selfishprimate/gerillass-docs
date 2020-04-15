@@ -15,6 +15,18 @@
             }
         }
     }
+    &.terminal{
+        pre{
+            code{
+                &::before{
+                    content: "$ ";
+                }
+                &::after{
+                    display: none !important;
+                }
+            }
+        }
+    }
 }
 .highlight{
     font-family: "Roboto Mono", monospace;
