@@ -22,7 +22,7 @@ I am proud to present to you a brand new toolkit for Sass: [**Gerillass**](https
 
 ## What is Gerillass?
 
-Gerillass is a Sass mixins library that will give you flexibility for your projects and accelerate your performance.
+Gerillass is a library built on top of [**Sass (Syntactically Awesome Style Sheets)**](https://sass-lang.com/) to give you flexibility for your projects and accelerate your performance and creativity.
 
 Many of the utilities that come with Gerillass are the solutions I have come up with for the challenges I have faced as a frontend developer over the years. These solutions have been shaped by the inspiration of other popular libraries and frameworks like [**Bourbon**](https://www.bourbon.io/), [**Scut**](https://davidtheclark.github.io/scut/), [**Compass**](http://compass-style.org/), [**Bootstrap**](https://getbootstrap.com/), etc. over time and helped me create Gerillass.
 
