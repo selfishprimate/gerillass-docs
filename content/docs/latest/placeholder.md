@@ -1,13 +1,13 @@
 # Placeholder
 
 {{< featured type="Mixin" name="placeholder" >}}
-Suppose you have a containing element and a link inside of it. You want entire surface of this containing block to be clickable with this link. How can you do that?
+This Sass mixin will help you to style the **placeholder text** in an `<input>` or `<textarea>` element and generate cross-browser compatible CSS code.
 {{< /featured >}}
 
 ## Examples
 
 {{< highlight-wrapper class="example">}}
-If no value is passed, the `::before` pseudo-element is targeted by default.
+Just call the mixin and write your style declerations.
 {{< highlight scss >}}
 .element{
     @include gls-placeholder{
@@ -33,3 +33,31 @@ If no value is passed, the `::before` pseudo-element is targeted by default.
     color: red;
 }
 {{< /highlight >}}
+{{< /highlight-wrapper >}}
+
+{{< highlight-wrapper class="example">}}
+When you call this mixin in the root of your stylesheet it will target all the `<input>` and `<textarea>` elements.
+{{< highlight scss >}}
+@include gls-placeholder{
+    color: orange;
+}
+{{< /highlight >}}
+{{< highlight css >}}
+//CSS Output
+::-webkit-input-placeholder {
+    color: orange;
+}
+::-moz-placeholder {
+    color: orange;
+}
+:-ms-input-placeholder {
+    color: orange;
+}
+:-moz-placeholder {
+    color: orange;
+}2
+::placeholder {
+    color: orange;
+}
+{{< /highlight >}}
+{{< /highlight-wrapper >}}

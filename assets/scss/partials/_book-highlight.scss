@@ -27,6 +27,17 @@
             }
         }
     }
+    &.no-lang{
+        .highlight{
+            pre{
+                code{
+                    &:after{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
 }
 .highlight{
     font-family: "Roboto Mono", monospace;

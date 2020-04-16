@@ -28,15 +28,11 @@ Many of the utilities that come with Gerillass are the solutions I have come up 
 
 Hope you'll enjoy using it!
 
-## Latest Version
+## Installation
 
-Gerillass is currently live with version 1.0.0 and it is the latest right now.
+You can Install the Gerillass library via [**npm (Node Package Manager)**](https://www.npmjs.com/), [**Yarn**](https://yarnpkg.com/), [**Bower**](https://bower.io/) and include the source files into your projects. Or you can [**download it manually**](https://github.com/babilkuyusu/gerillass) into your local computer.
 
-## Manuel Installation
-
-You can easily download and attach the library directly into your local computer.
-
-## Terminal Installation
+### Terminal Installation
 
 {{< highlight-wrapper class="terminal">}}
 Open the terminal window. Target the folder that you want Gerillass to be installed. Copy and past the command below and hit the enter to install the library into your local computer.
@@ -45,9 +41,9 @@ git clone https://github.com/babilkuyusu/gerillass.git
 {{< /highlight >}}
 {{< /highlight-wrapper >}}
 
-## Node.js Installation
+### Node.js Installation
 
-If you are working on a Node project install Gerillass via [**npm (Node Package Manager)**](https://www.npmjs.com/), [**Yarn**](https://yarnpkg.com/), [**Bower**](https://bower.io/). Package files don’t include documentation. So please check out this site to learn how to use Gerillass.
+If you are working on a Node project you can add Gerillass as a dependency. Package files don’t include documentation. So please check out this very site to learn how to use Gerillass.
 
 {{< highlight-wrapper class="terminal">}}
 npm installation:
@@ -70,6 +66,22 @@ bower install gerillass
 {{< /highlight >}}
 {{< /highlight-wrapper >}}
 
+### How to Include?
+
+{{< highlight-wrapper class="no-lang">}}
+Import Gerillass at the beginning of your stylesheet:
+{{< highlight scss >}}
+@import "gerillass/core/gerillass";
+{{< /highlight >}}
+{{< /highlight-wrapper >}}
+
 ## Contribution
 
-I know there is a lack of information about Gerillass and I know there will be some people who want to contribute to the library and this very documentation page as well. So, ,if you you like Gerillass and you want to help with this documentation page please feel free to contribute to the project.
+I know there is a lack of information about Gerillass and I know there will be some people who want to contribute to the library and this very documentation page as well. So, if you you like Gerillass and you want to help with this documentation page please feel free to contribute to the project.
+
+## Related Links
+
+1. [**Gerillass Site**]()
+2. [**Github**]()
+3. [**Change Log**]()
+4. [**Blog**]()

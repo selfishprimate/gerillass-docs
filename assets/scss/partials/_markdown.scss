@@ -27,6 +27,14 @@
     padding-left: $padding-16 * 2;
   }
 
+  ul{
+      list-style: circle;
+  }
+
+  ol{
+      list-style: inherit;
+  }
+
   dl {
     dt {
       font-weight: bolder;
