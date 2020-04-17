@@ -55,7 +55,7 @@ When you call this mixin in the root of your stylesheet it will target all the `
 }
 :-moz-placeholder {
     color: orange;
-}2
+}
 ::placeholder {
     color: orange;
 }
