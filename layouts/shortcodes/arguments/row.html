@@ -1,11 +1,11 @@
 <tr>
-    <td>
-        <code>{{.Get "name"}}</code>
+    <td class="name">
+        <code>{{.Get "name" | markdownify}}</code>
     </td>
-    <td>
-        <code>{{.Get "type"}}</code>
+    <td class="type">
+        <code>{{.Get "type" | markdownify}}</code>
     </td>
-    <td>
+    <td class="description">
         <p>{{.Get "description" | markdownify}}</p>
     </td>
 </tr>

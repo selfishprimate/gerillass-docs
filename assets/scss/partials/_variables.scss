@@ -81,11 +81,4 @@ $toc-width: 16rem !default;
 
 $mobile-breakpoint: $menu-width + $body-min-width + $toc-width !default;
 
-// Hint colors
-$hint-colors: (
-  info: #6bf,
-  warning: #fd6,
-  danger: #f66
-) !default;
-
 $icon-filter: none !default;

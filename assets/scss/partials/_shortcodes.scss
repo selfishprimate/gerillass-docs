@@ -94,13 +94,3 @@ a.book-btn {
   margin-bottom: $padding-8;
   cursor: pointer;
 }
-
-// {{< hint >}}
-.book-hint {
-  @each $name, $color in $hint-colors {
-    &.#{$name} {
-      border-left-color: $color;
-      background-color: rgba($color, 0.1);
-    }
-  };
-}

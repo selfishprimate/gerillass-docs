@@ -8,11 +8,8 @@
 
   blockquote {
     margin: $padding-16 0;
-    padding: $padding-8 $padding-16 $padding-8 ($padding-16 - $padding-4); //to keep total left space 16dp
-
+    padding: $global-space;
     border-left: $padding-4 solid $gray-200;
-    border-radius: $border-radius;
-
     :first-child { margin-top: 0; }
     :last-child { margin-bottom: 0; }
   }

@@ -3,9 +3,14 @@
 {{< featured type="Mixin" name="stretched-link" >}}
 Suppose you have a containing element and a link inside of it. You want entire surface of this containing block to be clickable with this link. How can you do that?
 
-This Sass mixin helps you to achieve that. It spreads the clickability of a link to the entire area of its containing block. Note that the containing block must have `position: relative;` style rule and the mixin must be apply to the anchor element.
+This Sass mixin helps you to achieve that. It spreads the clickability of a link to the entire area of its containing block. 
 
-**Note:** You can apply this mixin to an HTML `<label>` element as well!
+**Important:** Note that the containing block must have `position: relative;` style rule and the mixin must be applied to the child element.
+
+{{< hint info >}}  
+It can be useful when you use this mixin with HTML radio buttons or a checkbox list design patterns to control the clickability of a `<label>` element.
+{{< /hint >}}
+
 {{< /featured >}}
 
 ## Arguments
@@ -40,7 +45,7 @@ If no value is passed, the `::before` pseudo-element is targeted by default.
 {{< /highlight-wrapper >}}
 
 {{< highlight-wrapper class="example">}}
-Pass a value as an argument to choose which pseudo-element that you want to use. 
+Pass one of the `before` or `after` options as an argument to choose which pseudo-element that you want to target. 
 {{< highlight scss >}}
 .element{
     @include gls-stretched-link(after);
@@ -64,7 +69,7 @@ Pass a value as an argument to choose which pseudo-element that you want to use.
 
 
 {{< highlight-wrapper class="example">}}
-Using both `::before` and `::after` pseudo-elements of a selected link.
+Targeting the both `::before` and `::after` pseudo-elements of a selected element(s).
 {{< highlight scss >}}
 .element{
     @include gls-stretched-link(before);

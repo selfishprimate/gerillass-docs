@@ -1,0 +1,15 @@
+// Hint colors
+$hint-colors: (
+  info: $primary-color,
+  warning: darkkhaki,
+  danger: #f66
+) !default;
+
+.book-hint {
+  @each $name, $color in $hint-colors {
+    &.#{$name} {
+      border-left-color: $color;
+      background-color: rgba($color, 0.1);
+    }
+  };
+}

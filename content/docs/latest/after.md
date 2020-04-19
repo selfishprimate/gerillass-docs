@@ -2,7 +2,7 @@
 
 {{< featured type="Mixin" name="after" >}}
 
-The **gls-after()** mixin helps you to generate some content or a style element after the actual content of a selected element(s).
+This mixin helps you to generate some content or a style element after the actual content of a selected element(s).
 
 {{< /featured >}}
 
@@ -22,14 +22,14 @@ Simply pass a value as a string.
 .element{
     @include gls-after("Text to use!");
 }
+{{< /highlight >}}
+{{< highlight css >}}
 // CSS Output
 .element::after {
     content: "Text to use!";
 }
 {{< /highlight >}}
-
 {{< /highlight-wrapper >}}
-
 
 {{< highlight-wrapper class="example">}}
 You can only target the `::after` pseudo-element and then pass a decleration block.
@@ -41,6 +41,8 @@ You can only target the `::after` pseudo-element and then pass a decleration blo
         color: red;
     };
 }
+{{< /highlight >}}
+{{< highlight css >}}
 // CSS Output
 .element::after {
     content: "Easy to use!";
@@ -60,6 +62,8 @@ You can fetch a given value by using custom property. One thing important to rem
 .element{
     @include gls-after("data-currency");
 }
+{{< /highlight >}}
+{{< highlight css >}}
 // CSS Output
 .element::after {
     content: attr(data-currency);
@@ -76,6 +80,8 @@ You can pass a value for CSS content property as a string and a decleration bloc
         color: red;
     };
 }
+{{< /highlight >}}
+{{< highlight css >}}
 // CSS Output
 .element::after {
   content: attr(data-currency);
