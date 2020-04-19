@@ -5,14 +5,12 @@
     margin-bottom: $global-space * 2;
     &.example{
         margin-bottom: $global-space * 4;
-        & > p:first-of-type{
-            &::before{
-                display: block;
-                counter-increment: section;
-                content: "Example " counter(section);
-                font-weight: bold;
-                margin-bottom: 5px;
-            }
+        &::before{
+            display: block;
+            counter-increment: section;
+            content: "Example " counter(section);
+            font-weight: bold;
+            margin-bottom: $global-space / 2;
         }
     }
     &.terminal{

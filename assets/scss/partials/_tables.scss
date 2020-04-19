@@ -1,6 +1,6 @@
 .table{
     margin: 0 0 80px;
-
+    overflow-x: scroll;
     p{
         font-size: .9em;
         line-height: 1.4;
@@ -11,13 +11,15 @@
         font-size: 80%;
         line-height: 1.3;
         padding: 0;
+        @include gls-breakpoint-max(medium){
+            white-space: nowrap;
+        }
     }
 
     table{
         width: 100%;
         border-collapse: collapse;
         border-spacing: 0;
-        overflow: auto;
         margin-bottom: $global-space / 2;
         thead{
             th{
@@ -38,6 +40,15 @@
             vertical-align: middle;
             @include gls-breakpoint-min(large){
                 padding: 1rem 3rem 1rem 0;
+            }
+        }
+        td.name,
+        td.type{
+            white-space: nowrap;
+        }
+        td.description{
+            @include gls-breakpoint-max(medium){
+                white-space: nowrap;
             }
         }
     }

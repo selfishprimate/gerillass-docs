@@ -8,9 +8,9 @@ This mixin allows you to easily create a stylish dotted background pattern (also
 
 {{< arguments/table footnote="When the `$diagonal` is true you can pass two color values to make it look more interesting. For more see the examples.">}}
     {{< arguments/row name="$color" type="list" description="The color of the dots. This argument is required." >}}
-    {{< arguments/row name="$size" type="number (with unit)" description="The size of the dots." >}}
-    {{< arguments/row name="$gutter" type="number (with unit)" description="The size of the space between the dots." >}}
-    {{< arguments/row name="$diagonal" type="boolean" description="This option allows you to set line order of the dots. Default value is true." >}}
+    {{< arguments/row name="$size (1em)" type="number (with unit)" description="The size of the dots." >}}
+    {{< arguments/row name="$gutter ($size * 5)" type="number (with unit)" description="The size of the space between the dots." >}}
+    {{< arguments/row name="$diagonal (true)" type="boolean" description="This option allows you to set line order of the dots. Default value is true." >}}
 {{< /arguments/table >}}
 
 ## Examples
