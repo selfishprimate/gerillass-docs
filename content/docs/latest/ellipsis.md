@@ -34,7 +34,7 @@ Simply call the mixin in an element to truncate the text inside of it.
 {{< /highlight-wrapper >}}
 
 {{< highlight-wrapper class="example">}}
-Change the `$width` value of the text block if you need to.
+Change the `$width` or `$display` values of the selected element(s) if you need to.
 {{< highlight scss >}}
 .element{
     @include gls-ellipsis(
