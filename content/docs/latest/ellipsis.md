@@ -38,14 +38,15 @@ Change the `$width` value of the text block if you need to.
 {{< highlight scss >}}
 .element{
     @include gls-ellipsis(
-        $width: 200px
+        $width: 200px,
+        $display: block
     );
 }
 {{< /highlight >}}
 {{< highlight css >}}
 //CSS Output
 .element {
-    display: inline-block;
+    display: block;
     max-width: 200px;
     text-overflow: ellipsis;
     white-space: nowrap;
