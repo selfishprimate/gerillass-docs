@@ -1,7 +1,7 @@
 # Escape to Parent
 
 {{< featured type="Mixin" name="escape-to-parent" >}}
-This mixin allows you to **escape to the parent** element and use multiple class or id selectors with it. Therefore you can easily control how the selected child element(s) appear differently on various devices.
+This mixin allows you to **escape to the parent** element and use multiple class or id selectors with it. Therefore you can easily control how the selected child element(s) response differently on various cases.
 {{< /featured >}}
 
 ## Arguments
@@ -15,13 +15,10 @@ This mixin allows you to **escape to the parent** element and use multiple class
 {{< highlight-wrapper class="example">}}
 Call the mixin as many as the number of cases that you want the element response to and pass the related argument for each.
 {{< highlight scss >}}
-.element-container{
+.parent-element{
     .element{
         @include escape-to-parent(".smartphone"){
             background-color: red;
-        }
-        @include escape-to-parent(".tablet"){
-            background-color: blue;
         }
         @include escape-to-parent(".desktop"){
             background-color: green;
@@ -31,13 +28,10 @@ Call the mixin as many as the number of cases that you want the element response
 {{< /highlight >}}
 {{< highlight css >}}
 //CSS Output
-.smartphone.element-container .element {
+.smartphone.parent-element .element {
     background-color: red;
 }
-.tablet.element-container .element {
-    background-color: blue;
-}
-.desktop.element-container .element {
+.desktop.parent-element .element {
     background-color: green;
 }
 {{< /highlight >}}

@@ -1,6 +1,9 @@
 .table{
     margin: 0 0 80px;
     overflow-x: scroll;
+    @include gls-breakpoint-max(medium){
+        padding-bottom: $global-space;
+    }
     p{
         font-size: .9em;
         line-height: 1.4;
