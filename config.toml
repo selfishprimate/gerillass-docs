@@ -16,10 +16,10 @@ cleanDestinationDir = true
 [markup]
 [markup.goldmark.renderer]
     unsafe = true
-
+    
 [markup.highlight]
     codeFences = true
-    guessSyntax = false
+    guessSyntax = true
     hl_Lines = ""
     lineNoStart = 1
     lineNos = false
