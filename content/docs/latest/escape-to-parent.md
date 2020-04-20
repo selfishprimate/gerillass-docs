@@ -12,7 +12,7 @@ This mixin allows you to **escape to the parent** element and use multiple class
 
 ## Examples
 
-{{< highlight-wrapper class="example">}}
+{{< highlightwrap class="example">}}
 Call the mixin as many as the number of cases that you want the element response to and pass the related argument for each.
 {{< highlight scss >}}
 .parent-element{
@@ -35,4 +35,4 @@ Call the mixin as many as the number of cases that you want the element response
     background-color: green;
 }
 {{< /highlight >}}
-{{< /highlight-wrapper >}}
+{{< /highlightwrap >}}

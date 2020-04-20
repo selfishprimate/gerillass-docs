@@ -21,7 +21,7 @@ It can be useful when you use this mixin with HTML radio buttons or a checkbox l
 
 ## Examples
 
-{{< highlight-wrapper class="example">}}
+{{< highlightwrap class="example">}}
 If no value is passed, the `::before` pseudo-element is targeted by default.
 {{< highlight scss >}}
 .element{
@@ -42,9 +42,9 @@ If no value is passed, the `::before` pseudo-element is targeted by default.
     z-index: 1;
 }
 {{< /highlight >}}
-{{< /highlight-wrapper >}}
+{{< /highlightwrap >}}
 
-{{< highlight-wrapper class="example">}}
+{{< highlightwrap class="example">}}
 Pass one of the `before` or `after` options as an argument to choose which pseudo-element that you want to target. 
 {{< highlight scss >}}
 .element{
@@ -65,10 +65,10 @@ Pass one of the `before` or `after` options as an argument to choose which pseud
     z-index: 1;
 }
 {{< /highlight >}}
-{{< /highlight-wrapper >}}
+{{< /highlightwrap >}}
 
 
-{{< highlight-wrapper class="example">}}
+{{< highlightwrap class="example">}}
 Targeting the both `::before` and `::after` pseudo-elements of a selected element(s).
 {{< highlight scss >}}
 .element{
@@ -97,9 +97,9 @@ Targeting the both `::before` and `::after` pseudo-elements of a selected elemen
 }
 {{< /highlight >}}
 
-{{< /highlight-wrapper >}}
+{{< /highlightwrap >}}
 
-{{< highlight-wrapper class="example">}}
+{{< highlightwrap class="example">}}
 Don't forget that the containing block must have `position: relative;` style rule.
 
 {{< highlight html >}}
@@ -135,4 +135,4 @@ Don't forget that the containing block must have `position: relative;` style rul
 }
 {{< /highlight >}}
 
-{{< /highlight-wrapper >}}
+{{< /highlightwrap >}}

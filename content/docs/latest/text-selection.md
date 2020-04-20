@@ -12,7 +12,7 @@ This Sass mixin helps you to style the portion of a text (or element) that is se
 
 ## Examples
 
-{{< highlight-wrapper class="example">}}
+{{< highlightwrap class="example">}}
 If you call it in a selector with no value passed the style rules will be applied to this element and its children.
 {{< highlight scss >}}
 .element{
@@ -30,9 +30,9 @@ If you call it in a selector with no value passed the style rules will be applie
     background-color: red;
 }
 {{< /highlight >}}
-{{< /highlight-wrapper >}}
+{{< /highlightwrap >}}
 
-{{< highlight-wrapper class="example">}}
+{{< highlightwrap class="example">}}
 Pass the `only` value as an argument to apply the style rules to only one specific HTML element.
 {{< highlight scss >}}
 .element{
@@ -49,9 +49,9 @@ Pass the `only` value as an argument to apply the style rules to only one specif
     background-color: red;
 }
 {{< /highlight >}}
-{{< /highlight-wrapper >}}
+{{< /highlightwrap >}}
 
-{{< highlight-wrapper class="example">}}
+{{< highlightwrap class="example">}}
 Call the mixin at the root of your stylesheet to target all the HTML elements.
 {{< highlight scss >}}
 @include gls-text-selection{
@@ -66,4 +66,4 @@ Call the mixin at the root of your stylesheet to target all the HTML elements.
     background-color: red;
 }
 {{< /highlight >}}
-{{< /highlight-wrapper >}}
+{{< /highlightwrap >}}

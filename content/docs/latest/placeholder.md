@@ -6,7 +6,7 @@ This Sass mixin will help you to style the **placeholder text** in an `<input>` 
 
 ## Examples
 
-{{< highlight-wrapper class="example">}}
+{{< highlightwrap class="example">}}
 Simply call the mixin and write your style rules.
 {{< highlight scss >}}
 .element{
@@ -33,9 +33,9 @@ Simply call the mixin and write your style rules.
     color: red;
 }
 {{< /highlight >}}
-{{< /highlight-wrapper >}}
+{{< /highlightwrap >}}
 
-{{< highlight-wrapper class="example">}}
+{{< highlightwrap class="example">}}
 When you call it in the root of your stylesheet it will target all the `<input>` and `<textarea>` elements.
 {{< highlight scss >}}
 @include gls-placeholder{
@@ -60,4 +60,4 @@ When you call it in the root of your stylesheet it will target all the `<input>`
     color: orange;
 }
 {{< /highlight >}}
-{{< /highlight-wrapper >}}
+{{< /highlightwrap >}}

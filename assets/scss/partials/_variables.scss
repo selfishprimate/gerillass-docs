@@ -72,12 +72,14 @@ $body-background-color: white !default;
 $body-font-color: $gray-800 !default;
 $body-font-weight: normal !default;
 
-$body-min-width: 25rem !default;
-$container-max-width: 80rem !default;
+$header-height: 110px !default;
 
-$header-height: 7rem !default;
-$menu-width: 16rem !default;
-$toc-width: 16rem !default;
+
+$container-max-width: 1400px !default;
+$body-min-width: 500px !default;
+
+$menu-width: 250px !default;
+$toc-width: 250px !default;
 
 $mobile-breakpoint: $menu-width + $body-min-width + $toc-width !default;
 

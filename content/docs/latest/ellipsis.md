@@ -13,7 +13,7 @@ This mixin helps you to truncate a text and adds an **ellipsis** at the end of i
 
 ## Examples
 
-{{< highlight-wrapper class="example">}}
+{{< highlightwrap class="example">}}
 Simply call the mixin in an element to truncate the text inside of it.
 {{< highlight scss >}}
 .element{
@@ -31,9 +31,9 @@ Simply call the mixin in an element to truncate the text inside of it.
     word-wrap: normal;
 }
 {{< /highlight >}}
-{{< /highlight-wrapper >}}
+{{< /highlightwrap >}}
 
-{{< highlight-wrapper class="example">}}
+{{< highlightwrap class="example">}}
 Change the `$width` or `$display` values of the selected element(s) if you need to.
 {{< highlight scss >}}
 .element{
@@ -54,4 +54,4 @@ Change the `$width` or `$display` values of the selected element(s) if you need 
     word-wrap: normal;
 }
 {{< /highlight >}}
-{{< /highlight-wrapper >}}
+{{< /highlightwrap >}}

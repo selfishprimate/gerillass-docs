@@ -16,7 +16,7 @@ This mixin helps you to generate some content or a style element after the actua
 
 ## Examples
 
-{{< highlight-wrapper class="example">}}
+{{< highlightwrap class="example">}}
 Simply pass a value as a string.
 {{< highlight scss >}}
 .element{
@@ -29,9 +29,9 @@ Simply pass a value as a string.
     content: "Text to use!";
 }
 {{< /highlight >}}
-{{< /highlight-wrapper >}}
+{{< /highlightwrap >}}
 
-{{< highlight-wrapper class="example">}}
+{{< highlightwrap class="example">}}
 You can only target the `::after` pseudo-element and then pass a decleration block.
 {{< highlight scss >}}
 .element{
@@ -50,10 +50,10 @@ You can only target the `::after` pseudo-element and then pass a decleration blo
     color: red;
 }
 {{< /highlight >}}
-{{< /highlight-wrapper >}}
+{{< /highlightwrap >}}
 
 
-{{< highlight-wrapper class="example">}}
+{{< highlightwrap class="example">}}
 You can fetch a given value by using custom property. One thing important to remember here is the name of the property must start with 'data-' prefix.
 {{< highlight html>}}
 <div class="element" data-currency="TL">200</div>
@@ -69,9 +69,9 @@ You can fetch a given value by using custom property. One thing important to rem
     content: attr(data-currency);
 }
 {{< /highlight >}}
-{{< /highlight-wrapper >}}
+{{< /highlightwrap >}}
 
-{{< highlight-wrapper class="example">}}
+{{< highlightwrap class="example">}}
 You can pass a value for CSS content property as a string and a decleration block between the opening and closing curly braces.
 {{< highlight scss >}}
 .element{
@@ -89,6 +89,6 @@ You can pass a value for CSS content property as a string and a decleration bloc
   color: red;
 }
 {{< /highlight >}}
-{{< /highlight-wrapper >}}
+{{< /highlightwrap >}}
 
 

@@ -34,46 +34,46 @@ You can Install the Gerillass library via [**npm (Node Package Manager)**](https
 
 ### Terminal Installation
 
-{{< highlight-wrapper class="terminal">}}
+{{< highlightwrap class="terminal">}}
 Open the terminal window. Target the folder that you want Gerillass to be installed. Copy and past the command below and hit the enter to install the library into your local computer.
 {{< highlight nix >}}
 git clone https://github.com/babilkuyusu/gerillass.git
 {{< /highlight >}}
-{{< /highlight-wrapper >}}
+{{< /highlightwrap >}}
 
 ### Node.js Installation
 
 If you are working on a Node project you can add Gerillass as a dependency. Package files don’t include documentation. So please check out this very site to learn how to use Gerillass.
 
-{{< highlight-wrapper class="terminal">}}
+{{< highlightwrap class="terminal">}}
 npm installation:
 {{< highlight nix >}}
 npm install gerillass
 {{< /highlight >}}
-{{< /highlight-wrapper >}}
+{{< /highlightwrap >}}
 
-{{< highlight-wrapper class="terminal">}}
+{{< highlightwrap class="terminal">}}
 Yarn installation:
 {{< highlight nix >}}
 yarn add gerillass
 {{< /highlight >}}
-{{< /highlight-wrapper >}}
+{{< /highlightwrap >}}
 
-{{< highlight-wrapper class="terminal">}}
+{{< highlightwrap class="terminal">}}
 Bower installation:
 {{< highlight nix >}}
 bower install gerillass
 {{< /highlight >}}
-{{< /highlight-wrapper >}}
+{{< /highlightwrap >}}
 
 ### How to Include?
 
-{{< highlight-wrapper class="no-lang">}}
+{{< highlightwrap class="no-lang">}}
 Import Gerillass at the beginning of your stylesheet:
 {{< highlight scss >}}
 @import "gerillass/core/gerillass";
 {{< /highlight >}}
-{{< /highlight-wrapper >}}
+{{< /highlightwrap >}}
 
 ## Contribution
 

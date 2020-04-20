@@ -12,7 +12,7 @@ This Sass mixin provides smooth font rendering which means smooth the font on th
 
 ## Examples
 
-{{< highlight-wrapper class="example">}}
+{{< highlightwrap class="example">}}
 If you call it in a selector with no value passed the style rules will be applied to this very element and all its children.
 {{< highlight scss >}}
 .element{
@@ -29,9 +29,9 @@ If you call it in a selector with no value passed the style rules will be applie
     -moz-osx-font-smoothing: grayscale;
 }
 {{< /highlight >}}
-{{< /highlight-wrapper >}}
+{{< /highlightwrap >}}
 
-{{< highlight-wrapper class="example">}}
+{{< highlightwrap class="example">}}
 Pass the `only` value as an argument to apply the style rules to only one specific HTML element.
 {{< highlight scss >}}
 .element{
@@ -45,9 +45,9 @@ Pass the `only` value as an argument to apply the style rules to only one specif
     -moz-osx-font-smoothing: grayscale;
 }
 {{< /highlight >}}
-{{< /highlight-wrapper >}}
+{{< /highlightwrap >}}
 
-{{< highlight-wrapper class="example">}}
+{{< highlightwrap class="example">}}
 Call the mixin at the root of your stylesheet to target all the HTML elements.
 {{< highlight scss >}}
 @include gls-antialias;
@@ -61,7 +61,7 @@ Call the mixin at the root of your stylesheet to target all the HTML elements.
     -moz-osx-font-smoothing: grayscale;
 }
 {{< /highlight >}}
-{{< /highlight-wrapper >}}
+{{< /highlightwrap >}}
 
 ## Related Articles
 * [Stop Fixing Font Smoothing](https://usabilitypost.com/2012/11/05/stop-fixing-font-smoothing/)  

@@ -12,7 +12,7 @@ This mixin sets the `box-sizing` property value to `border-box` for selected HTM
 
 ## Examples
 
-{{< highlight-wrapper class="example">}}
+{{< highlightwrap class="example">}}
 If you call the mixin in a selector with no value passed the style rules will be applied to this very element and all the children in it.
 {{< highlight scss >}}
 .element {
@@ -30,9 +30,9 @@ If you call the mixin in a selector with no value passed the style rules will be
     box-sizing: border-box;
 }
 {{< /highlight >}}
-{{< /highlight-wrapper >}}
+{{< /highlightwrap >}}
 
-{{< highlight-wrapper class="example">}}
+{{< highlightwrap class="example">}}
 Pass the `only` value as an argument to apply the style rules to only one specific HTML element.
 {{< highlight scss >}}
 .element {
@@ -47,9 +47,9 @@ Pass the `only` value as an argument to apply the style rules to only one specif
     box-sizing: border-box;
 }
 {{< /highlight >}}
-{{< /highlight-wrapper >}}
+{{< /highlightwrap >}}
 
-{{< highlight-wrapper class="example">}}
+{{< highlightwrap class="example">}}
 Call the mixin at the root of your stylesheet to target all the HTML elements.
 {{< highlight scss >}}
 @include gls-border-box;
@@ -62,7 +62,7 @@ Call the mixin at the root of your stylesheet to target all the HTML elements.
     box-sizing: border-box;
 }
 {{< /highlight >}}
-{{< /highlight-wrapper >}}
+{{< /highlightwrap >}}
 
 ## Related Articles
 * [CSS Box Sizing](https://www.w3schools.com/css/css3_box-sizing.asp)
