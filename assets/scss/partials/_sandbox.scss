@@ -1,0 +1,19 @@
+.sandbox{
+    &.xsmall{
+        height: 50px;
+    }
+    &.small{
+        height: 100px;
+    }
+    &.medium{
+        height: 150px;
+    }
+    &.large{
+        height: 200px;
+    }
+    &.xlarge{
+        height: 300px;
+    }
+    margin-bottom: $global-space;
+    border-radius: $border-radius;
+}
