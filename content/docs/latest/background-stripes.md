@@ -23,6 +23,7 @@ Simply call the mixin without passing any arguments.
 }
 {{< /highlight >}}
 {{< highlight css >}}
+//CSS Output
 .element {
     background-image: repeating-linear-gradient(
         -45deg, 
@@ -33,7 +34,9 @@ Simply call the mixin without passing any arguments.
     );
 }
 {{< /highlight >}}
-<div class="sandbox small" style="  background-image: repeating-linear-gradient(-45deg, rgba(0, 0, 0, 0.1) 0, rgba(0, 0, 0, 0.1) 1em, transparent 1em, transparent 2em);"></div>
+{{< sandbox class="small" >}}
+background-image: repeating-linear-gradient(-45deg, rgba(0, 0, 0, 0.1) 0, rgba(0, 0, 0, 0.1) 1em, transparent 1em, transparent 2em);
+{{< /sandbox >}}
 {{< /highlightwrap >}}
 
 {{< highlightwrap class="example">}}
@@ -46,6 +49,7 @@ Let's pass a `$color` value to it!
 }
 {{< /highlight >}}
 {{< highlight css >}}
+//CSS Output
 .element {
     background-image: repeating-linear-gradient(
         -45deg, 
@@ -56,7 +60,9 @@ Let's pass a `$color` value to it!
     );
 }
 {{< /highlight >}}
-<div class="sandbox small" style="background-image: repeating-linear-gradient(-45deg, pink 0, pink 1em, transparent 1em, transparent 2em);"></div>
+{{< sandbox class="small" >}}
+background-image: repeating-linear-gradient(-45deg, pink 0, pink 1em, transparent 1em, transparent 2em);
+{{< /sandbox >}}
 {{< /highlightwrap >}}
 
 {{< highlightwrap class="example">}}
@@ -71,6 +77,7 @@ Now let's add more colors and change the `$thickness` and `$rotation` values. **
 }
 {{< /highlight >}}
 {{< highlight css >}}
+//CSS Output
 .element {
     background-image: repeating-linear-gradient(
         90deg, 
@@ -83,7 +90,9 @@ Now let's add more colors and change the `$thickness` and `$rotation` values. **
     );
 }
 {{< /highlight >}}
-<div class="sandbox small" style="background-image: repeating-linear-gradient(90deg, #FFD393 0em, #FFD393 3em, #FF974F 3em, #FF974F 6em, #F54F29 6em, #F54F29 9em);"></div>
+{{< sandbox class="small" >}}
+background-image: repeating-linear-gradient(90deg, #FFD393 0em, #FFD393 3em, #FF974F 3em, #FF974F 6em, #F54F29 6em, #F54F29 9em);
+{{< /sandbox >}}
 {{< /highlightwrap >}}
 
 {{< highlightwrap class="example">}}
@@ -99,52 +108,59 @@ Add an image to make your design look more alive! **Just do not forget to use qu
 }
 {{< /highlight >}}
 {{< highlight css >}}
+//CSS Output
 .element {
     background-image: repeating-linear-gradient(
         45deg, 
         rgba(0, 0, 255, 0.4) 0, 
         rgba(0, 0, 255, 0.4) 3px, 
-        transparent 3px, transparent 6px), 
-        url("https://i.picsum.photos/id/1069/3500/2333.jpg"
-    );
+        transparent 3px, transparent 6px
+    ), url("https://i.picsum.photos/id/1069/3500/2333.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 {{< /highlight >}}
-<div class="sandbox xlarge" style="background-image: repeating-linear-gradient(45deg, rgba(0, 0, 255, 0.4) 0, rgba(0, 0, 255, 0.4) 3px, transparent 3px, transparent 6px), url('https://i.picsum.photos/id/1069/3500/2333.jpg');background-position: center;background-repeat: no-repeat;background-size: cover;"></div>
+{{< sandbox class="xlarge" >}}
+background-image: repeating-linear-gradient(45deg, rgba(0, 0, 255, 0.4) 0, rgba(0, 0, 255, 0.4) 3px, transparent 3px, transparent 6px), url('https://i.picsum.photos/id/1069/3500/2333.jpg');background-position: center;background-repeat: no-repeat;background-size: cover;
+{{< /sandbox >}}
 {{< /highlightwrap >}}
 
 {{< highlightwrap class="example">}}
-Create an old fashioned tv screen effect.
+You can create an old fashioned tv screen effect as well.
 {{< highlight scss >}}
 .element{
     @include gls-background-stripes(
-        $color: rgba(blue, 0.4),
-        $thickness: 3px,
-        $rotation: 45deg,
-        $image: "https://i.picsum.photos/id/1069/3500/2333.jpg"
+        $color: black,
+        $thickness: 1px,
+        $rotation: 180deg,
+        $image: "https://i.picsum.photos/id/528/4000/3000.jpg"
     );
 }
 {{< /highlight >}}
 {{< highlight css >}}
+//CSS Output
 .element {
     background-image: repeating-linear-gradient(
         180deg, 
         black 0, 
         black 1px, 
         transparent 1px, 
-        transparent 2px), 
-        url("https://i.picsum.photos/id/528/4000/3000.jpg"
-    );
+        transparent 2px
+    ), url("https://i.picsum.photos/id/528/4000/3000.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 {{< /highlight >}}
-<div class="sandbox xlarge" style="background-image: repeating-linear-gradient(180deg, black 0, black 1px, transparent 1px, transparent 2px), url(https://i.picsum.photos/id/528/4000/3000.jpg);background-position: center;background-repeat: no-repeat;background-size: cover;"></div>
-Just play with the values to create more interesting things.
+
+{{< sandbox class="xlarge" >}}
+background-image: repeating-linear-gradient(180deg, black 0, black 1px, transparent 1px, transparent 2px), url(https://i.picsum.photos/id/528/4000/3000.jpg);background-position: center;background-repeat: no-repeat;background-size: cover;
+{{< /sandbox >}}
+
+Just play with the values of the given arguments to create more interesting things. **Use your imagination!**
 {{< /highlightwrap >}}
+
 
 
 

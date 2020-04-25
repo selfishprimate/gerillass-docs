@@ -10,6 +10,9 @@ $hint-colors: (
     &.#{$name} {
       border-left-color: $color;
       background-color: rgba($color, 0.1);
+      code {
+          background-color: rgba($color, 0.2);
+      }
     }
   };
 }

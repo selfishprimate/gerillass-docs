@@ -11,7 +11,7 @@ html {
 html,
 body{
     width: 100%;
-    font-family: 'Roboto', sans-serif;
+    font-family: $secondary-font-family;
     text-rendering: optimizeLegibility;
     color: $body-text-color;
     margin: 0;
@@ -34,7 +34,7 @@ h2, h3{
 
 h1, h2, h3, h4, h5, h6{
     margin-top: $global-space * 3;
-    font-family: "Jumble", sans-serif;
+    font-family: $primary-font-family;
     font-weight: 400;
     font-style: normal;
     line-height: 1.2;

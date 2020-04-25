@@ -36,7 +36,7 @@ Simply call the mixin and write your style rules.
 {{< /highlightwrap >}}
 
 {{< highlightwrap class="example">}}
-When you call it in the root of your stylesheet it will target all the `<input>` and `<textarea>` elements.
+When you call the mixin at the root of your stylesheet it will target all the `<input>` and `<textarea>` elements.
 {{< highlight scss >}}
 @include gls-placeholder{
     color: orange;

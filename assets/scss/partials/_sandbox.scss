@@ -14,6 +14,14 @@
     &.xlarge{
         height: 300px;
     }
+    &.xxlarge{
+        height: 400px;
+    }
     margin-bottom: $global-space;
     border-radius: $border-radius;
+    &.text{
+        font-size: 3em;
+        font-family: $primary-font-family;
+        margin: 0;
+    }
 }
