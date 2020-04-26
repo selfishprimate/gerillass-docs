@@ -1,7 +1,7 @@
 # Text Stroke
 
 {{< featured type="Mixin" name="text-stroke" >}}
-This Sass mixin helps you to add stroke to text and style it very easily.
+Text Stroke mixin helps you to add stroke to a text element and style it very easily.
 {{< /featured >}}
 
 ## Arguments

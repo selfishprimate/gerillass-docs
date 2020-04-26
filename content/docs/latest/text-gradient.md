@@ -35,10 +35,10 @@ First, let's forget about color-stop positioning and pass some values only for `
     background: linear-gradient(
         to right, orange, red, purple, blue, green
     );
-    color: transparent;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    color: transparent;
 }
 {{< /highlight >}}
 <h2 class="sandbox text" style="background: linear-gradient(to right, orange, red, purple, blue, green);color: transparent;-webkit-background-clip: text;-webkit-text-fill-color: transparent;background-clip: text;">Text Gradient is Awesome!</h2>
@@ -60,10 +60,10 @@ One-line method may be confusing sometimes. To explain how this mixin works clea
     background: linear-gradient(
         to top left, red, orange
     );
-    color: transparent;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    color: transparent;
 }
 {{< /highlight >}}
 <h2 class="sandbox text" style="background: linear-gradient(to top left, red, orange);color: transparent;-webkit-background-clip: text;-webkit-text-fill-color: transparent;background-clip: text;">Text Gradient is Awesome!</h2>
@@ -85,22 +85,22 @@ Now let's try it with color-stop positions to make it a bit complex.
     background: linear-gradient(
         to bottom, red 50%, orange 50%
     );
-    color: transparent;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    color: transparent;
 }
 {{< /highlight >}}
 <h2 class="sandbox text" style="background: linear-gradient(to bottom, red 50%, orange 50%);color: transparent;-webkit-background-clip: text;-webkit-text-fill-color: transparent;background-clip: text;">Text Gradient is Awesome!</h2>
 {{< /highlightwrap >}}
 
 {{< highlightwrap class="example">}}
-Even more complex!
+You can use the `starting-position` and the `ending-positions` of a color together.
 {{< highlight scss >}}
 .element{
     @include gls-text-gradient(
         $direction: top,
-        $colors: (green 40%) (blue 40% 60%) (purple 60% 100%) 
+        $colors: (green 0 40%) (blue 40% 60%) (purple 60% 100%) 
     );
 }
 {{< /highlight >}}
@@ -108,16 +108,42 @@ Even more complex!
 //CSS Output
 .element {
     background: linear-gradient(
-        to top, green 40%, blue 40% 60%, purple 60% 100%
+        to top, green 0 40%, blue 40% 60%, purple 60% 100%
     );
-    color: transparent;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    color: transparent;
 }
 {{< /highlight >}}
-<h2 class="sandbox text" style="background: linear-gradient(to top, green 40%, blue 40% 60%, purple 60% 100%);color: transparent;-webkit-background-clip: text;-webkit-text-fill-color: transparent;background-clip: text;">Text Gradient is Awesome!</h2>
+<h2 class="sandbox text" style="background: linear-gradient(to top, green 0 40%, blue 40% 60%, purple 60% 100%);color: transparent;-webkit-background-clip: text;-webkit-text-fill-color: transparent;background-clip: text;">Text Gradient is Awesome!</h2>
 {{< /highlightwrap >}}
+
+{{< highlightwrap class="example">}}
+The transitions between colors do not always have to be this sharp.
+{{< highlight scss >}}
+.element{
+    @include gls-text-gradient(
+        $direction: bottom,
+        $colors: (red 30%) (orange 60%) (brown 80%)
+    );
+}
+{{< /highlight >}}
+{{< highlight css >}}
+//CSS Output
+.element {
+    background: linear-gradient(
+        to bottom, red 30%, orange 60%, brown 80%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+{{< /highlight >}}
+<h2 class="sandbox text" style="background: linear-gradient(to bottom, red 30%, orange 60%, brown 80%);color: transparent;-webkit-background-clip: text;-webkit-text-fill-color: transparent;background-clip: text;">Text Gradient is Awesome!</h2>
+{{< /highlightwrap >}}
+
 
 If you want to master this you must have a clear understanding of how **linear-gradient()** works. For more check out the links below:
 
