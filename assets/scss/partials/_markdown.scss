@@ -9,8 +9,9 @@
 
   blockquote {
     margin: $padding-16 0;
-    padding: $global-space;
+    padding: $global-space $global-space * 1.5 $global-space $global-space * 1.5;
     border-left: $padding-4 solid $gray-200;
+    border-radius: $border-radius;
     :first-child { margin-top: 0; }
     :last-child { margin-bottom: 0; }
   }

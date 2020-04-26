@@ -1,4 +1,5 @@
 .book-page {
     flex: 1;
-    max-width: 900px;    
+    width: 100%;
+    max-width: $container-max-width - ($menu-width + $toc-width);    
 }
