@@ -2,6 +2,9 @@
     .book-toc{
         display: none;
     }
+    .book-page{
+        max-width: calc(100% - #{$menu-width});    
+    }
     .book-header{
         position: relative;
         margin-bottom: $global-space * 2;
@@ -45,6 +48,9 @@
     }
     .book-brand a img{
         width: 190px;
+    }
+    .book-page{
+        max-width: calc(100% + #{$menu-width});    
     }
 }
 
