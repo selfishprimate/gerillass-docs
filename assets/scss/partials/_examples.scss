@@ -2,13 +2,12 @@
     display: flex;
     .list-item {
         flex: 1;
-        height: 100px;
+        height: 70px;
         display: flex;
         justify-content: center;
         align-items: center;
         background-color: #eef2f3;
-        border-radius: $border-radius * 2;
-        font-family: $primary-font-family;
+        border-radius: $border-radius;
         font-size: 2em;
         &:not(:last-of-type){
             margin-right: $global-space;
