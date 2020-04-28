@@ -1,12 +1,13 @@
 # Linear Gradient
 
 {{< featured type="Mixin" name="linear-gradient" >}}
-**The Linear Gradient** mixin helps you to generate smooth (or sharp) transitions between two or more specified colors.
 
-The one-line method makes it very easy to use. To generate a linear gradient you must pass a value for gradient's angle of direction and at least two color values. You can also add color-stop points (starting and ending positions of colors).
+The Linear Gradient mixin helps you to generate smooth (or sharp) transitions between two or more specified colors.
+
+The one-line method makes it very easy to use. To generate a linear gradient you must pass values for gradient's angle of `$direction` and at least two color values. You can also add color-stop points (starting and ending positions of colors).
 
 {{< hint info >}}
-A color-stop position can be defined by `length` or a `percentage` units.
+A color-stop points can be defined by `length` or a `percentage` units.
 {{< /hint >}}
 
 {{< /featured >}}

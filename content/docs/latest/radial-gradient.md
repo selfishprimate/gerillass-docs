@@ -1,7 +1,15 @@
 # Radial Gradient
 
 {{< featured type="Mixin" name="radial-gradient" >}}
-This mixin helps you to generate radial gradients easily.
+
+The Radial Gradient mixin helps you to generate smooth (or sharp) transitions between two or more specified colors.
+
+The one-line method makes it very easy to use. To generate a radial gradient you must pass values for gradient's angle of `$direction`, `$shape` of the gradient and `$colors` (at least two color values must have). You can also add color-stop points (starting and ending positions of colors).
+
+{{< hint info >}}
+A color-stop points can be defined by `length` or a `percentage` units.
+{{< /hint >}}
+
 {{< /featured >}}
 
 ## Arguments
@@ -66,7 +74,7 @@ Now change the position of the gradient's shape.
 Use color-stops to make sharp transitions between the colors.
 {{< highlight scss >}}
 .element{
-    @include gls-radial-gradient(circle, center, (darkslateblue 0 10%) (white 10% 20%) (DodgerBlue 20% 30%) (PowderBlue 30% 100%));
+    @include gls-radial-gradient(circle, center, (darkslateblue 0 10%) (white 10% 20%) (dodgerblue 20% 30%) (powderblue 30% 100%));
 }
 {{< /highlight >}}
 {{< highlight css >}}
@@ -81,7 +89,7 @@ Use color-stops to make sharp transitions between the colors.
 {{< highlightwrap class="example">}}
 Now let's try it with the named arguments.
 {{< hint info >}}
-To use **named arguments** may be time-consuming compared to using **ordinal arguments** but it is definitely easier to use, especially if the number of arguments that you have to pass is too many.
+To use **named arguments** may be time-consuming compared to using **ordinal arguments** but it is definitely easier to use, especially if the number of arguments that you pass is too many.
 {{< /hint >}}
 {{< highlight scss >}}
 .element{

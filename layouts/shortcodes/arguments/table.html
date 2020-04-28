@@ -1,5 +1,4 @@
-<div class="table">
-
+<div class="table arguments">
     <table>
         <thead>
             <tr>
@@ -8,15 +7,11 @@
                 <th>Description</th>
             </tr>
         </thead>
-
         <tbody>
             {{.Inner}}
         </tbody>
-
     </table>
-
     {{with .Get "footnote" | markdownify}}
         <p class="footnote">* {{.}}</p>
     {{end}}
-
 </div>

@@ -1,0 +1,17 @@
+.list-wrapper{
+    display: flex;
+    .list-item {
+        flex: 1;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #eef2f3;
+        border-radius: $border-radius * 2;
+        font-family: $primary-font-family;
+        font-size: 2em;
+        &:not(:last-of-type){
+            margin-right: $global-space;
+        }
+    }
+}
