@@ -3,7 +3,7 @@
 {{< featured type="Mixin" name="only" >}}
 This mixin helps you to filter elements that match based on their position among a group of siblings and apply your style rules to **only** those elements.
 {{< hint info >}}
-You can pass a **string** value to target elements by their `id`, `class` and `pseudo-class` selector. Or you can pass a **number** (or **multiple numbers** seperated by comma) to get the items in the list based on their index position.
+You can pass a **string** value to target elements by their `id`, `class` and `pseudo-class` selector. Or you can pass a **number** (or **multiple numbers** seperated by comma) to get the items based on their index position in the list.
 {{< /hint >}}
 {{< /featured >}}
 
@@ -16,7 +16,7 @@ You can pass a **string** value to target elements by their `id`, `class` and `p
 
 ## Examples
 
-Imagine that you have a group of items and you want to make some style changes only for some of them.
+Suppose you have a group of items like in the example below and you want to make some style changes only for some of them.
 
 {{< highlight html >}}
 <div class="list-wrapper">

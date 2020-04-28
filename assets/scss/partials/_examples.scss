@@ -8,7 +8,9 @@
         align-items: center;
         background-color: #eef2f3;
         border-radius: $border-radius;
-        font-size: 2em;
+        @include gls-breakpoint-min(medium){
+            font-size: 2em;
+        }
         &:not(:last-of-type){
             margin-right: $global-space;
         }
