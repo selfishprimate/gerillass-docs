@@ -1,7 +1,7 @@
-# Only
+# Except
 
-{{< featured type="Mixin" name="only" >}}
-This mixin helps you to filter elements that match based on their position among a group of siblings and apply your style rules to **only** those elements.
+{{< featured type="Mixin" name="except" >}}
+This mixin helps you to target elements that you do not want to apply style changes to that you want for other elements in the list.
 {{< hint info >}}
 You can pass a **string** value to target elements by their `id`, `class` and `pseudo-class` selector. Or you can pass a **number** (or **multiple numbers** seperated by comma) to get the items based on their index position in the list.
 {{< /hint >}}
@@ -16,7 +16,7 @@ You can pass a **string** value to target elements by their `id`, `class` and `p
 
 ## Examples
 
-Suppose you have a group of items like in the example below and you want to make some style changes only for some of them.
+Let's say you have a list of items wrapped by a container. Just like the example below. Now, you want to apply some style changes to all of them, however, **except** for one or more ...
 
 {{< highlight html >}}
 <div class="list-wrapper">
@@ -30,11 +30,11 @@ Suppose you have a group of items like in the example below and you want to make
 {{< /highlight >}}
 
 {{< highlightwrap class="example">}}
-Let's start with the **first** one!
+Let's exclude the **first** one!
 {{< highlight scss >}}
 .list-wrapper{
     .list-item{
-        @include gls-only(first) {
+        @include gls-except(first){
             background-color: #5bc0bb;
             color: white;
         }
@@ -43,13 +43,13 @@ Let's start with the **first** one!
 {{< /highlight >}}
 {{< highlight css >}}
 //CSS Output
-.list-wrapper .list-item:first-of-type {
+.list-wrapper .list-item:not(:first-of-type) {
     background-color: #5bc0bb;
     color: white;
 }
 {{< /highlight >}}
 <style>
-.list-wrapper.example01 .list-item:first-of-type {
+.list-wrapper.example01 .list-item:not(:first-of-type) {
     background-color: #5bc0bb;
     color: white;
 }
@@ -65,11 +65,11 @@ Let's start with the **first** one!
 {{< /highlightwrap >}}
 
 {{< highlightwrap class="example">}}
-Now, let's try to get the **last item** in the list.
+Now, let's try to exclude the **last item** in the list.
 {{< highlight scss >}}
 .list-wrapper{
     .list-item{
-        @include gls-only(last) {
+        @include gls-except(last){
             background-color: #5bc0bb;
             color: white;
         }
@@ -78,13 +78,13 @@ Now, let's try to get the **last item** in the list.
 {{< /highlight >}}
 {{< highlight css >}}
 //CSS Output
-.list-wrapper .list-item:last-of-type {
+.list-wrapper .list-item:not(:last-of-type) {
     background-color: #5bc0bb;
     color: white;
 }
 {{< /highlight >}}
 <style>
-.list-wrapper.example02 .list-item:last-of-type {
+.list-wrapper.example02 .list-item:not(:last-of-type) {
     background-color: #5bc0bb;
     color: white;
 }
@@ -101,11 +101,11 @@ Now, let's try to get the **last item** in the list.
 
 
 {{< highlightwrap class="example">}}
-Now, let's target the **second** item in the list.
+Now, let's exclude the **third** item in the list.
 {{< highlight scss >}}
 .list-wrapper{
     .list-item{
-        @include gls-only(2) {
+        @include gls-except(3){
             background-color: #5bc0bb;
             color: white;
         }
@@ -114,13 +114,13 @@ Now, let's target the **second** item in the list.
 {{< /highlight >}}
 {{< highlight css >}}
 //CSS Output
-.list-wrapper .list-item:first-of-type {
+.list-wrapper .list-item:not(:nth-of-type(3)) {
     background-color: #5bc0bb;
     color: white;
 }
 {{< /highlight >}}
 <style>
-.list-wrapper.example03 .list-item:nth-of-type(2) {
+.list-wrapper.example03 .list-item:not(:nth-of-type(3)) {
     background-color: #5bc0bb;
     color: white;
 }
@@ -135,14 +135,12 @@ Now, let's target the **second** item in the list.
 </div>
 {{< /highlightwrap >}}
 
-
-
 {{< highlightwrap class="example">}}
-Let’s get those elements whose numeric position is odd (e.g. 1, 3, 5, ...).
+Let’s exclude those elements whose numeric position is even (e.g. 2, 4, 6, ...).
 {{< highlight scss >}}
 .list-wrapper{
     .list-item{
-        @include gls-only(odd){
+        @include gls-except(even){
             background-color: #5bc0bb;
             color: white;
         }
@@ -151,13 +149,13 @@ Let’s get those elements whose numeric position is odd (e.g. 1, 3, 5, ...).
 {{< /highlight >}}
 {{< highlight css >}}
 //CSS Output
-.list-wrapper .list-item:nth-of-type(odd) {
+.list-wrapper .list-item:not(:nth-of-type(even)) {
     background-color: #5bc0bb;
     color: white;
 }
 {{< /highlight >}}
 <style>
-.list-wrapper.example04 .list-item:nth-of-type(odd) {
+.list-wrapper.example04 .list-item:not(:nth-of-type(even)) {
     background-color: #5bc0bb;
     color: white;
 }
@@ -173,14 +171,14 @@ Let’s get those elements whose numeric position is odd (e.g. 1, 3, 5, ...).
 {{< /highlightwrap >}}
 
 {{< highlightwrap class="example">}}
-Now, let's try something really fancy!
+Now, let's try something really fancy and exclude multiple items!
 {{< hint info >}}
-Remember that when you make a multiple selection the arguments you pass must be numbers and separated by comma.
+Remember that when you target multiple items in the list, the arguments you pass must be numbers and separated by comma.
 {{</ hint >}}
 {{< highlight scss >}}
 .list-wrapper{
     .list-item{
-        @include gls-only(4, 5, 6) {
+        @include gls-except(1, 4, 5){
             background-color: #5bc0bb;
             color: white;
         }
@@ -189,17 +187,13 @@ Remember that when you make a multiple selection the arguments you pass must be 
 {{< /highlight >}}
 {{< highlight css >}}
 //CSS Output
-.list-wrapper .list-item:nth-of-type(4), 
-.list-wrapper .list-item:nth-of-type(5), 
-.list-wrapper .list-item:nth-of-type(6) {
+.list-wrapper .list-item:not(:nth-of-type(1)):not(:nth-of-type(4)):not(:nth-of-type(5)) {
     background-color: #5bc0bb;
     color: white;
 }
 {{< /highlight >}}
 <style>
-.list-wrapper.example05 .list-item:nth-of-type(4), 
-.list-wrapper.example05 .list-item:nth-of-type(5), 
-.list-wrapper.example05 .list-item:nth-of-type(6) {
+.list-wrapper.example05 .list-item:not(:nth-of-type(1)):not(:nth-of-type(4)):not(:nth-of-type(5)) {
     background-color: #5bc0bb;
     color: white;
 }
@@ -211,6 +205,56 @@ Remember that when you make a multiple selection the arguments you pass must be 
     <div class="list-item">04</div>
     <div class="list-item">05</div>
     <div class="list-item">06</div>
+</div>
+{{< /highlightwrap >}}
+
+{{< highlightwrap class="example">}}
+Let's exclude the items with class `exclude` on them.
+{{< hint info >}}
+When you pass arguments for `id` or `class` attributes of the items, don't forget to wrap your arguments with quotation. 
+{{</ hint >}}
+
+{{< highlight html >}}
+<div class="list-wrapper">
+    <div class="list-item exclude">01</div>
+    <div class="list-item">02</div>
+    <div class="list-item">03</div>
+    <div class="list-item">04</div>
+    <div class="list-item">05</div>
+    <div class="list-item exclude">06</div>
+</div>
+{{< /highlight >}}
+
+{{< highlight scss >}}
+.list-wrapper{
+    .list-item{
+        @include gls-except(".exclude"){
+            background-color: #5bc0bb;
+            color: white;
+        }
+    }
+}
+{{< /highlight >}}
+{{< highlight css >}}
+//CSS Output
+.list-wrapper .list-item:not(.exclude) {
+    background-color: #5bc0bb;
+    color: white;
+}
+{{< /highlight >}}
+<style>
+.list-wrapper.example06 .list-item:not(.exclude) {
+    background-color: #5bc0bb;
+    color: white;
+}
+</style>
+<div class="list-wrapper example06">
+    <div class="list-item exclude">01</div>
+    <div class="list-item">02</div>
+    <div class="list-item">03</div>
+    <div class="list-item">04</div>
+    <div class="list-item">05</div>
+    <div class="list-item exclude">06</div>
 </div>
 {{< /highlightwrap >}}
 
