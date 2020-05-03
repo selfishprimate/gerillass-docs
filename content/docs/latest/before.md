@@ -1,3 +1,7 @@
+---
+title: "Before"
+---
+
 # Before
 
 {{< featured type="Mixin" name="before" >}}

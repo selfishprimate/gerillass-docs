@@ -1,3 +1,7 @@
+---
+title: "Tablet"
+---
+
 # Tablet
 
 {{< featured type="Mixin" name="tablet" >}}

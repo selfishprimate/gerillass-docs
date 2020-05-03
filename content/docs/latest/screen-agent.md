@@ -1,3 +1,7 @@
+---
+title: "Screen Agent"
+---
+
 # Screen Agent
 
 {{< featured type="Mixin" name="screen-agent" >}}

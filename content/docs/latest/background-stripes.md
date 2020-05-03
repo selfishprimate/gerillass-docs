@@ -1,3 +1,7 @@
+---
+title: "Background Stripes"
+---
+
 # Background Stripes
 
 {{< featured type="Mixin" name="background-stripes" >}}

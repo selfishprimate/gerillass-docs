@@ -1,3 +1,7 @@
+---
+title: "Smartphone"
+---
+
 # Smartphone
 
 {{< featured type="Mixin" name="smartphone" >}}

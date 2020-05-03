@@ -1,3 +1,7 @@
+---
+title: "Clearfix"
+---
+
 # Clearfix
 
 {{< featured type="Mixin" name="clearfix" >}}

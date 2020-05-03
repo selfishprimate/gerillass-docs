@@ -1,3 +1,7 @@
+---
+title: "Cutter"
+---
+
 # Cutter
 
 {{< featured type="Mixin" name="cutter" >}}

@@ -1,3 +1,7 @@
+---
+title: "Ellipsis"
+---
+
 # Ellipsis
 
 {{< featured type="Mixin" name="ellipsis" >}}

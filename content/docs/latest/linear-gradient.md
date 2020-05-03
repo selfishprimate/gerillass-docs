@@ -1,3 +1,7 @@
+---
+title: "Linear Gradient"
+---
+
 # Linear Gradient
 
 {{< featured type="Mixin" name="linear-gradient" >}}

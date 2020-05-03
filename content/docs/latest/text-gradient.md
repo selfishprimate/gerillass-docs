@@ -1,3 +1,7 @@
+---
+title: "Text Gradient"
+---
+
 # Text Gradient
 
 {{< featured type="Mixin" name="text-gradient" >}}

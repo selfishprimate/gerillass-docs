@@ -1,3 +1,7 @@
+---
+title: "Radial Gradient"
+---
+
 # Radial Gradient
 
 {{< featured type="Mixin" name="radial-gradient" >}}

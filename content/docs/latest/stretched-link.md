@@ -1,3 +1,7 @@
+---
+title: "Stretched Link"
+---
+
 # Stretched Link
 
 {{< featured type="Mixin" name="stretched-link" >}}

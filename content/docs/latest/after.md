@@ -1,3 +1,7 @@
+---
+title: "After"
+---
+
 # After
 
 {{< featured type="Mixin" name="after" >}}

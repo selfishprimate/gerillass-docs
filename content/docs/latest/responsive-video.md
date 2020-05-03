@@ -1,3 +1,7 @@
+---
+title: "Responsive Video"
+---
+
 # Responsive Video
 
 {{< featured type="Mixin" name="responsive-video" >}}

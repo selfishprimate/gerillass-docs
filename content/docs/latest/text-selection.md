@@ -1,3 +1,7 @@
+---
+title: "Text Selection"
+---
+
 # Text Selection
 
 {{< featured type="Mixin" name="text-selection" >}}

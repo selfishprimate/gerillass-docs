@@ -1,3 +1,7 @@
+---
+title: "Background Dots"
+---
+
 # Background Dots
 
 {{< featured type="Mixin" name="background-dots" >}}

@@ -1,3 +1,7 @@
+---
+title: "Text Image"
+---
+
 # Text Image
 
 {{< featured type="Mixin" name="text-image" >}}

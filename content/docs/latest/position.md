@@ -1,3 +1,7 @@
+---
+title: "Position"
+---
+
 # Position
 
 {{< featured type="Mixin" name="position" >}}

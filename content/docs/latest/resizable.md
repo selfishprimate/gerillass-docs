@@ -1,3 +1,7 @@
+---
+title: "Resizable"
+---
+
 # Resizable
 
 {{< featured type="Mixin" name="resizable" >}}

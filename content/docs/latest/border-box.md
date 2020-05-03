@@ -1,3 +1,7 @@
+---
+title: "Border Box"
+---
+
 # Border Box
 
 {{< featured type="Mixin" name="border-box" >}}

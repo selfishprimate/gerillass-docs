@@ -1,3 +1,7 @@
+---
+title: "Text Stroke"
+---
+
 # Text Stroke
 
 {{< featured type="Mixin" name="text-stroke" >}}

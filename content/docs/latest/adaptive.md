@@ -1,3 +1,7 @@
+---
+title: "Adaptive"
+---
+
 # Adaptive
 
 {{< featured type="Mixin" name="adaptive" >}}

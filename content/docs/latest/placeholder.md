@@ -1,3 +1,7 @@
+---
+title: "Placeholder"
+---
+
 # Placeholder
 
 {{< featured type="Mixin" name="placeholder" >}}

@@ -1,3 +1,7 @@
+---
+title: "Sizer"
+---
+
 # Sizer
 
 {{< featured type="Mixin" name="sizer" >}}

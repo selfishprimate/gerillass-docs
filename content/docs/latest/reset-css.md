@@ -1,18 +1,12 @@
 ---
-title: "Antialias"
+title: "Reset CSS"
 ---
 
-# Antialias
+# Reset CSS
 
-{{< featured type="Mixin" name="antialias" >}}
+{{< featured type="Mixin" name="reset-css" >}}
 This Sass mixin provides smooth font rendering which means smooth the font on the level of pixel and prevents the subpixels-rendering.
 {{< /featured >}}
-
-## Arguments
-
-{{< arguments/table footnote="Please check out the links at the end of the page for more information about Font Smoothing.">}}
-    {{< arguments/row name="$value" type="string" description="Accepts `only` value. It is used only when it wants to be applied for one specific HTML element." >}}
-{{< /arguments/table >}}
 
 ## Examples
 

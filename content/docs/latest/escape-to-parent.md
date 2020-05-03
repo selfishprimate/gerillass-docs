@@ -1,3 +1,7 @@
+---
+title: "Escape to Parent"
+---
+
 # Escape to Parent
 
 {{< featured type="Mixin" name="escape-to-parent" >}}

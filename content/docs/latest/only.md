@@ -1,3 +1,7 @@
+---
+title: "Only"
+---
+
 # Only
 
 {{< featured type="Mixin" name="only" >}}

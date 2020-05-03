@@ -1,3 +1,7 @@
+---
+title: "Placeholder Shown"
+---
+
 # Placeholder Shown
 
 {{< featured type="Mixin" name="placeholder-shown" >}}
