@@ -5,62 +5,73 @@ title: "Reset CSS"
 # Reset CSS
 
 {{< featured type="Mixin" name="reset-css" >}}
-This Sass mixin provides smooth font rendering which means smooth the font on the level of pixel and prevents the subpixels-rendering.
+**Reset CSS** mixin (also known as **CSS Reset**) helps you to reset the browser default styles of all HTML elements to a consistent baseline.
+{{< hint info >}}
+Endless thanks to [**Eric Meyer**](https://meyerweb.com/) for his legendary [**Reset CSS**](https://meyerweb.com/eric/tools/css/reset/) code that used for years and allowing us to include it to this library.
+{{< /hint >}}
 {{< /featured >}}
 
 ## Examples
 
 {{< highlightwrap class="example">}}
-If you call it in a selector with no value passed the style rules will be applied to this very element and all its children.
+Simply call the mixin at the root of your stylesheet to override browser default styles.
 {{< highlight scss >}}
-.element{
-    @include gls-antialias;
-}
+@include gls-reset-css;
 {{< /highlight >}}
 {{< highlight css >}}
 //CSS Output
-.element, .element:before, .element:after,
-.element *,
-.element *::before,
-.element *::after {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, main, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
 }
 {{< /highlight >}}
 {{< /highlightwrap >}}
 
-{{< highlightwrap class="example">}}
-Pass the `only` value as an argument to apply the style rules to only one specific HTML element.
-{{< highlight scss >}}
-.element{
-    @include gls-antialias(only);
-}
-{{< /highlight >}}
-{{< highlight css >}}
-//CSS Output
-.element, .element::before, .element::after {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-{{< /highlight >}}
-{{< /highlightwrap >}}
-
-{{< highlightwrap class="example">}}
-Call the mixin at the root of your stylesheet to target all the HTML elements.
-{{< highlight scss >}}
-@include gls-antialias;
-{{< /highlight >}}
-{{< highlight css >}}
-//CSS Output
-*,
-*::before,
-*::after {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-{{< /highlight >}}
-{{< /highlightwrap >}}
 
 ## Related Articles
-* [Stop Fixing Font Smoothing](https://usabilitypost.com/2012/11/05/stop-fixing-font-smoothing/)  
-* [Font Smooth](https://www.zachleat.com/web/font-smooth/)
+* [CSS Tools: Reset CSS](https://meyerweb.com/eric/tools/css/reset/)
+* [What is a CSS Reset?](https://cssreset.com/what-is-a-css-reset/)
+* [Browsers' default CSS for HTML elements](https://stackoverflow.com/questions/6867254/browsers-default-css-for-html-elements)
