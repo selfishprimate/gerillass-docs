@@ -22,11 +22,11 @@ If you call the mixin in a selector with no value passed the style rules will be
 {{< highlight css >}}
 //CSS Output
 .element, 
-.element:before, 
-.element:after,
+.element::before, 
+.element::after,
 .element *,
-.element *:before,
-.element *:after {
+.element *::before,
+.element *::after {
     box-sizing: border-box;
 }
 {{< /highlight >}}
@@ -42,8 +42,8 @@ Pass the `only` value as an argument to apply the style rules to only one specif
 {{< highlight css >}}
 //CSS Output
 .element, 
-.element:before, 
-.element:after {
+.element::before, 
+.element::after {
     box-sizing: border-box;
 }
 {{< /highlight >}}
@@ -57,8 +57,8 @@ Call the mixin at the root of your stylesheet to target all the HTML elements.
 {{< highlight css >}}
 //CSS Output
 *,
-*:before,
-*:after {
+*::before,
+*::after {
     box-sizing: border-box;
 }
 {{< /highlight >}}

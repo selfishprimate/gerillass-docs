@@ -23,8 +23,8 @@ If you call it in a selector with no value passed the style rules will be applie
 //CSS Output
 .element, .element:before, .element:after,
 .element *,
-.element *:before,
-.element *:after {
+.element *::before,
+.element *::after {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -40,7 +40,7 @@ Pass the `only` value as an argument to apply the style rules to only one specif
 {{< /highlight >}}
 {{< highlight css >}}
 //CSS Output
-.element, .element:before, .element:after {
+.element, .element::before, .element::after {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -55,8 +55,8 @@ Call the mixin at the root of your stylesheet to target all the HTML elements.
 {{< highlight css >}}
 //CSS Output
 *,
-*:before,
-*:after {
+*::before,
+*::after {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
