@@ -14,7 +14,7 @@ Endless thanks to [**Eric Meyer**](https://meyerweb.com/) for his legendary [**R
 ## Examples
 
 {{< highlightwrap class="example">}}
-Simply call the mixin at the root of your stylesheet to override browser default styles.
+Simply call the mixin at the root of your style sheet to override browser default styles.
 {{< highlight scss >}}
 @include gls-reset-css;
 {{< /highlight >}}
@@ -69,7 +69,6 @@ table {
 }
 {{< /highlight >}}
 {{< /highlightwrap >}}
-
 
 ## Related Articles
 * [CSS Tools: Reset CSS](https://meyerweb.com/eric/tools/css/reset/)
