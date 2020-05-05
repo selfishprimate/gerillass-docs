@@ -17,3 +17,10 @@
         }
     }
 }
+
+.text-shadow-container{
+    height: 100px;
+    display: flex;
+    align-items: center;
+    margin-bottom: $global-space * 10;
+}
