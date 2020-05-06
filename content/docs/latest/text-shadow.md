@@ -206,26 +206,26 @@ Unless you overdo **Text Shadow** mixin, you can create marvelous effects.
 {{< highlight css >}}
 //CSS Output
 .element {
-  transition: .3s;
-  text-shadow: -1px 0 gold, -2px 0 gold, -3px 0 gold;
+    transition: .3s;
+    text-shadow: -1px 0 gold, -2px 0 gold, -3px 0 gold;
 }
 .element:hover {
-  text-shadow: 1px 0 gold, 2px 0 gold, 3px 0 gold, 4px 0 gold, 5px 0 gold, 6px 0 gold, 7px 0 gold, 8px 0 gold;
+    text-shadow: 1px 0 gold, 2px 0 gold, 3px 0 gold, 4px 0 gold, 5px 0 gold, 6px 0 gold, 7px 0 gold, 8px 0 gold;
 }
 .element:active {
-  text-shadow: 1px 0 deepskyblue, 2px 0 deepskyblue, 3px 0 deepskyblue, 4px 0 deepskyblue, 5px 0 deepskyblue, 6px 0 deepskyblue, 7px 0 deepskyblue, 8px 0 deepskyblue;
+    text-shadow: 1px 0 deepskyblue, 2px 0 deepskyblue, 3px 0 deepskyblue, 4px 0 deepskyblue, 5px 0 deepskyblue, 6px 0 deepskyblue, 7px 0 deepskyblue, 8px 0 deepskyblue;
 }
 {{< /highlight >}}
 <style>
 .example09 {
-  transition: .3s;
-  text-shadow: -1px 0 gold, -2px 0 gold, -3px 0 gold;
+    transition: .3s;
+    text-shadow: -1px 0 gold, -2px 0 gold, -3px 0 gold;
 }
 .example09:hover {
-  text-shadow: 1px 0 gold, 2px 0 gold, 3px 0 gold, 4px 0 gold, 5px 0 gold, 6px 0 gold, 7px 0 gold, 8px 0 gold;
+    text-shadow: 1px 0 gold, 2px 0 gold, 3px 0 gold, 4px 0 gold, 5px 0 gold, 6px 0 gold, 7px 0 gold, 8px 0 gold;
 }
 .example09:active {
-  text-shadow: 1px 0 deepskyblue, 2px 0 deepskyblue, 3px 0 deepskyblue, 4px 0 deepskyblue, 5px 0 deepskyblue, 6px 0 deepskyblue, 7px 0 deepskyblue, 8px 0 deepskyblue;
+    text-shadow: 1px 0 deepskyblue, 2px 0 deepskyblue, 3px 0 deepskyblue, 4px 0 deepskyblue, 5px 0 deepskyblue, 6px 0 deepskyblue, 7px 0 deepskyblue, 8px 0 deepskyblue;
 }
 </style>
 <div class="text-shadow-container">
