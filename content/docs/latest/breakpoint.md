@@ -23,7 +23,7 @@ title: "Breakpoint"
 ## Examples
 
 {{< highlightwrap class="example">}}
-Simply call the mixin and **pass a custom value** to it. This code will apply styles only if your browser's viewport is equal to `320px`.
+Simply call the mixin and **pass a custom value** to it. The code below will apply styles only if your browser's viewport is equal to `320px`.
 {{< highlight scss >}}
 .element{
     @include gls-breakpoint(320px) {
@@ -42,7 +42,7 @@ Simply call the mixin and **pass a custom value** to it. This code will apply st
 {{< /highlightwrap >}}
 
 {{< highlightwrap class="example">}}
-If you set the `mode` option to `only` you'll see that the result will be as same as the first example.
+If you set the `mode` option to `only` you'll see that the result will be as similar as the first example. The code below will apply styles only if your browser's viewport is equal to `1200px`.
 {{< highlight scss >}}
 .element{
     @include gls-breakpoint(only, 1200px) {
