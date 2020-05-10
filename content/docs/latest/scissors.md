@@ -1,11 +1,11 @@
 ---
-title: "Cutter"
+title: "Scissors"
 ---
 
-# Cutter
+# Scissors
 
-{{< featured type="Mixin" name="cutter" >}}
-Cutter mixin helps you to **cut off** the corners of an element. Provides an easy to use one-line method to set the size of the cut, and the corners that you want to apply the effect.
+{{< featured type="Mixin" name="scissors" >}}
+**Scissors** Sass mixin helps you to **cut off** the corners of an element. Provides an easy to use one-line method to set the size of the cut, and the corners that you want to apply the effect.
 
 {{< hint info >}}
 The **first** value helps you select `top-left`, the **second** value `top-right`, the **third** value `bottom-right` and the **fourth** value `bottom-left` corners.
@@ -25,7 +25,7 @@ The **first** value helps you select `top-left`, the **second** value `top-right
 Simply call the mixin and pass just `one` value to affect all the corners evenly.
 {{< highlight scss >}}
 .element{
-    @include gls-cutter(30px);
+    @include gls-scissors(30px);
 }
 {{< /highlight >}}
 {{< highlight css >}}
@@ -44,7 +44,7 @@ clip-path: polygon(0 30px, 30px 0, calc(100% - 30px) 0, 100% 30px, 100% calc(100
 Do as follow to target only the top corners.
 {{< highlight scss >}}
 .element{
-    @include gls-cutter(30px 30px 0 0);
+    @include gls-scissors(30px 30px 0 0);
 }
 {{< /highlight >}}
 {{< highlight css >}}
@@ -63,7 +63,7 @@ clip-path: polygon(0 30px, 30px 0, calc(100% - 30px) 0, 100% 30px, 100% calc(100
 You can use `null` to skip a corner as well! The following arrangement will target only the bottom corners.
 {{< highlight scss >}}
 .element{
-    @include gls-cutter(null null 50px 50px);
+    @include gls-scissors(null null 50px 50px);
 }
 {{< /highlight >}}
 {{< highlight css >}}
@@ -94,7 +94,7 @@ For some reason, your design component might look different, but I'm sure you ge
     display: flex;
     justify-content: center;
     background-color: #5bc0bb;
-    @include gls-cutter(0 0 50% 50%);
+    @include gls-scissors(0 0 50% 50%);
     h2{
         color: white;
         font-size: 2.5em;
