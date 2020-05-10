@@ -5,17 +5,13 @@ title: "Before"
 # Before
 
 {{< featured type="Mixin" name="before" >}}
-
-This mixin helps you to generate some content or a style element before the actual content of a selected element(s).
-
+**Before** Sass mixin helps you to generate some content or a style element before the actual content of a selected element(s).
 {{< /featured >}}
 
 ## Arguments
 
 {{< arguments/table footnote="When you want to fetch a given value by using custom property the name of the property must start with 'data-' prefix. For more please see the examples.">}}
-
     {{< arguments/row name="$content" type="string" description="You can pass a content as a string or fetch the given value using custom property like `data-content`." >}}
-
 {{< /arguments/table >}}
 
 ## Examples

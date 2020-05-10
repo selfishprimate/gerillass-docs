@@ -6,7 +6,7 @@ title: "After"
 
 {{< featured type="Mixin" name="after" >}}
 
-This mixin helps you to generate some content or a style element after the actual content of a selected element(s).
+**After** Sass mixin helps you to generate some content or a style element after the actual content of a selected element(s).
 
 {{< /featured >}}
 

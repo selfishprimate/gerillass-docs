@@ -5,7 +5,7 @@ title: "Clearfix"
 # Clearfix
 
 {{< featured type="Mixin" name="clearfix" >}}
-Clearfix mixin helps you to clear floats to prevent broken layouts and must be applied to the parent element.
+**Clearfix** Sass mixin helps you to clear floats to prevent broken layouts and must be applied to the parent element.
 {{< /featured >}}
 
 ## Examples

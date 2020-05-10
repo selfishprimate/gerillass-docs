@@ -5,7 +5,7 @@ title: "Tablet"
 # Tablet
 
 {{< featured type="Mixin" name="tablet" >}}
-There will be times when you need to style elements only for one particular tablet model. This mixin helps you to achieve that.
+There will be times when you need to style elements only for one particular tablet model. **Tablet** Sass mixin helps you to achieve that.
 {{< hint info >}}
 **Tip:** There are predefined values for commonly used tablet models in the `_map-for-tablets.scss` file. **You can add another model specifications here to expand the list if you like**.
 {{< /hint >}}

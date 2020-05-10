@@ -5,7 +5,7 @@ title: "Escape to Parent"
 # Escape to Parent
 
 {{< featured type="Mixin" name="escape-to-parent" >}}
-This mixin allows you to **escape to the parent** element and use multiple class or id selectors with it. Therefore you can easily control how the selected child element(s) response differently on various cases.
+**Escape to Parent** Sass mixin allows you to **escape to the parent** element and use multiple class or id selectors with it. Therefore you can easily control how the selected child element(s) response differently on various cases.
 {{< /featured >}}
 
 ## Arguments

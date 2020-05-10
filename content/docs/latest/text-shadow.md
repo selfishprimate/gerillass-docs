@@ -5,7 +5,7 @@ title: "Text Shadow"
 # Text Shadow
 
 {{< featured type="Mixin" name="text-shadow" >}}
-**Text Shadow** mixin helps you to add shadow to texts. Accepts comma-seperated list of shadow or a single shadow value that can be multiplied optionally. **Provides an easy to use one-line method**.
+**Text Shadow** Sass mixin helps you to add shadow to texts. Accepts comma-seperated list of shadow or a single shadow value that can be multiplied optionally. **Provides an easy to use one-line method**.
 {{< hint info >}}
 The first three (`$direction`, `$color`, `$size`) are the required arguments and they must be ordered as follow: @include gls-text-shadow(**bottom red 20px**). You can't use these three interchangeably.
 {{< /hint >}}

@@ -5,7 +5,7 @@ title: "Text Selection"
 # Text Selection
 
 {{< featured type="Mixin" name="text-selection" >}}
-This Sass mixin helps you to style the portion of a text (or element) that is selected by a user.
+**Text Selection** Sass mixin helps you to style the portion of a text (or element) that is selected by a user.
 {{< /featured >}}
 
 ## Arguments

@@ -5,7 +5,7 @@ title: "Resizable"
 # Resizable
 
 {{< featured type="Mixin" name="resizable" >}}
-Resizable mixin helps you to make an element resizable on both horizontal or vertical directions.
+**Resizable** Sass mixin helps you to make an element resizable on both horizontal or vertical directions.
 {{< /featured >}}
 
 {{< hint info >}}

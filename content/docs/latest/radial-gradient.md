@@ -6,7 +6,7 @@ title: "Radial Gradient"
 
 {{< featured type="Mixin" name="radial-gradient" >}}
 
-The Radial Gradient mixin helps you to generate smooth (or sharp) transitions between two or more specified colors.
+**Radial Gradient** Sass mixin helps you to generate smooth (or sharp) transitions between two or more specified colors.
 
 The one-line method makes it very easy to use. To generate a radial gradient you must pass values for gradient's angle of `$direction`, `$shape` of the gradient and `$colors` (at least two color values must have). You can also add color-stop points (starting and ending positions of colors).
 

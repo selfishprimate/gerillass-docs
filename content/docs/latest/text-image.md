@@ -5,7 +5,7 @@ title: "Text Image"
 # Text Image
 
 {{< featured type="Mixin" name="text-image" >}}
-This mixin helps you to clip the background image of a selected element to the shape of its foreground text. 
+**Text Image** Sass mixin helps you to clip the background image of a selected element to the shape of its foreground text. 
 {{< /featured >}}
 
 ## Arguments

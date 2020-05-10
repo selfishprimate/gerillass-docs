@@ -5,7 +5,7 @@ title: "Background Stripes"
 # Background Stripes
 
 {{< featured type="Mixin" name="background-stripes" >}}
-This mixin allows you to create stylish and colorful background stripes.
+**Background Stripes** Sass mixin allows you to create stylish and colorful background stripes.
 {{< /featured >}}
 
 ## Arguments

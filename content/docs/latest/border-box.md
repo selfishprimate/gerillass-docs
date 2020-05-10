@@ -5,7 +5,7 @@ title: "Border Box"
 # Border Box
 
 {{< featured type="Mixin" name="border-box" >}}
-This mixin sets the `box-sizing` property value to `border-box` for selected HTML element(s).
+**Border Box** Sass mixin sets the `box-sizing` property value to `border-box` for selected HTML element(s).
 {{< /featured >}}
 
 ## Arguments

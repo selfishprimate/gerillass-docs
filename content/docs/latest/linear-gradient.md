@@ -6,7 +6,7 @@ title: "Linear Gradient"
 
 {{< featured type="Mixin" name="linear-gradient" >}}
 
-The Linear Gradient mixin helps you to generate smooth (or sharp) transitions between two or more specified colors.
+**Linear Gradient** Sass mixin helps you to generate smooth (or sharp) transitions between two or more specified colors.
 
 The one-line method makes it very easy to use. To generate a linear gradient you must pass values for gradient's angle of `$direction` and at least two color values. You can also add color-stop points (starting and ending positions of colors).
 
