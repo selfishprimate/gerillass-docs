@@ -11,7 +11,7 @@ title: "All Text Inputs"
 ## Arguments
 
 {{< arguments/table footnote="You can call the mixin either at the root level of your style sheet to target all the text-based input elements in the DOM or call it in a selector to target only some particular elements as children of the given selector.">}}
-    {{< arguments/row name="$pseudo" type="string" description="It helps you to target pseudo classes of the selected text-based input elements. Accepts `hover`, `focus`, `active`, `invalid`, `required`, `disabled` values." >}}
+    {{< arguments/row name="$pseudo" type="string" description="Sets the pleudo-class selector of the selected text-based input elements. Accepts `hover`, `focus`, `active`, `invalid`, `required`, `disabled` values." >}}
 {{< /arguments/table >}}
 
 ## Examples
@@ -47,7 +47,7 @@ textarea {
 {{< /highlightwrap >}}
 
 {{< highlightwrap class="example">}}
-Now let's style the **hover state** of the inputs.
+Let's target all the text-based HTML inputs with the **:hover** pseudo-class selector applied. 
 {{< highlight scss >}}
 @include gls-all-text-inputs(hover) {
     background-color: orange;
@@ -77,10 +77,7 @@ textarea:hover {
 {{< /highlightwrap >}}
 
 {{< highlightwrap class="example">}}
-Now let's try to style the **focus state** of the inputs. 
-{{< hint info >}}
-I'm not going to try all of them, but feel free to try with the other values as well!
-{{< /hint >}}
+Let's target all the text-based HTML inputs with the **:focus** pseudo-class selector applied. 
 {{< highlight scss >}}
 @include gls-all-text-inputs(focus) {
     background-color: green;
@@ -88,8 +85,159 @@ I'm not going to try all of them, but feel free to try with the other values as 
 {{< /highlight >}}
 {{< highlight css >}}
 //CSS Output
-[type='color']:focus, [type='date']:focus, [type='datetime']:focus, [type='datetime-local']:focus, [type='email']:focus, [type='month']:focus, [type='number']:focus, [type='password']:focus, [type='search']:focus, [type='tel']:focus, [type='text']:focus, [type='time']:focus, [type='url']:focus, [type='week']:focus, input:not([type]):focus, textarea:focus {
+[type='color']:focus, 
+[type='date']:focus, 
+[type='datetime']:focus, 
+[type='datetime-local']:focus, 
+[type='email']:focus, 
+[type='month']:focus, 
+[type='number']:focus, 
+[type='password']:focus, 
+[type='search']:focus, 
+[type='tel']:focus, 
+[type='text']:focus, 
+[type='time']:focus, 
+[type='url']:focus, 
+[type='week']:focus, 
+input:not([type]):focus, 
+textarea:focus {
     background-color: green;
+}
+{{< /highlight >}}
+{{< /highlightwrap >}}
+
+{{< highlightwrap class="example">}}
+Now let's target all the text-based HTML inputs with the **:active** pseudo-class selector applied. 
+{{< highlight scss >}}
+.element {
+    @include gls-all-text-inputs(active) {
+        background-color: green;
+        color: white;
+    };
+}
+{{< /highlight >}}
+{{< highlight css >}}
+//CSS Output
+.element [type='color']:active, 
+.element [type='date']:active, 
+.element [type='datetime']:active, 
+.element [type='datetime-local']:active, 
+.element [type='email']:active, 
+.element [type='month']:active, 
+.element [type='number']:active, 
+.element [type='password']:active, 
+.element [type='search']:active, 
+.element [type='tel']:active, 
+.element [type='text']:active, 
+.element [type='time']:active, 
+.element [type='url']:active, 
+.element [type='week']:active, 
+.element input:not([type]):active, 
+.element textarea:active {
+    background-color: green;
+    color: white;
+}
+{{< /highlight >}}
+{{< /highlightwrap >}}
+
+{{< highlightwrap class="example">}}
+Now let's target all the text-based HTML inputs with the **:invalid** pseudo-class selector applied. 
+{{< highlight scss >}}
+.element {
+    @include gls-all-text-inputs(invalid) {
+        background-color: red;
+        color: white;
+    };
+}
+{{< /highlight >}}
+{{< highlight css >}}
+//CSS Output
+.element [type='color']:invalid, 
+.element [type='date']:invalid, 
+.element [type='datetime']:invalid, 
+.element [type='datetime-local']:invalid, 
+.element [type='email']:invalid, 
+.element [type='month']:invalid, 
+.element [type='number']:invalid, 
+.element [type='password']:invalid, 
+.element [type='search']:invalid, 
+.element [type='tel']:invalid, 
+.element [type='text']:invalid, 
+.element [type='time']:invalid, 
+.element [type='url']:invalid, 
+.element [type='week']:invalid, 
+.element input:not([type]):invalid, 
+.element textarea:invalid {
+    background-color: red;
+    color: white;
+}
+{{< /highlight >}}
+{{< /highlightwrap >}}
+
+{{< highlightwrap class="example">}}
+Now let's try it with the **:required** pseudo-class selector applied. 
+{{< highlight scss >}}
+.element {
+    @include gls-all-text-inputs(required) {
+        background-color: orange;
+        color: white;
+    };
+}
+{{< /highlight >}}
+{{< highlight css >}}
+//CSS Output
+.element [type='color']:required, 
+.element [type='date']:required, 
+.element [type='datetime']:required, 
+.element [type='datetime-local']:required, 
+.element [type='email']:required, 
+.element [type='month']:required, 
+.element [type='number']:required, 
+.element [type='password']:required, 
+.element [type='search']:required, 
+.element [type='tel']:required, 
+.element [type='text']:required, 
+.element [type='time']:required, 
+.element [type='url']:required, 
+.element [type='week']:required, 
+.element input:not([type]):required, 
+.element textarea:required {
+    background-color: orange;
+    color: white;
+}
+{{< /highlight >}}
+{{< /highlightwrap >}}
+
+{{< highlightwrap class="example">}}
+Now let's try it with **:disabled** pseudo-class selector applied. 
+{{< highlight scss >}}
+.element {
+    @include gls-all-text-inputs(disabled) {
+        background-color: gray;
+        color: black;
+    };
+}
+{{< /highlight >}}
+{{< highlight css >}}
+//CSS Output
+.element [type='color']:disabled, 
+.element [type='date']:disabled, 
+.element [type='datetime']:disabled, 
+.element [type='datetime-local']:disabled, 
+.element [type='email']:disabled, 
+.element [type='month']:disabled, 
+.element [type='number']:disabled, 
+.element [type='password']:disabled, 
+.element [type='search']:disabled, 
+.element [type='tel']:disabled, 
+.element [type='text']:disabled, 
+.element [type='time']:disabled, 
+.element [type='url']:disabled, 
+.element [type='week']:disabled, 
+.element input:not([type]):disabled, 
+.element textarea:disabled {
+    background-color: gray;
+    color: white;
 }
 {{< /highlight >}}
 {{< /highlightwrap >}}
