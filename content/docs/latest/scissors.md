@@ -4,14 +4,14 @@ title: "Scissors"
 
 # Scissors
 
-{{< featured type="Mixin" name="scissors" >}}
+{{< mixin type="Mixin" name="scissors" >}}
 **Scissors** Sass mixin helps you to **cut off** the corners of an element. Provides an easy to use one-line method to set the size of the cut, and the corners that you want to apply the effect.
 
 {{< hint info >}}
 The **first** value helps you select `top-left`, the **second** value `top-right`, the **third** value `bottom-right` and the **fourth** value `bottom-left` corners.
 {{< /hint >}}
 
-{{< /featured >}}
+{{< /mixin >}}
 
 ## Arguments
 

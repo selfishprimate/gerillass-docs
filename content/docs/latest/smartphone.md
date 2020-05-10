@@ -4,12 +4,12 @@ title: "Smartphone"
 
 # Smartphone
 
-{{< featured type="Mixin" name="smartphone" >}}
+{{< mixin type="Mixin" name="smartphone" >}}
 There will be times when you need to style elements only for one particular smartphone model. **Smartphone** Sass mixin helps you to achieve that.
 {{< hint info >}}
 **Tip:** There are predefined values for commonly used smartphone models in the `_map-for-smartphones.scss` file. **You can add another model specifications here to expand the list if you like**.
 {{< /hint >}}
-{{< /featured >}}
+{{< /mixin >}}
 
 ## Arguments
 

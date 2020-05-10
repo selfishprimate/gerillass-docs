@@ -4,12 +4,12 @@ title: "Reset CSS"
 
 # Reset CSS
 
-{{< featured type="Mixin" name="reset-css" >}}
+{{< mixin type="Mixin" name="reset-css" >}}
 **Reset CSS** Sass mixin (also known as **CSS Reset**) helps you to reset the browser default styles of all HTML elements to a consistent baseline.
 {{< hint info >}}
 Endless thanks to [**Eric Meyer**](https://meyerweb.com/) for his legendary [**Reset CSS**](https://meyerweb.com/eric/tools/css/reset/) code that used for years and allowing us to include it to this library.
 {{< /hint >}}
-{{< /featured >}}
+{{< /mixin >}}
 
 ## Examples
 

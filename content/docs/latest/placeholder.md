@@ -4,9 +4,9 @@ title: "Placeholder"
 
 # Placeholder
 
-{{< featured type="Mixin" name="placeholder" >}}
+{{< mixin type="Mixin" name="placeholder" >}}
 **Placeholder** Sass mixin will help you to style the **placeholder text** in an `<input>` or `<textarea>` element and generate cross-browser compatible CSS code.
-{{< /featured >}}
+{{< /mixin >}}
 
 ## Examples
 

@@ -4,9 +4,9 @@ title: "Background Dots"
 
 # Background Dots
 
-{{< featured type="Mixin" name="background-dots" >}}
+{{< mixin type="Mixin" name="background-dots" >}}
 **Background Dots** Sass mixin allows you to easily create a stylish dotted background pattern (also known as **polka dots**).
-{{< /featured >}}
+{{< /mixin >}}
 
 ## Arguments
 

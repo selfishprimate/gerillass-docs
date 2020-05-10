@@ -4,9 +4,9 @@ title: "All Buttons"
 
 # All Buttons
 
-{{< featured type="Mixin" name="all-buttons" >}}
+{{< mixin type="Mixin" name="all-buttons" >}}
 **All Buttons** Sass mixin helps you to target all the HTML button elements in the DOM so you can easily apply your style rules.
-{{< /featured >}}
+{{< /mixin >}}
 
 ## Arguments
 

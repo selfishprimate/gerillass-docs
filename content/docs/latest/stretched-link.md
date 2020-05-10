@@ -4,7 +4,7 @@ title: "Stretched Link"
 
 # Stretched Link
 
-{{< featured type="Mixin" name="stretched-link" >}}
+{{< mixin type="Mixin" name="stretched-link" >}}
 Suppose you have a containing element and a link inside of it. You want entire surface of this containing block to be clickable with this link. How can you do that?
 
 This Sass mixin helps you to achieve that. It spreads the clickability of a link to the entire area of its containing block. 
@@ -15,7 +15,7 @@ This Sass mixin helps you to achieve that. It spreads the clickability of a link
 It can be useful when you use this mixin with HTML radio buttons or a checkbox list design patterns to control the clickability of a `<label>` element.
 {{< /hint >}}
 
-{{< /featured >}}
+{{< /mixin >}}
 
 ## Arguments
 

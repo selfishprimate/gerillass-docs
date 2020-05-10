@@ -4,10 +4,10 @@ title: "Placeholder Shown"
 
 # Placeholder Shown
 
-{{< featured type="Mixin" name="placeholder-shown" >}}
+{{< mixin type="Mixin" name="placeholder-shown" >}}
 **Placeholder Shown** Sass mixin helps you to style `<input>` or `<textarea>` element that is currently displaying placeholder text. 
 As soon as the placeholder text disappears (that is, when the user starts typing), the style rules applied to the selected element(s) will also go away.
-{{< /featured >}}
+{{< /mixin >}}
 
 ## Examples
 

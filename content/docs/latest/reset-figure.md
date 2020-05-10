@@ -3,9 +3,9 @@ title: "Reset Figure"
 ---
 
 # Reset Figure
-{{< featured type="Mixin" name="reset-figure" >}}
+{{< mixin type="Mixin" name="reset-figure" >}}
 **Reset Figure** Sass mixin helps you to reset the margin values of `<figure>` elements to `0` and make the `<img>` element responsive (fluid) in it. 
-{{< /featured >}}
+{{< /mixin >}}
 
 ## Examples
 

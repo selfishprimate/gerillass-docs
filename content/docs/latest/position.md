@@ -4,9 +4,9 @@ title: "Position"
 
 # Position
 
-{{< featured type="Mixin" name="position" >}}
+{{< mixin type="Mixin" name="position" >}}
 **Position** Sass mixin provides a one-line method to set rapidly both the position and the offset properties of a selected element(s).
-{{< /featured >}}
+{{< /mixin >}}
 
 ## Arguments
 

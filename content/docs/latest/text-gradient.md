@@ -4,7 +4,7 @@ title: "Text Gradient"
 
 # Text Gradient
 
-{{< featured type="Mixin" name="text-gradient" >}}
+{{< mixin type="Mixin" name="text-gradient" >}}
 
 **Text Gradient** Sass mixin (also know as **CSS Gradient Text**) helps you to add a gradient overlay to a text element. Provides a one-line method to set the gradient line's angle of direction, color values and the color-stop positions very easily. 
 
@@ -12,7 +12,7 @@ title: "Text Gradient"
 A color-stop position can be defined by `length` or a `percentage` units.
 {{< /hint >}}
 
-{{< /featured >}}
+{{< /mixin >}}
 
 ## Arguments
 

@@ -4,9 +4,9 @@ title: "Sizer"
 
 # Sizer
 
-{{< featured type="Mixin" name="sizer" >}}
+{{< mixin type="Mixin" name="sizer" >}}
 **Sizer** Sass mixin helps you to size elements with one statement (or two). Size elements or create square or recangle shapes very easily.
-{{< /featured >}}
+{{< /mixin >}}
 
 ## Arguments
 

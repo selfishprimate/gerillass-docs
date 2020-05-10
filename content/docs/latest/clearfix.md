@@ -4,9 +4,9 @@ title: "Clearfix"
 
 # Clearfix
 
-{{< featured type="Mixin" name="clearfix" >}}
+{{< mixin type="Mixin" name="clearfix" >}}
 **Clearfix** Sass mixin helps you to clear floats to prevent broken layouts and must be applied to the parent element.
-{{< /featured >}}
+{{< /mixin >}}
 
 ## Examples
 

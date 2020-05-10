@@ -4,12 +4,12 @@ title: "Except"
 
 # Except
 
-{{< featured type="Mixin" name="except" >}}
+{{< mixin type="Mixin" name="except" >}}
 **Except** Sass mixin helps you to target elements that you do not want to apply style changes to that you want for other elements in the list.
 {{< hint info >}}
 You can pass a **string** value to target elements by their `id`, `class` and `pseudo-class` selector. Or you can pass a **number** (or **multiple numbers** seperated by comma) to get the items based on their index position in the list.
 {{< /hint >}}
-{{< /featured >}}
+{{< /mixin >}}
 
 ## Arguments
 

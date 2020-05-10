@@ -4,9 +4,9 @@ title: "Border Radius"
 
 # Border Radius
 
-{{< featured type="Mixin" name="border-radius" >}}
+{{< mixin type="Mixin" name="border-radius" >}}
 **Border Radius** Sass mixin helps you to rounds the corner(s) of an element. You can pass one value (with unit) to style all the corners equally or you can use CSS shorthand property to style each corner differently. For more see [the examples.](#examples)
-{{< /featured >}}
+{{< /mixin >}}
 
 ## Arguments
 

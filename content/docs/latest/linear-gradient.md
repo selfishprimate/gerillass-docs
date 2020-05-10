@@ -4,7 +4,7 @@ title: "Linear Gradient"
 
 # Linear Gradient
 
-{{< featured type="Mixin" name="linear-gradient" >}}
+{{< mixin type="Mixin" name="linear-gradient" >}}
 
 **Linear Gradient** Sass mixin helps you to generate smooth (or sharp) transitions between two or more specified colors.
 
@@ -14,7 +14,7 @@ The one-line method makes it very easy to use. To generate a linear gradient you
 A color-stop points can be defined by `length` or a `percentage` units.
 {{< /hint >}}
 
-{{< /featured >}}
+{{< /mixin >}}
 
 ## Arguments
 

@@ -4,11 +4,11 @@ title: "After"
 
 # After
 
-{{< featured type="Mixin" name="after" >}}
+{{< mixin type="Mixin" name="after" >}}
 
 **After** Sass mixin helps you to generate some content or a style element after the actual content of a selected element(s).
 
-{{< /featured >}}
+{{< /mixin >}}
 
 ## Arguments
 

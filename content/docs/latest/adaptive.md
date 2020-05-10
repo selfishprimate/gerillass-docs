@@ -4,12 +4,12 @@ title: "Adaptive"
 
 # Adaptive
 
-{{< featured type="Mixin" name="adaptive" >}}
+{{< mixin type="Mixin" name="adaptive" >}}
 **Adaptive** Sass mixin helps you to set `max-width` value to the containing elements based on the `breakpoint` values defined in the `_map-for-breakpoints.scss` file, and also specifies a `$gutter` value, where the edges of a browser screen can most closely get to the edges of the selected element.
 {{< hint info >}}
 **Tip:** Adaptive mixin works best with the `percentage` values.
 {{< /hint >}}
-{{< /featured >}}
+{{< /mixin >}}
 
 ## Arguments
 

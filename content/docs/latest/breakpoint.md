@@ -4,14 +4,14 @@ title: "Breakpoint"
 
 # Breakpoint
 
-{{< featured type="Mixin" name="breakpoint" >}}
+{{< mixin type="Mixin" name="breakpoint" >}}
 **Breakpoint** Sass mixin helps you to write consistent media queries in Sass. Provides an easy to use one-line method.
 
 {{< hint info >}}
 **Tip:** There are predefined values for breakpoints in the `_map-for-breakpoints.scss` file based on Bootstraps' breakpoint values. **You can add more values here to expand the list or replace existing ones with yours**.
 {{< /hint >}}
 
-{{< /featured >}}
+{{< /mixin >}}
 
 ## Arguments
 

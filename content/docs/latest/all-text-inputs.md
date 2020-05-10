@@ -4,9 +4,9 @@ title: "All Text Inputs"
 
 # All Text Inputs
 
-{{< featured type="Mixin" name="all-text-inputs" >}}
+{{< mixin type="Mixin" name="all-text-inputs" >}}
 **All Text Inputs** Sass mixin helps you to target all the text-based HTML input elements in the DOM, thus you can easily apply your style rules.
-{{< /featured >}}
+{{< /mixin >}}
 
 ## Arguments
 

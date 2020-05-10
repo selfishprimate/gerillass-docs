@@ -1,0 +1,32 @@
+<div class="featured-content">
+
+    <div class="subheader">
+        {{ with .Get "type" }}
+        <div class="item">
+            <span class="key">Type:</span>
+            <span class="value">{{.}}</span>
+        </div>
+        {{ end }}
+        {{ with .Get "name" }}
+        <div class="item">
+            <span class="call">
+                <span class="method">@include</span>
+                <span class="name">gls-{{.}}();</span>
+            </span>
+        </div>
+        {{ end }}
+    </div>
+
+    <div class="description">{{.Inner | markdownify}}</div>
+
+    {{with .Get "name"}}
+    <div class="btn-wrapper">
+        <a class="btn small" href="https://github.com/babilkuyusu/gerillass/tree/master/scss/library/_{{.}}.scss"
+            target="_blank">
+            <ion-icon name="logo-github" class="btn-icon left"></ion-icon>
+            <span class="btn-text">Github Source Code</span>
+        </a>
+    </div>
+    {{end}}
+
+</div>

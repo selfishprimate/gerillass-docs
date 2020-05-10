@@ -4,9 +4,9 @@ title: "Antialias"
 
 # Antialias
 
-{{< featured type="Mixin" name="antialias" >}}
+{{< mixin type="Mixin" name="antialias" >}}
 **Antialias** Sass mixin provides smooth font rendering which means smooth the font on the level of pixel and prevents the subpixels-rendering.
-{{< /featured >}}
+{{< /mixin >}}
 
 ## Arguments
 

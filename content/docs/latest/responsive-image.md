@@ -3,9 +3,9 @@ title: "Responsive Image"
 ---
 
 # Responsive Image
-{{< featured type="Mixin" name="responsive-image" >}}
+{{< mixin type="Mixin" name="responsive-image" >}}
 **Responsive Image** Sass mixin helps you to make images responsive and reset the default `display: inline;` propert to `display: block;` to romove the extra space below them.
-{{< /featured >}}
+{{< /mixin >}}
 
 ## Examples
 

@@ -4,9 +4,9 @@ title: "Text Stroke"
 
 # Text Stroke
 
-{{< featured type="Mixin" name="text-stroke" >}}
+{{< mixin type="Mixin" name="text-stroke" >}}
 **Text Stroke** Sass mixin helps you to add stroke to a text element and style it very easily.
-{{< /featured >}}
+{{< /mixin >}}
 
 ## Arguments
 

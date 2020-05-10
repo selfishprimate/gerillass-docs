@@ -4,9 +4,9 @@ title: "Before"
 
 # Before
 
-{{< featured type="Mixin" name="before" >}}
+{{< mixin type="Mixin" name="before" >}}
 **Before** Sass mixin helps you to generate some content or a style element before the actual content of a selected element(s).
-{{< /featured >}}
+{{< /mixin >}}
 
 ## Arguments
 

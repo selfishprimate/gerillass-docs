@@ -4,9 +4,9 @@ title: "Ellipsis"
 
 # Ellipsis
 
-{{< featured type="Mixin" name="ellipsis" >}}
+{{< mixin type="Mixin" name="ellipsis" >}}
 **Ellipsis** Sass mixin helps you to truncate a text and adds an **ellipsis** at the end of it based on the given `$width` value.
-{{< /featured >}}
+{{< /mixin >}}
 
 ## Arguments
 
