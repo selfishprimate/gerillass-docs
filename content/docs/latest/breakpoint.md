@@ -80,7 +80,7 @@ Now, let's set the, `$mode` option to `min` and pass a pre-defined breakpoint va
 {{< /highlightwrap >}}
 
 {{< highlightwrap class="example">}}
-For **desktop-first** arrangements set the `$mode` option to `max` and this time let's pass a custom value.
+For **desktop-first** arrangements set the `$mode` option to `max` and this time let's pass a custom value for the second argument.
 {{< highlight scss >}}
 .element{
     @include gls-breakpoint(max, 1024px) {

@@ -22,10 +22,10 @@ This is a **Gerillass** technique for **image replacement**. There are other met
 ## Examples
 
 {{< highlightwrap class="example">}}
-It’s important to use a similar markup like in the below example. But it doesn't necessarily to be a `<h1>` tag, so you can change it depending on the seo strategy you are running on your site.
+It’s important to use a similar markup like in the below example. But the containing element doesn't necessarily to be a `<h1>` tag, so feel free to change it depending on the SEO strategy you are running on your site.
 
 {{< hint info >}}
-In this example, I create a brand logo for "**Coolors**" you can create for your brand if you like.
+In this example, I create a logo for "**Coolors**". Well, you can use your own brand's logo file and change the logo text if you like.
 {{< /hint >}}
 {{< highlight html >}}
 <h1 class="brand-logo">
@@ -117,7 +117,7 @@ Now, simply call the mixin as in the example below and change the argument value
 {{< highlightwrap class="example">}}
 As said before, the `$image-url` argument is optional. With that in mind, now let's try to specify the logo image by using the selected element's style attribute.
 {{< hint info >}}
-Note that the `background-image` property has disappeared.
+Note that the `background-image` decleration has disappeared from the generated CSS code.
 {{< /hint >}}
 {{< highlight html >}}
 <h1 class="brand-logo" style="background-image: url(https://coolors.co/assets/img/logo.svg);">
