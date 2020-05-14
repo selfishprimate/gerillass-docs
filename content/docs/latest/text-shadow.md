@@ -18,7 +18,7 @@ The first three (`$direction`, `$color`, `$size`) are the required arguments and
     {{< arguments/row name="$color" type="color value" description="Sets the color of the shadow." >}}
     {{< arguments/row name="$size" type="number (with unit)" description="Sets how far the shadow will be from the text. When used with `$fill`, it also determines how many times the shadow will be multiplied." >}}
     {{< arguments/row name="$blur" type="number (with unit)" description="The `$blur` argument is optional. Sets the blur value of the shadow. Default value is set to `null`." >}}
-    {{< arguments/row name="$fill" type="boolean" description="This makes shadow fill the gap between the text and the shadow. It is optional and **should always be at the end** The default value is set to `false`." >}}
+    {{< arguments/row name="$fill" type="boolean" description="This makes shadow fill the gap between the text and the shadow. It is optional and **should always be at the end**. The default value is set to `false`." >}}
 {{< /arguments/table >}}
 
 {{< hint danger >}}
