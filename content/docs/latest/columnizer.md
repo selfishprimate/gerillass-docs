@@ -241,7 +241,7 @@ You can use either `$gutter` or `$fill` arguments optionallt. But remember, **th
 {{< /highlightwrap >}}
 
 {{< highlightwrap class="example">}}
-Now let's try it with the **breakpoint mixin** to show you how they these mixins work harmoniously together.
+Now let's try it with the **breakpoint mixin** to show you how these mixins work harmoniously together.
 {{< highlight scss >}}
 .parent-element{
     @include gls-columnizer(2, 10px, true);
@@ -327,12 +327,6 @@ Now let's try it with the **breakpoint mixin** to show you how they these mixins
     <div class="item">07</div>
 </div>
 {{< /highlightwrap >}}
-
-
-
-
-
-
 
 
 
