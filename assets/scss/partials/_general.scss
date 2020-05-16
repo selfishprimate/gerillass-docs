@@ -74,6 +74,7 @@ em{
 a {
     text-decoration: underline;
     color: $body-text-color;
+    cursor: pointer;
     &:visited {
         color: $body-text-color;
     }

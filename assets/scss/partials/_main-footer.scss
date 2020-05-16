@@ -1,0 +1,19 @@
+.main-footer{
+    margin-top: $global-space * 4;
+    background-color: $body-background-color;
+    border-top: 1px solid $border-color;
+    &__inner{
+        height: $header-height;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    &__left{}
+    &__right{}
+    &__link{
+        color: $link-color;
+        font-style: italic;
+        font-weight: bold;
+    }
+}

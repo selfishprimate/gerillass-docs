@@ -8,20 +8,7 @@
 
     <body>
 
-        <header class="book-header">
-            <label class="menu-toggler" for="menu-control">
-                <ion-icon name="menu-sharp"></ion-icon>
-            </label>
-            <div class="inner container">
-                <div class="left">
-                    {{ partial "docs/brand" . }}
-                </div>
-                <div class="middle">
-                    {{ partial "docs/search" . }}
-                </div>
-                <div class="right"></div>
-            </div>
-        </header>
+        {{ partial "main-header" . }}
 
         <input type="checkbox" class="hidden" id="menu-control"/>
         <main class="main-container container flex">
@@ -40,12 +27,12 @@
                 {{ template "main" . }}
                 <!-- Page Content -->
 
-                <footer class="book-footer">
+                <div class="book-footer">
                     {{ template "footer" . }}
                     <!-- Footer under page content -->
                     {{ template "comments" . }}
                     <!-- Comments block -->
-                </footer>
+                </div>
                 {{ partial "docs/inject/footer" . }}
             </div>
 
@@ -59,6 +46,8 @@
                 </aside>
             {{ end }}
         </main>
+
+        {{ partial "main-footer" . }}
 
         {{ partial "docs/inject/body" . }}
         <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
