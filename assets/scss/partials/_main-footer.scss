@@ -2,8 +2,8 @@
     margin-top: $global-space * 4;
     background-color: $body-background-color;
     border-top: 1px solid $border-color;
+    padding: $global-space * 2 0;
     &__inner{
-        height: $header-height;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -11,9 +11,23 @@
     }
     &__left{}
     &__right{}
+    &__text {
+        line-height: 1.3;
+    }
     &__link{
         color: $link-color;
         font-style: italic;
         font-weight: bold;
+    }
+    @include gls-breakpoint(max, large) {
+        &__inner {
+            flex-direction: column;
+        }
+        &__left {
+            margin-bottom: $global-space;
+        }
+        &__text {
+            text-align: center;
+        }
     }
 }

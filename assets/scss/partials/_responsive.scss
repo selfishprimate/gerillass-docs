@@ -1,11 +1,11 @@
-@include gls-breakpoint-max(large){
+@include gls-breakpoint(max, large){
     .book-toc{
         display: none;
     }
     .book-page{
         max-width: calc(100% - #{$menu-width});    
     }
-    .book-header{
+    .main-header{
         position: relative;
         margin-bottom: $global-space * 2;
         height: auto;
@@ -39,7 +39,7 @@
     }
 }
 
-@include gls-breakpoint-max(medium){
+@include gls-breakpoint(max, medium){
     .book-menu{
         margin-left: -$menu-width;
     }
@@ -54,7 +54,7 @@
     }
 }
 
-@include gls-breakpoint-max(small){
+@include gls-breakpoint(max, small){
     body{
         font-size: .9rem;
     }
@@ -94,7 +94,7 @@
     ion-icon{
         font-size: 26px;
     }
-    @include gls-breakpoint-min(medium){
+    @include gls-breakpoint(min, medium){
         display: none;
     }
 }

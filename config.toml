@@ -49,7 +49,7 @@ cleanDestinationDir = true
 
     # LogoTitle = "Gerillass Documentation"
     LogoDescription = "Documentation for v1.0.0"
-
+    
     # (Optional, default none) Set leaf bundle to render as side menu
     # When not specified file structure and weights will be used
     #   BookMenuBundle = '/menu'
