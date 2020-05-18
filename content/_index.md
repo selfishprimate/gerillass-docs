@@ -7,8 +7,9 @@ type: docs
 
 Hi developers, designers and the other enthusiasts of the open-source community! 
 
-I am proud to present to you a brand new toolkit for Sass: [**Gerillass**](https://gerillass.com/). It is an open-source toolkit that contains a set of Sass mixins to help you avoid code repetition and write better, faster and consistent CSS code.
+I am proud to present to you a brand new toolkit named [**Gerillass**](https://gerillass.com/). It is an open-source toolkit that contains a set of Sass mixins to help you avoid code repetition and write better, faster and consistent CSS code.
 
+_More than anything, Gerillass is here to make web development fun for you._  
 <div class="download-buttons btn-wrapper" style="margin-bottom: 80px;">
     <a class="btn small" href="https://github.com/babilkuyusu/gerillass" target="_blank">
         <ion-icon name="download-outline"></ion-icon>

@@ -7,7 +7,7 @@ title: "Remify"
 {{< function type="Function" name="remify" >}}
 **Remify** function helps you to convert the `pixel` values to `rem`. 
 {{< hint info >}}
-**Tip:** It's especially useful when you work with rem units and when you try to calculate how many rems that a pixel value you pass.
+**Tip:** It's especially useful when you work with rem units and having hard times to calculate how many rems that a pixel value you pass.
 {{< /hint >}}
 {{< /function >}}
 ## Arguments
