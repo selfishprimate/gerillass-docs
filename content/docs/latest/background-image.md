@@ -20,7 +20,7 @@ title: "Background Image"
 ## Examples
 
 {{< highlightwrap class="example">}}
-Simply call the mixin in selector and pass the URL of the background image.
+Simply call the mixin in a selector and pass the URL of the background image.
 {{< highlight scss >}}
 .element{
     @include gls-background-image("https://i.picsum.photos/id/1018/3914/2935.jpg");
@@ -36,13 +36,13 @@ Simply call the mixin in selector and pass the URL of the background image.
     background-size: cover;
 }
 {{< /highlight >}}
-{{< sandbox class="xlarge" >}}
-position: relative;background-image: url("https://i.picsum.photos/id/1018/3914/2935.jpg");background-position: center center;background-repeat: no-repeat;background-size: cover;
+{{< sandbox class="xlarge element" >}}
+position: relative;background-position: center center;background-repeat: no-repeat;background-size: cover;
 {{< /sandbox >}}
 {{< /highlightwrap >}}
 
 {{< highlightwrap class="example">}}
-Now let's apply a color filter to it by passing a value for $filter-color argument.
+Now let's apply a color filter to it by passing a color value for $filter-color argument.
 {{< highlight scss >}}
 .element{
     @include gls-background-image("https://i.picsum.photos/id/1018/3914/2935.jpg", rgba(teal, 0.3));
@@ -76,7 +76,6 @@ Now let's apply a color filter to it by passing a value for $filter-color argume
 <style>
 .element.example02 {
     position: relative;
-    background-image: url("https://i.picsum.photos/id/1018/3914/2935.jpg");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -138,7 +137,6 @@ Now let's pass multiple color values for `$filter-color` to make background imag
 <style>
 .element.example03 {
   position: relative;
-  background-image: url("https://i.picsum.photos/id/1018/3914/2935.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -198,7 +196,6 @@ Now let's try `$filter-direction` option, and while trying it, let's use sharper
 <style>
 .element.example04 {
   position: relative;
-  background-image: url("https://i.picsum.photos/id/1018/3914/2935.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -307,7 +304,6 @@ Let's try with a title text that placed inside the selected element and see it i
     -webkit-box-align: center;
     align-items: center;
     position: relative;
-    background-image: url("https://i.picsum.photos/id/1018/3914/2935.jpg");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -340,6 +336,12 @@ Let's try with a title text that placed inside the selected element and see it i
 </div>
 
 {{< /highlightwrap >}}
+
+<style>
+.element{
+background-image: url("https://i.picsum.photos/id/1018/3914/2935.jpg");
+}
+</style>
 
 
 
