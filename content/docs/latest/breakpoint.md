@@ -42,7 +42,7 @@ Simply call the mixin and **pass a custom value** to it. The code below will app
 {{< /highlightwrap >}}
 
 {{< highlightwrap class="example">}}
-If you set the `mode` option to `only` you'll see that the result will be as similar as the first example. The code below will apply styles only if your browser's viewport is equal to `1200px`.
+If you set the `$mode` option to `only` you'll see that the result will be as similar as the first example. The code below will apply styles only if your browser's viewport is equal to `1200px`.
 {{< highlight scss >}}
 .element{
     @include gls-breakpoint(only, 1200px) {
@@ -61,7 +61,7 @@ If you set the `mode` option to `only` you'll see that the result will be as sim
 {{< /highlightwrap >}}
 
 {{< highlightwrap class="example">}}
-Now, let's set the, `$mode` option to `min` and pass a pre-defined breakpoint value. If you are a **mobile-first** person you are going to use this one a lot!
+Now, let's set the `$mode` option to `min` and pass a pre-defined breakpoint value. If you are a **mobile-first** person you are going to use this one a lot!
 {{< highlight scss >}}
 .element{
     @include gls-breakpoint(min, medium) {
@@ -121,7 +121,7 @@ We can set a range between two values ​​to apply our styles.
 {{< /highlightwrap >}}
 
 {{< highlightwrap class="example">}}
-**Note that** when using the `between` mode with predefined values, the `max-width` value will always be extracted by one. **This setting prevents the styles ​​you apply from overlapping each other**.
+**Note that** when using the `between` mode with pre-defined values, the `max-width` value will always be extracted by one. **This setting prevents the styles ​​you apply from overlapping each other**.
 {{< hint info >}}
 **Important:** Please, examine how pre-defined breakpoint values ​​bounce among themselves correctly in the code below.
 {{< /hint >}}

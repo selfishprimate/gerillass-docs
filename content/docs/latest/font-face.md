@@ -223,6 +223,7 @@ Now let's use the `@content` directive to pass a content block into the mixin.
 {{< /highlight >}}
 {{< /highlightwrap >}}
 
+If you don't have all the font varieties, or you have a font and you want to convert it to a **web font** (@font-face embeddable), try **Font Squirrel**'s [Webfont Generator](https://www.fontsquirrel.com/tools/webfont-generator).
 
 ## Related Articles
 * [Font Face](https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face)  
