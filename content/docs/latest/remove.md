@@ -73,7 +73,7 @@ You can use `$mode` options to set the `width` media feature. Accepts `only`, `m
 {{< /highlightwrap >}}
 
 {{< highlightwrap class="example">}}
-You can use pre-defined breakpoint values which are: `xsmall`, `small`, `medium`, `large`, `xlarge`.
+You can use predefined breakpoint values which are: `xsmall`, `small`, `medium`, `large`, `xlarge`.
 {{< highlight scss >}}
 .element{
     @include gls-remove(max, medium);
@@ -90,7 +90,7 @@ You can use pre-defined breakpoint values which are: `xsmall`, `small`, `medium`
 {{< /highlightwrap >}}
 
 {{< highlightwrap class="example">}}
-You can set a range by using pre-defined values as well!
+You can set a range by using predefined values as well!
 {{< highlight scss >}}
 .element{
     @include gls-remove(small, medium);

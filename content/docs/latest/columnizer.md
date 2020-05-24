@@ -24,7 +24,7 @@ title: "Columnizer"
 ## Examples
 
 {{< highlightwrap >}}
-Suppose you have a group of items like in the example below and you want to make them look lined up in columns (**There are pre-defined style rules for items to show the differences more easily**).
+Suppose you have a group of items like in the example below and you want to make them look lined up in columns (**There are predefined style rules for items to show the differences more easily**).
 {{< highlight html >}}
 <div class="parent-element">
     <div class="item">01</div>

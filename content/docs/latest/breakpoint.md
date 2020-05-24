@@ -61,7 +61,7 @@ If you set the `$mode` option to `only` you'll see that the result will be as si
 {{< /highlightwrap >}}
 
 {{< highlightwrap class="example">}}
-Now, let's set the `$mode` option to `min` and pass a pre-defined breakpoint value. If you are a **mobile-first** person you are going to use this one a lot!
+Now, let's set the `$mode` option to `min` and pass a predefined breakpoint value. If you are a **mobile-first** person you are going to use this one a lot!
 {{< highlight scss >}}
 .element{
     @include gls-breakpoint(min, medium) {
@@ -101,7 +101,7 @@ For **desktop-first** arrangements set the `$mode` option to `max` and this time
 {{< highlightwrap class="example">}}
 We can set a range between two values ​​to apply our styles.
 {{< hint info >}}
-**Tip:** You can use **pre-defined** and **custom** values together if you like.
+**Tip:** You can use **predefined** and **custom** values together if you like.
 {{< /hint >}}
 {{< highlight scss >}}
 .element{
@@ -121,9 +121,9 @@ We can set a range between two values ​​to apply our styles.
 {{< /highlightwrap >}}
 
 {{< highlightwrap class="example">}}
-**Note that** when using the `between` mode with pre-defined values, the `max-width` value will always be extracted by one. **This setting prevents the styles ​​you apply from overlapping each other**.
+**Note that** when using the `between` mode with predefined values, the `max-width` value will always be extracted by one. **This setting prevents the styles ​​you apply from overlapping each other**.
 {{< hint info >}}
-**Important:** Please, examine how pre-defined breakpoint values ​​bounce among themselves correctly in the code below.
+**Important:** Please, examine how predefined breakpoint values ​​bounce among themselves correctly in the code below.
 {{< /hint >}}
 
 {{< highlight scss >}}
@@ -160,7 +160,7 @@ We can set a range between two values ​​to apply our styles.
 {{< /highlightwrap >}}
 
 {{< highlightwrap class="example">}}
-**Extracting by one** is only for **pre-defined** values. When you work with custom values you don't have to worry about that!
+**Extracting by one** is only for **predefined** values. When you work with custom values you don't have to worry about that!
 {{< highlight scss >}}
 .element{
     @include gls-breakpoint(between, small 1199px) {
@@ -189,7 +189,7 @@ We can set a range between two values ​​to apply our styles.
 {{< highlightwrap class="example">}}
 **Now let's try to define a range without passing the "between" option**. Simply pass two values and **seperate them by comma**. 
 {{< hint info >}}
-The values either can be custom numbers (with a unit) or pre-defined values.
+The values either can be custom numbers (with a unit) or predefined values.
 {{< /hint >}}
 {{< highlight scss >}}
 .element{
@@ -209,7 +209,7 @@ The values either can be custom numbers (with a unit) or pre-defined values.
 {{< /highlightwrap >}}
 
 {{< highlightwrap class="example">}}
-Now let's try it with the pre-defined values just to see that it works.
+Now let's try it with the predefined values just to see that it works.
 {{< highlight scss >}}
 .element{
     @include gls-breakpoint(small, large) {

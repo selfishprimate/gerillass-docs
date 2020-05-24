@@ -57,7 +57,7 @@ background-color:#5bc0bb;border-top-left-radius: 40px;border-top-right-radius: 4
 {{< highlightwrap class="example">}}
 Now, let's try to target right corners.
 {{< hint info >}}
-Just to remind you once more these are the pre-defined values to target the corners: `top`, `top-right`, `right`, `bottom-right`, `bottom`, `bottom-left`, `left`, `top-left`, `cross-left`, `cross-right`, `all`.
+Just to remind you once more these are the predefined values to target the corners: `top`, `top-right`, `right`, `bottom-right`, `bottom`, `bottom-left`, `left`, `top-left`, `cross-left`, `cross-right`, `all`.
 {{< /hint >}}
 {{< highlight scss >}}
 .element{

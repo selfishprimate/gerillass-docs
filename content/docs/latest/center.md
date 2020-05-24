@@ -5,12 +5,12 @@ title: "Center"
 # Center
 
 {{< mixin type="Mixin" name="center" >}}
-**Center** Sass mixin allows you to center elements on both the horizontal and vertical axes.
+**Center** Sass mixin allows you to center elements (**the elements that have `position` value either `absolute` or `fixed`**) on both the horizontal and vertical axes.
 {{< hint info >}}
 **Important:** You must declare either `position: absolute` or `position: fixed` style rule to the selected element to make this mixin work correctly. **The parent element's `position` value, which you'll be centering within must be other than `static`**.
 {{< /hint >}}
 {{< hint warning >}}
-**Note that in mind** that because this mixin uses the CSS ‘**transform**’ property, this property will no longer be available to use!
+**Note that in mind** that because this mixin uses the CSS ‘**transform**’ property, this property will no longer be available for the selected element!
 {{< /hint >}}
 {{< /mixin >}}
 

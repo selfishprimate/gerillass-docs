@@ -36,8 +36,8 @@ Simply call the mixin in a selector and pass the URL of the background image.
     background-size: cover;
 }
 {{< /highlight >}}
-{{< sandbox class="xlarge element" >}}
-position: relative;background-position: center center;background-repeat: no-repeat;background-size: cover;
+{{< sandbox class="xlarge" >}}
+position: relative;background-image: url("https://i.picsum.photos/id/1018/3914/2935.jpg");background-position: center center;background-repeat: no-repeat;background-size: cover;
 {{< /sandbox >}}
 {{< /highlightwrap >}}
 
