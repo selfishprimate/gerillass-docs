@@ -16,7 +16,7 @@ title: "Responsive Video"
 ## Arguments
 
 {{< arguments/table footnote="The value you pass can be with or without the quotation marks." >}}
-    {{< arguments/row name="$ratio" type="string, number" description="Accepts only one arguments. It can be `number` or `string` type. The value must be formatted something like this: `16/9`, `4/3`, `1/1` based on the ratio of the video that you want to embed. Default ratio value is set to `16/9`." >}}
+    {{< arguments/row name="$ratio" type="string, number" description="The aspect ratio of the video. Accepts either `number` or `string` type of values. The value must be formatted something like this: `16/9`, `4/3`, `1/1` based on the ratio of the video that you want to embed. Default ratio value is set to `16/9`." >}}
 {{< /arguments/table >}}
 
 ## Examples
