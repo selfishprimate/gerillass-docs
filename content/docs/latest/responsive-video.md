@@ -22,9 +22,9 @@ title: "Responsive Video"
 ## Examples
 
 {{< highlightwrap class="example">}}
-Let try calling it without passing an argument. Remember that the default `$ratio` value is set to `16/9`.
+Simply call the mixin without passing any argument. **Remember that the default `$ratio` value is set to `16/9`**.
 {{< highlight html >}}
-<div class="responsive-video">
+<div class="element">
     <iframe src="https://www.youtube.com/embed/JBc6JiRlsOU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 {{< /highlight >}}
@@ -35,11 +35,15 @@ Let try calling it without passing an argument. Remember that the default `$rati
 {{< /highlight >}}
 {{< highlight css >}}
 //CSS Output
-.responsive-video {
+.element {
     position: relative;
+}
+.element::before {
+    content: "";
+    display: block;
     padding-top: 56.25%;
 }
-.responsive-video > * {
+.element > * {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -50,14 +54,15 @@ Let try calling it without passing an argument. Remember that the default `$rati
 }
 {{< /highlight >}}
 <style>
-.responsive-video.example01 {
+.element.example01 {
     position: relative;
-    padding-top: 56.25%;
-    margin-bottom: 16px;
-    border-radius: 3px;
-    overflow: hidden;
 }
-.responsive-video > * {
+.element.example01::before {
+    content: "";
+    display: block;
+    padding-top: 56.25%;
+}
+.element.example01 > * {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -67,18 +72,18 @@ Let try calling it without passing an argument. Remember that the default `$rati
     left: 0;
 }
 </style>
-<div class="responsive-video example01">
+
+<div class="element example01" style="margin-bottom: 1em;">
     <iframe src="https://www.youtube.com/embed/JBc6JiRlsOU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+</div>  
 
 Try to resize the browser screen to see the result.
-
 {{< /highlightwrap >}}
 
 {{< highlightwrap class="example">}}
-Now, let's try with a video clip that has 4/3 aspect ratio and pass the related value for `$ratio` argument. Comes from the loving voice of **Anna German**.
+Now, let's **try with a video clip that has 4/3 aspect ratio** and pass the related value for `$ratio` argument. Comes from the loving voice of **Anna German**.
 {{< highlight html >}}
-<div class="responsive-video">
+<div class="element">
     <iframe src="https://www.youtube.com/embed/KYaCmvyK50Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 {{< /highlight >}}
@@ -89,11 +94,15 @@ Now, let's try with a video clip that has 4/3 aspect ratio and pass the related 
 {{< /highlight >}}
 {{< highlight css >}}
 //CSS Output
-.responsive-video {
+.element {
     position: relative;
+}
+.element::before {
+    content: "";
+    display: block;
     padding-top: 75%;
 }
-.responsive-video > * {
+.element > * {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -104,23 +113,33 @@ Now, let's try with a video clip that has 4/3 aspect ratio and pass the related 
 }
 {{< /highlight >}}
 <style>
-.responsive-video.example02 {
+.element.example02 {
     position: relative;
+}
+.element.example02::before {
+    content: "";
+    display: block;
     padding-top: 75%;
-    margin-bottom: 16px;
-    border-radius: 3px;
-    overflow: hidden;
+}
+.element.example02 > * {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
 }
 </style>
-<div class="responsive-video example02">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/KYaCmvyK50Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="element example02">
+<iframe src="https://www.youtube.com/embed/KYaCmvyK50Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 {{< /highlightwrap >}}
 
 {{< highlightwrap class="example">}}
-Now, let's pass a string value.
+Now, let's **pass a string value**.
 {{< highlight html >}}
-<div class="responsive-video">
+<div class="element">
     <iframe src="https://www.youtube.com/embed/fiyABGQnF5A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 {{< /highlight >}}
@@ -131,11 +150,15 @@ Now, let's pass a string value.
 {{< /highlight >}}
 {{< highlight css >}}
 //CSS Output
-.responsive-video {
+.element {
     position: relative;
+}
+.element::before {
+    content: "";
+    display: block;
     padding-top: 56.25%;
 }
-.responsive-video > * {
+.element > * {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -146,15 +169,140 @@ Now, let's pass a string value.
 }
 {{< /highlight >}}
 <style>
-.responsive-video.example03 {
-    position: relative;
-    padding-top: 56.25%;
-    margin-bottom: 16px;
-    border-radius: 3px;
-    overflow: hidden;
+.element.example03 {
+  position: relative;
+}
+.element.example03::before {
+  content: "";
+  display: block;
+  padding-top: 56.25%;
+}
+.element.example03 > * {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 </style>
-<div class="responsive-video example03">
+<div class="element example03">
 <iframe src="https://www.youtube.com/embed/fiyABGQnF5A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+{{< /highlightwrap >}}
+
+{{< highlightwrap class="example">}}
+Now let's **pass a string value** and **use `colon` punctuation mark**. The result will be the same.
+{{< highlight html >}}
+<div class="element">
+    <iframe src="https://www.youtube.com/embed/ymf7DZUeVow" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+{{< /highlight >}}
+{{< highlight scss >}}
+.element{
+    @include gls-responsive-video("16:9");
+}
+{{< /highlight >}}
+{{< highlight css >}}
+//CSS Output
+.element {
+    position: relative;
+}
+.element::before {
+    content: "";
+    display: block;
+    padding-top: 56.25%;
+}
+.element > * {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+{{< /highlight >}}
+<style>
+.element.example04 {
+  position: relative;
+}
+.element.example04::before {
+  content: "";
+  display: block;
+  padding-top: 56.25%;
+}
+.element.example04 > * {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+</style>
+<div class="element example04">
+<iframe src="https://www.youtube.com/embed/ymf7DZUeVow" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+{{< /highlightwrap >}}
+
+{{< highlightwrap class="example">}}
+You can **change the width value of the selected element** if you like, **the aspect ratio won't be collapsed**.
+{{< highlight html >}}
+<div class="element">
+    <iframe src="https://www.youtube.com/embed/dK6Gvee-ri4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+{{< /highlight >}}
+{{< highlight scss >}}
+.element{
+    width: 400px;
+    @include gls-responsive-video("16:9");
+}
+{{< /highlight >}}
+{{< highlight css >}}
+//CSS Output
+.element {
+    width: 400px;
+    position: relative;
+}
+.element::before {
+    content: "";
+    display: block;
+    padding-top: 56.25%;
+}
+.element > * {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+{{< /highlight >}}
+<style>
+.element.example05 {
+  width: 400px;
+  position: relative;
+}
+.element.example05::before {
+  content: "";
+  display: block;
+  padding-top: 56.25%;
+}
+.element.example05 > * {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+</style>
+<div class="element example05">
+<iframe src="https://www.youtube.com/embed/dK6Gvee-ri4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 {{< /highlightwrap >}}

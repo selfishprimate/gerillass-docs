@@ -1,8 +1,10 @@
 .table{
     margin: 0 0 80px;
-    overflow-x: scroll;
     @include gls-breakpoint(max, medium){
         padding-bottom: $global-space;
+    }
+    @include gls-breakpoint(max, large){
+        overflow-x: auto;
     }
     p{
         font-size: .9em;

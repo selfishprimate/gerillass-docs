@@ -2,7 +2,8 @@
 $hint-colors: (
   info: $primary-color,
   warning: darkkhaki,
-  danger: #f66
+  danger: #f66,
+  tip: $jelly-bean
 ) !default;
 
 .book-hint {
@@ -13,6 +14,7 @@ $hint-colors: (
       code {
           background-color: rgba($color, 0.2);
       }
+      strong {}
     }
   };
 }

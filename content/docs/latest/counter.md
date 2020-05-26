@@ -295,7 +295,7 @@ Now let's pass two values, one for the front of the counter the other one is for
 {{< /highlightwrap >}}
 
 {{< highlightwrap class="example">}}
-Now let's pass `decimal` value for the counter style and add a string behind it!
+Now let's change the counter style to `decimal` again and add a string behind it!
 {{< highlight scss >}}
 .listicle-wrapper {
     @include gls-counter(decimal, "th ") {
@@ -445,7 +445,7 @@ Now let's add a string to both the front and behind of the counter.
 {{< /highlightwrap >}}
 
 {{< highlightwrap class="example">}}
-The examples shown so far were about how to use this function. **So where can you go from here?** Here is an example!
+The examples shown so far were about how to use this mixin. **So where can you go from here?** Here is an example!
 {{< highlight html >}}
 <div class="listicle-wrapper counter-start">
     <div class="item counter-item">The passage experienced a surge in popularity during the 1960s when Letraset used it on their dry-transfer sheets, and again during the 90s as desktop publishers bundled the text with their software. Today it's seen all around the web; on templates, websites, and stock designs. Use our generator to get your own, or read on for the authoritative history of lorem ipsum.</div>
