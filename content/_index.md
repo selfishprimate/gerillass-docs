@@ -49,7 +49,41 @@ git submodule add https://github.com/babilkuyusu/gerillass.git
 {{< /highlightwrap >}}
 
 
-### 2. Node.js
+### 2. RubyGems
+
+Install the Gerillass gem by using the RubyGems package manager:
+
+{{< highlightwrap class="terminal">}}
+{{< highlight nix >}}
+gem install gerillass
+{{< /highlight >}}
+{{< /highlightwrap >}}
+
+Install the Gerillass library into the current directory:
+
+{{< highlightwrap class="terminal">}}
+{{< highlight nix >}}
+gerillass install
+{{< /highlight >}}
+{{< /highlightwrap >}}
+
+**Tip:** You can target installation into a specific directory using the path flag:
+
+{{< highlightwrap class="terminal">}}
+{{< highlight nix >}}
+gerillass install --path my/custom/path/
+{{< /highlight >}}
+{{< /highlightwrap >}}
+
+Import Gerillass at the beginning of your style sheet:
+
+{{< highlightwrap >}}
+{{< highlight scss >}}
+@import "gerillass/core/gerillass";
+{{< /highlight >}}
+{{< /highlightwrap >}}
+
+### 3. Node.js
 
 If you are working on a Node.js project you can add Gerillass as a dependency.
 
