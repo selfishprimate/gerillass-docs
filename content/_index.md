@@ -83,6 +83,40 @@ Import Gerillass at the beginning of your style sheet:
 {{< /highlight >}}
 {{< /highlightwrap >}}
 
+### 3. Installation for Ruby on Rails
+
+{{< highlightwrap class="terminal">}}
+Add Gerillass to your Gemfile:
+{{< highlight nix >}}
+gem install gerillass
+{{< /highlight >}}
+{{< /highlightwrap >}}
+
+{{< highlightwrap class="terminal">}}
+After that run the command below:
+{{< highlight nix >}}
+bundle install
+{{< /highlight >}}
+{{< /highlightwrap >}}
+
+{{< highlightwrap class="terminal">}}
+Restart your server and rename application.css to application.scss:
+{{< highlight nix >}}
+mv app/assets/stylesheets/application.css app/assets/stylesheets/application.scss
+{{< /highlight >}}
+{{< /highlightwrap >}}
+
+Delete all Sprockets directives in application.scss (require, require_tree and require_self) and use Sass’s native @import instead (why?).
+
+{{< highlightwrap >}}
+Import Gerillass at the beginning of application.scss. Any project styles that utilize Gerillass’s features must be imported after Gerillass.
+{{< highlight scss >}}
+@import "gerillass";
+@import "home";
+@import "users";
+{{< /highlight >}}
+{{< /highlightwrap >}}
+
 ### 3. Node.js
 
 If you are working on a Node.js project you can add Gerillass as a dependency.
@@ -101,7 +135,7 @@ yarn add gerillass
 {{< /highlight >}}
 {{< /highlightwrap >}}
 
-### 3. How to Include?
+### 5. How to Include?
 
 {{< highlightwrap class="no-lang">}}
 Import Gerillass at the beginning of your stylesheet.
