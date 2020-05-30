@@ -39,12 +39,12 @@ You can Install Gerillass via [**Github**](https://github.com/babilkuyusu/gerill
 {{< highlightwrap class="terminal">}}
 Open the terminal window. Target the folder that you want Gerillass to be installed. Copy and past the command below and hit the enter to install the library into your local computer.
 {{< highlight nix >}}
-git clone https://github.com/babilkuyusu/gerillass.git
+git clone https://github.com/selfishprimate/gerillass.git
 {{< /highlight >}}
 
 If you're running on a Git project you can add Gerillass as a subdirectory to your Git repository.
 {{< highlight nix >}}
-git submodule add https://github.com/babilkuyusu/gerillass.git
+git submodule add https://github.com/selfishprimate/gerillass.git
 {{< /highlight >}}
 {{< /highlightwrap >}}
 
