@@ -263,7 +263,7 @@ When you pass arguments for `id` or `class` attributes of the items, don't forge
 {{< /highlightwrap >}}
 
 {{< highlightwrap class="example">}}
-Now suppose you don't know the number of the items that will appear in the list, and that **you want to exclude the third item from the very end**. How can you achieve that? **The code below will target all the elements in the list except the second**.
+Now suppose you don't know the number of the items that will appear in the list, and that **you want to exclude the second item from the very end**. How can you achieve that? It's easy! **The code below will target all the elements in the list except the second**.
 {{< hint info >}}
 You can pass negative values to exclude elements based on their position among a group of siblings, counting from the end.
 {{</ hint >}}
