@@ -218,3 +218,120 @@ Remember that when you make a multiple selection the arguments you pass must be 
 </div>
 {{< /highlightwrap >}}
 
+{{< highlightwrap class="example">}}
+Now suppose you don't know the number of the items that will appear in the list, and that **you want to target only the third item from the very end**. How can you achieve that? It's surprisingly easy!
+
+{{< hint info >}}
+**Information:** You can pass negative values to target elements based on their position among a group of siblings, counting from the end.
+{{</ hint >}}
+
+{{< highlight scss >}}
+.list-wrapper {
+  .list-item {
+    @include gls-only(-3) {
+      background-color: #5bc0bb;
+      color: white;
+    }
+  }
+}
+{{< /highlight >}}
+{{< highlight css >}}
+//CSS Output
+.list-wrapper .list-item:nth-last-of-type(3) {
+  background-color: #5bc0bb;
+  color: white;
+}
+{{< /highlight >}}
+<style>
+.list-wrapper.example06 .list-item:nth-last-of-type(3) {
+  background-color: #5bc0bb;
+  color: white;
+}
+</style>
+<div class="list-wrapper example06">
+    <div class="list-item exclude">01</div>
+    <div class="list-item">02</div>
+    <div class="list-item">03</div>
+    <div class="list-item">04</div>
+    <div class="list-item">05</div>
+    <div class="list-item exclude">06</div>
+</div>
+{{< /highlightwrap >}}
+
+{{< highlightwrap class="example">}}
+Now let's pass multiple negative values.
+{{< highlight scss >}}
+.list-wrapper {
+  .list-item {
+    @include gls-only(-1, -2, -4) {
+      background-color: #5bc0bb;
+      color: white;
+    }
+  }
+}
+{{< /highlight >}}
+{{< highlight css >}}
+//CSS Output
+.list-wrapper .list-item:nth-last-of-type(1), 
+.list-wrapper .list-item:nth-last-of-type(2), 
+.list-wrapper .list-item:nth-last-of-type(4) {
+  background-color: #5bc0bb;
+  color: white;
+}
+{{< /highlight >}}
+<style>
+.list-wrapper.example07 .list-item:nth-last-of-type(1), 
+.list-wrapper.example07 .list-item:nth-last-of-type(2), 
+.list-wrapper.example07 .list-item:nth-last-of-type(4) {
+  background-color: #5bc0bb;
+  color: white;
+}
+</style>
+<div class="list-wrapper example07">
+    <div class="list-item exclude">01</div>
+    <div class="list-item">02</div>
+    <div class="list-item">03</div>
+    <div class="list-item">04</div>
+    <div class="list-item">05</div>
+    <div class="list-item exclude">06</div>
+</div>
+{{< /highlightwrap >}}
+
+{{< highlightwrap class="example">}}
+Now let's pass the **positive and negative values ​​together**.
+{{< highlight scss >}}
+.list-wrapper {
+  .list-item {
+    @include gls-only(1, -2) {
+      background-color: #5bc0bb;
+      color: white;
+    }
+  }
+}
+{{< /highlight >}}
+{{< highlight css >}}
+//CSS Output
+.list-wrapper .list-item:nth-of-type(1), 
+.list-wrapper .list-item:nth-last-of-type(2) {
+  background-color: #5bc0bb;
+  color: white;
+}
+{{< /highlight >}}
+<style>
+.list-wrapper.example08 .list-item:nth-of-type(1),
+.list-wrapper.example08 .list-item:nth-last-of-type(2) {
+  background-color: #5bc0bb;
+  color: white;
+}
+</style>
+<div class="list-wrapper example08">
+    <div class="list-item exclude">01</div>
+    <div class="list-item">02</div>
+    <div class="list-item">03</div>
+    <div class="list-item">04</div>
+    <div class="list-item">05</div>
+    <div class="list-item exclude">06</div>
+</div>
+{{< /highlightwrap >}}
+
+

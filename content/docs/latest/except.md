@@ -263,9 +263,10 @@ When you pass arguments for `id` or `class` attributes of the items, don't forge
 {{< /highlightwrap >}}
 
 {{< highlightwrap class="example">}}
-Now suppose you don't know the number of the items that will appear in the list, and that **you want to exclude the second item from the very end**. How can you achieve that? It's easy! **The code below will target all the elements in the list except the second**.
+Now suppose you don't know the number of the items that will appear in the list, and that **you want to exclude the second item from the very end**. How can you achieve that? It's easy!
+
 {{< hint info >}}
-You can pass negative values to exclude elements based on their position among a group of siblings, counting from the end.
+**Information:** You can pass negative values to exclude elements based on their position among a group of siblings, counting from the end.
 {{</ hint >}}
 
 {{< highlight scss >}}
@@ -292,6 +293,78 @@ You can pass negative values to exclude elements based on their position among a
 }
 </style>
 <div class="list-wrapper example07">
+    <div class="list-item exclude">01</div>
+    <div class="list-item">02</div>
+    <div class="list-item">03</div>
+    <div class="list-item">04</div>
+    <div class="list-item">05</div>
+    <div class="list-item exclude">06</div>
+</div>
+{{< /highlightwrap >}}
+
+{{< highlightwrap class="example">}}
+Now let's pass multiple negative values.
+
+{{< highlight scss >}}
+.list-wrapper {
+  .list-item {
+    @include gls-except(-2, -4) {
+      background-color: #5bc0bb;
+      color: white;
+    }
+  }
+}
+{{< /highlight >}}
+{{< highlight css >}}
+//CSS Output
+.list-wrapper .list-item:not(:nth-last-of-type(2)):not(:nth-last-of-type(4)) {
+  background-color: #5bc0bb;
+  color: white;
+}
+{{< /highlight >}}
+<style>
+.list-wrapper.example08 .list-item:not(:nth-last-of-type(2)):not(:nth-last-of-type(4)) {
+  background-color: #5bc0bb;
+  color: white;
+}
+</style>
+<div class="list-wrapper example08">
+    <div class="list-item exclude">01</div>
+    <div class="list-item">02</div>
+    <div class="list-item">03</div>
+    <div class="list-item">04</div>
+    <div class="list-item">05</div>
+    <div class="list-item exclude">06</div>
+</div>
+{{< /highlightwrap >}}
+
+{{< highlightwrap class="example">}}
+Now let's pass the **positive and negative values ​​together**.
+
+{{< highlight scss >}}
+.list-wrapper {
+  .list-item {
+    @include gls-except(1, -1, -2) {
+      background-color: #5bc0bb;
+      color: white;
+    }
+  }
+}
+{{< /highlight >}}
+{{< highlight css >}}
+//CSS Output
+.list-wrapper .list-item:not(:nth-of-type(1)):not(:nth-last-of-type(1)):not(:nth-last-of-type(2)) {
+  background-color: #5bc0bb;
+  color: white;
+}
+{{< /highlight >}}
+<style>
+.list-wrapper.example09 .list-item:not(:nth-of-type(1)):not(:nth-last-of-type(1)):not(:nth-last-of-type(2)) {
+  background-color: #5bc0bb;
+  color: white;
+}
+</style>
+<div class="list-wrapper example09">
     <div class="list-item exclude">01</div>
     <div class="list-item">02</div>
     <div class="list-item">03</div>
