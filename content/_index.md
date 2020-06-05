@@ -11,7 +11,7 @@ I am proud to present to you a brand new toolkit named [**Gerillass**](https://g
 
 **More than anything, Gerillass is here to make web development fun for everyone.**
 
-Hope you'll enjoy it!
+Hope you'll enjoy using it!
 
 <div class="download-buttons btn-wrapper" style="margin-bottom: 80px;">
     <a class="btn small" href="https://github.com/babilkuyusu/gerillass" target="_blank">

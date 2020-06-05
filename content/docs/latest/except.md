@@ -262,3 +262,41 @@ When you pass arguments for `id` or `class` attributes of the items, don't forge
 </div>
 {{< /highlightwrap >}}
 
+{{< highlightwrap class="example">}}
+Now suppose you don't know the number of the items that will appear in the list, and that **you want to exclude the third item from the very end**. How can you achieve that? **The code below will target all the elements in the list except the second**.
+{{< hint info >}}
+You can pass negative values to exclude elements based on their position among a group of siblings, counting from the end.
+{{</ hint >}}
+
+{{< highlight scss >}}
+.list-wrapper{
+  .list-item{
+    @include gls-except(-2){
+      background-color: #5bc0bb;
+      color: white;
+    }
+  }
+}
+{{< /highlight >}}
+{{< highlight css >}}
+//CSS Output
+.list-wrapper .list-item:not(:nth-last-of-type(2)) {
+  background-color: #5bc0bb;
+  color: white;
+}
+{{< /highlight >}}
+<style>
+.list-wrapper.example07 .list-item:not(:nth-last-of-type(2)) {
+  background-color: #5bc0bb;
+  color: white;
+}
+</style>
+<div class="list-wrapper example07">
+    <div class="list-item exclude">01</div>
+    <div class="list-item">02</div>
+    <div class="list-item">03</div>
+    <div class="list-item">04</div>
+    <div class="list-item">05</div>
+    <div class="list-item exclude">06</div>
+</div>
+{{< /highlightwrap >}}
