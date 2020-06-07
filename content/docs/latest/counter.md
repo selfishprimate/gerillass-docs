@@ -548,7 +548,7 @@ The examples shown so far were about how to use this mixin. **So where can you g
 {{< /highlightwrap >}}
 
 {{< highlightwrap class="example">}}
-If you want **to continue a list that is interrupted by another content**, simply give the continuing parent element **‘counter-continue’** class instead of **‘counter-start’**.
+If you want **to continue a list that is interrupted by another content (for example, an unpleasant ugly add banner)**, simply give the continuing parent element **‘counter-continue’** class instead of **‘counter-start’**.
 {{< highlight html >}}
 <div class="listicle-wrapper counter-start">
     <div class="item counter-item">The passage experienced a surge in popularity during the 1960s when Letraset used it on their dry-transfer sheets, and again during the 90s as desktop publishers bundled the text with their software. Today it's seen all around the web; on templates, websites, and stock designs. Use our generator to get your own, or read on for the authoritative history of lorem ipsum.</div>
