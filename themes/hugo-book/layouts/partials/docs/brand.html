@@ -1,16 +1,10 @@
 <div class="book-brand">
-    <a href="{{ .Site.BaseURL | relLangURL }}">
-
+    <a href="https://gerillass.com">
         {{ with .Site.Params.LogoLink }}
             <img src="{{ . | relURL }}" alt="Logo"/>
         {{ end }}
-
         {{ with .Site.Params.LogoTitle}}
             <span class="logo-title">{{.}}</span>
-        {{ end }}
-
-        {{ with .Site.Params.LogoDescription}}
-            <span class="logo-description">{{.}}</span>
         {{ end }}
     </a>
 </div>

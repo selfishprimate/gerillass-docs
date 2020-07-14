@@ -46,9 +46,7 @@ cleanDestinationDir = true
     # (Optional, default none) Set the path to a logo for the book. If the logo is
     # /static/logo.png then the path would be logo.png
     LogoLink = 'images/gerillass-logo.svg'
-
     # LogoTitle = "Gerillass Documentation"
-    LogoDescription = "Documentation for v1.0.0"
     
     # (Optional, default none) Set leaf bundle to render as side menu
     # When not specified file structure and weights will be used
@@ -60,7 +58,7 @@ cleanDestinationDir = true
 
     # Set source repository location.
     # Used for 'Last Modified' and 'Edit this page' links.
-    BookRepo = 'https://github.com/babilkuyusu/gerillass-docs'
+    BookRepo = 'https://github.com/selfishprimate/gerillass-docs'
 
     # Enable "Edit this page" links for 'doc' page type.
     # Disabled by default. Uncomment to enable. Requires 'BookRepo' param.

@@ -7,14 +7,14 @@
 <div class="btn-wrapper flex justify-between">
     {{ if and .GitInfo .Site.Params.BookRepo }}
         {{ $date := .GitInfo.AuthorDate.Local.Format (default "January 2, 2006" .Site.Params.BookDateFormat) }}
-        <a href="{{ .Site.Params.BookRepo }}/commit/{{ .GitInfo.Hash }}" title='{{ i18n "Last modified by" }} {{ .GitInfo.AuthorName }} | {{ $date }}' target="_blank" rel="noopener">
+        <a href="{{ .Site.Params.BookRepo }}/commit/{{ .GitInfo.Hash }}" title='{{ i18n "Last modified by" }} {{ .GitInfo.AuthorName }} | {{ $date }}' target="_blank" rel="noopener noreferrer">
             <!-- <ion-icon class="btn-icon left" name="today-outline"></ion-icon> -->
             <!-- <img src="{{ "svg/calendar.svg" | relURL }}" class="book-icon" alt="Calendar"/> -->
             <span class="btn-text">{{ $date }}</span>
         </a>
     {{ end }}
     {{ if and .File .Site.Params.BookRepo .Site.Params.BookEditPath }}
-        <a href="{{ .Site.Params.BookRepo }}/{{ .Site.Params.BookEditPath }}/{{ replace .File.Path "\\" "/" }}" target="_blank" rel="noopener">
+        <a href="{{ .Site.Params.BookRepo }}/{{ .Site.Params.BookEditPath }}/{{ replace .File.Path "\\" "/" }}" target="_blank" rel="noopener noreferrer">
             <!-- <ion-icon class="btn-icon left" name="create-outline"></ion-icon> -->
             <!-- <img src="{{ "svg/edit.svg" | relURL }}" class="book-icon" alt="Edit" /> -->
             <span class="btn-text">{{ i18n "Edit this page" }}</span>

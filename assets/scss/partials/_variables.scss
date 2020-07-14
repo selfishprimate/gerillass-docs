@@ -1,8 +1,13 @@
 //Color Library
 $white: #FFFFFF;
 $black: #000000;
+$snow: #fafaf8;
 $steal-teal: #668F80;
 $charleston-green: #222C25;
+$crayola: #2f3937;
+$granite-green: #657167;
+$artichoke: #8b9381;
+
 $light-gray: rgb(230,230,230);
 $bus-yellow: #ffd900;
 $light-sea-green: #5BC0BB;
@@ -11,10 +16,12 @@ $copper: #B77434;
 $snow: #FAFAF8;
 $jelly-bean: #DB504A;
 
-$primary-color: $light-sea-green;
-$secondary-color: $bus-yellow;
+$celtic-blue: #0366D6;
 
-$link-color: $primary-color;
+$primary-color: $celtic-blue;
+$secondary-color: $steal-teal;
+
+$link-color: $celtic-blue;
 $link-color-hover: $primary-color;
 $link-color-active: $primary-color;
 $link-color-visited: $primary-color;

@@ -1,16 +1,20 @@
 <footer class="main-footer">
-    <div class="main-footer__inner container">
+  <div class="main-footer__inner container">
 
-        <div class="main-footer__left">
-            <div class="main-footer__text">
+    <div class="main-footer__left">
+      <div class="main-footer__author">
+              Designed and built by <a class="main-footer__link" href="https://www.linkedin.com/in/selfishprimate/" target="_blank" rel="noopener noreferrer">Halil İbrahim Çakıroğlu</a>
+      </div>
+      <div class="main-footer__text">
                 Please feel free to give a star or contribute to the library.
-                <a class="main-footer__link">Help it grow!</a>
-            </div>
-        </div>
-
-        <div class="main-footer__right">
-            {{ partial "github-buttons" . }}
-        </div>
+                <a class="main-footer__link" href="https://www.patreon.com/selfishprimate" target="_blank" rel="noopener noreferrer">Help it grow!</a>
+      </div>
 
     </div>
+
+    <div class="main-footer__right">
+      {{ partial "github-buttons" . }}
+    </div>
+
+  </div>
 </footer>

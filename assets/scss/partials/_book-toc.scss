@@ -9,10 +9,6 @@
                 a{
                     font-size: .8em;
                     line-height: 1.3;
-                    text-decoration: none;
-                    &:hover{
-                        text-decoration: none;
-                    }
                 }
                 > ul {
                     padding: ($global-space / 2) 0 0 $global-space ;

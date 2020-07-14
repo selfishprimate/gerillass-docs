@@ -1,68 +1,56 @@
-.github-buttons{
-    $base-size: 28px;
-    $primary-color: $charleston-green;
+.github-buttons {
+  $base-size: 28px;
+  position: relative;
+  padding-left: 1.2rem;
+  ion-icon {
+    position: absolute;
+    font-size: $base-size;
+    left: 0;
+  }
+  ul {
     position: relative;
-    padding-left: $base-size + 5;
-    ion-icon{
-        position: absolute;
-        font-size: $base-size;
-        left: 0;
-    }
-    ul{
-        position: relative;
-        display: flex;
-        li{
-            position: relative;
-            height: $base-size;
-            padding: 0 14px;
-            border: 1px solid $primary-color;
-            border-radius: $base-size;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            transition: .3s;
-            &:not(:last-of-type) {
-                margin-right: 11px;
-                &::after{
-                    content: "";
-                    display: block;
-                    position: absolute;
-                    height: 1px;
-                    width: 12px;
-                    right: 0;
-                    top: 50%;
-                    transform: translateX(100%) translateY(-50%);
-                    background-color: $primary-color;
-                }
-                &::before{
-                    content: "";
-                    display: block;
-                    position: absolute;
-                    width: 3px;
-                    height: 3px;
-                    border-radius: 3px;
-                    right: -8px;
-                    top: 50%;
-                    transform: translateY(-50%);
-                    background-color: $primary-color;
-                }
-            }
-            a{
-                font-size: 13px;
-                color: $primary-color;
-                line-height: 0;
-                text-decoration: none;
-                background-color: red;
-                @include gls-stretched-link;
-            }
-            &:hover,
-            &.download{
-                background-color: $primary-color;
-                a{
-                    color: $white;
-                }
-            }
+    display: flex;
+    li {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: __remify(28px);
+      font-size: __remify(13px);
+      padding: 0 0.8rem;
+      border: __remify(2px) solid $body-text-color;
+      border-radius: __remify(4px);
+      &:not(:last-of-type) {
+        margin-right: __remify(6px);
+        &::after {
+          content: "";
+          position: absolute;
+          height: __remify(2px);
+          width: __remify(8px);
+          right: __remify(-8px);
+          @include gls-center(vertical);
+          background-color: $body-text-color;
         }
+      }
+      &:hover {
+        background-color: $body-text-color;
+        a {
+          color: white;
+          opacity: 1;
+        }
+      }
+      a {
+        font-weight: 500;
+        text-decoration: none;
+        line-height: 0;
+        @include gls-stretched-link;
+      }
+      &.download {
+        background-color: $body-text-color;
+        a {
+          color: white;
+        }
+      }
     }
+  }
 }
-

@@ -1,91 +1,95 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.Language.Lang }}">
 
-    <head>
-        {{ partial "docs/html-head" . }}
-        {{ partial "docs/inject/head" . }}
-    </head>
+  <head>
+    {{ partial "docs/html-head" . }}
+    {{ partial "docs/inject/head" . }}
+  </head>
 
-    <body>
+  <body>
 
-        {{ partial "main-header" . }}
+    {{ partial "main-header" . }}
 
-        <input type="checkbox" class="hidden" id="menu-control"/>
-        <main class="main-container container flex">
+    <input type="checkbox" class="hidden" id="menu-control"/>
+    <main class="main-container container flex">
 
-            <aside class="book-menu">
-                {{ template "menu" . }}
-            </aside>
+      <aside class="book-menu">
+        <div class="home-button-wrapper">
+          <a class="home-button" href="/">Getting Started</a>
+        </div>
 
-            <div class="book-page">
+        {{ template "menu" . }}
+      </aside>
 
-                <!-- Mobile Layout Header -->
-                <!--<header class="book-header">
+      <div class="book-page">
+
+        <!-- Mobile Layout Header -->
+        <!--<header class="book-header">
                     {{ template "header" . }}
                 </header>-->
 
-                {{ template "main" . }}
-                <!-- Page Content -->
+        {{ template "main" . }}
+        <!-- Page Content -->
 
-                <div class="book-footer">
-                    {{ template "footer" . }}
-                    <!-- Footer under page content -->
-                    {{ template "comments" . }}
-                    <!-- Comments block -->
-                </div>
-                {{ partial "docs/inject/footer" . }}
-            </div>
+        <div class="book-footer">
+          {{ template "footer" . }}
+          <!-- Footer under page content -->
+          {{ template "comments" . }}
+          <!-- Comments block -->
+        </div>
+        {{ partial "docs/inject/footer" . }}
+      </div>
 
-            {{ if default true (default .Site.Params.BookToC .Params.BookToC) }}
-                <aside class="book-toc">
-                    {{ with .Site.Params.BookTocLabel }}
-                        <div class="book-toc-label label">{{.}}</div>
-                    {{ end }}
-                    {{ template "toc" . }}
-                    <!-- Table of Contents -->
-                </aside>
-            {{ end }}
-        </main>
+      {{ if default true (default .Site.Params.BookToC .Params.BookToC) }}
+        <aside class="book-toc">
+          {{ with .Site.Params.BookTocLabel }}
+            <div class="book-toc-label label">{{.}}</div>
+          {{ end }}
+          {{ template "toc" . }}
+          <!-- Table of Contents -->
+        </aside>
+      {{ end }}
+    </main>
 
-        {{ partial "main-footer" . }}
+    {{ partial "main-footer" . }}
 
-        {{ partial "docs/inject/body" . }}
-        <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
-    </body>
+    {{ partial "docs/inject/body" . }}
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+  </body>
 
 </html>
 
 {{ define "menu" }}
-    {{ partial "docs/menu" . }}
+  {{ partial "docs/menu" . }}
 {{ end }}
 
 {{ define "header" }}
-    {{ partial "docs/header" . }}
+  {{ partial "docs/header" . }}
 
-    {{ if default true (default .Site.Params.BookToC .Params.BookToC) }}
-        <input type="checkbox" class="hidden" id="toc-control"/>
-        <aside class="hidden clearfix">
-            {{ template "toc" . }}
-        </aside>
-    {{ end }}
+  {{ if default true (default .Site.Params.BookToC .Params.BookToC) }}
+    <input type="checkbox" class="hidden" id="toc-control"/>
+    <aside class="hidden clearfix">
+      {{ template "toc" . }}
+    </aside>
+  {{ end }}
 {{ end }}
 
 {{ define "footer" }}
-    {{ partial "docs/footer" . }}
+  {{ partial "docs/footer" . }}
 {{ end }}
 
 {{ define "comments" }}
-    {{ if and .Content (default true (default .Site.Params.BookComments .Params.BookComments)) }}
-        <div class="book-comments">
-            {{- partial "docs/comments" . -}}
-        </div>
-    {{ end }}
+  {{ if and .Content (default true (default .Site.Params.BookComments .Params.BookComments)) }}
+    <div class="book-comments">
+      {{- partial "docs/comments" . -}}
+    </div>
+  {{ end }}
 {{ end }}
 
 {{ define "main" }}
-    {{ .Content }}
+  {{ .Content }}
 {{ end }}
 
 {{ define "toc" }}
-    {{ .TableOfContents }}
+  {{ .TableOfContents }}
 {{ end }}

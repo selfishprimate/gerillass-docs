@@ -1,156 +1,162 @@
 ---
-title: Introduction
 type: docs
+title: "Getting Started"
 ---
 
-# Strongest Sass Toolkit ever!
+# Getting Started
 
-Hi developers, designers and the other enthusiasts of the open-source community! 
+***
+_This page is an overview of the Gerillass installation. To see the examples and learn how to use Gerillass, check the sidebar at the left-hand side._
 
-I am proud to present to you a brand new toolkit named [**Gerillass**](https://gerillass.com/). It is an open-source toolkit that contains a set of Sass mixins to help you avoid code repetition and generate better, faster and consistent CSS code.
+[Gerillass](https://gerillass.com) is a library built on top of [Sass (Syntactically Awesome Style Sheets)](https://sass-lang.com/) to give you flexibility for your projects and accelerate your performance and creativity.
 
-**More than anything, Gerillass is here to make web development fun for everyone.**
+Many of the utilities that come with Gerillass are the solutions I have come up with for the challenges I have faced as a frontend developer over the years. These solutions have been shaped by the inspiration of other popular libraries and frameworks like [Bourbon](https://www.bourbon.io/), [Susy](https://www.oddbird.net/), [Scut](https://davidtheclark.github.io/scut/), [Bootstrap](https://getbootstrap.com/), etc. over time and helped me create Gerillass.
 
-Hope you'll enjoy using it!
+Hope you’ll enjoy using it!
 
 <div class="download-buttons btn-wrapper" style="margin-bottom: 80px;">
-    <a class="btn small" href="https://github.com/babilkuyusu/gerillass" target="_blank">
+    <a class="btn small" href="https://github.com/selfishprimate/gerillass" target="_blank" rel="noopener noreferrer">
         <ion-icon name="download-outline"></ion-icon>
         <span class="btn-text">Download the Library</span>
     </a>
-    <a class="btn small" href="https://gerillass.com/" target="_blank">
+    <a class="btn small" href="https://gerillass.com/" target="_blank" rel="noopener noreferrer">
         <ion-icon name="link-outline"></ion-icon>
         <span class="btn-text">Visit Gerillass Site!</span>
     </a>
 </div>
 
-## What is Gerillass?
-
-Gerillass is a library built on top of [**Sass (Syntactically Awesome Style Sheets)**](https://sass-lang.com/) to give you flexibility for your projects and accelerate your performance and creativity.
-
-Many of the utilities that come with Gerillass are the solutions I have come up with for the challenges I have faced as a frontend developer over the years. These solutions have been shaped by the inspiration of other popular libraries and frameworks like [**Bourbon**](https://www.bourbon.io/), [**Scut**](https://davidtheclark.github.io/scut/), [**Compass**](http://compass-style.org/), [**Bootstrap**](https://getbootstrap.com/), etc. over time and helped me create Gerillass.
-
 ## Installation
 
-You can Install Gerillass via [**Github**](https://github.com/babilkuyusu/gerillass), [**npm (Node Package Manager)**](https://www.npmjs.com/), [**Yarn**](https://yarnpkg.com/) by **using terminal window**, and include the source files into your projects. Or you can [**download it manually**](https://github.com/babilkuyusu/gerillass/archive/master.zip) into your local computer.
+{{< highlightwrap class="terminal">}}
 
-### 1. Github
+{{< highlight nix >}}
+npm install gerillass
+{{< /highlight >}}
+{{< /highlightwrap >}}
+
+{{< highlightwrap >}}
+You can **import** Gerillass with **node_modules** path.
+{{< highlight scss >}}
+@import '{node_modules_path}/gerillass/scss/gerillass';
+{{< /highlight >}}
+{{< /highlightwrap >}}
+
+**To include the library without using the {node_modules_path} see the examples below.**
+
+{{< highlightwrap >}}
+If you're working with an **eyeglass** setup, simply import it without providing the **node_modules** path.
+{{< highlight scss >}}
+@import 'gerillass';
+{{< /highlight >}}
+{{< /highlightwrap >}}
+    
+### Cloning the repository from Github
 
 {{< highlightwrap class="terminal">}}
-Open the terminal window. Target the folder that you want Gerillass to be installed. Copy and past the command below and hit the enter to install the library into your local computer.
+You can clone the repository into your local computer from Github.
 {{< highlight nix >}}
 git clone https://github.com/selfishprimate/gerillass.git
 {{< /highlight >}}
+{{< /highlightwrap >}}
 
-If you're running on a Git project you can add Gerillass as a subdirectory to your Git repository.
+{{< highlightwrap class="terminal">}}
+Or you can add the library as a submodule into your Git based project ([What is a submodule?](https://git-scm.com/book/en/v2/Git-Tools-Submodules)).
 {{< highlight nix >}}
 git submodule add https://github.com/selfishprimate/gerillass.git
 {{< /highlight >}}
 {{< /highlightwrap >}}
 
-
-### 2. RubyGems
-
-Install the Gerillass gem by using the RubyGems package manager:
-
-{{< highlightwrap class="terminal">}}
-{{< highlight nix >}}
-gem install gerillass
-{{< /highlight >}}
-{{< /highlightwrap >}}
-
-Install the Gerillass library into the current directory:
-
-{{< highlightwrap class="terminal">}}
-{{< highlight nix >}}
-gerillass install
-{{< /highlight >}}
-{{< /highlightwrap >}}
-
-**Tip:** You can target installation into a specific directory using the path flag:
-
-{{< highlightwrap class="terminal">}}
-{{< highlight nix >}}
-gerillass install --path my/custom/path/
-{{< /highlight >}}
-{{< /highlightwrap >}}
-
-Import Gerillass at the beginning of your style sheet:
-
 {{< highlightwrap >}}
+Including to the project:
 {{< highlight scss >}}
-@import "gerillass/core/gerillass";
+@import 'gerillass/scss/gerillass';
 {{< /highlight >}}
 {{< /highlightwrap >}}
 
-### 3. Installation for Ruby on Rails
+### Node.js Installation
+
+If you are working on a Node project you can install Gerillass as a dependency.
 
 {{< highlightwrap class="terminal">}}
-Add Gerillass to your Gemfile:
-{{< highlight nix >}}
-gem install gerillass
-{{< /highlight >}}
-{{< /highlightwrap >}}
-
-{{< highlightwrap class="terminal">}}
-After that run the command below:
-{{< highlight nix >}}
-bundle install
-{{< /highlight >}}
-{{< /highlightwrap >}}
-
-{{< highlightwrap class="terminal">}}
-Restart your server and rename application.css to application.scss:
-{{< highlight nix >}}
-mv app/assets/stylesheets/application.css app/assets/stylesheets/application.scss
-{{< /highlight >}}
-{{< /highlightwrap >}}
-
-Delete all Sprockets directives in application.scss (require, require_tree and require_self) and use Sass’s native @import instead (why?).
-
-{{< highlightwrap >}}
-Import Gerillass at the beginning of application.scss. Any project styles that utilize Gerillass’s features must be imported after Gerillass.
-{{< highlight scss >}}
-@import "gerillass";
-@import "home";
-@import "users";
-{{< /highlight >}}
-{{< /highlightwrap >}}
-
-### 3. Node.js
-
-If you are working on a Node.js project you can add Gerillass as a dependency.
-
-{{< highlightwrap class="terminal">}}
-**npm installation:**
+**npm installation**
 {{< highlight nix >}}
 npm install gerillass
 {{< /highlight >}}
 {{< /highlightwrap >}}
 
 {{< highlightwrap class="terminal">}}
-**Yarn installation:**
+**Yarn installation**
 {{< highlight nix >}}
 yarn add gerillass
 {{< /highlight >}}
 {{< /highlightwrap >}}
 
-### 5. How to Include?
+### Using with React.js
 
-{{< highlightwrap class="no-lang">}}
-Import Gerillass at the beginning of your stylesheet.
+{{< highlightwrap >}}
+Simply `@import` the library at the beginning of your App.scss file without using the **node_modules** path.
 {{< highlight scss >}}
-@import "gerillass/core/gerillass";
+@import 'gerillass';
 {{< /highlight >}}
 {{< /highlightwrap >}}
 
-## Contribution
+### Using with Gulp
 
-So, if you you like Gerillass and you want to help with this documentation page please feel free to contribute to the project.
+{{< highlightwrap >}}
+You can add a new Gulp task as in the below example or simply add `includePath: ['node_modules/gerillass/scss']` option to the task if you have one already.
+{{< highlight js >}}
+function sassify(done) {
+  return (
+    src("assets/sass/**/*.scss")
+    .pipe(sass({
+      outputStyle: "expanded",
+      includePaths: ["node_modules/gerillass/scss"],
+    }).on('error', sass.logError))
+    .pipe(dest("assets/css"))
+  );
+  done()
+}
+{{< /highlight >}}
+{{< /highlightwrap >}}
 
-## Related Links
+{{< highlightwrap >}}
+Including to the project:
+{{< highlight scss >}}
+@import 'gerillass';
+{{< /highlight >}}
+{{< /highlightwrap >}}
+    
+### Using with Grunt
 
-1. [**Gerillass Site**]()
-2. [**Github**]()
-3. [**Change Log**]()
-4. [**Blog**]()
+{{< highlightwrap >}}
+You can add the Gerillass library by editing your Gruntfile.js at the root level of your project. Simply find the sass related rules and add `loadPath: ['node_modules/gerillass/scss']` inside the `options` object.
+{{< highlight js >}}
+sass: {
+  dist: {
+    options: {
+      style: "expanded",
+      loadPath: ['node_modules/gerillass/scss']
+    },
+    files: {
+      "main.css": "main.scss"
+    }
+  }
+}
+{{< /highlight >}}
+{{< /highlightwrap >}}
+
+{{< highlightwrap >}}
+Including to the project:
+{{< highlight scss >}}
+@import 'gerillass';
+{{< /highlight >}}
+{{< /highlightwrap >}}
+
+## Experimenting Gerillass
+
+Experimenting Gerillass is easy. You can [**download the Gerillass library**](https://github.com/selfishprimate/gerillass/archive/master.zip), include it in your project, or use [**Gulpazan**](https://github.com/selfishprimate/gulpazan). Gulpazan is a Gulp based workflow, and it comes with Gerillass and all the packages and configurations that you'll need to work with Sass. [**Learn how you can install Gulpazan**](https://github.com/selfishprimate/gulpazan).
+
+{{< hint info >}}
+**Important Note**: Don't forget that you must have [**Node.js**](https://nodejs.org/en/) and [**Gulp**](https://gulpjs.com/docs/en/getting-started/quick-start) installed globally on your machine.
+{{< /hint >}}
+

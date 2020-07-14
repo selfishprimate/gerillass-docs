@@ -72,7 +72,7 @@ em{
 }
 
 a {
-    text-decoration: underline;
+    text-decoration: none;
     color: $body-text-color;
     cursor: pointer;
     &:visited {
@@ -151,5 +151,12 @@ ul.pagination {
 
 .book-icon {
   filter: $icon-filter;
+}
+
+.home-button-wrapper {
+  margin-bottom: 3rem;
+  a {
+    font-weight: bold;
+  }
 }
 
