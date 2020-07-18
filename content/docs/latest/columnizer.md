@@ -27,14 +27,14 @@ title: "Columnizer"
 Suppose you have a group of items like in the example below and you want to make them look lined up in columns (**There are predefined style rules for items to show the differences more easily**).
 {{< highlight html >}}
 <div class="parent-element">
-    <div class="item">01</div>
-    <div class="item">02</div>
-    <div class="item">03</div>
-    <div class="item">04</div>
-    <div class="item">05</div>
-    <div class="item">06</div>
-    <div class="item">07</div>
-    <div class="item">08</div>
+  <div class="item">01</div>
+  <div class="item">02</div>
+  <div class="item">03</div>
+  <div class="item">04</div>
+  <div class="item">05</div>
+  <div class="item">06</div>
+  <div class="item">07</div>
+  <div class="item">08</div>
 </div>
 {{< /highlight >}}
 {{< /highlightwrap >}}
@@ -43,18 +43,18 @@ Suppose you have a group of items like in the example below and you want to make
 Now let's get cracking. Just call the mixin in the `.parent-element{}` selector and pass a value for the number of columns.
 {{< highlight scss >}}
 .parent-element{
-    @include gls-columnizer(3);
+  @include gls-columnizer(3);
 }
 {{< /highlight >}}
 {{< highlight css >}}
 //CSS Output
 .parent-element {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 .parent-element > * {
-    flex: 0 0 calc(100% / 3);
-    margin-bottom: 0;
+  flex: 0 0 calc(100% / 3);
+  margin-bottom: 0;
 }
 .parent-element > *:not(:last-child) {
     margin-right: 0;
@@ -90,24 +90,26 @@ Now let's get cracking. Just call the mixin in the `.parent-element{}` selector 
 Let's pass a value for `$gutter` argument to separate every item from each other.
 {{< highlight scss >}}
 .parent-element{
-    @include gls-columnizer(3, 20px);
+  @include gls-columnizer(3, 20px);
 }
 {{< /highlight >}}
 {{< highlight css >}}
 //CSS Output
 .parent-element {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 .parent-element > * {
-    flex: 0 0 calc((100% - (3 - 1) * 20px) / 3);
-    margin-bottom: 20px;
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: calc((100% - (3 - 1) * 20px) / 3);
+  margin-bottom: 20px;
 }
 .parent-element > *:not(:last-child) {
-    margin-right: 20px;
+  margin-right: 20px;
 }
 .parent-element > *:nth-child(3n) {
-    margin-right: 0;
+  margin-right: 0;
 }
 {{< /highlight >}}
 
@@ -144,24 +146,26 @@ Let's pass a value for `$gutter` argument to separate every item from each other
 To make the orphans fill the gap let's pass `true` value at the end.
 {{< highlight scss >}}
 .parent-element{
-    @include gls-columnizer(3, 20px, true);
+  @include gls-columnizer(3, 20px, true);
 }
 {{< /highlight >}}
 {{< highlight css >}}
 //CSS Output
 .parent-element {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 .parent-element > * {
-    flex: 1 0 calc((100% - (3 - 1) * 20px) / 3);
-    margin-bottom: 20px;
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: calc((100% - (3 - 1) * 20px) / 3);
+  margin-bottom: 20px;
 }
 .parent-element > *:not(:last-child) {
-    margin-right: 20px;
+  margin-right: 20px;
 }
 .parent-element > *:nth-child(3n) {
-    margin-right: 0;
+  margin-right: 0;
 }
 {{< /highlight >}}
 
@@ -197,21 +201,23 @@ To make the orphans fill the gap let's pass `true` value at the end.
 You can use either `$gutter` or `$fill` arguments optionallt. But remember, **the $fill argument should always be at the end**.
 {{< highlight scss >}}
 .parent-element{
-    @include gls-columnizer(3, true);
+  @include gls-columnizer(3, true);
 }
 {{< /highlight >}}
 {{< highlight css >}}
 //CSS Output
 .parent-element {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 .parent-element > * {
-    flex: 1 0 calc(100% / 3);
-    margin-bottom: 0;
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: calc(100% / 3);
+  margin-bottom: 0;
 }
 .parent-element > *:not(:last-child) {
-    margin-right: 0;
+  margin-right: 0;
 }
 {{< /highlight >}}
 
@@ -244,43 +250,47 @@ You can use either `$gutter` or `$fill` arguments optionallt. But remember, **th
 Now let's try it with the **breakpoint mixin** to show you how these mixins work harmoniously together.
 {{< highlight scss >}}
 .parent-element{
-    @include gls-columnizer(2, 10px, true);
-    @include gls-breakpoint(min, large) {
-        @include gls-columnizer(4, 20px, false);
-    }
+  @include gls-columnizer(2, 10px, true);
+  @include gls-breakpoint(min, large) {
+    @include gls-columnizer(4, 20px, false);
+  }
 }
 {{< /highlight >}}
 {{< highlight css >}}
 //CSS Output
 .parent-element {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 .parent-element > * {
-    flex: 1 0 calc((100% - (2 - 1) * 10px) / 2);
-    margin-bottom: 10px;
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: calc((100% - (2 - 1) * 10px) / 2);
+  margin-bottom: 10px;
 }
 .parent-element > *:not(:last-child) {
-    margin-right: 10px;
+  margin-right: 10px;
 }
 .parent-element > *:nth-child(2n) {
-    margin-right: 0;
+  margin-right: 0;
 }
 @media (min-width: 992px) {
-    .parent-element {
-        display: flex;
-        flex-wrap: wrap;
-    }
-    .parent-element > * {
-        flex: 0 0 calc((100% - (4 - 1) * 20px) / 4);
-        margin-bottom: 20px;
-    }
-    .parent-element > *:not(:last-child) {
-        margin-right: 20px;
-    }
-    .parent-element > *:nth-child(4n) {
-        margin-right: 0;
-    }
+  .parent-element {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .parent-element > * {
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: calc((100% - (4 - 1) * 20px) / 4);
+    margin-bottom: 20px;
+  }
+  .parent-element > *:not(:last-child) {
+    margin-right: 20px;
+  }
+  .parent-element > *:nth-child(4n) {
+    margin-right: 0;
+  }
 }
 {{< /highlight >}}
 
