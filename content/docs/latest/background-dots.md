@@ -159,7 +159,7 @@ Now let's add an image and see how sexy this design piece will look!
         $color: rgba(black, 0.1) rgba(green, 0.2),
         $size: 4px,
         $gutter: 20px,
-        $image: "https://i.picsum.photos/id/528/4000/3000.jpg"
+        $image: "/images/backgrounds/03.jpg"
     );
 }
 {{< /highlight >}}
@@ -182,7 +182,7 @@ Now let's add an image and see how sexy this design piece will look!
     height: 100%;
     top: 0;
     left: 0;
-    background-image: url(https://i.picsum.photos/id/528/4000/3000.jpg);
+    background-image: url("/images/backgrounds/03.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -198,7 +198,7 @@ Now let's add an image and see how sexy this design piece will look!
     height: 100%;
     top: 0;
     left: 0;
-    background-image: url(https://i.picsum.photos/id/528/4000/3000.jpg);
+    background-image: url("/images/backgrounds/03.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;

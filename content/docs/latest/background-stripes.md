@@ -107,7 +107,7 @@ Add an image to make your design look more alive! **Just do not forget to use qu
         $color: rgba(blue, 0.4),
         $thickness: 3px,
         $rotation: 45deg,
-        $image: "https://i.picsum.photos/id/1069/3500/2333.jpg"
+        $image: "/images/backgrounds/05.jpg"
     );
 }
 {{< /highlight >}}
@@ -119,14 +119,14 @@ Add an image to make your design look more alive! **Just do not forget to use qu
         rgba(0, 0, 255, 0.4) 0, 
         rgba(0, 0, 255, 0.4) 3px, 
         transparent 3px, transparent 6px
-    ), url("https://i.picsum.photos/id/1069/3500/2333.jpg");
+    ), url("/images/backgrounds/05.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 {{< /highlight >}}
 {{< sandbox class="xlarge" >}}
-background-image: repeating-linear-gradient(45deg, rgba(0, 0, 255, 0.4) 0, rgba(0, 0, 255, 0.4) 3px, transparent 3px, transparent 6px), url('https://i.picsum.photos/id/1069/3500/2333.jpg');background-position: center;background-repeat: no-repeat;background-size: cover;
+background-image: repeating-linear-gradient(45deg, rgba(0, 0, 255, 0.4) 0, rgba(0, 0, 255, 0.4) 3px, transparent 3px, transparent 6px), url('/images/backgrounds/05.jpg');background-position: center;background-repeat: no-repeat;background-size: cover;
 {{< /sandbox >}}
 {{< /highlightwrap >}}
 
@@ -138,7 +138,7 @@ You can create an old fashioned tv screen effect as well.
         $color: black,
         $thickness: 1px,
         $rotation: 180deg,
-        $image: "https://i.picsum.photos/id/528/4000/3000.jpg"
+        $image: "/images/backgrounds/03.jpg"
     );
 }
 {{< /highlight >}}
@@ -151,7 +151,7 @@ You can create an old fashioned tv screen effect as well.
         black 1px, 
         transparent 1px, 
         transparent 2px
-    ), url("https://i.picsum.photos/id/528/4000/3000.jpg");
+    ), url("/images/backgrounds/03.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -159,7 +159,7 @@ You can create an old fashioned tv screen effect as well.
 {{< /highlight >}}
 
 {{< sandbox class="xlarge" >}}
-background-image: repeating-linear-gradient(180deg, black 0, black 1px, transparent 1px, transparent 2px), url(https://i.picsum.photos/id/528/4000/3000.jpg);background-position: center;background-repeat: no-repeat;background-size: cover;
+background-image: repeating-linear-gradient(180deg, black 0, black 1px, transparent 1px, transparent 2px), url(/images/backgrounds/03.jpg);background-position: center;background-repeat: no-repeat;background-size: cover;
 {{< /sandbox >}}
 
 Just play with the values of the given arguments to create more interesting things. **Use your imagination!**

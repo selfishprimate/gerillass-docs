@@ -19,8 +19,10 @@
     }
     &__author {}
     &__link{
-        color: $link-color !important;
-        text-decoration: none;
+        color: transparentize($body-text-color, 0.3);
+        text-decoration: underline;
+        font-style: italic;
+        font-weight: bold;
     }
     @include gls-breakpoint(max, large) {
         &__inner {

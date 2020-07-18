@@ -23,21 +23,21 @@ title: "Background Image"
 Simply call the mixin in a selector and pass the URL of the background image.
 {{< highlight scss >}}
 .element{
-    @include gls-background-image("https://i.picsum.photos/id/1018/3914/2935.jpg");
+    @include gls-background-image("/images/backgrounds/07.jpg");
 }
 {{< /highlight >}}
 {{< highlight css >}}
 //CSS Output
 .element {
     position: relative;
-    background-image: url("https://i.picsum.photos/id/1018/3914/2935.jpg");
+    background-image: url("/images/backgrounds/07.jpg");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 {{< /highlight >}}
 {{< sandbox class="xlarge" >}}
-position: relative;background-image: url("https://i.picsum.photos/id/1018/3914/2935.jpg");background-position: center center;background-repeat: no-repeat;background-size: cover;
+position: relative;background-image: url("/images/backgrounds/07.jpg");background-position: center center;background-repeat: no-repeat;background-size: cover;
 {{< /sandbox >}}
 {{< /highlightwrap >}}
 
@@ -45,21 +45,21 @@ position: relative;background-image: url("https://i.picsum.photos/id/1018/3914/2
 Now let's apply a color filter to it by passing a color value for $filter-color argument.
 {{< highlight scss >}}
 .element{
-    @include gls-background-image("https://i.picsum.photos/id/1018/3914/2935.jpg", rgba(255, 204, 153, 0.5));
+    @include gls-background-image("/images/backgrounds/07.jpg", rgba(255, 204, 153, 0.5));
 }
 {{< /highlight >}}
 {{< highlight css >}}
 //CSS Output
 .element {
     position: relative;
-    background-image: linear-gradient(to top, rgba(255, 204, 153, 0.5), rgba(255, 204, 153, 0.5)), url("https://i.picsum.photos/id/1018/3914/2935.jpg");
+    background-image: linear-gradient(to top, rgba(255, 204, 153, 0.5), rgba(255, 204, 153, 0.5)), url("/images/backgrounds/07.jpg");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 {{< /highlight >}}
 {{< sandbox class="xlarge" >}}
-position: relative;background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 204, 153, 0.5)), to(rgba(255, 204, 153, 0.5))), url("https://i.picsum.photos/id/1018/3914/2935.jpg");background-image: linear-gradient(to top, rgba(255, 204, 153, 0.5), rgba(255, 204, 153, 0.5)), url("https://i.picsum.photos/id/1018/3914/2935.jpg");background-position: center center;background-repeat: no-repeat;background-size: cover;
+position: relative;background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 204, 153, 0.5)), to(rgba(255, 204, 153, 0.5))), url("/images/backgrounds/07.jpg");background-image: linear-gradient(to top, rgba(255, 204, 153, 0.5), rgba(255, 204, 153, 0.5)), url("/images/backgrounds/07.jpg");background-position: center center;background-repeat: no-repeat;background-size: cover;
 {{< /sandbox >}}
 {{< /highlightwrap >}}
 
@@ -70,21 +70,21 @@ Now let's pass multiple color values for `$filter-color` to make background imag
 {{< /hint >}}
 {{< highlight scss >}}
 .element{
-    @include gls-background-image("https://i.picsum.photos/id/1018/3914/2935.jpg", rgba(0, 0, 0, 0.5) rgba(40, 102, 100, 0.8));
+    @include gls-background-image("/images/backgrounds/07.jpg", rgba(0, 0, 0, 0.5) rgba(40, 102, 100, 0.8));
 }
 {{< /highlight >}}
 {{< highlight css >}}
 //CSS Output
 .element {
     position: relative;
-    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(40, 102, 100, 0.8)), url("https://i.picsum.photos/id/1018/3914/2935.jpg");
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(40, 102, 100, 0.8)), url("/images/backgrounds/07.jpg");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 {{< /highlight >}}
 {{< sandbox class="xlarge" >}}
-position: relative;background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.5)), to(rgba(40, 102, 100, 0.8))), url("https://i.picsum.photos/id/1018/3914/2935.jpg");background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(40, 102, 100, 0.8)), url("https://i.picsum.photos/id/1018/3914/2935.jpg");background-position: center center;background-repeat: no-repeat;background-size: cover;
+position: relative;background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.5)), to(rgba(40, 102, 100, 0.8))), url("/images/backgrounds/07.jpg");background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(40, 102, 100, 0.8)), url("/images/backgrounds/07.jpg");background-position: center center;background-repeat: no-repeat;background-size: cover;
 {{< /sandbox >}}
 {{< /highlightwrap >}}
 
@@ -95,21 +95,21 @@ Now let's try `$filter-direction` option, and while trying it, let's use sharper
 {{< /hint >}}
 {{< highlight scss >}}
 .element{
-    @include gls-background-image("https://i.picsum.photos/id/1018/3914/2935.jpg", rgba(0, 128, 128, 0.7) rgba(255, 192, 203, 0.8), right);
+    @include gls-background-image("/images/backgrounds/07.jpg", rgba(0, 128, 128, 0.7) rgba(255, 192, 203, 0.8), right);
 }
 {{< /highlight >}}
 {{< highlight css >}}
 //CSS Output
 .element {
     position: relative;
-    background-image: linear-gradient(to right, rgba(0, 128, 128, 0.7), rgba(255, 192, 203, 0.8)), url("https://i.picsum.photos/id/1018/3914/2935.jpg");
+    background-image: linear-gradient(to right, rgba(0, 128, 128, 0.7), rgba(255, 192, 203, 0.8)), url("/images/backgrounds/07.jpg");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 {{< /highlight >}}
 {{< sandbox class="xlarge" >}}
-position: relative;background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 128, 128, 0.7)), to(rgba(255, 192, 203, 0.8))), url("https://i.picsum.photos/id/1018/3914/2935.jpg");background-image: linear-gradient(to right, rgba(0, 128, 128, 0.7), rgba(255, 192, 203, 0.8)), url("https://i.picsum.photos/id/1018/3914/2935.jpg");background-position: center center;background-repeat: no-repeat;background-size: cover;
+position: relative;background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 128, 128, 0.7)), to(rgba(255, 192, 203, 0.8))), url("/images/backgrounds/07.jpg");background-image: linear-gradient(to right, rgba(0, 128, 128, 0.7), rgba(255, 192, 203, 0.8)), url("/images/backgrounds/07.jpg");background-position: center center;background-repeat: no-repeat;background-size: cover;
 {{< /sandbox >}}
 
 {{< /highlightwrap >}}
@@ -120,7 +120,7 @@ There will be times when you would like to **add a background image on an elemen
 **Important:** Please examine the CSS output. When you add a background image on an element by using style attribute, the CSS output will be different then the others. This is to prevent `background-image` declerations that made on both sides from overriding each other.
 {{< /hint >}}
 {{< highlight html >}}
-<div class="element" style="background-image: url(https://i.picsum.photos/id/1018/3914/2935.jpg)"></div>
+<div class="element" style="background-image: url(/images/backgrounds/07.jpg)"></div>
 {{< /highlight >}}
 {{< highlight scss >}}
 .element{
@@ -172,7 +172,7 @@ There will be times when you would like to **add a background image on an elemen
   z-index: 1;
 }
 </style>
-<div class="element sandbox xxlarge example05" style="background-image: url(https://i.picsum.photos/id/1018/3914/2935.jpg)"></div>
+<div class="element sandbox xxlarge example05" style="background-image: url(/images/backgrounds/07.jpg)"></div>
 {{< /highlightwrap >}}
 
 {{< highlightwrap class="example">}}
@@ -180,7 +180,7 @@ Probably you're asking why those `"position: relative"` and `"z-index: 1"` style
 
 Let's try with a title text that placed inside the selected element to see it in action. 
 {{< highlight html >}}
-<div class="element" style="background-image: url(https://i.picsum.photos/id/1018/3914/2935.jpg)">
+<div class="element" style="background-image: url(/images/backgrounds/07.jpg)">
     <h2>A beautiful title text standing over the color filter.</h2>
 </div>
 {{< /highlight >}}
@@ -249,7 +249,7 @@ Let's try with a title text that placed inside the selected element to see it in
 }
 </style>
 
-<div class="element sandbox large example06" style="background-image: url(https://i.picsum.photos/id/1018/3914/2935.jpg)">
+<div class="element sandbox large example06" style="background-image: url(/images/backgrounds/07.jpg)">
     <h2 class="title">A beautiful title text standing over the color filter.</h2>
 </div>
 

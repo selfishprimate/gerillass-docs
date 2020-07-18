@@ -1,78 +1,81 @@
-.markdown{
-    counter-reset: section;
+.markdown {
+  counter-reset: section;
 }
-.highlight-wrapper{
-    margin-bottom: $global-space * 2;
-    &.example{
-        margin-bottom: $global-space * 4;
-        &::before{
-            display: block;
-            counter-increment: section;
-            content: "Example " counter(section);
-            font-weight: bold;
-            margin-bottom: $global-space / 2;
-        }
+.highlight-wrapper {
+  margin-bottom: $global-space * 2;
+  &.example {
+    margin-bottom: $global-space * 4;
+    &::before {
+      display: block;
+      counter-increment: section;
+      content: "Example " counter(section);
+      font-weight: bold;
+      margin-bottom: $global-space / 2;
     }
-    &.terminal{
-        pre{
-            code{
-                &::before{
-                    content: "$ ";
-                }
-                &::after{
-                    display: none !important;
-                }
-            }
+  }
+  &.terminal {
+    pre {
+      code {
+        &::before {
+          content: "$ ";
         }
-    }
-    &.no-lang{
-        .highlight{
-            pre{
-                code{
-                    &:after{
-                        display: none;
-                    }
-                }
-            }
+        &::after {
+          display: none !important;
         }
+      }
     }
+  }
+  &.no-lang {
+    .highlight {
+      pre {
+        code {
+          &:after {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+  .highlight-figure {
+    @include gls-reset-figure;
+  }
 }
-.highlight{
-    font-family: "Roboto Mono", monospace;
-    position: relative;
-    margin-bottom: $global-space * 1;
-    pre{
-        code{
-            &[class^="language"]{
-                &:after{
-                    content: attr(data-lang);
-                    position: absolute;
-                    top: 0;
-                    right: 0;
-                    min-width: 54px;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    background-color: rgba(255,255,255,.05);
-                    border-top-right-radius: .15rem;
-                    border-bottom-left-radius: .15rem;
-                    padding: 0;
-                    font-size: 12px;
-                }
-            }
+.highlight {
+  font-family: "Roboto Mono", monospace;
+  position: relative;
+  margin-bottom: $global-space * 1;
+  pre {
+    code {
+      &[class^="language"] {
+        &:after {
+          content: attr(data-lang);
+          position: absolute;
+          top: 0;
+          right: 0;
+          min-width: 54px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: rgba(255, 255, 255, 0.05);
+          border-top-right-radius: 0.15rem;
+          border-bottom-left-radius: 0.15rem;
+          padding: 0;
+          font-size: 12px;
         }
+      }
     }
+  }
 }
 
 // Special case for highlighted code with line numbers
 
 .highlight table tr {
-    td:nth-child(1) pre {
-        margin: 0;
-        padding-right: 0;
-    }
-    td:nth-child(2) pre {
-        margin: 0;
-        padding-left: 0;
-    }
+  td:nth-child(1) pre {
+    margin: 0;
+    padding-right: 0;
+  }
+  td:nth-child(2) pre {
+    margin: 0;
+    padding-left: 0;
+  }
 }

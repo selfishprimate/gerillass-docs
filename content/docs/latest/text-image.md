@@ -23,13 +23,13 @@ Simply call the mixin in the selector and pass the URL of an image.
 {{< /highlight >}}
 {{< highlight scss >}}
 .element{
-    @include gls-text-image("https://i.picsum.photos/id/1015/6000/4000.jpg");
+    @include gls-text-image("/images/backgrounds/05.jpg");
 }
 {{< /highlight >}}
 {{< highlight css >}}
 //CSS Output
 .element {
-    background-image: url("https://i.picsum.photos/id/1015/6000/4000.jpg");
+    background-image: url("/images/backgrounds/05.jpg");
     background-size: cover;
     background-position: center;
     -webkit-background-clip: text;
@@ -38,7 +38,7 @@ Simply call the mixin in the selector and pass the URL of an image.
     color: transparent;
 }
 {{< /highlight >}}
-<h2 class="sandbox text" style="background-image: url('https://i.picsum.photos/id/1015/6000/4000.jpg');background-size: cover;background-position: center;-webkit-background-clip: text;-webkit-text-fill-color: transparent;background-clip: text;color: transparent;">Text Image is Awesome!</h2>
+<h2 class="sandbox text" style="background-image: url('/images/backgrounds/05.jpg');background-size: cover;background-position: center;-webkit-background-clip: text;-webkit-text-fill-color: transparent;background-clip: text;color: transparent;">Text Image is Awesome!</h2>
 {{< /highlightwrap >}}
 
 {{< highlightwrap class="example">}}

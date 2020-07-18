@@ -63,7 +63,7 @@ Now let's change the aspect ratio, and try it with a real world example and use 
 {{< highlight scss >}}
 .element{
     @include gls-ratio-box(4/3);
-    @include gls-background-image("https://i.picsum.photos/id/1082/5416/3611.jpg");
+    @include gls-background-image("/images/backgrounds/06.jpg");
 }
 {{< /highlight >}}
 
@@ -71,7 +71,7 @@ Now let's change the aspect ratio, and try it with a real world example and use 
 //CSS Output
 .element {
     position: relative;
-    background-image: url("https://i.picsum.photos/id/1082/5416/3611.jpg");
+    background-image: url("/images/backgrounds/06.jpg");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -98,7 +98,7 @@ Now let's change the aspect ratio, and try it with a real world example and use 
 }
 .element.example02 {
   position: relative;
-  background-image: url("https://i.picsum.photos/id/1082/5416/3611.jpg");
+  background-image: url("/images/backgrounds/06.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
