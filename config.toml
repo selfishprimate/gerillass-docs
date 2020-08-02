@@ -25,8 +25,8 @@ cleanDestinationDir = true
     lineNos = false
     lineNumbersInTable = true
     noClasses = true
-    style = "dracula"
-    tabWidth = 4
+    style = "monokai"
+    tabWidth = 2
 
     # Theme Names: "abap", "arduino", "borland", "bw", "colorful", "dracula", "fruity", "github", "igor", "manni", "monokai", "monokailight", "murphy", "native", "paraiso-dark", "paraiso-light", "perldoc", "solarized-dark", "solarized-dark256", "solarized-light", "solarized-light", "tango", "trac", "vs", "xcode"
 
