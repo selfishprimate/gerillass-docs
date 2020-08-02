@@ -1,4 +1,4 @@
-@include gls-breakpoint(max, large){
+@include breakpoint(max, large){
     .book-toc{
         display: none;
     }
@@ -39,7 +39,7 @@
     }
 }
 
-@include gls-breakpoint(max, medium){
+@include breakpoint(max, medium){
     .book-menu{
         margin-left: -$menu-width;
     }
@@ -54,7 +54,7 @@
     }
 }
 
-@include gls-breakpoint(max, small){
+@include breakpoint(max, small){
     body{
         font-size: .9rem;
     }
@@ -94,7 +94,7 @@
     ion-icon{
         font-size: 26px;
     }
-    @include gls-breakpoint(min, medium){
+    @include breakpoint(min, medium){
         display: none;
     }
 }

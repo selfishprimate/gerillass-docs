@@ -14,14 +14,14 @@ title: "Responsive Image"
 Simply call the mixin in a selector that targets the `<img>` element itself.
 {{< highlight scss >}}
 img {
-    @include gls-responsive-image;
+  @include responsive-image;
 }
 {{< /highlight >}}
 {{< highlight css >}}
 //CSS Output
 img {
-    display: block;
-    width: 100%;
+  display: block;
+  width: 100%;
 }
 {{< /highlight >}}
 {{< /highlightwrap >}}

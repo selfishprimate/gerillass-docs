@@ -28,7 +28,7 @@
           height: __remify(2px);
           width: __remify(8px);
           right: __remify(-8px);
-          @include gls-center(vertical);
+          @include center(vertical);
           background-color: $body-text-color;
         }
       }
@@ -43,7 +43,7 @@
         font-weight: 500;
         text-decoration: none;
         line-height: 0;
-        @include gls-stretched-link;
+        @include stretched-link;
       }
       &.download {
         background-color: $body-text-color;

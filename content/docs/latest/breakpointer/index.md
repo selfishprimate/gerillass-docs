@@ -25,7 +25,7 @@ title: "Breakpointer"
 {{< highlightwrap class="example">}}
 Call the mixin at the root level of your style sheet without passing any argument.
 {{< highlight scss >}}
-@include gls-breakpointer;
+@include breakpointer;
 {{< /highlight >}}
 {{< highlight css >}}
 //CSS Output
@@ -63,7 +63,7 @@ Call the mixin at the root level of your style sheet without passing any argumen
 {{< highlightwrap class="example">}}
 You can pass a CSS declaration block to customize the looking (as I did when I was developing the Gerillass' site itself).
 {{< highlight scss >}}
-@include gls-breakpointer {
+@include breakpointer {
   position: fixed;
   top: 0;
   right: 0;

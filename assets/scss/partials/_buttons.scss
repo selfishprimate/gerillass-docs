@@ -34,7 +34,7 @@
 
 .download-buttons{
     display: flex;
-    @include gls-breakpoint(max, small){
+    @include breakpoint(max, small){
         flex-wrap: wrap;
         .btn{
             flex: 1 0 auto;

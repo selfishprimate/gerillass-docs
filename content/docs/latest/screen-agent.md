@@ -14,7 +14,7 @@ Suppose you have two types of photos loading on your site: one for the normal sc
 ## Arguments
 
 {{< arguments/table footnote="The string values must be wrapped with the quotation signs." >}}
-    {{< arguments/row name="$resolution" type="string,<br/>number (with unit)" description="Accepts only one argument and three different values which targets the screen resolution: `1x`, `2x` and `3x`. Or you can pass a custom numeric value with `dpi` and `dpcm` units." >}}
+  {{< arguments/row name="$resolution" type="string,<br/>number (with unit)" description="Accepts only one argument and three different values which targets the screen resolution: `1x`, `2x` and `3x`. Or you can pass a custom numeric value with `dpi` and `dpcm` units." >}}
 {{< /arguments/table >}}
 
 ## Examples
@@ -23,21 +23,21 @@ Suppose you have two types of photos loading on your site: one for the normal sc
 Based on the assumption above, we can give the following example.
 {{< highlight scss >}}
 .element{
-    background-image: url(https://sample-site.com/images/sample-image-1920x1080.jpg);
-    @include gls-screen-agent("2x"){
-        background-image: url(https://sample-site.com/images/sample-image-3840x2160.jpg);
-    }
+  background-image: url(https://sample-site.com/images/sample-image-1920x1080.jpg);
+  @include screen-agent("2x"){
+    background-image: url(https://sample-site.com/images/sample-image-3840x2160.jpg);
+  }
 }
 {{< /highlight >}}
 {{< highlight css >}}
 //CSS Output
 .element {
-    background-image: url(https://sample-site.com/images/sample-image-1920x1080.jpg);
+  background-image: url(https://sample-site.com/images/sample-image-1920x1080.jpg);
 }
 @media (min-resolution: 192dpi) {
-    .element {
-        background-image: url(https://sample-site.com/images/sample-image-3840x2160.jpg);
-    }
+  .element {
+    background-image: url(https://sample-site.com/images/sample-image-3840x2160.jpg);
+  }
 }
 {{< /highlight >}}
 {{< /highlightwrap >}}
@@ -46,21 +46,21 @@ Based on the assumption above, we can give the following example.
 Now, let's try it with a custom value.
 {{< highlight scss >}}
 .element{
-    background-color: green;
-    @include gls-screen-agent(192dpi){
-        background-color: teal;
-    }
+  background-color: green;
+  @include screen-agent(192dpi){
+    background-color: teal;
+  }
 }
 {{< /highlight >}}
 {{< highlight css >}}
 //CSS Output
 .element {
-    background-color: green;
+  background-color: green;
 }
 @media (min-resolution: 192dpi) {
-    .element {
-        background-color: teal;
-    }
+  .element {
+    background-color: teal;
+  }
 }
 {{< /highlight >}}
 {{< /highlightwrap >}}

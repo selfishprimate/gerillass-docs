@@ -11,7 +11,7 @@ title: "Circle"
 ## Arguments
 
 {{< arguments/table >}}
-    {{< arguments/row name="$size" type="string" description="The size of the circle." >}}
+  {{< arguments/row name="$size" type="string" description="The size of the circle." >}}
 {{< /arguments/table >}}
 
 ## Examples
@@ -20,16 +20,16 @@ title: "Circle"
 Call the mixin in a selector and pass a number value (with unit) for the `$size` argument.
 {{< highlight scss >}}
 .element{
-    @include gls-circle(150px);
+  @include circle(150px);
 }
 {{< /highlight >}}
 {{< highlight css >}}
 // CSS Output
 .element {
-    width: 150px;
-    height: 150px;
-    display: inline-block;
-    border-radius: 100%;
+  width: 150px;
+  height: 150px;
+  display: inline-block;
+  border-radius: 100%;
 }
 {{< /highlight >}}
 {{< /highlightwrap >}}

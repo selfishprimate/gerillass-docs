@@ -16,7 +16,7 @@ The **first** value helps you select `top-left`, the **second** value `top-right
 ## Arguments
 
 {{< arguments/table footnote="You can use `0` or `null` to skip styling the related corner.">}}
-    {{< arguments/row name="--" type="number (with unit)" description="Accepts `one` or `four` values. The values must be separated by space. Use `null` value to **skip** corners of the box." >}}
+  {{< arguments/row name="--" type="number (with unit)" description="Accepts `one` or `four` values. The values must be separated by space. Use `null` value to **skip** corners of the box." >}}
 {{< /arguments/table >}}
 
 ## Examples
@@ -25,13 +25,13 @@ The **first** value helps you select `top-left`, the **second** value `top-right
 Simply call the mixin and pass just `one` value to affect all the corners evenly.
 {{< highlight scss >}}
 .element{
-    @include gls-scissors(30px);
+  @include scissors(30px);
 }
 {{< /highlight >}}
 {{< highlight css >}}
 //CSS Output
 .element {
-    clip-path: polygon(0 30px, 30px 0, calc(100% - 30px) 0, 100% 30px, 100% calc(100% - 30px), calc(100% - 30px) 100%, 30px 100%, 0 calc(100% - 30px));
+  clip-path: polygon(0 30px, 30px 0, calc(100% - 30px) 0, 100% 30px, 100% calc(100% - 30px), calc(100% - 30px) 100%, 30px 100%, 0 calc(100% - 30px));
 }
 {{< /highlight >}}
 {{< sandbox class="medium" >}}
@@ -44,13 +44,13 @@ clip-path: polygon(0 30px, 30px 0, calc(100% - 30px) 0, 100% 30px, 100% calc(100
 Do as follow to target only the top corners.
 {{< highlight scss >}}
 .element{
-    @include gls-scissors(30px 30px 0 0);
+  @include scissors(30px 30px 0 0);
 }
 {{< /highlight >}}
 {{< highlight css >}}
 //CSS Output
 .element {
-    clip-path: polygon(0 30px, 30px 0, calc(100% - 30px) 0, 100% 30px, 100% calc(100% - 0px), calc(100% - 0px) 100%, 0px 100%, 0 calc(100% - 0px));
+  clip-path: polygon(0 30px, 30px 0, calc(100% - 30px) 0, 100% 30px, 100% calc(100% - 0px), calc(100% - 0px) 100%, 0px 100%, 0 calc(100% - 0px));
 }
 {{< /highlight >}}
 {{< sandbox class="medium" >}}
@@ -63,13 +63,13 @@ clip-path: polygon(0 30px, 30px 0, calc(100% - 30px) 0, 100% 30px, 100% calc(100
 You can use `null` to skip a corner as well! The following arrangement will target only the bottom corners.
 {{< highlight scss >}}
 .element{
-    @include gls-scissors(null null 50px 50px);
+  @include scissors(null null 50px 50px);
 }
 {{< /highlight >}}
 {{< highlight css >}}
 //CSS Output
 .element {
-    clip-path: polygon(0 0px, 0px 0, calc(100% - 0px) 0, 100% 0px, 100% calc(100% - 50px), calc(100% - 50px) 100%, 50px 100%, 0 calc(100% - 50px));
+  clip-path: polygon(0 0px, 0px 0, calc(100% - 0px) 0, 100% 0px, 100% calc(100% - 50px), calc(100% - 50px) 100%, 50px 100%, 0 calc(100% - 50px));
 }
 {{< /highlight >}}
 {{< sandbox class="medium" >}}
@@ -85,53 +85,53 @@ For some reason, your design component might look different, but I'm sure you ge
 {{< /hint >}}
 {{< highlight html >}}
 <div class="element">
-    <h2>It's a fancy looking title text!</h2>
+  <h2>It's a fancy looking title text!</h2>
 </div>
 {{< /highlight >}}
 {{< highlight scss >}}
 .element{
-    height: 300px;
-    display: flex;
-    justify-content: center;
-    background-color: #5bc0bb;
-    @include gls-scissors(0 0 50% 50%);
-    h2{
-        color: white;
-        font-size: 2.5em;
-        text-align: center;
-    }
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  background-color: #5bc0bb;
+  @include scissors(0 0 50% 50%);
+  h2 {
+    color: white;
+    font-size: 2.5em; 
+    text-align: center;
+  }
 }
 {{< /highlight >}}
 {{< highlight css >}}
 //CSS Output
 .element {
-    height: 200px;
-    display: flex;
-    justify-content: center;
-    background-color: #5bc0bb;
-    clip-path: polygon(0 0px, 0px 0, calc(100% - 0px) 0, 100% 0px, 100% calc(100% - 50%), calc(100% - 50%) 100%, 50% 100%, 0 calc(100% - 50%));
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  background-color: #5bc0bb;
+  clip-path: polygon(0 0px, 0px 0, calc(100% - 0px) 0, 100% 0px, 100% calc(100% - 50%), calc(100% - 50%) 100%, 50% 100%, 0 calc(100% - 50%));
 }
 .element h2 {
-    color: white;
-    font-size: 2.5em;
-    text-align: center;
+  color: white;
+  font-size: 2.5em;
+  text-align: center;
 }
 {{< /highlight >}}
 <div class="element">
-    <h2>It's a fancy looking title text!</h2>
+  <h2>It's a fancy looking title text!</h2>
 </div>
 <style>
 .element {
-    height: 200px;
-    display: flex;
-    justify-content: center;
-    background-color: #5bc0bb;
-    clip-path: polygon(0 0px, 0px 0, calc(100% - 0px) 0, 100% 0px, 100% calc(100% - 50%), calc(100% - 50%) 100%, 50% 100%, 0 calc(100% - 50%));
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  background-color: #5bc0bb;
+  clip-path: polygon(0 0px, 0px 0, calc(100% - 0px) 0, 100% 0px, 100% calc(100% - 50%), calc(100% - 50%) 100%, 50% 100%, 0 calc(100% - 50%));
 }
 .element h2 {
-    color: white;
-    font-size: 2.5em;
-    text-align: center;
+  color: white;
+  font-size: 2.5em;
+  text-align: center;
 }
 </style>
 {{< /highlightwrap >}}

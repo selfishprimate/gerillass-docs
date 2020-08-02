@@ -7,7 +7,7 @@ title: "Text Shadow"
 {{< mixin type="Mixin" name="text-shadow" >}}
 **Text Shadow** Sass mixin helps you to add shadow to texts. Accepts comma-seperated list of shadow or a single shadow value that can be multiplied optionally. **Provides an easy to use one-line method**.
 {{< hint info >}}
-The first three (`$direction`, `$color`, `$size`) are the required arguments and they must be ordered as follow: @include gls-text-shadow(**bottom red 20px**). You can't use these three interchangeably.
+The first three (`$direction`, `$color`, `$size`) are the required arguments and they must be ordered as follow: @include text-shadow(**bottom red 20px**). You can't use these three interchangeably.
 {{< /hint >}}
 {{< /mixin >}}
 
@@ -31,7 +31,7 @@ The first three (`$direction`, `$color`, `$size`) are the required arguments and
 Let's start with some basic shadow arrangements.
 {{< highlight scss >}}
 .element{
-    @include gls-text-shadow(bottom rgba(black, 0.3) 6px);
+    @include text-shadow(bottom rgba(black, 0.3) 6px);
 }
 {{< /highlight >}}
 {{< highlight css >}}
@@ -49,7 +49,7 @@ Let's start with some basic shadow arrangements.
 Now, let's **add some $blur** to the shadow.
 {{< highlight scss >}}
 .element{
-    @include gls-text-shadow(bottom rgba(black, 0.3) 6px 4px);
+    @include text-shadow(bottom rgba(black, 0.3) 6px 4px);
 }
 {{< /highlight >}}
 {{< highlight css >}}
@@ -67,7 +67,7 @@ Now, let's **add some $blur** to the shadow.
 Now, to understand what `$fill` is for, let's try one more time without the `$fill` argument and examine the CSS output. 
 {{< highlight scss >}}
 .element{
-    @include gls-text-shadow(bottom #5bc0bb 30px);
+    @include text-shadow(bottom #5bc0bb 30px);
 }
 {{< /highlight >}}
 {{< highlight css >}}
@@ -88,7 +88,7 @@ It takes the shadow and increments it as much as the amount of the `$size` value
 {{< /hint >}}
 {{< highlight scss >}}
 .element{
-    @include gls-text-shadow(bottom #5bc0bb 30px true);
+    @include text-shadow(bottom #5bc0bb 30px true);
 }
 {{< /highlight >}}
 {{< highlight css >}}
@@ -106,7 +106,7 @@ It takes the shadow and increments it as much as the amount of the `$size` value
 You can **add alpha value to the colors** to soften the shadow.
 {{< highlight scss >}}
 .element{
-    @include gls-text-shadow(bottom rgba(#5bc0bb, 0.04) 30px true);
+    @include text-shadow(bottom rgba(#5bc0bb, 0.04) 30px true);
 }
 {{< /highlight >}}
 {{< highlight css >}}
@@ -124,7 +124,7 @@ You can **add alpha value to the colors** to soften the shadow.
 Now, let's **add multiple shadow values** with different `$direction`, `$color`, `$size` values.
 {{< highlight scss >}}
 .element{
-    @include gls-text-shadow(
+    @include text-shadow(
         top yellow 5px, 
         right lightseagreen 15px,
         bottom orange 5px, 
@@ -147,7 +147,7 @@ Now, let's **add multiple shadow values** with different `$direction`, `$color`,
 Let's **add alpha value the colors** and set `$fill` option to `true` to make it look more sexy!
 {{< highlight scss >}}
 .element{
-    @include gls-text-shadow(
+    @include text-shadow(
         top rgba(yellow, 0.1) 10px true, 
         bottom rgba(orange, 0.1) 10px true, 
         left rgba(pink, 0.1) 10px true,
@@ -171,7 +171,7 @@ You can **use corners** as well.
 {{< highlight scss >}}
 .element{
     color: pink;
-    @include gls-text-shadow(top-left crimson 15px true);
+    @include text-shadow(top-left crimson 15px true);
 }
 {{< /highlight >}}
 {{< highlight css >}}
@@ -194,12 +194,12 @@ Unless you overdo **Text Shadow** mixin, you can create marvelous effects.
 {{< highlight scss >}}
 .element{
     transition: .3s;
-    @include gls-text-shadow(left gold 3px true);
+    @include text-shadow(left gold 3px true);
     &:hover{
-        @include gls-text-shadow(right gold 8px true);
+        @include text-shadow(right gold 8px true);
     }
     &:active{
-        @include gls-text-shadow(right deepskyblue 8px true);
+        @include text-shadow(right deepskyblue 8px true);
     }
 }
 {{< /highlight >}}

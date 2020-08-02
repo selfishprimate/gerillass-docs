@@ -20,7 +20,7 @@ title: "Antialias"
 If you call it in a selector with no value passed the style rules will be applied to this very element and all its children.
 {{< highlight scss >}}
 .element{
-    @include gls-antialias;
+  @include antialias;
 }
 {{< /highlight >}}
 {{< highlight css >}}
@@ -29,8 +29,8 @@ If you call it in a selector with no value passed the style rules will be applie
 .element *,
 .element *::before,
 .element *::after {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 {{< /highlight >}}
 {{< /highlightwrap >}}
@@ -39,14 +39,14 @@ If you call it in a selector with no value passed the style rules will be applie
 Pass the `only` value as an argument to apply the style rules to only one specific HTML element.
 {{< highlight scss >}}
 .element{
-    @include gls-antialias(only);
+  @include antialias(only);
 }
 {{< /highlight >}}
 {{< highlight css >}}
 //CSS Output
 .element, .element::before, .element::after {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 {{< /highlight >}}
 {{< /highlightwrap >}}
@@ -54,15 +54,15 @@ Pass the `only` value as an argument to apply the style rules to only one specif
 {{< highlightwrap class="example">}}
 Call the mixin at the root of your stylesheet to target all the HTML elements.
 {{< highlight scss >}}
-@include gls-antialias;
+@include antialias;
 {{< /highlight >}}
 {{< highlight css >}}
 //CSS Output
 *,
 *::before,
 *::after {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 {{< /highlight >}}
 {{< /highlightwrap >}}

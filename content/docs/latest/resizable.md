@@ -15,8 +15,8 @@ title: "Resizable"
 ## Arguments
 
 {{< arguments/table footnote="">}}
-    {{< arguments/row name="$direction" type="string" description="This option sets the direction of the resize property. Accepts `both`, `horizontal`, `vertical`, `none` values. The default value is set to `both`." >}}
-    {{< arguments/row name="$overflow" type="string" description="This option adjust the `overflow` property. Default value is set to `auto`. " >}}
+  {{< arguments/row name="$direction" type="string" description="This option sets the direction of the resize property. Accepts `both`, `horizontal`, `vertical`, `none` values. The default value is set to `both`." >}}
+  {{< arguments/row name="$overflow" type="string" description="This option adjust the `overflow` property. Default value is set to `auto`. " >}}
 {{< /arguments/table >}}
 
 ## Examples
@@ -28,15 +28,15 @@ A tiny icon will appear in the lower right corner of the box below, grab it and 
 {{< /hint >}}
 {{< highlight scss >}}
 .element{
-    @include gls-resizable;
+  @include resizable;
 }
 {{< /highlight >}}
 {{< highlight css >}}
 //CSS Output
 .element {
-    resize: both;
-    overflow: auto;
-    max-width: 100%;
+  resize: both;
+  overflow: auto;
+  max-width: 100%;
 }
 {{< /highlight >}}
 {{< sandbox class="small" >}}

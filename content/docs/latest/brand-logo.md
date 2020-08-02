@@ -14,9 +14,9 @@ This is a **Gerillass** technique for **image replacement**. There are other met
 ## Arguments
 
 {{< arguments/table >}}
-    {{< arguments/row name="$width" type="number (with unit)" description="Sets the width value of the logo image." >}}
-    {{< arguments/row name="$height" type="number (with unit)" description="Sets the height value of the logo image." >}}
-    {{< arguments/row name="$image-url" type="string" description="Sets the url of the logo image. Works best with the absolute URL links. This argument is optional, so you can specify the image with style attribute." >}}
+  {{< arguments/row name="$width" type="number (with unit)" description="Sets the width value of the logo image." >}}
+  {{< arguments/row name="$height" type="number (with unit)" description="Sets the height value of the logo image." >}}
+  {{< arguments/row name="$image-url" type="string" description="Sets the url of the logo image. Works best with the absolute URL links. This argument is optional, so you can specify the image with style attribute." >}}
 {{< /arguments/table >}}
 
 ## Examples
@@ -29,7 +29,7 @@ In this example, I create a logo for "**Coolors**". Well, you can use your own b
 {{< /hint >}}
 {{< highlight html >}}
 <h1 class="brand-logo">
-    <a href="#">Coolors</a>
+  <a href="#">Coolors</a>
 </h1>
 {{< /highlight >}}
 
@@ -37,78 +37,78 @@ Now, simply call the mixin as in the example below and change the argument value
 
 {{< highlight scss >}}
 .brand-logo{
-    @include gls-brand-logo(
-        $width: 100px,
-        $height: 30px,
-        $image-url: "https://coolors.co/assets/img/logo.svg"
-    );
+  @include brand-logo(
+    $width: 100px,
+    $height: 30px,
+    $image-url: "https://coolors.co/assets/img/logo.svg"
+  );
 }
 {{< /highlight >}}
 
 {{< highlight css >}}
 //CSS Output
 .brand-logo {
-    position: relative;
-    display: inline-block;
-    width: 100px;
-    height: 30px;
-    background-image: url("https://coolors.co/assets/img/logo.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100%;
+  position: relative;
+  display: inline-block;
+  width: 100px;
+  height: 30px;
+  background-image: url("https://coolors.co/assets/img/logo.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
 }
 .brand-logo a {
-    display: block;
-    width: 0;
-    height: 0;
-    overflow: hidden;
+  display: block;
+  width: 0;
+  height: 0;
+  overflow: hidden;
 }
 .brand-logo a::after {
-    content: "";
-    position: absolute;
-    pointer-events: auto;
-    background-color: rgba(0, 0, 0, 0);
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 1;
+  content: "";
+  position: absolute;
+  pointer-events: auto;
+  background-color: rgba(0, 0, 0, 0);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
 }
 {{< /highlight >}}
 
 <style>
 .brand-logo.example01 {
-    position: relative;
-    display: inline-block;
-    width: 100px;
-    height: 30px;
-    background-image: url("https://coolors.co/assets/img/logo.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100%;
-    margin: 0;
+  position: relative;
+  display: inline-block;
+  width: 100px;
+  height: 30px;
+  background-image: url("https://coolors.co/assets/img/logo.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  margin: 0;
 }
 .brand-logo.example01 a {
-    display: block;
-    width: 0;
-    height: 0;
-    overflow: hidden;
+  display: block;
+  width: 0;
+  height: 0;
+  overflow: hidden;
 }
 .brand-logo.example01 a::after {
-    content: "";
-    position: absolute;
-    pointer-events: auto;
-    background-color: rgba(0, 0, 0, 0);
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 1;
+  content: "";
+  position: absolute;
+  pointer-events: auto;
+  background-color: rgba(0, 0, 0, 0);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
 }
 </style>
 
 <h1 class="brand-logo example01">
-    <a href="#">Coolors</a>
+  <a href="#">Coolors</a>
 </h1>
 
 {{< /highlightwrap >}}
@@ -121,44 +121,44 @@ Note that the `background-image` decleration has disappeared from the generated 
 {{< /hint >}}
 {{< highlight html >}}
 <h1 class="brand-logo" style="background-image: url(https://coolors.co/assets/img/logo.svg);">
-    <a href="#">Coolors</a>
+  <a href="#">Coolors</a>
 </h1>
 {{< /highlight >}}
 {{< highlight scss >}}
 .brand-logo{
-    @include gls-brand-logo(
-        $width: 100px,
-        $height: 30px
-    );
+  @include brand-logo(
+    $width: 100px,
+    $height: 30px
+  );
 }
 {{< /highlight >}}
 {{< highlight css >}}
 //CSS Output
 .brand-logo {
-    display: inline-block;
-    position: relative;
-    width: 100px;
-    height: 30px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100%;
+  display: inline-block;
+  position: relative;
+  width: 100px;
+  height: 30px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 .brand-logo a {
-    display: block;
-    width: 0;
-    height: 0;
-    overflow: hidden;
+  display: block;
+  width: 0;
+  height: 0;
+  overflow: hidden;
 }
 .brand-logo a::after {
-    content: "";
-    position: absolute;
-    pointer-events: auto;
-    background-color: rgba(0, 0, 0, 0);
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 1;
+  content: "";
+  position: absolute;
+  pointer-events: auto;
+  background-color: rgba(0, 0, 0, 0);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
 }
 {{< /highlight >}}
 {{< /highlightwrap >}}

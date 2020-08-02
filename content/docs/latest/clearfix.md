@@ -14,15 +14,15 @@ title: "Clearfix"
 Simply clear floats by calling the mixin in the parent element's selector.
 {{< highlight scss >}}
 .element{
-    @include gls-clearfix;
+  @include clearfix;
 }
 {{< /highlight >}}
 {{< highlight css >}}
 //CSS Output
 .element::after {
-    content: "";
-    display: block;
-    clear: both;
+  content: "";
+  display: block;
+  clear: both;
 }
 {{< /highlight >}}
 {{< /highlightwrap >}}

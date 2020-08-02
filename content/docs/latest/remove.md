@@ -15,8 +15,8 @@ title: "Remove"
 ## Arguments
 
 {{< arguments/table >}}
-    {{< arguments/row name="$value" type="number (with unit)" description="Sets the width value to which your styles will be applied." >}}
-    {{< arguments/row name="$mode" type="string" description="Sets the `width` media feature. Accepts `only`, `min`, `max` or `between` values." >}}
+  {{< arguments/row name="$value" type="number (with unit)" description="Sets the width value to which your styles will be applied." >}}
+  {{< arguments/row name="$mode" type="string" description="Sets the `width` media feature. Accepts `only`, `min`, `max` or `between` values." >}}
 {{< /arguments/table >}}
 
 ## Examples
@@ -25,15 +25,15 @@ title: "Remove"
 Simply call the mixin and pass the width value for which you want the selected element to remove from the documen layout.
 {{< highlight scss >}}
 .element{
-    @include gls-remove(500px);
+  @include remove(500px);
 }
 {{< /highlight >}}
 {{< highlight css >}}
 // CSS Output
 @media (width: 500px) {
-    .element {
-        display: none;
-    }
+  .element {
+    display: none;
+  }
 }
 {{< /highlight >}}
 {{< /highlightwrap >}}
@@ -42,15 +42,15 @@ Simply call the mixin and pass the width value for which you want the selected e
 You can **specify a range** where you don't want the selected element to appear.
 {{< highlight scss >}}
 .element{
-    @include gls-remove(500px, 1024px);
+  @include remove(500px, 1024px);
 }
 {{< /highlight >}}
 {{< highlight css >}}
 // CSS Output
 @media (min-width: 500px) and (max-width: 1024px) {
-    .element {
-        display: none;
-    }
+  .element {
+    display: none;
+  }
 }
 {{< /highlight >}}
 {{< /highlightwrap >}}
@@ -59,15 +59,15 @@ You can **specify a range** where you don't want the selected element to appear.
 You can use `$mode` options to set the `width` media feature. Accepts `only`, `min`, `max` or `between` values.
 {{< highlight scss >}}
 .element{
-    @include gls-remove(min, 1200px);
+  @include remove(min, 1200px);
 }
 {{< /highlight >}}
 {{< highlight css >}}
 // CSS Output
 @media (min-width: 1200px) {
-    .element {
-        display: none;
-    }
+  .element {
+    display: none;
+  }
 }
 {{< /highlight >}}
 {{< /highlightwrap >}}
@@ -76,15 +76,15 @@ You can use `$mode` options to set the `width` media feature. Accepts `only`, `m
 You can use predefined breakpoint values which are: `xsmall`, `small`, `medium`, `large`, `xlarge`.
 {{< highlight scss >}}
 .element{
-    @include gls-remove(max, medium);
+  @include remove(max, medium);
 }
 {{< /highlight >}}
 {{< highlight css >}}
 // CSS Output
 @media (max-width: 768px) {
-    .element {
-        display: none;
-    }
+  .element {
+    display: none;
+  }
 }
 {{< /highlight >}}
 {{< /highlightwrap >}}
@@ -93,15 +93,15 @@ You can use predefined breakpoint values which are: `xsmall`, `small`, `medium`,
 You can set a range by using predefined values as well!
 {{< highlight scss >}}
 .element{
-    @include gls-remove(small, medium);
+  @include remove(small, medium);
 }
 {{< /highlight >}}
 {{< highlight css >}}
 // CSS Output
 @media (min-width: 576px) and (max-width: 767px) {
-    .element {
-        display: none;
-    }
+  .element {
+    display: none;
+  }
 }
 {{< /highlight >}}
 {{< /highlightwrap >}}

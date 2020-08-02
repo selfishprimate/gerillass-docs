@@ -11,7 +11,7 @@ title: "Text Selection"
 ## Arguments
 
 {{< arguments/table >}}
-    {{< arguments/row name="$value" type="string" description="Accepts `only` value. It is used only when it wants to be applied for one specific HTML element." >}}
+  {{< arguments/row name="$value" type="string" description="Accepts `only` value. It is used only when it wants to be applied for one specific HTML element." >}}
 {{< /arguments/table >}}
 
 ## Examples
@@ -20,18 +20,18 @@ title: "Text Selection"
 If you call it in a selector with no value passed the style rules will be applied to this element and its children.
 {{< highlight scss >}}
 .element{
-    @include gls-text-selection{
-        color: pink;
-        background-color: red;
-    }
+  @include text-selection{
+    color: pink;
+    background-color: red;
+  }
 }
 {{< /highlight >}}
 {{< highlight css >}}
 //CSS Output
 .element::selection,
 .element *::selection {
-    color: pink;
-    background-color: red;
+  color: pink;
+  background-color: red;
 }
 {{< /highlight >}}
 {{< /highlightwrap >}}
@@ -40,17 +40,17 @@ If you call it in a selector with no value passed the style rules will be applie
 Pass the `only` value as an argument to apply the style rules to only one specific HTML element.
 {{< highlight scss >}}
 .element{
-    @include gls-text-selection(only){
-        color: pink;
-        background-color: red;
-    }
+  @include text-selection(only){
+    color: pink;
+    background-color: red;
+  }
 }
 {{< /highlight >}}
 {{< highlight css >}}
 //CSS Output
 .element::selection {
-    color: pink;
-    background-color: red;
+  color: pink;
+  background-color: red;
 }
 {{< /highlight >}}
 {{< /highlightwrap >}}
@@ -58,16 +58,16 @@ Pass the `only` value as an argument to apply the style rules to only one specif
 {{< highlightwrap class="example">}}
 Call the mixin at the root of your stylesheet to target all the HTML elements.
 {{< highlight scss >}}
-@include gls-text-selection{
-    color: pink;
-    background-color: red;
+@include text-selection{
+  color: pink;
+  background-color: red;
 }
 {{< /highlight >}}
 {{< highlight css >}}
 //CSS Output
 ::selection {
-    color: pink;
-    background-color: red;
+  color: pink;
+  background-color: red;
 }
 {{< /highlight >}}
 {{< /highlightwrap >}}

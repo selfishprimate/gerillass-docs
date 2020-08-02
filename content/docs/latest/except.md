@@ -14,8 +14,8 @@ You can pass a **string** value to target elements by their `id`, `class` and `p
 ## Arguments
 
 {{< arguments/table footnote="**Important:** Passing multiple arguments is only for numeric values and the values must be comma-separated.">}}
-    {{< arguments/row name="--" type="string" description="The pseudo-class, class or id selectors. Accepts `first`, `last`, `odd`, `even` and class or id selectors." >}}
-    {{< arguments/row name="--" type="number" description="The index number of the element(s) in the list. It is also possible to make multiple selections." >}}
+  {{< arguments/row name="--" type="string" description="The pseudo-class, class or id selectors. Accepts `first`, `last`, `odd`, `even` and class or id selectors." >}}
+  {{< arguments/row name="--" type="number" description="The index number of the element(s) in the list. It is also possible to make multiple selections." >}}
 {{< /arguments/table >}}
 
 ## Examples
@@ -24,12 +24,12 @@ Let's say you have a list of items wrapped by a container. Just like the example
 
 {{< highlight html >}}
 <div class="list-wrapper">
-    <div class="list-item">01</div>
-    <div class="list-item">02</div>
-    <div class="list-item">03</div>
-    <div class="list-item">04</div>
-    <div class="list-item">05</div>
-    <div class="list-item">06</div>
+  <div class="list-item">01</div>
+  <div class="list-item">02</div>
+  <div class="list-item">03</div>
+  <div class="list-item">04</div>
+  <div class="list-item">05</div>
+  <div class="list-item">06</div>
 </div>
 {{< /highlight >}}
 
@@ -37,19 +37,19 @@ Let's say you have a list of items wrapped by a container. Just like the example
 Let's exclude the **first** one!
 {{< highlight scss >}}
 .list-wrapper{
-    .list-item{
-        @include gls-except(first){
-            background-color: #5bc0bb;
-            color: white;
-        }
+  .list-item{
+    @include except(first){
+      background-color: #5bc0bb;
+      color: white;
     }
+  }
 }
 {{< /highlight >}}
 {{< highlight css >}}
 //CSS Output
 .list-wrapper .list-item:not(:first-of-type) {
-    background-color: #5bc0bb;
-    color: white;
+  background-color: #5bc0bb;
+  color: white;
 }
 {{< /highlight >}}
 <style>
@@ -59,12 +59,12 @@ Let's exclude the **first** one!
 }
 </style>
 <div class="list-wrapper example01">
-    <div class="list-item">01</div>
-    <div class="list-item">02</div>
-    <div class="list-item">03</div>
-    <div class="list-item">04</div>
-    <div class="list-item">05</div>
-    <div class="list-item">06</div>
+  <div class="list-item">01</div>
+  <div class="list-item">02</div>
+  <div class="list-item">03</div>
+  <div class="list-item">04</div>
+  <div class="list-item">05</div>
+  <div class="list-item">06</div>
 </div>
 {{< /highlightwrap >}}
 
@@ -72,34 +72,34 @@ Let's exclude the **first** one!
 Now, let's try to exclude the **last item** in the list.
 {{< highlight scss >}}
 .list-wrapper{
-    .list-item{
-        @include gls-except(last){
-            background-color: #5bc0bb;
-            color: white;
-        }
+  .list-item{
+    @include except(last){
+      background-color: #5bc0bb;
+      color: white;
     }
+  }
 }
 {{< /highlight >}}
 {{< highlight css >}}
 //CSS Output
 .list-wrapper .list-item:not(:last-of-type) {
-    background-color: #5bc0bb;
-    color: white;
+  background-color: #5bc0bb;
+  color: white;
 }
 {{< /highlight >}}
 <style>
 .list-wrapper.example02 .list-item:not(:last-of-type) {
-    background-color: #5bc0bb;
-    color: white;
+  background-color: #5bc0bb;
+  color: white;
 }
 </style>
 <div class="list-wrapper example02">
-    <div class="list-item">01</div>
-    <div class="list-item">02</div>
-    <div class="list-item">03</div>
-    <div class="list-item">04</div>
-    <div class="list-item">05</div>
-    <div class="list-item">06</div>
+  <div class="list-item">01</div>
+  <div class="list-item">02</div>
+  <div class="list-item">03</div>
+  <div class="list-item">04</div>
+  <div class="list-item">05</div>
+  <div class="list-item">06</div>
 </div>
 {{< /highlightwrap >}}
 
@@ -108,34 +108,34 @@ Now, let's try to exclude the **last item** in the list.
 Now, let's exclude the **third** item in the list.
 {{< highlight scss >}}
 .list-wrapper{
-    .list-item{
-        @include gls-except(3){
-            background-color: #5bc0bb;
-            color: white;
-        }
+  .list-item{
+    @include except(3){
+      background-color: #5bc0bb;
+      color: white;
     }
+  }
 }
 {{< /highlight >}}
 {{< highlight css >}}
 //CSS Output
 .list-wrapper .list-item:not(:nth-of-type(3)) {
-    background-color: #5bc0bb;
-    color: white;
+  background-color: #5bc0bb;
+  color: white;
 }
 {{< /highlight >}}
 <style>
 .list-wrapper.example03 .list-item:not(:nth-of-type(3)) {
-    background-color: #5bc0bb;
-    color: white;
+  background-color: #5bc0bb;
+  color: white;
 }
 </style>
 <div class="list-wrapper example03">
-    <div class="list-item">01</div>
-    <div class="list-item">02</div>
-    <div class="list-item">03</div>
-    <div class="list-item">04</div>
-    <div class="list-item">05</div>
-    <div class="list-item">06</div>
+  <div class="list-item">01</div>
+  <div class="list-item">02</div>
+  <div class="list-item">03</div>
+  <div class="list-item">04</div>
+  <div class="list-item">05</div>
+  <div class="list-item">06</div>
 </div>
 {{< /highlightwrap >}}
 
@@ -143,34 +143,34 @@ Now, let's exclude the **third** item in the list.
 Let’s exclude those elements whose numeric position is even (e.g. 2, 4, 6, ...).
 {{< highlight scss >}}
 .list-wrapper{
-    .list-item{
-        @include gls-except(even){
-            background-color: #5bc0bb;
-            color: white;
-        }
+  .list-item{
+    @include except(even){
+      background-color: #5bc0bb;
+      color: white;
     }
+  }
 }
 {{< /highlight >}}
 {{< highlight css >}}
 //CSS Output
 .list-wrapper .list-item:not(:nth-of-type(even)) {
-    background-color: #5bc0bb;
-    color: white;
+  background-color: #5bc0bb;
+  color: white;
 }
 {{< /highlight >}}
 <style>
 .list-wrapper.example04 .list-item:not(:nth-of-type(even)) {
-    background-color: #5bc0bb;
-    color: white;
+  background-color: #5bc0bb;
+  color: white;
 }
 </style>
 <div class="list-wrapper example04">
-    <div class="list-item">01</div>
-    <div class="list-item">02</div>
-    <div class="list-item">03</div>
-    <div class="list-item">04</div>
-    <div class="list-item">05</div>
-    <div class="list-item">06</div>
+  <div class="list-item">01</div>
+  <div class="list-item">02</div>
+  <div class="list-item">03</div>
+  <div class="list-item">04</div>
+  <div class="list-item">05</div>
+  <div class="list-item">06</div>
 </div>
 {{< /highlightwrap >}}
 
@@ -181,25 +181,25 @@ Remember that when you target multiple items in the list, the arguments you pass
 {{</ hint >}}
 {{< highlight scss >}}
 .list-wrapper{
-    .list-item{
-        @include gls-except(1, 4, 5){
-            background-color: #5bc0bb;
-            color: white;
-        }
+  .list-item{
+    @include except(1, 4, 5){
+      background-color: #5bc0bb;
+      color: white;
     }
+  }
 }
 {{< /highlight >}}
 {{< highlight css >}}
 //CSS Output
 .list-wrapper .list-item:not(:nth-of-type(1)):not(:nth-of-type(4)):not(:nth-of-type(5)) {
-    background-color: #5bc0bb;
-    color: white;
+  background-color: #5bc0bb;
+  color: white;
 }
 {{< /highlight >}}
 <style>
 .list-wrapper.example05 .list-item:not(:nth-of-type(1)):not(:nth-of-type(4)):not(:nth-of-type(5)) {
-    background-color: #5bc0bb;
-    color: white;
+  background-color: #5bc0bb;
+  color: white;
 }
 </style>
 <div class="list-wrapper example05">
@@ -220,45 +220,45 @@ When you pass arguments for `id` or `class` attributes of the items, don't forge
 
 {{< highlight html >}}
 <div class="list-wrapper">
-    <div class="list-item exclude">01</div>
-    <div class="list-item">02</div>
-    <div class="list-item">03</div>
-    <div class="list-item">04</div>
-    <div class="list-item">05</div>
-    <div class="list-item exclude">06</div>
+  <div class="list-item exclude">01</div>
+  <div class="list-item">02</div>
+  <div class="list-item">03</div>
+  <div class="list-item">04</div>
+  <div class="list-item">05</div>
+  <div class="list-item exclude">06</div>
 </div>
 {{< /highlight >}}
 
 {{< highlight scss >}}
 .list-wrapper{
-    .list-item{
-        @include gls-except(".exclude"){
-            background-color: #5bc0bb;
-            color: white;
-        }
+  .list-item{
+    @include except(".exclude"){
+      background-color: #5bc0bb;
+      color: white;
     }
+  }
 }
 {{< /highlight >}}
 {{< highlight css >}}
 //CSS Output
 .list-wrapper .list-item:not(.exclude) {
-    background-color: #5bc0bb;
-    color: white;
+  background-color: #5bc0bb;
+  color: white;
 }
 {{< /highlight >}}
 <style>
 .list-wrapper.example06 .list-item:not(.exclude) {
-    background-color: #5bc0bb;
-    color: white;
+  background-color: #5bc0bb;
+  color: white;
 }
 </style>
 <div class="list-wrapper example06">
-    <div class="list-item exclude">01</div>
-    <div class="list-item">02</div>
-    <div class="list-item">03</div>
-    <div class="list-item">04</div>
-    <div class="list-item">05</div>
-    <div class="list-item exclude">06</div>
+  <div class="list-item exclude">01</div>
+  <div class="list-item">02</div>
+  <div class="list-item">03</div>
+  <div class="list-item">04</div>
+  <div class="list-item">05</div>
+  <div class="list-item exclude">06</div>
 </div>
 {{< /highlightwrap >}}
 
@@ -272,7 +272,7 @@ Now suppose you don't know the number of the items that will appear in the list,
 {{< highlight scss >}}
 .list-wrapper{
   .list-item{
-    @include gls-except(-2){
+    @include except(-2){
       background-color: #5bc0bb;
       color: white;
     }
@@ -308,7 +308,7 @@ Now let's pass multiple negative values.
 {{< highlight scss >}}
 .list-wrapper {
   .list-item {
-    @include gls-except(-2, -4) {
+    @include except(-2, -4) {
       background-color: #5bc0bb;
       color: white;
     }
@@ -329,12 +329,12 @@ Now let's pass multiple negative values.
 }
 </style>
 <div class="list-wrapper example08">
-    <div class="list-item exclude">01</div>
-    <div class="list-item">02</div>
-    <div class="list-item">03</div>
-    <div class="list-item">04</div>
-    <div class="list-item">05</div>
-    <div class="list-item exclude">06</div>
+  <div class="list-item exclude">01</div>
+  <div class="list-item">02</div>
+  <div class="list-item">03</div>
+  <div class="list-item">04</div>
+  <div class="list-item">05</div>
+  <div class="list-item exclude">06</div>
 </div>
 {{< /highlightwrap >}}
 
@@ -344,7 +344,7 @@ Now let's pass the **positive and negative values ​​together**.
 {{< highlight scss >}}
 .list-wrapper {
   .list-item {
-    @include gls-except(1, -1, -2) {
+    @include except(1, -1, -2) {
       background-color: #5bc0bb;
       color: white;
     }
@@ -365,11 +365,11 @@ Now let's pass the **positive and negative values ​​together**.
 }
 </style>
 <div class="list-wrapper example09">
-    <div class="list-item exclude">01</div>
-    <div class="list-item">02</div>
-    <div class="list-item">03</div>
-    <div class="list-item">04</div>
-    <div class="list-item">05</div>
-    <div class="list-item exclude">06</div>
+  <div class="list-item exclude">01</div>
+  <div class="list-item">02</div>
+  <div class="list-item">03</div>
+  <div class="list-item">04</div>
+  <div class="list-item">05</div>
+  <div class="list-item exclude">06</div>
 </div>
 {{< /highlightwrap >}}

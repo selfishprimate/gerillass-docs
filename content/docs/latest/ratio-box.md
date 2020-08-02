@@ -22,7 +22,7 @@ title: "Ratio Box"
 ## Arguments
 
 {{< arguments/table footnote="The value you pass can be with or without the quotation marks." >}}
-    {{< arguments/row name="$ratio" type="string, number" description="The aspect ratio of the selected item. Accepts either `number` or `string` type of values. You can pass any aspect ratio value you want in the following formats: `16/9`, `4/3`, `1/1`. The default ratio value is set to `16/9`." >}}
+  {{< arguments/row name="$ratio" type="string, number" description="The aspect ratio of the selected item. Accepts either `number` or `string` type of values. You can pass any aspect ratio value you want in the following formats: `16/9`, `4/3`, `1/1`. The default ratio value is set to `16/9`." >}}
 {{< /arguments/table >}}
 
 ## Examples
@@ -31,28 +31,28 @@ title: "Ratio Box"
 Simply call the mixin without passing any argument. **The default value is set to `16/9`**.
 {{< highlight scss >}}
 .element{
-    @include gls-ratio-box;
+  @include ratio-box;
 }
 {{< /highlight >}}
 
 {{< highlight css >}}
 //CSS Output
 .element {
-    position: relative;
+  position: relative;
 }
 .element::before {
-    content: "";
-    display: block;
-    padding-top: 56.25%;
+  content: "";
+  display: block;
+  padding-top: 56.25%;
 }
 .element > * {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 {{< /highlight >}}
 {{< /highlightwrap >}}
@@ -62,39 +62,39 @@ Simply call the mixin without passing any argument. **The default value is set t
 Now let's change the aspect ratio, and try it with a real world example and use one more mixin from the library just to apply a background image to the selected element.
 {{< highlight scss >}}
 .element{
-    @include gls-ratio-box(4/3);
-    @include gls-background-image("/images/backgrounds/06.jpg");
+  @include ratio-box(4/3);
+  @include background-image("/images/backgrounds/06.jpg");
 }
 {{< /highlight >}}
 
 {{< highlight css >}}
 //CSS Output
 .element {
-    position: relative;
-    background-image: url("/images/backgrounds/06.jpg");
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  position: relative;
+  background-image: url("/images/backgrounds/06.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .element::before {
-    content: "";
-    display: block;
-    padding-top: 56.25%;
+  content: "";
+  display: block;
+  padding-top: 56.25%;
 }
 .element > * {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 {{< /highlight >}}
 
 <style>
 .element {
-    border-radius: 3px;
+  border-radius: 3px;
 }
 .element.example02 {
   position: relative;
@@ -126,28 +126,28 @@ Now let's change the aspect ratio, and try it with a real world example and use 
 Now **let's pass a string** value! I guarantee the result will be the same.
 {{< highlight scss >}}
 .element{
-    @include gls-ratio-box("4/3");
+  @include ratio-box("4/3");
 }
 {{< /highlight >}}
 
 {{< highlight css >}}
 //CSS Output
 .element {
-    position: relative;
+  position: relative;
 }
 .element::before {
-    content: "";
-    display: block;
-    padding-top: 75%;
+  content: "";
+  display: block;
+  padding-top: 75%;
 }
 .element > * {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 {{< /highlight >}}
 {{< /highlightwrap >}}
@@ -159,28 +159,28 @@ You can use the **`:`** sign to seperate two numbers instead of **`"/"`**.
 {{< /hint >}}
 {{< highlight scss >}}
 .element{
-    @include gls-ratio-box("16:9");
+  @include ratio-box("16:9");
 }
 {{< /highlight >}}
 
 {{< highlight css >}}
 //CSS Output
 .element {
-    position: relative;
+  position: relative;
 }
 .element::before {
-    content: "";
-    display: block;
-    padding-top: 56.25%;
+  content: "";
+  display: block;
+  padding-top: 56.25%;
 }
 .element > * {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 {{< /highlight >}}
 {{< /highlightwrap >}}
@@ -192,85 +192,85 @@ Now let's try again with a very bizarre aspect ratio, give the selected element 
 {{< /hint >}}
 {{< highlight html >}}
 <div class="element">
-    <span class="text">The passage experienced a surge in popularity during the 1960s when Letraset used it on their dry-transfer sheets.</span>
+  <span class="text">The passage experienced a surge in popularity during the 1960s when Letraset used it on their dry-transfer sheets.</span>
 </div>
 {{< /highlight >}}
 {{< highlight scss >}}
 .element{
-    max-width: 500px;
-    background-color: crimson;
-    @include gls-ratio-box(16/6);
-    .text {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 1em;
-        color: white;
-    }
+  max-width: 500px;
+  background-color: crimson;
+  @include ratio-box(16/6);
+  .text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    color: white;
+  }
 }
 {{< /highlight >}}
 
 {{< highlight css >}}
 //CSS Output
 .element {
-    max-width: 500px;
-    background-color: crimson;
-    position: relative;
+  max-width: 500px;
+  background-color: crimson;
+  position: relative;
 }
 .element::before {
-    content: "";
-    display: block;
-    padding-top: 37.5%;
+  content: "";
+  display: block;
+  padding-top: 37.5%;
 }
 .element > * {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 .element .text {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1em;
-    color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+  color: white;
 }
 {{< /highlight >}}
 <style>
 .element.example05 {
-    max-width: 500px;
-    background-color: crimson;
-    position: relative;
+  max-width: 500px;
+  background-color: crimson;
+  position: relative;
 }
 .element.example05::before {
-    content: "";
-    display: block;
-    padding-top: 37.5%;
+  content: "";
+  display: block;
+  padding-top: 37.5%;
 }
 .element.example05 > * {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 .element.example05 .text {
-    display: -webkit-box;
-    display: flex;
-    -webkit-box-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    align-items: center;
-    padding: 1em;
-    color: white;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  padding: 1em;
+  color: white;
 }
 </style>
 <div class="element example05">
-    <span class="text">The passage experienced a surge in popularity during the 1960s when Letraset used it on their dry-transfer sheets.</span>
+  <span class="text">The passage experienced a surge in popularity during the 1960s when Letraset used it on their dry-transfer sheets.</span>
 </div>
 {{< /highlightwrap >}}

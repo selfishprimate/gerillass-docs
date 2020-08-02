@@ -23,7 +23,7 @@
             &:required + .book-search-spinner {
                 display: block;
             }
-            @include gls-placeholder{
+            @include placeholder{
                 padding-left: 5px;
                 color: $placeholder-color;
             }

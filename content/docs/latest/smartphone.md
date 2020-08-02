@@ -14,8 +14,8 @@ There will be times when you need to style elements only for one particular smar
 ## Arguments
 
 {{< arguments/table footnote="The string values can be pass with or without the quotation marks." >}}
-    {{< arguments/row name="$device" type="string" description="Accepts the name of a smartphone model. Predefined values are `iPhone4`, `iPhone-SE`, `iPhone5-SE`, `iPhone6`, `iPhone6-Plus`, `iPhone7`, `iPhone7-Plus`, `iPhone8`, `iPhone8-Plus`, `iPhone11`, `iPhone11-Pro`, `iPhone11-Pro-Max`, `iPhoneX`, `Galaxy-S7`, `Galaxy-S8`, `Galaxy-S8-Plus`, `Galaxy-S10`." >}}
-    {{< arguments/row name="$orientation" type="string" description="Accepts two values: `portrait` or `landscape`. The default value is set to `portrait`." >}}
+  {{< arguments/row name="$device" type="string" description="Accepts the name of a smartphone model. Predefined values are `iPhone4`, `iPhone-SE`, `iPhone5-SE`, `iPhone6`, `iPhone6-Plus`, `iPhone7`, `iPhone7-Plus`, `iPhone8`, `iPhone8-Plus`, `iPhone11`, `iPhone11-Pro`, `iPhone11-Pro-Max`, `iPhoneX`, `Galaxy-S7`, `Galaxy-S8`, `Galaxy-S8-Plus`, `Galaxy-S10`." >}}
+  {{< arguments/row name="$orientation" type="string" description="Accepts two values: `portrait` or `landscape`. The default value is set to `portrait`." >}}
 {{< /arguments/table >}}
 
 ## Examples
@@ -24,17 +24,17 @@ There will be times when you need to style elements only for one particular smar
 First, call the mixin and pass only one value for the `$device` model name. Unless you pass a value for `$orientation`, it will be `portrait`.
 {{< highlight scss >}}
 .element {
-    @include gls-smartphone(iPhone8) {
-        background-color: teal;
-    }
+  @include smartphone(iPhone8) {
+    background-color: teal;
+  }
 }
 {{< /highlight >}}
 {{< highlight css >}}
 //CSS Output
 @media only screen and (device-width: 375px) and (device-height: 667px) and (orientation: portrait) {
-    .element {
-        background-color: teal;
-    }
+  .element {
+    background-color: teal;
+  }
 }
 {{< /highlight >}}
 {{< /highlightwrap >}}
@@ -43,17 +43,17 @@ First, call the mixin and pass only one value for the `$device` model name. Unle
 Now, let's try to pass two arguments: one for the name of the `$device` model, the other is for the `$orientation`.
 {{< highlight scss >}}
 .element{
-    @include gls-smartphone(iPhone8-Plus, landscape){
-        background-color: teal;
-    }
+  @include smartphone(iPhone8-Plus, landscape){
+    background-color: teal;
+  }
 }
 {{< /highlight >}}
 {{< highlight css >}}
 //CSS Output
 @media only screen and (device-width: 736px) and (device-height: 414px) and (orientation: landscape) {
-    .element {
-        background-color: teal;
-    }
+  .element {
+    background-color: teal;
+  }
 }
 {{< /highlight >}}
 {{< /highlightwrap >}}

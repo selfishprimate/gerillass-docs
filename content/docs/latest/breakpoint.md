@@ -16,8 +16,8 @@ title: "Breakpoint"
 ## Arguments
 
 {{< arguments/table footnote="When you use `between` option you must pass two values for `width` and they must be seperated by space. For more see the [examples](#examples).">}}
-    {{< arguments/row name="$mode" type="string" description="Sets the `width` media feature. Accepts `only`, `min`, `max` or `between` values." >}}
-    {{< arguments/row name="$value" type="number (with unit)" description="The width value to which your styles will be applied." >}}
+  {{< arguments/row name="$mode" type="string" description="Sets the `width` media feature. Accepts `only`, `min`, `max` or `between` values." >}}
+  {{< arguments/row name="$value" type="number (with unit)" description="The width value to which your styles will be applied." >}}
 {{< /arguments/table >}}
 
 ## Examples
@@ -26,17 +26,17 @@ title: "Breakpoint"
 Simply call the mixin and **pass a custom value** to it. The code below will apply styles only if your browser's viewport is equal to `320px`.
 {{< highlight scss >}}
 .element{
-    @include gls-breakpoint(320px) {
-        background-color: green;
-    };
+  @include breakpoint(320px) {
+    background-color: green;
+  };
 }
 {{< /highlight >}}
 {{< highlight css >}}
 //CSS Output
 @media (width: 320px) {
-    .element {
-        background-color: green;
-    }
+  .element {
+    background-color: green;
+  }
 }
 {{< /highlight >}}
 {{< /highlightwrap >}}
@@ -45,17 +45,17 @@ Simply call the mixin and **pass a custom value** to it. The code below will app
 If you set the `$mode` option to `only` you'll see that the result will be as similar as the first example. The code below will apply styles only if your browser's viewport is equal to `1200px`.
 {{< highlight scss >}}
 .element{
-    @include gls-breakpoint(only, 1200px) {
-        background-color: teal;
-    };
+  @include breakpoint(only, 1200px) {
+    background-color: teal;
+  };
 }
 {{< /highlight >}}
 {{< highlight css >}}
 //CSS Output
 @media (width: 1200px) {
-    .element {
-        background-color: teal;
-    }
+  .element {
+    background-color: teal;
+  }
 }
 {{< /highlight >}}
 {{< /highlightwrap >}}
@@ -64,17 +64,17 @@ If you set the `$mode` option to `only` you'll see that the result will be as si
 Now, let's set the `$mode` option to `min` and pass a predefined breakpoint value. If you are a **mobile-first** person you are going to use this one a lot!
 {{< highlight scss >}}
 .element{
-    @include gls-breakpoint(min, medium) {
-        background-color: green;
-    };
+  @include breakpoint(min, medium) {
+    background-color: green;
+  };
 }
 {{< /highlight >}}
 {{< highlight css >}}
 //CSS Output
 @media (min-width: 768px) {
-    .element {
-        background-color: green;
-    }
+  .element {
+    background-color: green;
+  }
 }
 {{< /highlight >}}
 {{< /highlightwrap >}}
@@ -83,17 +83,17 @@ Now, let's set the `$mode` option to `min` and pass a predefined breakpoint valu
 For **desktop-first** arrangements set the `$mode` option to `max` and this time let's pass a custom value for the second argument.
 {{< highlight scss >}}
 .element{
-    @include gls-breakpoint(max, 1024px) {
-        background-color: green;
-    };
+  @include breakpoint(max, 1024px) {
+    background-color: green;
+  };
 }
 {{< /highlight >}}
 {{< highlight css >}}
 //CSS Output
 @media (max-width: 1024px) {
-    .element {
-        background-color: green;
-    }
+  .element {
+    background-color: green;
+  }
 }
 {{< /highlight >}}
 {{< /highlightwrap >}}
@@ -105,17 +105,17 @@ We can set a range between two values ​​to apply our styles.
 {{< /hint >}}
 {{< highlight scss >}}
 .element{
-    @include gls-breakpoint(between, small 1200px) {
-        background-color: green;
-    };
+  @include breakpoint(between, small 1200px) {
+    background-color: green;
+  };
 }
 {{< /highlight >}}
 {{< highlight css >}}
 //CSS Output
 @media (min-width: 576px) and (max-width: 1200px) {
-    .element {
-        background-color: green;
-    }
+  .element {
+    background-color: green;
+  }
 }
 {{< /highlight >}}
 {{< /highlightwrap >}}
@@ -128,33 +128,33 @@ We can set a range between two values ​​to apply our styles.
 
 {{< highlight scss >}}
 .element{
-    @include gls-breakpoint(between, small medium) {
-        background-color: green;
-    };
-    @include gls-breakpoint(between, medium large) {
-        background-color: blue;
-    };
-    @include gls-breakpoint(between, large xlarge) {
-        background-color: purple;
-    };
+  @include breakpoint(between, small medium) {
+    background-color: green;
+  };
+  @include breakpoint(between, medium large) {
+    background-color: blue;
+  };
+  @include breakpoint(between, large xlarge) {
+    background-color: purple;
+  };
 }
 {{< /highlight >}}
 {{< highlight css >}}
 //CSS Output
 @media (min-width: 576px) and (max-width: 767px) {
-    .element {
-        background-color: green;
-    }
+  .element {
+    background-color: green;
+  }
 }
 @media (min-width: 768px) and (max-width: 991px) {
-    .element {
-        background-color: blue;
-    }
+  .element {
+    background-color: blue;
+  }
 }
 @media (min-width: 992px) and (max-width: 1199px) {
-    .element {
-        background-color: purple;
-    }
+  .element {
+    background-color: purple;
+  }
 }
 {{< /highlight >}}
 {{< /highlightwrap >}}
@@ -163,25 +163,25 @@ We can set a range between two values ​​to apply our styles.
 **Extracting by one** is only for **predefined** values. When you work with custom values you don't have to worry about that!
 {{< highlight scss >}}
 .element{
-    @include gls-breakpoint(between, small 1199px) {
-        background-color: green;
-    };
-    @include gls-breakpoint(between, 1200px 1400px) {
-        background-color: blue;
-    };
+  @include breakpoint(between, small 1199px) {
+    background-color: green;
+  };
+  @include breakpoint(between, 1200px 1400px) {
+    background-color: blue;
+  };
 }
 {{< /highlight >}}
 {{< highlight css >}}
 //CSS Output
 @media (min-width: 576px) and (max-width: 1199px) {
-    .element {
-        background-color: green;
-    }
+  .element {
+    background-color: green;
+  }
 }
 @media (min-width: 1200px) and (max-width: 1400px) {
-    .element {
-        background-color: blue;
-    }
+  .element {
+    background-color: blue;
+  }
 }
 {{< /highlight >}}
 {{< /highlightwrap >}}
@@ -193,17 +193,17 @@ The values either can be custom numbers (with a unit) or predefined values.
 {{< /hint >}}
 {{< highlight scss >}}
 .element{
-    @include gls-breakpoint(320px, 768px) {
-        background-color: teal;
-    };
+  @include breakpoint(320px, 768px) {
+    background-color: teal;
+  };
 }
 {{< /highlight >}}
 {{< highlight css >}}
 //CSS Output
 @media (min-width: 320px) and (max-width: 768px) {
-    .element {
-        background-color: teal;
-    }
+  .element {
+    background-color: teal;
+  }
 }
 {{< /highlight >}}
 {{< /highlightwrap >}}
@@ -212,19 +212,17 @@ The values either can be custom numbers (with a unit) or predefined values.
 Now let's try it with the predefined values just to see that it works.
 {{< highlight scss >}}
 .element{
-    @include gls-breakpoint(small, large) {
-        background-color: teal;
-    };
+  @include breakpoint(small, large) {
+    background-color: teal;
+  };
 }
 {{< /highlight >}}
 {{< highlight css >}}
 //CSS Output
 @media (min-width: 576px) and (max-width: 991px) {
-    .element {
-        background-color: teal;
-    }
+  .element {
+    background-color: teal;
+  }
 }
 {{< /highlight >}}
 {{< /highlightwrap >}}
-
-Well, it is!

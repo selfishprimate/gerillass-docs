@@ -1,6 +1,6 @@
-@include gls-antialias;
-@include gls-reset-css;
-@include gls-border-box;
+@include antialias;
+@include reset-css;
+@include border-box;
 
 html {
     font-size: $font-size-base;

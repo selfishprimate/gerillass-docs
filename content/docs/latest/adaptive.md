@@ -14,7 +14,7 @@ title: "Adaptive"
 ## Arguments
 
 {{< arguments/table footnote="Apply this mixin to your containing element of your layout, and then narrow or widen your browser screen to test it!">}}
-    {{< arguments/row name="$gutter" type="number (with unit)" description="Accepts only one value and sets it for all the breakpoints. The default value is set to `30px`." >}}
+  {{< arguments/row name="$gutter" type="number (with unit)" description="Accepts only one value and sets it for all the breakpoints. The default value is set to `30px`." >}}
 {{< /arguments/table >}}
 
 ## Examples
@@ -23,33 +23,33 @@ title: "Adaptive"
 Simply call the mixin without passing any arguments. Default `$gutter` value is `30px`.
 {{< highlight scss >}}
 .main-container{
-    @include gls-adaptive;
+  @include adaptive;
 }
 {{< /highlight >}}
 {{< highlight css >}}
 //CSS Output
 .main-container {
-    margin: 0 auto;
+  margin: 0 auto;
 }
 @media (min-width: 576px) {
-    .main-container {
-        max-width: calc(576px - (30px * 2));
-    }
+  .main-container {
+    max-width: calc(576px - (30px * 2));
+  }
 }
 @media (min-width: 768px) {
-    .main-container {
-        max-width: calc(768px - (30px * 2));
-    }
+  .main-container {
+    max-width: calc(768px - (30px * 2));
+  }
 }
 @media (min-width: 992px) {
-    .main-container {
-        max-width: calc(992px - (30px * 2));
-    }
+  .main-container {
+    max-width: calc(992px - (30px * 2));
+  }
 }
 @media (min-width: 1200px) {
-    .main-container {
-        max-width: calc(1200px - (30px * 2));
-    }
+  .main-container {
+    max-width: calc(1200px - (30px * 2));
+  }
 }
 {{< /highlight >}}
 {{< /highlightwrap >}}
@@ -58,33 +58,33 @@ Simply call the mixin without passing any arguments. Default `$gutter` value is 
 Try passing an argument value with `em` unit (you can use any kind of length units here: `px`, `em`, `rem`, `percentage` etc. will be just fine).
 {{< highlight scss >}}
 .main-container{
-    @include gls-adaptive(2em);
+  @include adaptive(2em);
 }
 {{< /highlight >}}
 {{< highlight css >}}
 //CSS Output
 .main-container {
-    margin: 0 auto;
+  margin: 0 auto;
 }
 @media (min-width: 576px) {
-    .main-container {
-        ax-width: calc(576px - (2em * 2));
-    }
+  .main-container {
+    ax-width: calc(576px - (2em * 2));
+  }
 }
 @media (min-width: 768px) {
-    .main-container {
-        max-width: calc(768px - (2em * 2));
-    }
+  .main-container {
+    max-width: calc(768px - (2em * 2));
+  }
 }
 @media (min-width: 992px) {
-    .main-container {
-        max-width: calc(992px - (2em * 2));
-    }
+  .main-container {
+    max-width: calc(992px - (2em * 2));
+  }
 }
 @media (min-width: 1200px) {
-    .main-container {
-        max-width: calc(1200px - (2em * 2));
-    }
+  .main-container {
+    max-width: calc(1200px - (2em * 2));
+  }
 }
 {{< /highlight >}}
 {{< /highlightwrap >}}

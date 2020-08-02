@@ -15,15 +15,15 @@ As soon as the placeholder text disappears (that is, when the user starts typing
 Simply call the mixin and write your style rules.
 {{< highlight scss >}}
 input{
-    @include gls-placeholder-shown{
-        background-color: yellow;
-    }
+  @include placeholder-shown{
+    background-color: yellow;
+  }
 }
 {{< /highlight >}}
 {{< highlight css >}}
 //CSS Output
 input:placeholder-shown {
-    background-color: yellow;
+  background-color: yellow;
 }
 {{< /highlight >}}
 {{< /highlightwrap >}}
@@ -31,14 +31,14 @@ input:placeholder-shown {
 {{< highlightwrap class="example">}}
 When you call the mixin at the root of your stylesheet it will target all the `<input>` and `<textarea>` elements.
 {{< highlight scss >}}
-@include gls-placeholder-shown{
-    background-color: yellow;
+@include placeholder-shown{
+  background-color: yellow;
 }
 {{< /highlight >}}
 {{< highlight css >}}
 //CSS Output
 :placeholder-shown {
-    background-color: yellow;
+  background-color: yellow;
 }
 {{< /highlight >}}
 {{< /highlightwrap >}}

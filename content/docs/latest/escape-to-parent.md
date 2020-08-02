@@ -20,23 +20,23 @@ title: "Escape to Parent"
 Call the mixin as many as the number of cases that you want the element response to and pass the related argument for each.
 {{< highlight scss >}}
 .parent-element{
-    .element{
-        @include escape-to-parent(".smartphone"){
-            background-color: red;
-        }
-        @include escape-to-parent(".desktop"){
-            background-color: green;
-        }
+  .element{
+    @include escape-to-parent(".smartphone"){
+      background-color: red;
     }
+    @include escape-to-parent(".desktop"){
+      background-color: green;
+    }
+  }
 }
 {{< /highlight >}}
 {{< highlight css >}}
 //CSS Output
 .smartphone.parent-element .element {
-    background-color: red;
+  background-color: red;
 }
 .desktop.parent-element .element {
-    background-color: green;
+  background-color: green;
 }
 {{< /highlight >}}
 {{< /highlightwrap >}}

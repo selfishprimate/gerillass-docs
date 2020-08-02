@@ -11,9 +11,9 @@ title: "Background Image"
 ## Arguments
 
 {{< arguments/table footnote="Use `null` if you want to skip an argument. For more see [the examples](#examples).">}}
-    {{< arguments/row name="$image-url" type="string" description="The URL link of the background image." >}}
-    {{< arguments/row name="filter-color" type="color | list" description="The color or the list of colors you may want to apply as a filter over the background image. **Multiple color values must be seperated by space.**" >}}
-    {{< arguments/row name="$filter-direction" type="string" description="The angle of gradient's direction. **It can be activated only when you pass multiple color values for `$filter-color` argument**. Accpets `top`, `top-right`, `right`, `bottom-right`, `bottom`, `bottom-left`, `left`, `top-left` values. The default value is set `to top`." >}}
+  {{< arguments/row name="$image-url" type="string" description="The URL link of the background image." >}}
+  {{< arguments/row name="filter-color" type="color | list" description="The color or the list of colors you may want to apply as a filter over the background image. **Multiple color values must be seperated by space.**" >}}
+  {{< arguments/row name="$filter-direction" type="string" description="The angle of gradient's direction. **It can be activated only when you pass multiple color values for `$filter-color` argument**. Accpets `top`, `top-right`, `right`, `bottom-right`, `bottom`, `bottom-left`, `left`, `top-left` values. The default value is set `to top`." >}}
 {{< /arguments/table >}}
 
 
@@ -23,17 +23,17 @@ title: "Background Image"
 Simply call the mixin in a selector and pass the URL of the background image.
 {{< highlight scss >}}
 .element{
-    @include gls-background-image("/images/backgrounds/07.jpg");
+  @include background-image("/images/backgrounds/07.jpg");
 }
 {{< /highlight >}}
 {{< highlight css >}}
 //CSS Output
 .element {
-    position: relative;
-    background-image: url("/images/backgrounds/07.jpg");
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  position: relative;
+  background-image: url("/images/backgrounds/07.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 {{< /highlight >}}
 {{< sandbox class="xlarge" >}}
@@ -45,17 +45,17 @@ position: relative;background-image: url("/images/backgrounds/07.jpg");backgroun
 Now let's apply a color filter to it by passing a color value for $filter-color argument.
 {{< highlight scss >}}
 .element{
-    @include gls-background-image("/images/backgrounds/07.jpg", rgba(255, 204, 153, 0.5));
+  @include background-image("/images/backgrounds/07.jpg", rgba(255, 204, 153, 0.5));
 }
 {{< /highlight >}}
 {{< highlight css >}}
 //CSS Output
 .element {
-    position: relative;
-    background-image: linear-gradient(to top, rgba(255, 204, 153, 0.5), rgba(255, 204, 153, 0.5)), url("/images/backgrounds/07.jpg");
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  position: relative;
+  background-image: linear-gradient(to top, rgba(255, 204, 153, 0.5), rgba(255, 204, 153, 0.5)), url("/images/backgrounds/07.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 {{< /highlight >}}
 {{< sandbox class="xlarge" >}}
@@ -70,17 +70,17 @@ Now let's pass multiple color values for `$filter-color` to make background imag
 {{< /hint >}}
 {{< highlight scss >}}
 .element{
-    @include gls-background-image("/images/backgrounds/07.jpg", rgba(0, 0, 0, 0.5) rgba(40, 102, 100, 0.8));
+  @include background-image("/images/backgrounds/07.jpg", rgba(0, 0, 0, 0.5) rgba(40, 102, 100, 0.8));
 }
 {{< /highlight >}}
 {{< highlight css >}}
 //CSS Output
 .element {
-    position: relative;
-    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(40, 102, 100, 0.8)), url("/images/backgrounds/07.jpg");
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  position: relative;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(40, 102, 100, 0.8)), url("/images/backgrounds/07.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 {{< /highlight >}}
 {{< sandbox class="xlarge" >}}
@@ -95,17 +95,17 @@ Now let's try `$filter-direction` option, and while trying it, let's use sharper
 {{< /hint >}}
 {{< highlight scss >}}
 .element{
-    @include gls-background-image("/images/backgrounds/07.jpg", rgba(0, 128, 128, 0.7) rgba(255, 192, 203, 0.8), right);
+  @include background-image("/images/backgrounds/07.jpg", rgba(0, 128, 128, 0.7) rgba(255, 192, 203, 0.8), right);
 }
 {{< /highlight >}}
 {{< highlight css >}}
 //CSS Output
 .element {
-    position: relative;
-    background-image: linear-gradient(to right, rgba(0, 128, 128, 0.7), rgba(255, 192, 203, 0.8)), url("/images/backgrounds/07.jpg");
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  position: relative;
+  background-image: linear-gradient(to right, rgba(0, 128, 128, 0.7), rgba(255, 192, 203, 0.8)), url("/images/backgrounds/07.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 {{< /highlight >}}
 {{< sandbox class="xlarge" >}}
@@ -124,29 +124,29 @@ There will be times when you would like to **add a background image on an elemen
 {{< /highlight >}}
 {{< highlight scss >}}
 .element{
-    @include gls-background-image(null, rgba(teal, 0.7) rgba(pink, 0.8), right);
+  @include background-image(null, rgba(teal, 0.7) rgba(pink, 0.8), right);
 }
 {{< /highlight >}}
 {{< highlight css >}}
 .element {
-    position: relative;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  position: relative;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .element::after {
-    content: "";
-    display: block;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to right, rgba(0, 128, 128, 0.7), rgba(255, 192, 203, 0.8));
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(0, 128, 128, 0.7), rgba(255, 192, 203, 0.8));
 }
 .element > * {
-    position: relative;
-    z-index: 1;
+  position: relative;
+  z-index: 1;
 }
 {{< /highlight >}}
 <style>
@@ -181,67 +181,67 @@ Probably you're asking why those `"position: relative"` and `"z-index: 1"` style
 Let's try with a title text that placed inside the selected element to see it in action. 
 {{< highlight html >}}
 <div class="element" style="background-image: url(/images/backgrounds/07.jpg)">
-    <h2>A beautiful title text standing over the color filter.</h2>
+  <h2>A beautiful title text standing over the color filter.</h2>
 </div>
 {{< /highlight >}}
 {{< highlight scss >}}
 .element{
-    @include gls-background-image(null, rgba(teal, 0.7) rgba(pink, 0.8), right);
+  @include background-image(null, rgba(teal, 0.7) rgba(pink, 0.8), right);
 }
 {{< /highlight >}}
 {{< highlight css "linenos=table,hl_lines=18-22,linenostart=1">}}
 //CSS Output
 .element {
-    position: relative;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  position: relative;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .element::after {
-    content: "";
-    display: block;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to right, rgba(0, 128, 128, 0.7), rgba(255, 192, 203, 0.8));
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(0, 128, 128, 0.7), rgba(255, 192, 203, 0.8));
 }
 .element > * {
-    position: relative;
-    z-index: 1;
+  position: relative;
+  z-index: 1;
 }
 {{< /highlight >}}
 <style>
 .element.example06 {
-    border-radius: 5px;
-    display: -webkit-box;
-    display: flex;
-    -webkit-box-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    align-items: center;
-    position: relative;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding: 30px;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  position: relative;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 30px;
 }
 .element.example06 .title {
-    color: white;
-    text-align: center;
-    margin: 0;
+  color: white;
+  text-align: center;
+  margin: 0;
 }
 .element.example06::after {
-    content: "";
-    display: block;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: -webkit-gradient(linear, left top, right top, from(rgba(0, 128, 128, 0.7)), to(rgba(255, 192, 203, 0.8)));
-    background: linear-gradient(to right, rgba(0, 128, 128, 0.7), rgba(255, 192, 203, 0.8));
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(0, 128, 128, 0.7)), to(rgba(255, 192, 203, 0.8)));
+  background: linear-gradient(to right, rgba(0, 128, 128, 0.7), rgba(255, 192, 203, 0.8));
 }
 .element.example06 > * {
   position: relative;
@@ -250,7 +250,7 @@ Let's try with a title text that placed inside the selected element to see it in
 </style>
 
 <div class="element sandbox large example06" style="background-image: url(/images/backgrounds/07.jpg)">
-    <h2 class="title">A beautiful title text standing over the color filter.</h2>
+  <h2 class="title">A beautiful title text standing over the color filter.</h2>
 </div>
 
 {{< /highlightwrap >}}

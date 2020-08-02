@@ -13,17 +13,17 @@ title: "Reset Figure"
 Simply call the mixin in a selector that targets the `<figure>` element itself.
 {{< highlight scss >}}
 figure{
-    @include gls-reset-figure;
+  @include reset-figure;
 }
 {{< /highlight >}}
 {{< highlight css >}}
 //CSS Output
 figure {
-    margin: 0;
+  margin: 0;
 }
 figure img {
-    display: block;
-    width: 100%;
+  display: block;
+  width: 100%;
 }
 {{< /highlight >}}
 {{< /highlightwrap >}}

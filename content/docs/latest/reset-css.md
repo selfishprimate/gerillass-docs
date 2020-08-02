@@ -16,7 +16,7 @@ Endless thanks to [**Eric Meyer**](https://meyerweb.com/) for his legendary [**R
 {{< highlightwrap class="example">}}
 Simply call the mixin at the root of your style sheet to override browser default styles.
 {{< highlight scss >}}
-@include gls-reset-css;
+@include reset-css;
 {{< /highlight >}}
 {{< highlight css >}}
 //CSS Output
@@ -37,35 +37,35 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, main, nav, section {
-    display: block;
+  display: block;
 }
 body {
-    line-height: 1;
+  line-height: 1;
 }
 ol, ul {
-    list-style: none;
+  list-style: none;
 }
 blockquote, q {
-    quotes: none;
+  quotes: none;
 }
 blockquote:before, blockquote:after,
 q:before, q:after {
-    content: '';
-    content: none;
+  content: '';
+  content: none;
 }
 table {
-    border-collapse: collapse;
-    border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 {{< /highlight >}}
 {{< /highlightwrap >}}

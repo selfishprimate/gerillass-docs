@@ -14,27 +14,27 @@ title: "Placeholder"
 Simply call the mixin and write your style rules.
 {{< highlight scss >}}
 .element{
-    @include gls-placeholder{
-        color: red;
-    }
+  @include placeholder{
+    color: red;
+  }
 }
 {{< /highlight >}}
 {{< highlight css >}}
 //CSS Output
 .element::-webkit-input-placeholder {
-    color: red;
+  color: red;
 }
 .element::-moz-placeholder {
-    color: red;
+  color: red;
 }
 .element:-ms-input-placeholder {
-    color: red;
+  color: red;
 }
 .element:-moz-placeholder {
-    color: red;
+  color: red;
 }
 .element::placeholder {
-    color: red;
+  color: red;
 }
 {{< /highlight >}}
 {{< /highlightwrap >}}
@@ -42,26 +42,26 @@ Simply call the mixin and write your style rules.
 {{< highlightwrap class="example">}}
 When you call the mixin at the root of your stylesheet it will target all the `<input>` and `<textarea>` elements.
 {{< highlight scss >}}
-@include gls-placeholder{
-    color: orange;
+@include placeholder{
+  color: orange;
 }
 {{< /highlight >}}
 {{< highlight css >}}
 //CSS Output
 ::-webkit-input-placeholder {
-    color: orange;
+  color: orange;
 }
 ::-moz-placeholder {
-    color: orange;
+  color: orange;
 }
 :-ms-input-placeholder {
-    color: orange;
+  color: orange;
 }
 :-moz-placeholder {
-    color: orange;
+  color: orange;
 }
 ::placeholder {
-    color: orange;
+  color: orange;
 }
 {{< /highlight >}}
 {{< /highlightwrap >}}

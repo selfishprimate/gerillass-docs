@@ -11,8 +11,8 @@ title: "Sprite"
 ## Arguments
 
 {{< arguments/table footnote="To learn more about the `background-position` property values check out the [links](#related-articles) at the end of the page.">}}
-    {{< arguments/row name="$image-url" type="string" description="The URL link of the sprite image. **Important:** Don't forget that the image link must be either absolute or relative to the generated CSS file." >}}
-    {{< arguments/row name="$position" type="number | string" description="Sets the positioning of the `background-image`. **Multiple values must be seperated by space**." >}}
+  {{< arguments/row name="$image-url" type="string" description="The URL link of the sprite image. **Important:** Don't forget that the image link must be either absolute or relative to the generated CSS file." >}}
+  {{< arguments/row name="$position" type="number | string" description="Sets the positioning of the `background-image`. **Multiple values must be seperated by space**." >}}
 {{< /arguments/table >}}
 
 ## Examples
@@ -24,29 +24,29 @@ You can apply it to one single element and pass both `$image-url` and `$position
 {{< /hint >}}
 {{< highlight scss >}}
 .sprite-element{
-    @include gls-sprite("../images/sprite.png", 0 0);
+  @include sprite("../images/sprite.png", 0 0);
 }
 {{< /highlight >}}
 {{< highlight css >}}
 //CSS Output
 .sprite-element {
-    display: inline-block;
-    background-image: url("../images/sprite.png");
-    background-position: 0 0;
-    background-repeat: no-repeat;
+  display: inline-block;
+  background-image: url("../images/sprite.png");
+  background-position: 0 0;
+  background-repeat: no-repeat;
 }
 {{< /highlight >}}
 <style>
 .sprite-element.single {
-    width: 100px;
-    height: 100px;
-    display: inline-block;
-    background-image: url("sprite.png");
-    background-repeat: no-repeat;
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  background-image: url("sprite.png");
+  background-repeat: no-repeat;
 }
 </style>
 <div class="sprite-elements">
-    <div class="sprite-element single"></div>
+  <div class="sprite-element single"></div>
 </div>
 {{< /highlightwrap >}}
 
@@ -65,9 +65,9 @@ First let's call the mixin just to define the sprite image's url link and specif
 
 {{< highlight scss >}}
 .sprite-element{
-    width: 100px;
-    height: 100px;
-    @include gls-sprite("sprite.png");
+  width: 100px;
+  height: 100px;
+  @include sprite("sprite.png");
 }
 {{< /highlight >}}
 
@@ -75,10 +75,10 @@ You can pass `width` and `height` values into the mixin as well!
 
 {{< highlight scss >}}
 .sprite-element{
-    @include gls-sprite("sprite.png") {
-        width: 100px;
-        height: 100px;
-    };
+  @include sprite("sprite.png") {
+    width: 100px;
+    height: 100px;
+  };
 }
 {{< /highlight >}}
 
@@ -86,22 +86,22 @@ Then let's pass the positioning values for each of the elements separately using
 
 {{< highlight scss >}}
 .sprite-element{
-    @include gls-sprite("sprite.png") {
-        width: 100px;
-        height: 100px;
-    };
-    &.first {
-        @include gls-sprite(0 0);
-    }
-    &.second {
-        @include gls-sprite(-100px 0)
-    }
-    &.third {
-        @include gls-sprite(-200px 0)
-    }
-    &.fourth {
-        @include gls-sprite(-300px 0)
-    }
+  @include sprite("sprite.png") {
+    width: 100px;
+    height: 100px;
+  };
+  &.first {
+    @include sprite(0 0);
+  }
+  &.second {
+    @include sprite(-100px 0)
+  }
+  &.third {
+    @include sprite(-200px 0)
+  }
+  &.fourth {
+    @include sprite(-300px 0)
+  }
 }
 {{< /highlight >}}
 
@@ -109,51 +109,51 @@ Well, the result will be like this:
 {{< highlight css >}}
 //CSS Output
 .sprite-element {
-    width: 100px;
-    height: 100px;
-    display: inline-block;
-    background-image: url("sprite.png");
-    background-repeat: no-repeat;
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  background-image: url("sprite.png");
+  background-repeat: no-repeat;
 }
 .sprite-element.first {
-    background-position: 0 0;
+  background-position: 0 0;
 }
 .sprite-element.second {
-    background-position: -100px 0;
+  background-position: -100px 0;
 }
 .sprite-element.third {
-    background-position: -200px 0;
+  background-position: -200px 0;
 }
 .sprite-element.fourth {
-    background-position: -300px 0;
+  background-position: -300px 0;
 }
 {{< /highlight >}}
 <style>
 .sprite-element {
-    width: 100px;
-    height: 100px;
-    display: inline-block;
-    background-image: url("sprite.png");
-    background-repeat: no-repeat;
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  background-image: url("sprite.png");
+  background-repeat: no-repeat;
 }
 .sprite-element.first {
-    background-position: 0 0;
+  background-position: 0 0;
 }
 .sprite-element.second {
-    background-position: -100px 0;
+  background-position: -100px 0;
 }
 .sprite-element.third {
-    background-position: -200px 0;
+  background-position: -200px 0;
 }
 .sprite-element.fourth {
-    background-position: -300px 0;
+  background-position: -300px 0;
 }
 </style>
 <div class="sprite-elements">
-    <div class="sprite-element first"></div>
-    <div class="sprite-element second"></div>
-    <div class="sprite-element third"></div>
-    <div class="sprite-element fourth"></div>
+  <div class="sprite-element first"></div>
+  <div class="sprite-element second"></div>
+  <div class="sprite-element third"></div>
+  <div class="sprite-element fourth"></div>
 </div>
 {{< /highlightwrap >}}
 

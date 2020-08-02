@@ -13,7 +13,7 @@ title: "Remify"
 ## Arguments
 
 {{< arguments/table >}}
-    {{< arguments/row name="$value" type="number (with unit)" description="The pixel value that you want it to be converted to `rem`." >}}
+  {{< arguments/row name="$value" type="number (with unit)" description="The pixel value that you want it to be converted to `rem`." >}}
 {{< /arguments/table >}}
 
 ## Examples
@@ -22,13 +22,13 @@ title: "Remify"
 Simply call the function and pass a `pixel` value to it!
 {{< highlight scss >}}
 .element {
-    font-size: __remify(30px);
+  font-size: __remify(30px);
 }
 {{< /highlight >}}
 {{< highlight css >}}
 //CSS Output
 .element {
-    font-size: 1.875rem;
+  font-size: 1.875rem;
 }
 {{< /highlight >}}
 {{< /highlightwrap >}}

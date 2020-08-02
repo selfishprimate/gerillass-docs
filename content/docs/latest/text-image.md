@@ -11,7 +11,7 @@ title: "Text Image"
 ## Arguments
 
 {{< arguments/table footnote="**Important:** Note that the URL of the image must be passed in quotation marks.">}}
-    {{< arguments/row name="$image" type="string (quoted)" description="The URL of a clipping image." >}}
+  {{< arguments/row name="$image" type="string (quoted)" description="The URL of a clipping image." >}}
 {{< /arguments/table >}}
 
 ## Examples
@@ -23,19 +23,19 @@ Simply call the mixin in the selector and pass the URL of an image.
 {{< /highlight >}}
 {{< highlight scss >}}
 .element{
-    @include gls-text-image("/images/backgrounds/05.jpg");
+  @include text-image("/images/backgrounds/05.jpg");
 }
 {{< /highlight >}}
 {{< highlight css >}}
 //CSS Output
 .element {
-    background-image: url("/images/backgrounds/05.jpg");
-    background-size: cover;
-    background-position: center;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    color: transparent;
+  background-image: url("/images/backgrounds/05.jpg");
+  background-size: cover;
+  background-position: center;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
 }
 {{< /highlight >}}
 <h2 class="sandbox text" style="background-image: url('/images/backgrounds/05.jpg');background-size: cover;background-position: center;-webkit-background-clip: text;-webkit-text-fill-color: transparent;background-clip: text;color: transparent;">Text Image is Awesome!</h2>
@@ -48,18 +48,18 @@ The `$image` parameter is optional. This is very useful especially in the cases 
 {{< /highlight >}}
 {{< highlight scss >}}
 .element{
-    @include gls-text-image;
+  @include text-image;
 }
 {{< /highlight >}}
 {{< highlight css >}}
 //CSS Output
 .element {
-    background-size: cover;
-    background-position: center;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    color: transparent;
+  background-size: cover;
+  background-position: center;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
 }
 {{< /highlight >}}
 <h2 class="sandbox text" style="background-image: url(https://i.picsum.photos/id/225/1500/979.jpg);background-size: cover;background-position: center;-webkit-background-clip: text;-webkit-text-fill-color: transparent;background-clip: text;color: transparent;">Text Image is Awesome!</h2>

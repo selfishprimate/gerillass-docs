@@ -17,7 +17,7 @@ title: "Center"
 ## Arguments
 
 {{< arguments/table footnote="Pass `both` value to center an element on both the horizontal and vertical axes, or do not pass at all.">}}
-    {{< arguments/row name="$axis" type="string" description="Sets the axis of the alingment. Accepts `horizontal`, `vertical` and `both` values. The default value is set to `both`." >}}
+  {{< arguments/row name="$axis" type="string" description="Sets the axis of the alingment. Accepts `horizontal`, `vertical` and `both` values. The default value is set to `both`." >}}
 {{< /arguments/table >}}
 
 
@@ -27,36 +27,36 @@ title: "Center"
 Simply call the mixin without passing any arguments **to center the selected element on both the horizontal and vertical axes**.
 {{< highlight scss >}}
 .parent-element {
-    position: relative;
-    .element{
-        position: absolute;
-        @include gls-center;
-    }
+  position: relative;
+  .element{
+    position: absolute;
+    @include center;
+  }
 }
 {{< /highlight >}}
 {{< highlight css >}}
 //CSS Output
 .parent-element {
-    position: relative;
+  position: relative;
 }
 .parent-element .element {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
 }
 {{< /highlight >}}
 <style>
 .parent-element.example01 .element {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translateX(-50%) translateY(-50%);
-    transform: translateX(-50%) translateY(-50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
 }
 </style>
 <div class="parent-element sandbox large example01">
-    <h2 class="element">Gerillass</h2>
+  <h2 class="element">Gerillass</h2>
 </div>
 {{< /highlightwrap >}}
 
@@ -65,22 +65,22 @@ Simply call the mixin without passing any arguments **to center the selected ele
 Let's **center** the selected element on **horizontal axis only**.
 {{< highlight scss >}}
 .parent-element {
-    position: relative;
-    .element{
-        position: absolute;
-        @include gls-center(horizontal);
-    }
+  position: relative;
+  .element{
+    position: absolute;
+    @include center(horizontal);
+  }
 }
 {{< /highlight >}}
 {{< highlight css >}}
 //CSS Output
 .parent-element {
-    position: relative;
+  position: relative;
 }
 .parent-element .element {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 {{< /highlight >}}
 <style>
@@ -92,7 +92,7 @@ Let's **center** the selected element on **horizontal axis only**.
 }
 </style>
 <div class="parent-element sandbox large example02">
-    <h2 class="element">Gerillass</h2>
+  <h2 class="element">Gerillass</h2>
 </div>
 {{< /highlightwrap >}}
 
@@ -100,22 +100,22 @@ Let's **center** the selected element on **horizontal axis only**.
 Now let's **center** the selected element on **vertical axis only**.
 {{< highlight scss >}}
 .parent-element {
-    position: relative;
-    .element{
-        position: absolute;
-        @include gls-center(vertical);
-    }
+  position: relative;
+  .element{
+    position: absolute;
+    @include center(vertical);
+  }
 }
 {{< /highlight >}}
 {{< highlight css >}}
 //CSS Output
 .parent-element {
-    position: relative;
+  position: relative;
 }
 .parent-element .element {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
 {{< /highlight >}}
 <style>
@@ -135,46 +135,46 @@ Now let's **center** the selected element on **vertical axis only**.
 Now let's pass `both` value to **center** the selected element **on both the horizontal and vertical axes**.
 {{< highlight scss >}}
 .parent-element {
-    position: relative;
-    .element{
-        position: absolute;
-        @include gls-center(both);
-    }
+  position: relative;
+  .element{
+    position: absolute;
+    @include center(both);
+  }
 }
 {{< /highlight >}}
 {{< highlight css >}}
 //CSS Output
 .parent-element {
-    position: relative;
+  position: relative;
 }
 .parent-element .element {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
 }
 {{< /highlight >}}
 <style>
 .parent-element.example04 .element {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translateX(-50%) translateY(-50%);
-    transform: translateX(-50%) translateY(-50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
 }
 </style>
 <div class="parent-element sandbox large example04">
-    <h2 class="element">Gerillass</h2>
+  <h2 class="element">Gerillass</h2>
 </div>
 <style>
 .parent-element{
-    position: relative;
-    background-color: rgba(255, 192, 203, 0.5);
-    padding: 20px;
+  position: relative;
+  background-color: rgba(255, 192, 203, 0.5);
+  padding: 20px;
 }
 .parent-element .element{
-    margin: 0;
-    font-size: 3em;
+  margin: 0;
+  font-size: 3em;
 }
 </style>
 {{< /highlightwrap >}}

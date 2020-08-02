@@ -16,7 +16,7 @@ title: "Responsive Video"
 ## Arguments
 
 {{< arguments/table footnote="The value you pass can be with or without the quotation marks." >}}
-    {{< arguments/row name="$ratio" type="string, number" description="The aspect ratio of the video. Accepts either `number` or `string` type of values. The value must be formatted something like this: `16/9`, `4/3`, `1/1` based on the ratio of the video that you want to embed. Default ratio value is set to `16/9`." >}}
+  {{< arguments/row name="$ratio" type="string, number" description="The aspect ratio of the video. Accepts either `number` or `string` type of values. The value must be formatted something like this: `16/9`, `4/3`, `1/1` based on the ratio of the video that you want to embed. Default ratio value is set to `16/9`." >}}
 {{< /arguments/table >}}
 
 ## Examples
@@ -25,56 +25,56 @@ title: "Responsive Video"
 Simply call the mixin without passing any argument. **Remember that the default `$ratio` value is set to `16/9`**.
 {{< highlight html >}}
 <div class="element">
-    <iframe src="https://www.youtube.com/embed/JBc6JiRlsOU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <iframe src="https://www.youtube.com/embed/JBc6JiRlsOU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 {{< /highlight >}}
 {{< highlight scss >}}
 .responsive-video{
-    @include gls-responsive-video;
+  @include responsive-video;
 }
 {{< /highlight >}}
 {{< highlight css >}}
 //CSS Output
 .element {
-    position: relative;
+  position: relative;
 }
 .element::before {
-    content: "";
-    display: block;
-    padding-top: 56.25%;
+  content: "";
+  display: block;
+  padding-top: 56.25%;
 }
 .element > * {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 {{< /highlight >}}
 <style>
 .element.example01 {
-    position: relative;
+  position: relative;
 }
 .element.example01::before {
-    content: "";
-    display: block;
-    padding-top: 56.25%;
+  content: "";
+  display: block;
+  padding-top: 56.25%;
 }
 .element.example01 > * {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 </style>
 
 <div class="element example01" style="margin-bottom: 1em;">
-    <iframe src="https://www.youtube.com/embed/JBc6JiRlsOU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <iframe src="https://www.youtube.com/embed/JBc6JiRlsOU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>  
 
 Try to resize the browser screen to see the result.
@@ -84,51 +84,51 @@ Try to resize the browser screen to see the result.
 Now, let's **try with a video clip that has 4/3 aspect ratio** and pass the related value for `$ratio` argument. Comes from the loving voice of **Anna German**.
 {{< highlight html >}}
 <div class="element">
-    <iframe src="https://www.youtube.com/embed/KYaCmvyK50Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <iframe src="https://www.youtube.com/embed/KYaCmvyK50Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 {{< /highlight >}}
 {{< highlight scss >}}
 .responsive-video{
-    @include gls-responsive-video(4/3);
+  @include responsive-video(4/3);
 }
 {{< /highlight >}}
 {{< highlight css >}}
 //CSS Output
 .element {
-    position: relative;
+  position: relative;
 }
 .element::before {
-    content: "";
-    display: block;
-    padding-top: 75%;
+  content: "";
+  display: block;
+  padding-top: 75%;
 }
 .element > * {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 {{< /highlight >}}
 <style>
 .element.example02 {
-    position: relative;
+  position: relative;
 }
 .element.example02::before {
-    content: "";
-    display: block;
-    padding-top: 75%;
+  content: "";
+  display: block;
+  padding-top: 75%;
 }
 .element.example02 > * {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 </style>
 <div class="element example02">
@@ -140,32 +140,32 @@ Now, let's **try with a video clip that has 4/3 aspect ratio** and pass the rela
 Now, let's **pass a string value**.
 {{< highlight html >}}
 <div class="element">
-    <iframe src="https://www.youtube.com/embed/fiyABGQnF5A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <iframe src="https://www.youtube.com/embed/fiyABGQnF5A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 {{< /highlight >}}
 {{< highlight scss >}}
 .responsive-video{
-    @include gls-responsive-video("16/9");
+  @include responsive-video("16/9");
 }
 {{< /highlight >}}
 {{< highlight css >}}
 //CSS Output
 .element {
-    position: relative;
+  position: relative;
 }
 .element::before {
-    content: "";
-    display: block;
-    padding-top: 56.25%;
+  content: "";
+  display: block;
+  padding-top: 56.25%;
 }
 .element > * {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 {{< /highlight >}}
 <style>
@@ -196,32 +196,32 @@ Now, let's **pass a string value**.
 Now let's **pass a string value** and **use `colon` punctuation mark**. The result will be the same.
 {{< highlight html >}}
 <div class="element">
-    <iframe src="https://www.youtube.com/embed/ymf7DZUeVow" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <iframe src="https://www.youtube.com/embed/ymf7DZUeVow" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 {{< /highlight >}}
 {{< highlight scss >}}
 .element{
-    @include gls-responsive-video("16:9");
+  @include responsive-video("16:9");
 }
 {{< /highlight >}}
 {{< highlight css >}}
 //CSS Output
 .element {
-    position: relative;
+  position: relative;
 }
 .element::before {
-    content: "";
-    display: block;
-    padding-top: 56.25%;
+  content: "";
+  display: block;
+  padding-top: 56.25%;
 }
 .element > * {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 {{< /highlight >}}
 <style>
@@ -252,34 +252,34 @@ Now let's **pass a string value** and **use `colon` punctuation mark**. The resu
 You can **change the width value of the selected element** if you like, **the aspect ratio won't be collapsed**.
 {{< highlight html >}}
 <div class="element">
-    <iframe src="https://www.youtube.com/embed/dK6Gvee-ri4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <iframe src="https://www.youtube.com/embed/dK6Gvee-ri4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 {{< /highlight >}}
 {{< highlight scss >}}
 .element{
-    width: 400px;
-    @include gls-responsive-video("16:9");
+  width: 400px;
+  @include responsive-video("16:9");
 }
 {{< /highlight >}}
 {{< highlight css >}}
 //CSS Output
 .element {
-    width: 400px;
-    position: relative;
+  width: 400px;
+  position: relative;
 }
 .element::before {
-    content: "";
-    display: block;
-    padding-top: 56.25%;
+  content: "";
+  display: block;
+  padding-top: 56.25%;
 }
 .element > * {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 {{< /highlight >}}
 <style>

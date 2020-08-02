@@ -16,9 +16,9 @@ title: "Columnizer"
 ## Arguments
 
 {{< arguments/table >}}
-    {{< arguments/row name="$columns" type="number" description="Sets the number of the hypothetical columns." >}}
-    {{< arguments/row name="$gutter" type="number (with unit)" description="Sets the value of the space between the columns." >}}
-    {{< arguments/row name="$fill" type="boolean" description="It is for orphans to fill the remaining gap at the end of the list. This argument is optional and **should always be at the end**. The default value is set to false." >}}
+  {{< arguments/row name="$columns" type="number" description="Sets the number of the hypothetical columns." >}}
+  {{< arguments/row name="$gutter" type="number (with unit)" description="Sets the value of the space between the columns." >}}
+  {{< arguments/row name="$fill" type="boolean" description="It is for orphans to fill the remaining gap at the end of the list. This argument is optional and **should always be at the end**. The default value is set to false." >}}
 {{< /arguments/table >}}
 
 ## Examples
@@ -43,7 +43,7 @@ Suppose you have a group of items like in the example below and you want to make
 Now let's get cracking. Just call the mixin in the `.parent-element{}` selector and pass a value for the number of columns.
 {{< highlight scss >}}
 .parent-element{
-  @include gls-columnizer(3);
+  @include columnizer(3);
 }
 {{< /highlight >}}
 {{< highlight css >}}
@@ -57,7 +57,7 @@ Now let's get cracking. Just call the mixin in the `.parent-element{}` selector 
   margin-bottom: 0;
 }
 .parent-element > *:not(:last-child) {
-    margin-right: 0;
+  margin-right: 0;
 }
 {{< /highlight >}}
 
@@ -75,14 +75,14 @@ Now let's get cracking. Just call the mixin in the `.parent-element{}` selector 
 }
 </style>
 <div class="columnizer parent-element example01">
-    <div class="item">01</div>
-    <div class="item">02</div>
-    <div class="item">03</div>
-    <div class="item">04</div>
-    <div class="item">05</div>
-    <div class="item">06</div>
-    <div class="item">07</div>
-    <div class="item">08</div>
+  <div class="item">01</div>
+  <div class="item">02</div>
+  <div class="item">03</div>
+  <div class="item">04</div>
+  <div class="item">05</div>
+  <div class="item">06</div>
+  <div class="item">07</div>
+  <div class="item">08</div>
 </div>
 {{< /highlightwrap >}}
 
@@ -90,7 +90,7 @@ Now let's get cracking. Just call the mixin in the `.parent-element{}` selector 
 Let's pass a value for `$gutter` argument to separate every item from each other.
 {{< highlight scss >}}
 .parent-element{
-  @include gls-columnizer(3, 20px);
+  @include columnizer(3, 20px);
 }
 {{< /highlight >}}
 {{< highlight css >}}
@@ -130,14 +130,14 @@ Let's pass a value for `$gutter` argument to separate every item from each other
 }
 </style>
 <div class="columnizer parent-element example02">
-    <div class="item">01</div>
-    <div class="item">02</div>
-    <div class="item">03</div>
-    <div class="item">04</div>
-    <div class="item">05</div>
-    <div class="item">06</div>
-    <div class="item">07</div>
-    <div class="item">08</div>
+  <div class="item">01</div>
+  <div class="item">02</div>
+  <div class="item">03</div>
+  <div class="item">04</div>
+  <div class="item">05</div>
+  <div class="item">06</div>
+  <div class="item">07</div>
+  <div class="item">08</div>
 </div>
 {{< /highlightwrap >}}
 
@@ -146,7 +146,7 @@ Let's pass a value for `$gutter` argument to separate every item from each other
 To make the orphans fill the gap let's pass `true` value at the end.
 {{< highlight scss >}}
 .parent-element{
-  @include gls-columnizer(3, 20px, true);
+  @include columnizer(3, 20px, true);
 }
 {{< /highlight >}}
 {{< highlight css >}}
@@ -186,14 +186,14 @@ To make the orphans fill the gap let's pass `true` value at the end.
 }
 </style>
 <div class="columnizer parent-element example03">
-    <div class="item">01</div>
-    <div class="item">02</div>
-    <div class="item">03</div>
-    <div class="item">04</div>
-    <div class="item">05</div>
-    <div class="item">06</div>
-    <div class="item">07</div>
-    <div class="item">08</div>
+  <div class="item">01</div>
+  <div class="item">02</div>
+  <div class="item">03</div>
+  <div class="item">04</div>
+  <div class="item">05</div>
+  <div class="item">06</div>
+  <div class="item">07</div>
+  <div class="item">08</div>
 </div>
 {{< /highlightwrap >}}
 
@@ -201,7 +201,7 @@ To make the orphans fill the gap let's pass `true` value at the end.
 You can use either `$gutter` or `$fill` arguments optionallt. But remember, **the $fill argument should always be at the end**.
 {{< highlight scss >}}
 .parent-element{
-  @include gls-columnizer(3, true);
+  @include columnizer(3, true);
 }
 {{< /highlight >}}
 {{< highlight css >}}
@@ -235,14 +235,14 @@ You can use either `$gutter` or `$fill` arguments optionallt. But remember, **th
 }
 </style>
 <div class="columnizer parent-element example04">
-    <div class="item">01</div>
-    <div class="item">02</div>
-    <div class="item">03</div>
-    <div class="item">04</div>
-    <div class="item">05</div>
-    <div class="item">06</div>
-    <div class="item">07</div>
-    <div class="item">08</div>
+  <div class="item">01</div>
+  <div class="item">02</div>
+  <div class="item">03</div>
+  <div class="item">04</div>
+  <div class="item">05</div>
+  <div class="item">06</div>
+  <div class="item">07</div>
+  <div class="item">08</div>
 </div>
 {{< /highlightwrap >}}
 
@@ -250,9 +250,9 @@ You can use either `$gutter` or `$fill` arguments optionallt. But remember, **th
 Now let's try it with the **breakpoint mixin** to show you how these mixins work harmoniously together.
 {{< highlight scss >}}
 .parent-element{
-  @include gls-columnizer(2, 10px, true);
-  @include gls-breakpoint(min, large) {
-    @include gls-columnizer(4, 20px, false);
+  @include columnizer(2, 10px, true);
+  @include breakpoint(min, large) {
+    @include columnizer(4, 20px, false);
   }
 }
 {{< /highlight >}}
@@ -328,20 +328,15 @@ Now let's try it with the **breakpoint mixin** to show you how these mixins work
 
 </style>
 <div class="columnizer parent-element example05">
-    <div class="item">01</div>
-    <div class="item">02</div>
-    <div class="item">03</div>
-    <div class="item">04</div>
-    <div class="item">05</div>
-    <div class="item">06</div>
-    <div class="item">07</div>
+  <div class="item">01</div>
+  <div class="item">02</div>
+  <div class="item">03</div>
+  <div class="item">04</div>
+  <div class="item">05</div>
+  <div class="item">06</div>
+  <div class="item">07</div>
 </div>
 {{< /highlightwrap >}}
-
-
-
-
-
 
 <style>
 .parent-element .item {

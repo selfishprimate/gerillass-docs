@@ -11,8 +11,8 @@ title: "Border Radius"
 ## Arguments
 
 {{< arguments/table >}}
-    {{< arguments/row name="$corner" type="string" description="It allows you to choose the corners of an element that you want to apply style rules. Accepts the following values: `top`, `top-right`, `right`, `bottom-right`, `bottom`, `bottom-left`, `left`, `top-left`, `cross-left`, `cross-right`, `all`." >}}
-    {{< arguments/row name="$value" type="number (with unit)" description="Size of the border radius that will be applied." >}}
+  {{< arguments/row name="$corner" type="string" description="It allows you to choose the corners of an element that you want to apply style rules. Accepts the following values: `top`, `top-right`, `right`, `bottom-right`, `bottom`, `bottom-left`, `left`, `top-left`, `cross-left`, `cross-right`, `all`." >}}
+  {{< arguments/row name="$value" type="number (with unit)" description="Size of the border radius that will be applied." >}}
 {{< /arguments/table >}}
 
 ## Examples
@@ -21,13 +21,13 @@ title: "Border Radius"
 Simply pass a value to target all the corners of an element and style them equally.
 {{< highlight scss >}}
 .element{
-    @include gls-border-radius(20px);
+  @include border-radius(20px);
 }
 {{< /highlight >}}
 {{< highlight css >}}
 //CSS Output
 .element {
-    border-radius: 20px;
+  border-radius: 20px;
 }
 {{< /highlight >}}
 {{< sandbox class="medium" >}}
@@ -39,14 +39,14 @@ background-color: #5bc0bb;border-radius: 20px;
 Now, let's pass two values: first one is `top` to target only top corners of a selected element and second one is `40px` for the size of the radius. 
 {{< highlight scss >}}
 .element{
-    @include gls-border-radius(top, 40px);
+  @include border-radius(top, 40px);
 }
 {{< /highlight >}}
 {{< highlight css >}}
 //CSS Output
 .element {
-    border-top-left-radius: 40px;
-    border-top-right-radius: 40px;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
 }
 {{< /highlight >}}
 {{< sandbox class="medium" >}}
@@ -61,14 +61,14 @@ Just to remind you once more these are the predefined values to target the corne
 {{< /hint >}}
 {{< highlight scss >}}
 .element{
-    @include gls-border-radius(right, 40px);
+  @include border-radius(right, 40px);
 }
 {{< /highlight >}}
 {{< highlight css >}}
 //CSS Output
 .element {
-    border-top-right-radius: 40px;
-    border-bottom-right-radius: 40px;
+  border-top-right-radius: 40px;
+  border-bottom-right-radius: 40px;
 }
 {{< /highlight >}}
 {{< sandbox class="medium" >}}
@@ -80,14 +80,14 @@ background-color:#5bc0bb;border-top-right-radius: 40px;border-bottom-right-radiu
 Now let's try the `cross-left` or `cross-right` values ​​so that you can target the corners diagonally.
 {{< highlight scss >}}
 .element{
-    @include gls-border-radius(cross-left, 40px);
+  @include border-radius(cross-left, 40px);
 }
 {{< /highlight >}}
 {{< highlight css >}}
 //CSS Output
 .element {
-    border-top-left-radius: 40px;
-    border-bottom-right-radius: 40px;
+  border-top-left-radius: 40px;
+  border-bottom-right-radius: 40px;
 }
 {{< /highlight >}}
 {{< sandbox class="medium" >}}
@@ -99,13 +99,13 @@ background-color:#5bc0bb;border-top-left-radius: 40px;border-bottom-right-radius
 You can use the CSS shorthand method to pass different radius size values for different corners.
 {{< highlight scss >}}
 .element{
-    @include gls-border-radius(25px 50px 100px 150px);
+  @include border-radius(25px 50px 100px 150px);
 }
 {{< /highlight >}}
 {{< highlight css >}}
 //CSS Output
 .element {
-    border-radius: 25px 50px 100px 150px;
+  border-radius: 25px 50px 100px 150px;
 }
 {{< /highlight >}}
 {{< sandbox class="large" >}}
@@ -117,16 +117,16 @@ background-color:#5bc0bb;border-radius: 25px 50px 100px 150px;
 Now, let's **pass four values** again but this time we're going to **seperate them by comma** to try something different.
 {{< highlight scss >}}
 .element{
-    @include gls-border-radius(25px, 50px, 100px, 150px);
+  @include border-radius(25px, 50px, 100px, 150px);
 }
 {{< /highlight >}}
 {{< highlight css >}}
 //CSS Output
 .element {
-    border-top-left-radius: 25px;
-    border-top-right-radius: 50px;
-    border-bottom-right-radius: 100px;
-    border-bottom-left-radius: 150px;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 100px;
+  border-bottom-left-radius: 150px;
 }
 {{< /highlight >}}
 {{< sandbox class="large" >}}
@@ -138,16 +138,16 @@ background-color:#5bc0bb;border-top-left-radius: 25px;border-top-right-radius: 5
 For each argument you can pass a second argument next to it to bend the curve.
 {{< highlight scss >}}
 .element{
-    @include gls-border-radius(100px 40px, 50px 20%, 100px 30%, 150px 2rem);
+  @include border-radius(100px 40px, 50px 20%, 100px 30%, 150px 2rem);
 }
 {{< /highlight >}}
 {{< highlight css >}}
 //CSS Output
 .element {
-    border-top-left-radius: 100px 40px;
-    border-top-right-radius: 50px 20%;
-    border-bottom-right-radius: 100px 30%;
-    border-bottom-left-radius: 150px 2rem;
+  border-top-left-radius: 100px 40px;
+  border-top-right-radius: 50px 20%;
+  border-bottom-right-radius: 100px 30%;
+  border-bottom-left-radius: 150px 2rem;
 }
 {{< /highlight >}}
 {{< sandbox class="large" >}}
@@ -160,14 +160,14 @@ background-color:#5bc0bb;border-top-left-radius: 100px 40px;border-top-right-rad
 Use `null` to skip a corner!
 {{< highlight scss >}}
 .element{
-    @include gls-border-radius(null, null, 100px 30%, 150px 2rem);
+  @include border-radius(null, null, 100px 30%, 150px 2rem);
 }
 {{< /highlight >}}
 {{< highlight css >}}
 //CSS Output
 .element {
-    border-bottom-right-radius: 100px 30%;
-    border-bottom-left-radius: 150px 2rem;
+  border-bottom-right-radius: 100px 30%;
+  border-bottom-left-radius: 150px 2rem;
 }
 {{< /highlight >}}
 {{< sandbox class="large" >}}

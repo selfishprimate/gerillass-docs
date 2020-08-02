@@ -37,7 +37,7 @@
     }
   }
   .highlight-figure {
-    @include gls-reset-figure;
+    @include reset-figure;
   }
 }
 .highlight {

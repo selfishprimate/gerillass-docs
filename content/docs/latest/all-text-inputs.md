@@ -19,8 +19,8 @@ title: "All Text Inputs"
 {{< highlightwrap class="example">}}
 Simply call the mixin at the root level of your style sheet **to target all the text-based input elements**.
 {{< highlight scss >}}
-@include gls-all-text-inputs {
-    background-color: #e6e6e6;
+@include all-text-inputs {
+  background-color: #e6e6e6;
 }
 {{< /highlight >}}
 {{< highlight css >}}
@@ -41,7 +41,7 @@ Simply call the mixin at the root level of your style sheet **to target all the 
 [type='week'], 
 input:not([type]), 
 textarea {
-    background-color: #e6e6e6;
+  background-color: #e6e6e6;
 }
 {{< /highlight >}}
 {{< /highlightwrap >}}
@@ -49,8 +49,8 @@ textarea {
 {{< highlightwrap class="example">}}
 Let's target all the text-based HTML inputs with the **:hover** pseudo-class selector applied. 
 {{< highlight scss >}}
-@include gls-all-text-inputs(hover) {
-    background-color: orange;
+@include all-text-inputs(hover) {
+  background-color: orange;
 }
 {{< /highlight >}}
 {{< highlight css >}}
@@ -71,7 +71,7 @@ Let's target all the text-based HTML inputs with the **:hover** pseudo-class sel
 [type='week']:hover, 
 input:not([type]):hover, 
 textarea:hover {
-    background-color: orange;
+  background-color: orange;
 }
 {{< /highlight >}}
 {{< /highlightwrap >}}
@@ -79,8 +79,8 @@ textarea:hover {
 {{< highlightwrap class="example">}}
 Let's target all the text-based HTML inputs with the **:focus** pseudo-class selector applied. 
 {{< highlight scss >}}
-@include gls-all-text-inputs(focus) {
-    background-color: green;
+@include all-text-inputs(focus) {
+  background-color: green;
 }
 {{< /highlight >}}
 {{< highlight css >}}
@@ -101,7 +101,7 @@ Let's target all the text-based HTML inputs with the **:focus** pseudo-class sel
 [type='week']:focus, 
 input:not([type]):focus, 
 textarea:focus {
-    background-color: green;
+  background-color: green;
 }
 {{< /highlight >}}
 {{< /highlightwrap >}}
@@ -110,10 +110,10 @@ textarea:focus {
 Now let's target all the text-based HTML inputs with the **:active** pseudo-class selector applied. 
 {{< highlight scss >}}
 .element {
-    @include gls-all-text-inputs(active) {
-        background-color: green;
-        color: white;
-    };
+  @include all-text-inputs(active) {
+    background-color: green;
+    color: white;
+  };
 }
 {{< /highlight >}}
 {{< highlight css >}}
@@ -134,8 +134,8 @@ Now let's target all the text-based HTML inputs with the **:active** pseudo-clas
 .element [type='week']:active, 
 .element input:not([type]):active, 
 .element textarea:active {
-    background-color: green;
-    color: white;
+  background-color: green;
+  color: white;
 }
 {{< /highlight >}}
 {{< /highlightwrap >}}
@@ -144,10 +144,10 @@ Now let's target all the text-based HTML inputs with the **:active** pseudo-clas
 Now let's target all the text-based HTML inputs with the **:invalid** pseudo-class selector applied. 
 {{< highlight scss >}}
 .element {
-    @include gls-all-text-inputs(invalid) {
-        background-color: red;
-        color: white;
-    };
+  @include all-text-inputs(invalid) {
+    background-color: red;
+    color: white;
+  };
 }
 {{< /highlight >}}
 {{< highlight css >}}
@@ -168,8 +168,8 @@ Now let's target all the text-based HTML inputs with the **:invalid** pseudo-cla
 .element [type='week']:invalid, 
 .element input:not([type]):invalid, 
 .element textarea:invalid {
-    background-color: red;
-    color: white;
+  background-color: red;
+  color: white;
 }
 {{< /highlight >}}
 {{< /highlightwrap >}}
@@ -178,10 +178,10 @@ Now let's target all the text-based HTML inputs with the **:invalid** pseudo-cla
 Now let's try it with the **:required** pseudo-class selector applied. 
 {{< highlight scss >}}
 .element {
-    @include gls-all-text-inputs(required) {
-        background-color: orange;
-        color: white;
-    };
+  @include all-text-inputs(required) {
+    background-color: orange;
+    color: white;
+  };
 }
 {{< /highlight >}}
 {{< highlight css >}}
@@ -202,8 +202,8 @@ Now let's try it with the **:required** pseudo-class selector applied.
 .element [type='week']:required, 
 .element input:not([type]):required, 
 .element textarea:required {
-    background-color: orange;
-    color: white;
+  background-color: orange;
+  color: white;
 }
 {{< /highlight >}}
 {{< /highlightwrap >}}
@@ -212,10 +212,10 @@ Now let's try it with the **:required** pseudo-class selector applied.
 Now let's try it with **:disabled** pseudo-class selector applied. 
 {{< highlight scss >}}
 .element {
-    @include gls-all-text-inputs(disabled) {
-        background-color: gray;
-        color: black;
-    };
+  @include all-text-inputs(disabled) {
+    background-color: gray;
+    color: black;
+  };
 }
 {{< /highlight >}}
 {{< highlight css >}}
@@ -236,8 +236,8 @@ Now let's try it with **:disabled** pseudo-class selector applied.
 .element [type='week']:disabled, 
 .element input:not([type]):disabled, 
 .element textarea:disabled {
-    background-color: gray;
-    color: white;
+  background-color: gray;
+  color: white;
 }
 {{< /highlight >}}
 {{< /highlightwrap >}}
@@ -246,9 +246,9 @@ Now let's try it with **:disabled** pseudo-class selector applied.
 Call the mixin in a selector to target only those text-based input elements inside that selector.
 {{< highlight scss >}}
 .containing-element {
-    @include gls-all-text-inputs {
-        background-color: green;
-    }
+  @include all-text-inputs {
+    background-color: green;
+  }
 }
 {{< /highlight >}}
 {{< highlight css >}}
@@ -269,7 +269,7 @@ Call the mixin in a selector to target only those text-based input elements insi
 .containing-element [type='week'], 
 .containing-element input:not([type]), 
 .containing-element textarea {
-    background-color: green;
+  background-color: green;
 }
 {{< /highlight >}}
 {{< /highlightwrap >}}

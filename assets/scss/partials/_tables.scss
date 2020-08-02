@@ -1,9 +1,9 @@
 .table{
     margin: 0 0 80px;
-    @include gls-breakpoint(max, medium){
+    @include breakpoint(max, medium){
         padding-bottom: $global-space;
     }
-    @include gls-breakpoint(max, large){
+    @include breakpoint(max, large){
         overflow-x: auto;
     }
     p{
@@ -16,7 +16,7 @@
         font-size: 80%;
         line-height: 1.3;
         padding: 0;
-        @include gls-breakpoint(max, large){
+        @include breakpoint(max, large){
             white-space: nowrap;
         }
     }
@@ -43,7 +43,7 @@
         tr th, tr td{
             padding: 1rem 1rem 1rem 0;
             vertical-align: middle;
-            @include gls-breakpoint(min, large){
+            @include breakpoint(min, large){
                 padding: 1rem 3rem 1rem 0;
             }
         }
@@ -52,7 +52,7 @@
             white-space: nowrap;
         }
         td.description{
-            @include gls-breakpoint(max, large){
+            @include breakpoint(max, large){
                 white-space: nowrap;
             }
         }

@@ -29,21 +29,21 @@ It can be useful when you use this mixin with HTML radio buttons or a checkbox l
 If no value is passed, the `::before` pseudo-element is targeted by default.
 {{< highlight scss >}}
 .element{
-    @include gls-stretched-link;
+  @include stretched-link;
 }
 {{< /highlight >}}
 {{< highlight css >}}
 //CSS Output
 .element::before {
-    content: "";
-    position: absolute;
-    pointer-events: auto;
-    background-color: rgba(0, 0, 0, 0);
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 1;
+  content: "";
+  position: absolute;
+  pointer-events: auto;
+  background-color: rgba(0, 0, 0, 0);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
 }
 {{< /highlight >}}
 {{< /highlightwrap >}}
@@ -52,21 +52,21 @@ If no value is passed, the `::before` pseudo-element is targeted by default.
 Pass one of the `before` or `after` options as an argument to choose which pseudo-element that you want to target. 
 {{< highlight scss >}}
 .element{
-    @include gls-stretched-link(after);
+  @include stretched-link(after);
 }
 {{< /highlight >}}
 {{< highlight css >}}
 //CSS Output
 .element::after {
-    content: "";
-    position: absolute;
-    pointer-events: auto;
-    background-color: rgba(0, 0, 0, 0);
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 1;
+  content: "";
+  position: absolute;
+  pointer-events: auto;
+  background-color: rgba(0, 0, 0, 0);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
 }
 {{< /highlight >}}
 {{< /highlightwrap >}}
@@ -76,28 +76,28 @@ Pass one of the `before` or `after` options as an argument to choose which pseud
 Targeting the both `::before` and `::after` pseudo-elements of a selected element(s).
 {{< highlight scss >}}
 .element{
-    @include gls-stretched-link(before);
-    &:after{
-        content: "\2192";
-    }
+  @include stretched-link(before);
+  &:after{
+    content: "\2192";
+  }
 }
 {{< /highlight >}}
 
 {{< highlight css >}}
 //CSS Output
 .element::before {
-    content: "";
-    position: absolute;
-    pointer-events: auto;
-    background-color: rgba(0, 0, 0, 0);
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 1;
+  content: "";
+  position: absolute;
+  pointer-events: auto;
+  background-color: rgba(0, 0, 0, 0);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
 }
 .element::after {
-    content: "\2192";
+  content: "\2192";
 }
 {{< /highlight >}}
 
@@ -108,34 +108,34 @@ Don't forget that the containing block must have `position: relative;` style rul
 
 {{< highlight html >}}
 <div class="containing-element">
-    <a class="element" href="https://sample-site.com/">Stretched Link</a>
+  <a class="element" href="https://sample-site.com/">Stretched Link</a>
 </div>
 {{< /highlight >}}
 
 {{< highlight scss >}}
 .containing-element{
-    position: relative;
-    .element{
-        @include gls-stretched-link(after);
-    }
+  position: relative;
+  .element{
+    @include stretched-link(after);
+  }
 }
 {{< /highlight >}}
 
 {{< highlight css >}}
 //CSS Output
 .containing-element {
-    position: relative;
+  position: relative;
 }
 .containing-element .element::after {
-    content: "";
-    position: absolute;
-    pointer-events: auto;
-    background-color: rgba(0, 0, 0, 0);
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 1;
+  content: "";
+  position: absolute;
+  pointer-events: auto;
+  background-color: rgba(0, 0, 0, 0);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
 }
 {{< /highlight >}}
 

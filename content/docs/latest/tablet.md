@@ -14,8 +14,8 @@ There will be times when you need to style elements only for one particular tabl
 ## Arguments
 
 {{< arguments/table footnote="The string values can be pass with or without the quotation marks." >}}
-    {{< arguments/row name="$device" type="string" description="Accepts the name of a tablet model. Predefined values are `iPadMini`, `iPad`, `iPadAir`, `iPadPro`, `Nexus7`, `Nexus9`, `Nexus10`." >}}
-    {{< arguments/row name="$orientation" type="string" description="Accepts two values: `portrait` or `landscape`. The default value is set to `portrait`." >}}
+  {{< arguments/row name="$device" type="string" description="Accepts the name of a tablet model. Predefined values are `iPadMini`, `iPad`, `iPadAir`, `iPadPro`, `Nexus7`, `Nexus9`, `Nexus10`." >}}
+  {{< arguments/row name="$orientation" type="string" description="Accepts two values: `portrait` or `landscape`. The default value is set to `portrait`." >}}
 {{< /arguments/table >}}
 
 ## Examples
@@ -24,17 +24,17 @@ There will be times when you need to style elements only for one particular tabl
 First, call the mixin and pass only one value for the `$device` model name. Unless you pass a value for `$orientation`, it will be `portrait`.
 {{< highlight scss >}}
 .element {
-    @include gls-tablet(iPad) {
-        background-color: teal;
-    }
+  @include tablet(iPad) {
+    background-color: teal;
+  }
 }
 {{< /highlight >}}
 {{< highlight css >}}
 //CSS Output
 @media only screen and (device-width: 810px) and (device-height: 1080px) and (orientation: portrait) {
-    .element {
-        background-color: teal;
-    }
+  .element {
+    background-color: teal;
+  }
 }
 {{< /highlight >}}
 {{< /highlightwrap >}}
@@ -43,17 +43,17 @@ First, call the mixin and pass only one value for the `$device` model name. Unle
 Now, let's try to pass two arguments: one for the name of the `$device` model, the other is for the `$orientation`.
 {{< highlight scss >}}
 .element {
-    @include gls-tablet(Nexus10, landscape) {
-        background-color: teal;
-    }
+  @include tablet(Nexus10, landscape) {
+    background-color: teal;
+  }
 }
 {{< /highlight >}}
 {{< highlight css >}}
 //CSS Output
 @media only screen and (device-width: 1280px) and (device-height: 800px) and (orientation: landscape) {
-    .element {
-        background-color: teal;
-    }
+  .element {
+    background-color: teal;
+  }
 }
 {{< /highlight >}}
 {{< /highlightwrap >}}
