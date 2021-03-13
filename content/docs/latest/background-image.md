@@ -12,7 +12,7 @@ title: "Background Image"
 
 {{< arguments/table footnote="Use `null` if you want to skip an argument. For more see [the examples](#examples).">}}
   {{< arguments/row name="$image-url" type="string" description="The URL link of the background image." >}}
-  {{< arguments/row name="filter-color" type="color | list" description="The color or the list of colors you may want to apply as a filter over the background image. **Multiple color values must be seperated by space.**" >}}
+  {{< arguments/row name="$filter-color" type="color | list" description="The color or the list of colors you may want to apply as a filter over the background image. **Multiple color values must be seperated by space.**" >}}
   {{< arguments/row name="$filter-direction" type="string" description="The angle of gradient's direction. **It can be activated only when you pass multiple color values for `$filter-color` argument**. Accpets `top`, `top-right`, `right`, `bottom-right`, `bottom`, `bottom-left`, `left`, `top-left` values. The default value is set `to top`." >}}
 {{< /arguments/table >}}
 
