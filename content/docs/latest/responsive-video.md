@@ -29,7 +29,7 @@ Simply call the mixin without passing any argument. **Remember that the default 
 </div>
 {{< /highlight >}}
 {{< highlight scss >}}
-.responsive-video{
+.element{
   @include responsive-video;
 }
 {{< /highlight >}}
@@ -88,7 +88,7 @@ Now, let's **try with a video clip that has 4/3 aspect ratio** and pass the rela
 </div>
 {{< /highlight >}}
 {{< highlight scss >}}
-.responsive-video{
+.element{
   @include responsive-video(4/3);
 }
 {{< /highlight >}}
@@ -144,7 +144,7 @@ Now, let's **pass a string value**.
 </div>
 {{< /highlight >}}
 {{< highlight scss >}}
-.responsive-video{
+.element{
   @include responsive-video("16/9");
 }
 {{< /highlight >}}
