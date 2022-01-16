@@ -38,6 +38,9 @@
   }
   .highlight-figure {
     @include reset-figure;
+    img {
+      border-radius: 3px;
+    }
   }
 }
 .highlight {
