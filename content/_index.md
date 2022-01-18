@@ -8,9 +8,9 @@ title: "Getting Started"
 ***
 _This page is an overview of the Gerillass installation. To see the examples and learn how to use Gerillass, check the sidebar at the left-hand side._
 
-[Gerillass](https://gerillass.com) is a library built on top of [Sass (Syntactically Awesome Style Sheets)](https://sass-lang.com/) to give you flexibility for your projects and accelerate your performance and creativity.
+**[Gerillass](https://gerillass.com)** is a library built on top of **[Sass (Syntactically Awesome Style Sheets)](https://sass-lang.com/)** to give you flexibility for your projects and accelerate your performance and creativity.
 
-Many of the utilities that come with Gerillass are the solutions I have come up with for the challenges I have faced as a frontend developer over the years. These solutions have been shaped by the inspiration of other popular libraries and frameworks like [Bourbon](https://www.bourbon.io/), [Susy](https://www.oddbird.net/), [Scut](https://davidtheclark.github.io/scut/), [Bootstrap](https://getbootstrap.com/), etc. over time and helped me create Gerillass.
+Many of the utilities that come with Gerillass are the solutions I have come up with for the challenges I have faced as a frontend developer over the years. These solutions have been shaped by the inspiration of other popular libraries and frameworks like **[Bourbon](https://www.bourbon.io/)**, **[Susy](https://www.oddbird.net/)**, **[Scut](https://davidtheclark.github.io/scut/)**, **[Bootstrap](https://getbootstrap.com/)**, etc. over time and helped me create Gerillass.
 
 Hope you’ll enjoy using it!
 
@@ -152,11 +152,23 @@ Including to the project:
 {{< /highlight >}}
 {{< /highlightwrap >}}
 
-## Experimenting Gerillass
+## Experimenting
 
-Experimenting Gerillass is easy. You can [**download the Gerillass library**](https://github.com/selfishprimate/gerillass/archive/master.zip), include it in your project, or use [**Gulpazan**](https://github.com/selfishprimate/gulpazan). Gulpazan is a Gulp based workflow, and it comes with Gerillass and all the packages and configurations that you'll need to work with Sass. [**Learn how you can install Gulpazan**](https://github.com/selfishprimate/gulpazan).
+Experimentation with Gerillass is easy: If you're processing Sass files on your computer already, [download the Gerillass Sass library](https://github.com/selfishprimate/gerillass/archive/master.zip), include it in your project, and start using it. If not, use [Gerillass Play](https://github.com/selfishprimate/gerillass-play)! Gerillass Play is a Gulp based playground, built for you to get started with [Sass](https://sass-lang.com/) and [Gerillass](https://gerillass.com/) quickly.
 
 {{< hint info >}}
 **Important Note**: Don't forget that you must have [**Node.js**](https://nodejs.org/en/) and [**Gulp**](https://gulpjs.com/docs/en/getting-started/quick-start) installed globally on your machine.
 {{< /hint >}}
+
+## Testing
+
+Gerillass comes with a unit-testing module named [True](https://github.com/oddbird/true), which makes Sass unit tests possible (endless thanks to the [OddBird Team](https://github.com/oddbird)).
+
+You can find two test examples under the `test` folder, take your time, examine the codes, and then write your unit tests. After that, run the following command to see if the tests pass.
+
+{{< highlightwrap class="terminal">}}
+{{< highlight nix >}}
+npm test
+{{< /highlight >}}
+{{< /highlightwrap >}}
 
