@@ -2,7 +2,6 @@
 
 baseURL = ''
 title = 'Gerillass Documentation'
-description= 'Lorem ipsum'
 
 # Book configuration
 disablePathToLower = true
