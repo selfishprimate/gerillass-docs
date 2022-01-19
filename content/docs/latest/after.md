@@ -1,5 +1,7 @@
 ---
 title: "After"
+site_title: "After Sass Mixin"
+site_description: "After Sass mixin is an easy way to use ::after CSS property. You can easily insert some text or design elements after the content of each selected element."
 ---
 
 # After

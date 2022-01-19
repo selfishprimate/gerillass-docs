@@ -1,11 +1,13 @@
 ---
 title: "Border Radius"
+site_title: "Border Radius Sass Mixin"
+site_description: "Border Radius Sass mixin helps you to rounds the corner(s) of a selected element by using the border-radius CSS property. You can pass one value (with the unit) to style all the corners equally or you can use CSS shorthand property to style each corner differently."
 ---
 
 # Border Radius
 
 {{< mixin type="Mixin" name="border-radius" >}}
-**Border Radius** Sass mixin helps you to rounds the corner(s) of an element. You can pass one value (with unit) to style all the corners equally or you can use CSS shorthand property to style each corner differently. For more see [the examples.](#examples)
+**Border Radius** Sass mixin helps you to rounds the corner(s) of a selected element by using the [border-radius CSS property](https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius). You can pass one value (with the unit) to style all the corners equally or you can use CSS shorthand property to style each corner differently. For more see [the examples.](#examples)
 {{< /mixin >}}
 
 ## Arguments

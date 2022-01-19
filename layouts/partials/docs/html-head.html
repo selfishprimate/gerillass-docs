@@ -1,17 +1,19 @@
 {{ if .Params.site_title }}
-<title>{{ .Params.site_title }} - {{ .Site.Title -}}</title>
+<title>{{ .Params.site_title }} · {{ .Site.Title -}}</title>
 {{ else }}
-<title>{{ partial "docs/title" . }} - {{ .Site.Title -}}</title>
+<title>{{ partial "docs/title" . }} · {{ .Site.Title -}}</title>
 {{ end }}
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
-<meta name="description" content="{{ .Params.site_description }}">
 
-{{ if .Params.site_keywords }}
-  <meta name="keywords" content="{{ .Params.site_keywords }}">
+{{ if .Params.site_description }}
+  <meta name="description" content="{{ .Params.site_description }}">
 {{ else }}
-  <meta name="keywords" content="Gerillass, CSS, CSS3, Web Design, Sass Mixins, Sass Functions, SCSS, Sass, Sass Toolkit, Sass Library, Sass Libraries, Sass Framework, Learn Sass, What is Sass, Frontend Tools">
+  <meta name="description" content="{{ .Site.Params.Description }}">
 {{ end }}
+
+<meta name="keywords" content="{{ .Site.Params.Keywords }}">
 
 {{- template "_internal/opengraph.html" . -}}
 

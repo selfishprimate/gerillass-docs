@@ -1,5 +1,7 @@
 ---
 title: "Clearfix"
+site_title: "Clearfix Sass Mixin"
+site_description: "Clearfix Sass Mixin helps you fix the broken layouts caused by using float CSS property."
 ---
 
 # Clearfix

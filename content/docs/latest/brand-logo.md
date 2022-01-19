@@ -1,11 +1,13 @@
 ---
 title: "Brand Logo"
+site_title: "Brand Logo Sass Mixin"
+site_description: "Brand Logo Sass Mixin helps you to create an SEO-friendly logo component for your brand's website by using CSS best practices."
 ---
 
 # Brand Logo
 
 {{< mixin type="Mixin" name="brand-logo" >}}
-**Brand Logo** Sass mixin helps you to create a SEO friendly logo component for your brand.
+**Brand Logo** Sass Mixin helps you to create an SEO-friendly logo component for your brand's website by using CSS best practices.
 {{< hint info >}}
 This is a **Gerillass** technique for **image replacement**. There are other methodologies too, check out the links at the end of this article to find out more about the topic.
 {{< /hint >}}

@@ -1,11 +1,13 @@
 ---
 title: "Border Box"
+site_title: "Border Box Sass Mixin"
+site_description: "Border Box Sass mixin sets the box-sizing CSS property value to border-box for selected HTML elements."
 ---
 
 # Border Box
 
 {{< mixin type="Mixin" name="border-box" >}}
-**Border Box** Sass mixin sets the `box-sizing` property value to `border-box` for selected HTML element(s).
+**Border Box** Sass mixin sets the [box-sizing CSS property](https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing) value to `border-box` for selected HTML element(s). Thus the padding and the border will be inside of the selected element.
 {{< /mixin >}}
 
 ## Arguments
@@ -37,7 +39,7 @@ If you call the mixin in a selector with no value passed the style rules will be
 {{< /highlightwrap >}}
 
 {{< highlightwrap class="example">}}
-Pass the `only` value as an argument to apply the style rules to only one specific HTML element.
+Pass the `only` value as an argument to apply the style rules to only to the selected element.
 {{< highlight scss >}}
 .element {
   @include border-box("only");

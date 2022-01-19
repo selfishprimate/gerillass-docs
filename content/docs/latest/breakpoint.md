@@ -1,11 +1,13 @@
 ---
 title: "Breakpoint"
+site_title: "Create Breakpoints and CSS Media Queries with Sass and Gerillass"
+site_description: "Breakpoint Sass mixin helps you to create scalable media queries and breakpoints by using the @media CSS at-rule in SCSS."
 ---
 
 # Breakpoint
 
 {{< mixin type="Mixin" name="breakpoint" >}}
-**Breakpoint** Sass mixin helps you to write consistent media queries in Sass. Provides an easy to use one-line method.
+**Breakpoint** Sass mixin helps you to create scalable media queries and breakpoints by using the [@media CSS at-rule](https://developer.mozilla.org/en-US/docs/Web/CSS/@media) in SCSS.
 
 {{< hint info >}}
 **Tip:** There are predefined values for breakpoints in the `_map-for-breakpoints.scss` file based on Bootstraps' breakpoint values. **You can add more values here to expand the list or replace existing ones with yours**.

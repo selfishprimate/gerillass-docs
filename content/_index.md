@@ -1,8 +1,7 @@
 ---
 type: docs
-title: "Getting Started with Gerillass Sass Library"
-site_description: "With sass and gerillass you can empower your frontend workflow and you can create beautiful web sites very easily."
-site_keywords: "Gerillass, CSS, CSS3, Web Design, Sass Mixins, Sass Functions, SCSS, Sass, Sass Toolkit, Sass Library, Sass Libraries, Sass Framework, Learn Sass, What is Sass, Frontend Development"
+site_title: "Getting Started with Gerillass Sass Library"
+site_description: "With sass and Gerillass you can empower your frontend workflow and you can create responsive web sites rapidly and very easily."
 ---
 
 # Getting Started

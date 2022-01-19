@@ -1,12 +1,14 @@
 ---
 title: "Breakpointer"
+site_title: "Breakpointer Sass Mixin"
+site_description: "Breakpointer Sass Mixin is a handy small tool that points which breakpoint you are at so that you can write your styles for that specific device."
 ---
 
 # Breakpointer
 
 {{< mixin type="Mixin" name="breakpointer" >}}
 
-**Breakpointer** Sass mixin is a handy small tool that points which breakpoint you are at so that you can write your styles for that specific breakpoint. 
+**Breakpointer** Sass mixin is a handy small tool that points which breakpoint you are at so that you can write your styles for that specific device.
 
 {{< hint info >}}
 **Tip:** This mixin works best with the predefined breakpoint values in the `_map-for-breakpoints.scss` file. Ok, let me put it this way. **If the breakpoint mixin is the knight, the breakpointer is its squire.**

@@ -1,7 +1,7 @@
 ---
 title: "Adaptive"
 site_title: "Adaptive Sass Mixin"
-site_description: "Learn how to use adaptive Sass mixin!"
+site_description: "Adaptive Sass mixin helps you set a max-width value to the containing elements. It is useful when you wish to apply adaptive design concepts to your responsive designs."
 ---
 
 # Adaptive
