@@ -55,7 +55,7 @@ Now let's see some examples.
 {{< /highlightwrap >}}
 
 {{< highlightwrap class="example">}}
-Let's see the animation on an image element. Call the Loadify mixin inside the element selector and do not pass any argument yet just to see the loading effect with the default timing values. 
+Let's see the animation on an image element. Call the Loadify mixin inside the element selector and **do not pass any argument** yet just to see the loading effect with the default timing values. 
 
 **Now scroll to the image and refresh the page to see how smooth the image appears on the page.**
 
