@@ -1,9 +1,20 @@
+{{ if .Params.site_title }}
+<title>{{ .Params.site_title }} - {{ .Site.Title -}}</title>
+{{ else }}
+<title>{{ partial "docs/title" . }} - {{ .Site.Title -}}</title>
+{{ end }}
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
-<meta name="description" content="{{ partial "docs/title" . }}">
+<meta name="description" content="{{ .Params.site_description }}">
+
+{{ if .Params.site_keywords }}
+  <meta name="keywords" content="{{ .Params.site_keywords }}">
+{{ else }}
+  <meta name="keywords" content="Gerillass, CSS, CSS3, Web Design, Sass Mixins, Sass Functions, SCSS, Sass, Sass Toolkit, Sass Library, Sass Libraries, Sass Framework, Learn Sass, What is Sass, Frontend Tools">
+{{ end }}
+
 {{- template "_internal/opengraph.html" . -}}
 
-<title>{{ partial "docs/title" . }} | {{ .Site.Title -}}</title>
 <link rel="icon" href="{{ "images/favicon.png" | relURL }}" type="image/x-icon">
 
 <!-- Theme stylesheet, you can customize scss by creating `assets/custom.scss` in your website -->

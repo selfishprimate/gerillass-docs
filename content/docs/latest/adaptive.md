@@ -1,5 +1,7 @@
 ---
 title: "Adaptive"
+site_title: "Adaptive Sass Mixin"
+site_description: "Learn how to use adaptive Sass mixin!"
 ---
 
 # Adaptive
