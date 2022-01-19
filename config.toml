@@ -1,6 +1,6 @@
 # hugo server --minify --themesDir ... --baseURL=http://localhost:1313/theme/book/
 
-baseURL = ''
+baseURL = 'https://docs.gerillass.com/'
 title = 'Gerillass Documentation'
 
 # Book configuration
