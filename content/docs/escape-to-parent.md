@@ -1,5 +1,7 @@
 ---
 title: "Escape to Parent"
+site_title: "Escape to Parent Sass Mixin"
+site_description: "Escape to Parent Sass Mixin allows you to escape to the parent element and use multiple class or id selectors with it."
 ---
 
 # Escape to Parent
