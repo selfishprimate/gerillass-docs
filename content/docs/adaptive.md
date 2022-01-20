@@ -2,6 +2,7 @@
 title: "Adaptive"
 site_title: "Adaptive Sass Mixin"
 site_description: "Adaptive Sass mixin helps you set a max-width value to the containing elements. It is useful when you wish to apply adaptive design concepts to your responsive designs."
+site_keywords: "Adaptive Design, CSS Adaptive Design, Bootstrap Adaptive Design, Adaptive Design with Sass, SCSS Adaptive Design, What is Adaptive Design?, "
 ---
 
 # Adaptive
@@ -12,6 +13,12 @@ site_description: "Adaptive Sass mixin helps you set a max-width value to the co
 **Tip:** Adaptive mixin works best with the `percentage` values.
 {{< /hint >}}
 {{< /mixin >}}
+
+## What is Adaptive Design?
+
+**Adaptive design** is a graphical user interface design that responds differently to various device screen sizes. Adaptive design typically uses multiple fixed layout sizes and when it detects the device size, it selects the best layout for this specific screen size.
+
+As for the **Adaptive Sass mixin**, it provides the fastest and most consistent adaptive design option for you.
 
 ## Arguments
 

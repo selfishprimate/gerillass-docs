@@ -1,7 +1,8 @@
 ---
 title: "Background Dots"
-site_title: "Create Colorful Polka Dots Background with CSS, Sass, and Gerillass"
+site_title: "Background Dots Sass Mixin"
 site_description: "Background Dots Sass mixin allows you to create stylish colorful dotted background patterns (also known as polka dots)."
+site_keywords: "CSS Dotted Background Generator, CSS Background Dots, CSS Polka Dots, CSS Dotted Gradient, CSS Background Pattern, CSS Dotted Background Pattern, CSS Multiple Dots, CSS Dots, CSS Polka Dot Background, Dot Pattern CSS, Dot Pattern Art"
 ---
 
 # Background Dots
