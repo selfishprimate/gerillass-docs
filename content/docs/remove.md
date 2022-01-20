@@ -1,11 +1,13 @@
 ---
 title: "Remove"
+site_title: "Remove Sass Mixin"
+site_description: "Remove Sass mixin is to help you to set the display CSS property of an element to none, and it combines it with CSS media queries to show or hide an element in the document flow based on the various device widths."
 ---
 
 # Remove
 
 {{< mixin type="Mixin" name="remove" >}}
-**Remove** Sass mixin helps you to set the `display` property of an element to `none`. 
+**Remove Sass mixin** is to help you to set the `display` CSS property of an element to `none`, and it combines it with CSS media queries to show or hide an element in the document flow based on the various device widths.
 
 {{< hint info >}}
 **Tip:** The usage is very similar to **Breakpoint** mixin. Accepts the same arguments as it is.

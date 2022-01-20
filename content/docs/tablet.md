@@ -1,5 +1,7 @@
 ---
 title: "Tablet"
+site_title: "Tablet Sass Mixin"
+site_description: "There will be times when you need to style elements only for one particular tablet model. Tablet Sass mixin helps you to achieve that."
 ---
 
 # Tablet

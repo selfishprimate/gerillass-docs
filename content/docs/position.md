@@ -1,11 +1,13 @@
 ---
 title: "Position"
+site_title: "Position Sass Mixin"
+site_description: "Position Sass mixin provides a one-line method to rapidly set both the position and the offset properties of a selected element."
 ---
 
 # Position
 
 {{< mixin type="Mixin" name="position" >}}
-**Position** Sass mixin provides a one-line method to set rapidly both the position and the offset properties of a selected element(s).
+**Position Sass mixin** provides a one-line method to rapidly set both the position and the offset properties of a selected element.
 {{< /mixin >}}
 
 ## Arguments

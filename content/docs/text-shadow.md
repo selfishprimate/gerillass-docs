@@ -1,11 +1,14 @@
 ---
 title: "Text Shadow"
+site_title: "Text Shadow Sass Mixin"
+site_description: "Text Shadow Sass mixin helps you to add shadow to text elements. Accepts a comma-separated list of shadows or a single shadow value that can be multiplied optionally. It provides an easy-to-use one-line method."
+site_keywords: "CSS Text Shadow, Sass Text Sahadow, CSS Animated Text Shadow, CSS Text Shadow Generator, CSS Text Shadow Examples, CSS Text Shadow Blur, CSS Text Shadow Outline, CSS Text Shadow Opacity, CSS Text Shadow Inset, CSS Text Shadow Effects, CSS Text Shadow Spread"
 ---
 
 # Text Shadow
 
 {{< mixin type="Mixin" name="text-shadow" >}}
-**Text Shadow** Sass mixin helps you to add shadow to texts. Accepts comma-seperated list of shadow or a single shadow value that can be multiplied optionally. **Provides an easy to use one-line method**.
+**Text Shadow Sass mixin** helps you to add shadow to text elements. Accepts comma-separated list of shadows or a single shadow value that can be multiplied optionally. **It provides an easy-to-use one-line method**.
 {{< hint info >}}
 The first three (`$direction`, `$color`, `$size`) are the required arguments and they must be ordered as follow: @include text-shadow(**bottom red 20px**). You can't use these three interchangeably.
 {{< /hint >}}

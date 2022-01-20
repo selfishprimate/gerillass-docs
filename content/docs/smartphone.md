@@ -1,5 +1,7 @@
 ---
 title: "Smartphone"
+site_title: "Smartphone Sass Mixin"
+site_description: "There will be times when you need to style elements only for one particular smartphone model. Smartphone Sass mixin helps you to achieve that."
 ---
 
 # Smartphone

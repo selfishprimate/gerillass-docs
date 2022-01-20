@@ -1,5 +1,7 @@
 ---
 title: "Text Selection"
+site_title: "Text Selection Sass Mixin"
+site_description: "Text Selection Sass mixin helps you to style the portion of a text (or element) that is selected by a user."
 ---
 
 # Text Selection

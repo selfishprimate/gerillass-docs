@@ -1,11 +1,13 @@
 ---
 title: "Screen Agent"
+site_title: "Screen Agent Sass Mixin"
+site_description: "Screen Agent Sass mixin helps you to target elements based on the various screen resolutions."
 ---
 
 # Screen Agent
 
 {{< mixin type="Mixin" name="screen-agent" >}}
-**Screen Agent** Sass mixin helps you to style elements based on the screen resolution.
+**Screen Agent Sass mixin** helps you to target elements based on the various screen resolutions.
 {{< hint info >}}
 Suppose you have two types of photos loading on your site: one for the normal screens, the other one is twice in size for the retina screens. In such cases, you may want to use this mixin.
 {{< /hint >}}

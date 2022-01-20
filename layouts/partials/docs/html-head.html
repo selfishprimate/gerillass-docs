@@ -13,7 +13,11 @@
   <meta name="description" content="{{ .Site.Params.Description }}">
 {{ end }}
 
-<meta name="keywords" content="{{ .Site.Params.Keywords }}">
+{{ if .Params.site_keywords }}
+  <meta name="keyword" content="{{ .Params.site_keywords }}">
+{{ else }}
+  <meta name="keywords" content="{{ .Site.Params.Keywords }}">
+{{ end }}
 
 {{- template "_internal/opengraph.html" . -}}
 

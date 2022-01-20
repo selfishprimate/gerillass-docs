@@ -1,11 +1,14 @@
 ---
 title: "Responsive Image"
+site_title: "Responsive Image Sass Mixin"
+site_description: "Responsive Image Sass mixin helps you to make images responsive and change the default display CSS property value from inline to block in order to remove the extra space below them."
+site_keywords: "CSS Responsive Image, Sass Responsive Image, Responsive Images, Reset CSS Image, CSS Fluid Images, Responsive img tag"
 ---
 
 # Responsive Image
 
 {{< mixin type="Mixin" name="responsive-image" >}}
-**Responsive Image** Sass mixin helps you to make images responsive and reset the default `display: inline;` propert to `display: block;` to romove the extra space below them.
+**Responsive Image Sass mixin** helps you to make images responsive and change the default `display` CSS property value from `inline` to `block` in order to remove the extra space below them.
 {{< /mixin >}}
 
 ## Examples

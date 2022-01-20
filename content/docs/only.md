@@ -1,11 +1,13 @@
 ---
 title: "Only"
+site_title: "Only Sass Mxin"
+site_description: "Only Sass mixin helps you to target elements based on their position among siblings of same type (tag name). This mixin uses :first-of-type, :last-of-type, and :nth-of-type CSS pseudo-classes."
 ---
 
 # Only
 
 {{< mixin type="Mixin" name="only" >}}
-**Only** Sass mixin helps you to filter elements that match based on their position among a group of siblings and apply your style rules to **only** those elements.
+**Only** Sass mixin helps you to filter elements that match based on their position among a group of siblings and apply your style rules to **only** those elements. This mixin uses `:first-of-type`, `:last-of-type`, and `:nth-of-type` CSS pseudo-classes.
 {{< hint info >}}
 You can pass a **string** value to target elements by their `id`, `class` and `pseudo-class` selector. Or you can pass a **number** (or **multiple numbers** seperated by comma) to get the items based on their index position in the list.
 {{< /hint >}}

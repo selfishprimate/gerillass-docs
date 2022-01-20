@@ -1,5 +1,8 @@
 ---
 title: "Text Gradient"
+site_title: "Text Gradient Sass Mixin"
+site_description: "Text Gradient Sass mixin (also known as CSS Gradient Text) helps you add a gradient overlay to a text element. It provides a one-line method to set the gradient line's angle of direction, color values, and color-stop positions very easily. "
+site_keywords: "Text Gradient, CSS Text Gradient, Sass Text Gradient, Text Gradient Generator, CSS Text Gradient Left to Right, CSS Text Gradient Overlay, CSS Text Gradient Top to Bottom, CSS Give Text Gradient Color, Tailwind CSS Text Gradient"
 ---
 
 # Text Gradient

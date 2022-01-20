@@ -1,11 +1,13 @@
 ---
 title: "Triangle"
+site_title: "Triangle Sass Mixin"
+site_description: "Triangle Sass mixin helps you generate triangles by using ::before or ::after CSS pseudo-elements."
 ---
 
 # Triangle
 
 {{< mixin type="Mixin" name="triangle" >}}
-**Triangle** Sass mixin helps you to generate triangles.
+**Triangle** Sass mixin helps you to generate triangles by using `::before` or `::after` CSS pseudo-elements.
 {{< hint info >}}
 **Tip:** Works best with the text based elements to point a direction to make user take action (e.g. dropdown menu labels). Especially very useful when you apply it to the selected element's `::before` or `::after` pseudo-elements.
 {{< /hint >}}

@@ -1,11 +1,13 @@
 ---
 title: "Ratio Box"
+site_title: "Ratio Box Sass Mixin"
+site_description: "Ratio Box Sass mixin helps you create proportional CSS boxes based on the aspect ratio values ​​you pass. This mixin is especially useful when you apply the background-image CSS property to the selected element: Whatever the width of the selected element, the aspect ratio will always be preserved."
 ---
 
 # Ratio Box
 
 {{< mixin type="Mixin" name="ratio-box" >}}
-**Ratio Box** Sass mixin helps you **create proportional boxes** based on the `$ratio` value ​​you pass. This mixin is especially useful when you apply background images to the selected element: **Whatever the width of the selected element the aspect ratio will always be preserved**.
+**Ratio Box Sass mixin** helps you create **proportional CSS boxes** based on the aspect ratio values ​​you pass. This mixin is especially useful when you apply the background-image CSS property to the selected element: **Whatever the width of the selected element, the aspect ratio will always be preserved**.
 
 **Ratio Box** mixin works based on the same principles as the **Responsive Video** mixin. The usage is the same too.
 

@@ -1,5 +1,8 @@
 ---
 title: "Reset CSS"
+site_title: "Reset CSS Sass Mixin"
+site_description: "Reset CSS Sass mixin (also known as CSS Reset) helps you reset the browser default styles of all HTML elements to a consistent baseline."
+site_keywords: "Sass CSS Reset, Reset CSS in Sass, SCSS Reset CSS, SCSS to CSS, Eric Meyer's CSS Reset, Modern CSS Reset, What is CSS Reset, CSS Reset Code, CSS Reset 2020, CSS Reset 2021, CSS Reset 2022, Normalize CSS, Bootstrap CSS Reset, Universal CSS Reset, CSS Reset to Default"
 ---
 
 # Reset CSS

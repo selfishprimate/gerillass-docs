@@ -1,11 +1,14 @@
 ---
 title: "Remify"
+site_title: "Remify Sass Mixin"
+site_description: "Remify Sass mixin is a handy SCSS function to help you convert the pixel values to rem."
+site_keywords: "Sass pixel to rem, pixel to rem with Sass, SCSS pixel to rem, pixel to rem, How to convert pixel to rem, CSS rem unit, Sass, SCSS, Sass Library, Sass Libraries"
 ---
 
 # Remify
 
 {{< function type="Function" name="remify" >}}
-**Remify** function helps you to convert the `pixel` values to `rem`. 
+**Remify Sass function** is a handy tool to help you convert the `pixel` values to `rem`. 
 {{< hint info >}}
 **Tip:** It's especially useful when you work with rem units and having hard times to calculate how many rems that a pixel value you pass.
 {{< /hint >}}

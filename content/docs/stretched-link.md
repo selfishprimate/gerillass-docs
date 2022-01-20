@@ -1,5 +1,8 @@
 ---
 title: "Stretched Link"
+site_title: "Stretched Link Sass Mixin"
+site_description: "Stretched Link Sass mixin helps you make any HTML element clickable by “stretching” a nested link to the entire area of itself."
+site_keywords: "Stretched Link, Bootstrap Stretched Link, Stretched Link without Bootstrap, Tailwind Stretched Link, Stretched Link Example, CSS Stretched Link, Sass Stretched Link, SCSS Stretched Link, Stretched Link Bootstrap 5"
 ---
 
 # Stretched Link
