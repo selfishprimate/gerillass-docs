@@ -1,5 +1,6 @@
 ---
 title: "Adaptive"
+description: "Adaptive Sass mixin helps you set a max-width value to the containing elements. It is useful when you wish to apply adaptive design concepts to your responsive designs."
 site_title: "Adaptive Sass Mixin"
 site_description: "Adaptive Sass mixin helps you set a max-width value to the containing elements. It is useful when you wish to apply adaptive design concepts to your responsive designs."
 site_keywords: "Adaptive Design, CSS Adaptive Design, Bootstrap Adaptive Design, Adaptive Design with Sass, SCSS Adaptive Design, What is Adaptive Design?, "
@@ -8,7 +9,7 @@ site_keywords: "Adaptive Design, CSS Adaptive Design, Bootstrap Adaptive Design,
 # Adaptive
 
 {{< mixin type="Mixin" name="adaptive" >}}
-**Adaptive** Sass mixin helps you to set `max-width` value to the containing elements based on the `breakpoint` values defined in the `_map-for-breakpoints.scss` file, and also specifies a `$gutter` value, where the edges of a browser screen can most closely get to the edges of the selected element.
+**Adaptive Sass mixin** helps you to set `max-width` value to the containing elements based on the `breakpoint` values defined in the `_map-for-breakpoints.scss` file, and also specifies a `$gutter` value, where the edges of a browser screen can most closely get to the edges of the selected element.
 {{< hint info >}}
 **Tip:** Adaptive mixin works best with the `percentage` values.
 {{< /hint >}}

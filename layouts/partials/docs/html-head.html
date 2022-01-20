@@ -19,7 +19,8 @@
   <meta name="keywords" content="{{ .Site.Params.Keywords }}">
 {{ end }}
 
-{{- template "_internal/opengraph.html" . -}}
+{{ template "_internal/opengraph.html" . }}
+{{ template "_internal/twitter_cards.html" . }}
 
 <link rel="icon" href="{{ "images/favicon.png" | relURL }}" type="image/x-icon">
 
