@@ -1,8 +1,8 @@
 ---
 title: "Responsive Video"
-site_title: "Responsive Video Sass Mixin"
-site_description: "Responsive Video Sass mixin helps you create responsive containing elements with a fixed aspect ratio that you define. This is especially useful when you embed videos from youtube or similar sources."
-site_keywords: "CSS Responsive Video, YouTube Videos with CSS, Responsive Videos, Responsive YouTube Video with CSS, Responsive YouTube Video with Sass, Responsive YouTube Video with SCSS, Responsive Video CSS, Responsive Video Embed"
+page_title: "Responsive Video Sass Mixin"
+page_description: "Responsive Video Sass mixin helps you create responsive containing elements with a fixed aspect ratio that you define. This is especially useful when you embed videos from youtube or similar sources."
+page_keywords: "CSS Responsive Video, YouTube Videos with CSS, Responsive Videos, Responsive YouTube Video with CSS, Responsive YouTube Video with Sass, Responsive YouTube Video with SCSS, Responsive Video CSS, Responsive Video Embed"
 ---
 
 # Responsive Video

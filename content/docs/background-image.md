@@ -1,7 +1,7 @@
 ---
 title: "Background Image"
-site_title: "Background Image Sass Mixin"
-site_description: "Background Image Sass mixin allows you to apply background-image CSS property to the selected element(s)."
+page_title: "Background Image Sass Mixin"
+page_description: "Background Image Sass mixin allows you to apply background-image CSS property to the selected element(s)."
 ---
 
 # Background Image

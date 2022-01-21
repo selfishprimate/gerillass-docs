@@ -1,7 +1,7 @@
 ---
 title: "Placeholder Shown"
-site_title: "Placeholder Shown Sass Mixin"
-site_description: "Placeholder Shown Sass mixin helps you to style input or textarea element that is currently displaying placeholder text by using :placeholder-shown CSS pseudo-class."
+page_title: "Placeholder Shown Sass Mixin"
+page_description: "Placeholder Shown Sass mixin helps you to style input or textarea element that is currently displaying placeholder text by using :placeholder-shown CSS pseudo-class."
 ---
 
 # Placeholder Shown

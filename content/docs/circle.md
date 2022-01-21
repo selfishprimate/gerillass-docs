@@ -1,7 +1,7 @@
 ---
 title: "Circle"
-site_title: "Circle Sass Mixin"
-site_description: "Circle Sass Mixin helps you to create a perfect circle shape in CSS and Sass."
+page_title: "Circle Sass Mixin"
+page_description: "Circle Sass Mixin helps you to create a perfect circle shape in CSS and Sass."
 ---
 
 # Circle

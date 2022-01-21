@@ -1,7 +1,7 @@
 ---
 title: "Columnizer"
-site_title: "Columnizer Sass Mixin"
-site_description: "Columnizer Sass Mixin helps you to create beautiful responsive card-based design layouts in CSS and Sass."
+page_title: "Columnizer Sass Mixin"
+page_description: "Columnizer Sass Mixin helps you to create beautiful responsive card-based design layouts in CSS and Sass."
 ---
 
 # Columnizer

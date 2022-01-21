@@ -1,5 +1,7 @@
-{{ if .Params.site_title }}
-<title>{{ .Params.site_title }} · {{ .Site.Title -}}</title>
+{{ "<!--" | safeHTML }}Designed and built by Halil İbrahim Çakıroğlu{{ "-->" | safeHTML }}
+
+{{ if .Params.page_title }}
+<title>{{ .Params.page_title }} · {{ .Site.Title -}}</title>
 {{ else }}
 <title>{{ partial "docs/title" . }} · {{ .Site.Title -}}</title>
 {{ end }}
@@ -7,14 +9,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
 
-{{ if .Params.site_description }}
-  <meta name="description" content="{{ .Params.site_description }}">
+{{ if .Params.page_description }}
+  <meta name="description" content="{{ .Params.page_description }}">
 {{ else }}
   <meta name="description" content="{{ .Site.Params.Description }}">
 {{ end }}
 
-{{ if .Params.site_keywords }}
-  <meta name="keyword" content="{{ .Params.site_keywords }}">
+{{ if .Params.page_keywords }}
+  <meta name="keyword" content="{{ .Params.page_keywords }}">
 {{ else }}
   <meta name="keywords" content="{{ .Site.Params.Keywords }}">
 {{ end }}
@@ -41,8 +43,3 @@
 {{ with .OutputFormats.Get "rss" -}}
     {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
 {{ end -}}
-
-{{ "<!--" | safeHTML }}
-Made with Book Theme
-https://github.com/alex-shpak/hugo-book
-{{ "-->" | safeHTML }}

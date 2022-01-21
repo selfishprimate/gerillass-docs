@@ -1,7 +1,7 @@
 ---
 title: "Counter"
-site_title: "Counter Sass Mixin"
-site_description: "Counter Sass mixin allows you to present your content in a listicle format by using CSS Counter Properties. With Sass and Gerillass it is now very easy to create automatically counting elements."
+page_title: "Counter Sass Mixin"
+page_description: "Counter Sass mixin allows you to present your content in a listicle format by using CSS Counter Properties. With Sass and Gerillass it is now very easy to create automatically counting elements."
 ---
 
 # Counter

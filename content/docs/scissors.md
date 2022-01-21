@@ -1,8 +1,8 @@
 ---
 title: "Scissors"
-site_title: "Scissors Sass Mixin"
-site_description: "Scissors Sass mixin helps you to cut off the corners of an element. Provides an easy-to-use one-line method to set the size of the cut, and the corners that you want to apply the effect."
-site_keywords: "CSS Cut Corner, CSS Cutted Edges, Cut Box Edges with CSS, Cut Corners Using CSS, Cut Corners Using Sass, Cut Corners Using SCSS, CSS Border Cut, CSS Cutted Edge, Cutout Corners with CSS, Cutout Corners with Sass, Cutout Corners with SCSS, CSS Cutting-Edge"
+page_title: "Scissors Sass Mixin"
+page_description: "Scissors Sass mixin helps you to cut off the corners of an element. Provides an easy-to-use one-line method to set the size of the cut, and the corners that you want to apply the effect."
+page_keywords: "CSS Cut Corner, CSS Cutted Edges, Cut Box Edges with CSS, Cut Corners Using CSS, Cut Corners Using Sass, Cut Corners Using SCSS, CSS Border Cut, CSS Cutted Edge, Cutout Corners with CSS, Cutout Corners with Sass, Cutout Corners with SCSS, CSS Cutting-Edge"
 ---
 
 # Scissors

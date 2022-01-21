@@ -1,7 +1,7 @@
 ---
 title: "All Buttons"
-site_title: "All Buttons Sass Mixin"
-site_description: "All Buttons Sass mixin helps you to target all the HTML button elements in the DOM so you can easily apply your style rules."
+page_title: "All Buttons Sass Mixin"
+page_description: "All Buttons Sass mixin helps you to target all the HTML button elements in the DOM so you can easily apply your style rules."
 ---
 
 # All Buttons

@@ -1,7 +1,7 @@
 ---
 title: "Brand Logo"
-site_title: "Brand Logo Sass Mixin"
-site_description: "Brand Logo Sass Mixin helps you to create an SEO-friendly logo component for your brand's website by using CSS best practices."
+page_title: "Brand Logo Sass Mixin"
+page_description: "Brand Logo Sass Mixin helps you to create an SEO-friendly logo component for your brand's website by using CSS best practices."
 ---
 
 # Brand Logo

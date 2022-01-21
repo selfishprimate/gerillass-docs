@@ -1,8 +1,8 @@
 ---
 title: "Before"
-site_title: "Before Sass Mixin"
-site_description: "Before Sass mixin is an easy way to use ::before CSS property. You can easily insert some text or design elements before the content of each selected element."
-site_keywords: "CSS After Before, CSS Before Icon, CSS Before Usage, CSS Pseudo Classes, CSS Before Selector"
+page_title: "Before Sass Mixin"
+page_description: "Before Sass mixin is an easy way to use ::before CSS property. You can easily insert some text or design elements before the content of each selected element."
+page_keywords: "CSS After Before, CSS Before Icon, CSS Before Usage, CSS Pseudo Classes, CSS Before Selector"
 ---
 
 # Before

@@ -1,7 +1,7 @@
 ---
 title: "Except"
-site_title: "Exclude Elements in the list with Except Sass Mixin"
-site_description: "Except Sass mixin helps you to target elements that you do not want to apply style changes to that you want for other elements in the list. This Sass mixin uses not CSS property."
+page_title: "Exclude Elements in the list with Except Sass Mixin"
+page_description: "Except Sass mixin helps you to target elements that you do not want to apply style changes to that you want for other elements in the list. This Sass mixin uses not CSS property."
 ---
 
 # Except

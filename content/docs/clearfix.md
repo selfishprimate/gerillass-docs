@@ -1,8 +1,8 @@
 ---
 title: "Clearfix"
-site_title: "Clearfix Sass Mixin"
-site_description: "Clearfix Sass Mixin helps you fix the broken layouts caused by using float CSS property."
-site_keywords: "CSS Clearfix, Clearfix Class, Clear Float CSS, Clear CSS, Clear: Both CSS"
+page_title: "Clearfix Sass Mixin"
+page_description: "Clearfix Sass Mixin helps you fix the broken layouts caused by using float CSS property."
+page_keywords: "CSS Clearfix, Clearfix Class, Clear Float CSS, Clear CSS, Clear: Both CSS"
 ---
 
 # Clearfix

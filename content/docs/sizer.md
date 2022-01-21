@@ -1,7 +1,7 @@
 ---
 title: "Sizer"
-site_title: "Sizer Sass Mixin"
-site_description: "Sizer Sass mixin helps you to size elements with one statement (or two). Size elements or create square or recangle shapes very easily."
+page_title: "Sizer Sass Mixin"
+page_description: "Sizer Sass mixin helps you to size elements with one statement (or two). Size elements or create square or recangle shapes very easily."
 ---
 
 # Sizer

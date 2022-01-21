@@ -1,8 +1,8 @@
 ---
 title: "Resizable"
-site_title: "Resizable Sass Mixin"
-site_description: "Resizable Sass mixin helps you to make an element resizable on both horizontal or vertical directions."
-site_keywords: "Resizable Sass Mixin, Sass Resize, SCSS Resize, CSS Resizable, SCSS to CSS, Sass to CSS"
+page_title: "Resizable Sass Mixin"
+page_description: "Resizable Sass mixin helps you to make an element resizable on both horizontal or vertical directions."
+page_keywords: "Resizable Sass Mixin, Sass Resize, SCSS Resize, CSS Resizable, SCSS to CSS, Sass to CSS"
 ---
 
 # Resizable

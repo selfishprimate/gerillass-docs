@@ -1,7 +1,7 @@
 ---
 title: "All Text Inputs"
-site_title: "All Text Inputs Sass Mixin"
-site_description: "All Text Inputs Sass mixin helps you to target all the text-based HTML input elements in the DOM, thus you can easily apply your style rules."
+page_title: "All Text Inputs Sass Mixin"
+page_description: "All Text Inputs Sass mixin helps you to target all the text-based HTML input elements in the DOM, thus you can easily apply your style rules."
 ---
 
 # All Text Inputs

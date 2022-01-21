@@ -1,7 +1,7 @@
 ---
 title: "Font Face"
-site_title: "Font Face Sass Mixin"
-site_description: "Font Face Sass mixin helps you to generate a cross-browser compatible @font-face CSS at-rule in CSS and SCSS."
+page_title: "Font Face Sass Mixin"
+page_description: "Font Face Sass mixin helps you to generate a cross-browser compatible @font-face CSS at-rule in CSS and SCSS."
 ---
 
 # Font Face

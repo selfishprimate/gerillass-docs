@@ -1,7 +1,7 @@
 ---
 title: "Radial Gradient"
-site_title: "Radial Gradient Sass Mixin"
-site_description: "Radial Gradient Sass mixin helps you generate beautiful radial CSS gradients. It uses the radial-gradient CSS property."
+page_title: "Radial Gradient Sass Mixin"
+page_description: "Radial Gradient Sass mixin helps you generate beautiful radial CSS gradients. It uses the radial-gradient CSS property."
 ---
 
 # Radial Gradient

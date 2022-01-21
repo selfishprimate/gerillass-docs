@@ -1,8 +1,8 @@
 ---
 title: "Reset Figure"
-site_title: "Reset Figure Sass Mixin"
-site_description: "Reset Figure Sass mixin helps you to reset the margin values of <figure> elements to zero and make the <img> element responsive in it."
-site_keywords: "HTML Figure Element, Responsive Figure Element, Responsive Image, CSS Responsive Image, CSS Figure Responsive, Responsive Image CSS, Responsive Images"
+page_title: "Reset Figure Sass Mixin"
+page_description: "Reset Figure Sass mixin helps you to reset the margin values of <figure> elements to zero and make the <img> element responsive in it."
+page_keywords: "HTML Figure Element, Responsive Figure Element, Responsive Image, CSS Responsive Image, CSS Figure Responsive, Responsive Image CSS, Responsive Images"
 ---
 
 # Reset Figure

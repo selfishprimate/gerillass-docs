@@ -1,8 +1,8 @@
 ---
 title: "After"
-site_title: "After Sass Mixin"
-site_description: "After Sass mixin is an easy way to use ::after CSS property. You can easily insert some text or design elements after the content of each selected element."
-site_keywords: "CSS After Before, CSS After Icon, CSS After Usage, CSS Pseudo Classes, CSS After Selector"
+page_title: "After Sass Mixin"
+page_description: "After Sass mixin is an easy way to use ::after CSS property. You can easily insert some text or design elements after the content of each selected element."
+page_keywords: "CSS After Before, CSS After Icon, CSS After Usage, CSS Pseudo Classes, CSS After Selector"
 ---
 
 # After

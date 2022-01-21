@@ -1,8 +1,8 @@
 ---
 title: "Breakpoint"
-site_title: "Create Breakpoints and CSS Media Queries with Sass and Gerillass"
-site_description: "Breakpoint Sass mixin helps you to create scalable media queries and breakpoints by using the @media CSS at-rule in SCSS."
-site_keywords: "CSS Breakpoints, CSS Breakpoints 2021, CSS Breakpoints Bootstrap, CSS Breakpoints for Mobile Devices, CSS Breakpoints List, Sass Breakpoints, CSS Breakpoints 2022, CSS Media Queries, Sass Media Queries, CSS Breakpoints for Responsive Design, Sass Include Breakpoint, Sass Breakpoint Mixin"
+page_title: "Create Breakpoints and CSS Media Queries with Sass and Gerillass"
+page_description: "Breakpoint Sass mixin helps you to create scalable media queries and breakpoints by using the @media CSS at-rule in SCSS."
+page_keywords: "CSS Breakpoints, CSS Breakpoints 2021, CSS Breakpoints Bootstrap, CSS Breakpoints for Mobile Devices, CSS Breakpoints List, Sass Breakpoints, CSS Breakpoints 2022, CSS Media Queries, Sass Media Queries, CSS Breakpoints for Responsive Design, Sass Include Breakpoint, Sass Breakpoint Mixin"
 ---
 
 # Breakpoint

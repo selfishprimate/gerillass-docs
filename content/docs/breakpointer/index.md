@@ -1,7 +1,7 @@
 ---
 title: "Breakpointer"
-site_title: "Breakpointer Sass Mixin"
-site_description: "Breakpointer Sass Mixin is a handy small tool that points which breakpoint you are at so that you can write your styles for that specific device."
+page_title: "Breakpointer Sass Mixin"
+page_description: "Breakpointer Sass Mixin is a handy small tool that points which breakpoint you are at so that you can write your styles for that specific device."
 ---
 
 # Breakpointer

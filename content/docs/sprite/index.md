@@ -1,8 +1,8 @@
 ---
 title: "Sprite"
-site_title: "Sprite Sass Mixin"
-site_description: "Sprite Sass mixin helps you to apply background images to the selected element(s) by using CSS Sprite technique."
-site_keywords: "CSS Sprite, Sass Sprite, CSS Sprite Technique, CSS Sprite Sheet Generator, CSS Sprite Tool, CSS Sprite Background Position, CSS Sprite and Image Maps"
+page_title: "Sprite Sass Mixin"
+page_description: "Sprite Sass mixin helps you to apply background images to the selected element(s) by using CSS Sprite technique."
+page_keywords: "CSS Sprite, Sass Sprite, CSS Sprite Technique, CSS Sprite Sheet Generator, CSS Sprite Tool, CSS Sprite Background Position, CSS Sprite and Image Maps"
 ---
 
 # Sprite

@@ -1,7 +1,7 @@
 ---
 title: "Linear Gradient"
-site_title: "Linear Gradient Sass Mixin"
-site_description: "Linear Gradient Sass mixin helps you to generate colorful CSS gradients, and it combines them with image and text elements. In this way, you can create beautiful page components."
+page_title: "Linear Gradient Sass Mixin"
+page_description: "Linear Gradient Sass mixin helps you to generate colorful CSS gradients, and it combines them with image and text elements. In this way, you can create beautiful page components."
 ---
 
 # Linear Gradient

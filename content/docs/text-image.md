@@ -1,8 +1,8 @@
 ---
 title: "Text Image"
-site_title: "Text Image Sass Mixin"
-site_description: "Text Image Sass mixin helps you to clip the background image of a selected element to the shape of its foreground text."
-site_keywords: "CSS Text Image Mask, CSS Text Image, CSS Text Image Background, CSS Text Image Wrap, CSS Text Image Side by Side, CSS Text Image Generator, Text Image with Sass, Sass Text Image Mask, CSS Image Text Fallback Color"
+page_title: "Text Image Sass Mixin"
+page_description: "Text Image Sass mixin helps you to clip the background image of a selected element to the shape of its foreground text."
+page_keywords: "CSS Text Image Mask, CSS Text Image, CSS Text Image Background, CSS Text Image Wrap, CSS Text Image Side by Side, CSS Text Image Generator, Text Image with Sass, Sass Text Image Mask, CSS Image Text Fallback Color"
 ---
 
 # Text Image

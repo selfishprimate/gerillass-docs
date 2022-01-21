@@ -1,7 +1,7 @@
 ---
 title: "Border Box"
-site_title: "Border Box Sass Mixin"
-site_description: "Border Box Sass mixin sets the box-sizing CSS property value to border-box for selected HTML elements."
+page_title: "Border Box Sass Mixin"
+page_description: "Border Box Sass mixin sets the box-sizing CSS property value to border-box for selected HTML elements."
 ---
 
 # Border Box

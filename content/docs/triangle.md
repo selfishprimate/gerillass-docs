@@ -1,7 +1,7 @@
 ---
 title: "Triangle"
-site_title: "Triangle Sass Mixin"
-site_description: "Triangle Sass mixin helps you generate triangles by using ::before or ::after CSS pseudo-elements."
+page_title: "Triangle Sass Mixin"
+page_description: "Triangle Sass mixin helps you generate triangles by using ::before or ::after CSS pseudo-elements."
 ---
 
 # Triangle

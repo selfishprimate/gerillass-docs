@@ -1,7 +1,7 @@
 ---
 title: "Screen Agent"
-site_title: "Screen Agent Sass Mixin"
-site_description: "Screen Agent Sass mixin helps you to target elements based on the various screen resolutions."
+page_title: "Screen Agent Sass Mixin"
+page_description: "Screen Agent Sass mixin helps you to target elements based on the various screen resolutions."
 ---
 
 # Screen Agent

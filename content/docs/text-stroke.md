@@ -1,8 +1,8 @@
 ---
 title: "Text Stroke"
-site_title: "Text Stroke Sass Mixin"
-site_description: "Text Stroke Sass mixin helps you to add stroke to a text element and style it very easily."
-site_keywords: "CSS text Stroke, Sass Text Stroke, CSS Text Stroke Generator, CSS Text Stroke Property, CSS Text Stroke Inside, CSS Text Stroke Width, CSS Text Stroke Animation, CSS Text Stroke Fallback Color, CSS Text Stroke Color, CSS Text Stroke Fill Color"
+page_title: "Text Stroke Sass Mixin"
+page_description: "Text Stroke Sass mixin helps you to add stroke to a text element and style it very easily."
+page_keywords: "CSS text Stroke, Sass Text Stroke, CSS Text Stroke Generator, CSS Text Stroke Property, CSS Text Stroke Inside, CSS Text Stroke Width, CSS Text Stroke Animation, CSS Text Stroke Fallback Color, CSS Text Stroke Color, CSS Text Stroke Fill Color"
 ---
 
 # Text Stroke

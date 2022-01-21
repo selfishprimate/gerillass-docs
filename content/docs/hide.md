@@ -1,7 +1,7 @@
 ---
 title: "Hide"
-site_title: "Hide Sass Mixin"
-site_description: "You can improve web accessibility by hiding elements with Hide Sass mixin. This will help you to hide some content visually on a web page, while it makes the content to be accessible to assistive technologies like a screen reader."
+page_title: "Hide Sass Mixin"
+page_description: "You can improve web accessibility by hiding elements with Hide Sass mixin. This will help you to hide some content visually on a web page, while it makes the content to be accessible to assistive technologies like a screen reader."
 ---
 
 # Hide

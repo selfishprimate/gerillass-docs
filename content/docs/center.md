@@ -1,7 +1,7 @@
 ---
 title: "Center"
-site_title: "Center Sass Mixin"
-site_description: "Center Sass Mixin allows you to center selected elements both on the horizontal and vertical axes by using absolute positioning in CSS and Sass."
+page_title: "Center Sass Mixin"
+page_description: "Center Sass Mixin allows you to center selected elements both on the horizontal and vertical axes by using absolute positioning in CSS and Sass."
 ---
 
 # Center

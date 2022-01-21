@@ -1,8 +1,8 @@
 ---
 title: "Background Stripes"
-site_title: "Background Stripes Sass Mixin"
-site_description: "Background Stripes Sass mixin allows you to create stylish and colorful background stripes using repeating-linear-gradient CSS property. You can easily create colorful background lines that are difficult to create with vanilla CSS."
-site_keywords: "CSS Background Lines, CSS Vertical Background Lines, CSS Horizontal Background Lines, CSS Background Stripes, CSS Animated Background Lines, SCSS to CSS"
+page_title: "Background Stripes Sass Mixin"
+page_description: "Background Stripes Sass mixin allows you to create stylish and colorful background stripes using repeating-linear-gradient CSS property. You can easily create colorful background lines that are difficult to create with vanilla CSS."
+page_keywords: "CSS Background Lines, CSS Vertical Background Lines, CSS Horizontal Background Lines, CSS Background Stripes, CSS Animated Background Lines, SCSS to CSS"
 ---
 
 # Background Stripes

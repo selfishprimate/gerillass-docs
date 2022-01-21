@@ -1,7 +1,7 @@
 ---
 title: "Placeholder"
-site_title: "Placeholder Sass Mixin"
-site_description: "Placeholder Sass mixin will help you to style the placeholder text in an `<input>` or `<textarea>` element and generate cross-browser compatible CSS code."
+page_title: "Placeholder Sass Mixin"
+page_description: "Placeholder Sass mixin will help you to style the placeholder text in an `<input>` or `<textarea>` element and generate cross-browser compatible CSS code."
 ---
 
 # Placeholder

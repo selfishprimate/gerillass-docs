@@ -1,7 +1,7 @@
 ---
 type: docs
-site_title: "Getting Started with Gerillass Sass Library"
-site_description: "With sass and Gerillass you can empower your frontend workflow and you can create responsive web sites rapidly and very easily."
+page_title: "Getting Started with Gerillass Sass Library"
+page_description: "With sass and Gerillass you can empower your frontend workflow and you can create responsive web sites rapidly and very easily."
 ---
 
 # Getting Started

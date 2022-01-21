@@ -1,7 +1,7 @@
 ---
 title: "Ellipsis"
-site_title: "Ellipsis Sass Mixin"
-site_description: "Ellipsis Sass mixin helps you to trim a text and adds an ellipsis at the end of it by using CSS text-overflow property."
+page_title: "Ellipsis Sass Mixin"
+page_description: "Ellipsis Sass mixin helps you to trim a text and adds an ellipsis at the end of it by using CSS text-overflow property."
 ---
 
 # Ellipsis
