@@ -1,26 +1,31 @@
 .book-brand {
-  &__link {
+  @include breakpoint(max, large) {
     display: flex;
-    align-items: center;
+    justify-content: center;
+  }
+  &__link {
     &:hover {
       color: inherit;
       text-decoration: initial;
     }
   }
-  &__icon {
-    font-family: $primary-icons;
-    font-size: 2.5rem;
-  }
+  &__logo {}
   &__title {
     display: flex;
     align-items: center;
     position: relative;
     font-family: $primary-font-family;
-    font-size: __remify(32px);
+    font-size: __remify(39px);
   }
   &__description {
+    display: flex;
+    align-items: center;
     font-size: __remify(11px);
-    @include remove (max, large);
+    text-align: center;
+    .gls-icon {
+      margin-right: 4px;
+      font-size: 0.9rem;
+    }
   }
 
   @include breakpoint(max, large){

@@ -12,9 +12,9 @@
       position: absolute;
       left: 50%;
       top: 100%;
-      font-size: 0.7rem;
-      font-weight: 600;
-      color: $tertiary-color;
+      font-size: 0.8rem;
+      font-family: $primary-font-family;
+      color: $primary-color;
       text-align: center;
       line-height: 1.2;
       transform: translateX(-50%) translateY(-100%);
@@ -23,12 +23,12 @@
     }
     &:hover {
       &::before {
-        top: -4px;
+        top: 0;
         opacity: 1;
       }
       a {
         opacity: 1;
-        color: $tertiary-color;
+        color: $primary-color;
       }
     }
   }

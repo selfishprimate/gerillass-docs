@@ -83,7 +83,7 @@
 .menu-toggler{
     position: absolute;
     display: block;
-    left: 10px;
+    left: 20px;
     top: 20px;
     width: 34px;
     height: 34px;
@@ -91,8 +91,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    ion-icon{
-        font-size: 26px;
+    &__icon {
+      font-size: 2rem;
     }
     @include breakpoint(min, medium){
         display: none;
