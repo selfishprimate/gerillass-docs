@@ -1,37 +1,32 @@
-.book-brand{
-    margin: 0;
-    a{
-        position: relative;
-        text-decoration: none;
-        display: inline-flex;
-        flex-direction: column;
-        &:hover{
-            text-decoration: none;
-            color: inherit;
-        }
-        img{
-            position: relative;
-            left: -4px;
-            width: 200px;
-            height: auto;
-        }
-        .logo-title{
-            display: block;
-            width: 0;
-            height: 0;
-            overflow: hidden;
-        }
-        .logo-description{
-            position: relative;
-            right: 0;
-            display: block;
-            font-size: 13px;
-            font-style: italic;
-            white-space: nowrap;
-            color: $body-text-color;
-            text-align: right;
-            margin-top: -4px;
-            padding: 2px 0;
-        }
+.book-brand {
+  &__link {
+    display: flex;
+    align-items: center;
+    &:hover {
+      color: inherit;
+      text-decoration: initial;
     }
+  }
+  &__icon {
+    font-family: $primary-icons;
+    font-size: 2.5rem;
+  }
+  &__title {
+    display: flex;
+    align-items: center;
+    position: relative;
+    font-family: $primary-font-family;
+    font-size: __remify(32px);
+  }
+  &__description {
+    font-size: __remify(11px);
+    @include remove (max, large);
+  }
+
+  @include breakpoint(max, large){
+    &__link {
+      justify-content: center;
+    }
+  }
+
 }

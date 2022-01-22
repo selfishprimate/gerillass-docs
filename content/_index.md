@@ -1,7 +1,7 @@
 ---
 type: docs
 page_title: "Getting Started with Gerillass Sass Library"
-page_description: "With sass and Gerillass you can empower your frontend workflow and you can create responsive web sites rapidly and very easily."
+page_description: "With Sass and Gerillass you can generate scalable CSS outputs, thus empower your frontend workflow and you can create responsive web sites rapidly and very easily."
 ---
 
 # Getting Started
