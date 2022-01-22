@@ -191,7 +191,7 @@ Let's try with a title text that placed inside the selected element to see it in
   @include background-image(null, rgba(teal, 0.7) rgba(pink, 0.8), right);
 }
 {{< /highlight >}}
-{{< highlight css "linenos=table,hl_lines=18-22,linenostart=1">}}
+{{< highlight css >}}
 //CSS Output
 .element {
   position: relative;
@@ -214,6 +214,7 @@ Let's try with a title text that placed inside the selected element to see it in
   z-index: 1;
 }
 {{< /highlight >}}
+
 <style>
 .element.example06 {
   border-radius: 5px;

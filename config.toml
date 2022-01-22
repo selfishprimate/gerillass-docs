@@ -52,7 +52,7 @@ cleanDestinationDir = true
     BookTocLabel = "Table of Contents"
 
     LogoTitle = "Gerillass"
-    LogoDescription = "This goes to Gerillass home page"
+    LogoDescription = "Go to Gerillass home page"
     
     # (Optional, default none) Set leaf bundle to render as side menu
     # When not specified file structure and weights will be used

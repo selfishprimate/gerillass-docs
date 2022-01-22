@@ -1,11 +1,22 @@
 <div class="book-brand">
-  <a class="book-brand__link" href="https://gerillass.com">
-    {{ with .Site.Params.LogoTitle }}
+  
+
+      <a class="book-brand__link" href="https://gerillass.com">
+
         <i class="book-brand__icon gls-arrow-left"></i>
-        <span class="book-brand__title">{{ . }}</span>
-    {{ end }}
-  </a>
-  {{ with .Site.Params.LogoDescription}}
-      <div class="book-brand__description">{{.}}</div>
-  {{ end }}
+
+        <div class="book-brand__logo">
+
+          {{ with .Site.Params.LogoTitle }}
+            <span class="book-brand__title">{{ . }}</span>
+          {{ end }}
+
+          {{ with .Site.Params.LogoDescription}}
+            <span class="book-brand__description">{{.}}</span>
+          {{ end }}
+
+        </div>
+
+      </a>
+   
 </div>
