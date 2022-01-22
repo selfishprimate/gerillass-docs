@@ -1,5 +1,7 @@
 ---
 title: "Loadify"
+page_title: "Loadify Sass Mixin"
+page_description: "Loadify Sass mixin is a handy tool that can help you make a page element load with a smooth fade-in effect during the time of page loadings. It also allows you to create smooth image loading effects."
 ---
 
 # Loadify
