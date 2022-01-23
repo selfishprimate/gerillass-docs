@@ -1,63 +1,65 @@
-.table{
-    margin: 0 0 80px;
-    @include breakpoint(max, medium){
-        padding-bottom: $global-space;
+.table {
+  margin: 0 0 80px;
+  @include breakpoint(max, medium) {
+    padding-bottom: $global-space;
+  }
+  @include breakpoint(max, large) {
+    overflow-x: auto;
+  }
+  p {
+    font-size: 0.875rem;
+    line-height: 1.4;
+    margin-bottom: 0;
+    @include breakpoint(min, small) {
+      font-size: 0.9rem;
     }
-    @include breakpoint(max, large){
-        overflow-x: auto;
-    }
-    p{
-        font-size: 0.875rem;
-        line-height: 1.4;
-        margin-bottom: 0;
-        @include breakpoint(min, small) {
-          font-size: 0.9rem;
-        }
-    }
+  }
 
-    .footnote{
-        font-size: 80%;
-        line-height: 1.3;
-        padding: 0;
-        @include breakpoint(max, large){
-            white-space: nowrap;
-        }
+  .footnote {
+    font-size: 80%;
+    line-height: 1.3;
+    padding: 0;
+    @include breakpoint(max, large) {
+      white-space: nowrap;
     }
+  }
 
-    table{
-        width: 100%;
-        border-collapse: collapse;
-        border-spacing: 0;
-        margin-bottom: $global-space / 2;
-        thead{
-            th{
-                text-align: left;
-                font-weight: bold;
-            }
-            tr{
-                border-bottom: ($border-width * 2) $border-style $border-color;
-            }
-        }
-        tbody{
-            tr{
-                border-bottom: $border-width $border-style $border-color;
-            }
-        }
-        tr th, tr td{
-            padding: 1rem 1rem 1rem 0;
-            vertical-align: middle;
-            @include breakpoint(min, large){
-                padding: 1rem 3rem 1rem 0;
-            }
-        }
-        td.name,
-        td.type{
-            white-space: nowrap;
-        }
-        td.description{
-            @include breakpoint(max, large){
-                white-space: nowrap;
-            }
-        }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin-bottom: $global-space / 2;
+    thead {
+      th {
+        text-align: left;
+        font-weight: bold;
+      }
+      tr {
+        border-bottom: ($border-width * 2) $border-style $border-color;
+      }
     }
+    tbody {
+      tr {
+        border-bottom: $border-width $border-style $border-color;
+      }
+    }
+    tr th,
+    tr td {
+      padding: 1rem 1rem 1rem 0;
+      vertical-align: middle;
+      @include breakpoint(min, large) {
+        padding: 1rem 3rem 1rem 0;
+      }
+    }
+    td.name,
+    td.type {
+      white-space: nowrap;
+    }
+    td.description {
+      font-size: __remify(13px);
+      @include breakpoint(max, large) {
+        white-space: nowrap;
+      }
+    }
+  }
 }
