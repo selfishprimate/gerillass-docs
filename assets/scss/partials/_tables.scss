@@ -3,11 +3,11 @@
   @include breakpoint(max, medium) {
     padding-bottom: $global-space;
   }
-  @include breakpoint(max, large) {
+  @include breakpoint(max, xlarge) {
     overflow-x: auto;
   }
   p {
-    font-size: 0.875rem;
+    font-size: __remify(13px);
     line-height: 1.4;
     margin-bottom: 0;
     @include breakpoint(min, small) {
@@ -56,8 +56,7 @@
       white-space: nowrap;
     }
     td.description {
-      font-size: __remify(13px);
-      @include breakpoint(max, large) {
+      @include breakpoint(max, xlarge) {
         white-space: nowrap;
       }
     }

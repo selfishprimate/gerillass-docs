@@ -1,9 +1,9 @@
 {{ "<!--" | safeHTML }}Designed and built by Halil İbrahim Çakıroğlu{{ "-->" | safeHTML }}
 
 {{ if .Params.page_title }}
-<title>{{ .Params.page_title }} · {{ .Site.Title -}}</title>
+  <title>{{ .Params.page_title }} · {{ .Site.Title -}}</title>
 {{ else }}
-<title>{{ partial "docs/title" . }} · {{ .Site.Title -}}</title>
+  <title>{{ partial "docs/title" . }} · {{ .Site.Title -}}</title>
 {{ end }}
 
 <meta charset="UTF-8">
@@ -31,15 +31,19 @@
 {{- $styles := resources.Get "scss/styles.scss" | resources.ExecuteAsTemplate "scss/styles.scss" . | resources.ToCSS | resources.Minify | resources.Fingerprint }}
 <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}">
 
+{{ if .Params.css }}
+  <link rel="stylesheet" href="{{ .Params.css }}">
+{{ end }}
+
 {{ if default true .Site.Params.BookSearch }}
-    {{- $searchJSFile := printf "%s.search.js" .Language.Lang -}}
-    {{- $searchJS := resources.Get "search.js" | resources.ExecuteAsTemplate $searchJSFile . | resources.Minify | resources.Fingerprint }}
-    <script defer src="{{ $searchJS.RelPermalink }}" integrity="{{ $searchJS.Data.Integrity }}"></script>
+  {{- $searchJSFile := printf "%s.search.js" .Language.Lang -}}
+  {{- $searchJS := resources.Get "search.js" | resources.ExecuteAsTemplate $searchJSFile . | resources.Minify | resources.Fingerprint }}
+  <script defer src="{{ $searchJS.RelPermalink }}" integrity="{{ $searchJS.Data.Integrity }}"></script>
 {{ end }}
 
 {{- template "_internal/google_analytics_async.html" . -}}
 
 <!-- RSS -->
 {{ with .OutputFormats.Get "rss" -}}
-    {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+  {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
 {{ end -}}

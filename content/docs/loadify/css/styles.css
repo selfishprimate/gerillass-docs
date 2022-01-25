@@ -1,0 +1,131 @@
+.parent-element {
+  display: flex;
+  flex-wrap: wrap;
+}
+.parent-element, .parent-element::before, .parent-element::after,
+.parent-element *,
+.parent-element *::before,
+.parent-element *::after {
+  box-sizing: border-box;
+}
+.parent-element > * {
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: calc((100% - (4 - 1) * 20px) / 4);
+  margin-bottom: 20px;
+}
+.parent-element > *:not(:last-child) {
+  margin-right: 20px;
+}
+.parent-element > *:nth-child(4n) {
+  margin-right: 0;
+}
+.parent-element .item {
+  display: flex;
+  justify-content: center;
+  border-radius: 3px;
+  padding: 20px;
+  background-color: #8b9381;
+  font-weight: bold;
+  color: white;
+}
+@keyframes loadify {
+  to {
+    opacity: 1;
+    visibility: visible;
+    backface-visibility: visible;
+  }
+}
+.parent-element .item {
+  opacity: 0;
+  visibility: hidden;
+  backface-visibility: hidden;
+  animation-name: loadify;
+  animation-fill-mode: forwards;
+}
+.parent-element.example-02 .item {
+  animation-delay: 0.2s;
+  animation-duration: 0.5s;
+}
+.parent-element.example-03 .item {
+  animation-delay: 1s;
+  animation-duration: 0.5s;
+}
+.parent-element.example-04 .item:nth-of-type(1), .parent-element.example-04 .item:nth-of-type(2), .parent-element.example-04 .item:nth-of-type(3), .parent-element.example-04 .item:nth-of-type(4), .parent-element.example-04 .item:nth-of-type(5), .parent-element.example-04 .item:nth-of-type(6), .parent-element.example-04 .item:nth-of-type(7), .parent-element.example-04 .item:nth-of-type(8) {
+  opacity: 0;
+  visibility: hidden;
+  backface-visibility: hidden;
+  animation-name: loadify;
+  animation-fill-mode: forwards;
+}
+.parent-element.example-04 .item:nth-of-type(1) {
+  animation-delay: 0.2s;
+  animation-duration: 0.5s;
+}
+.parent-element.example-04 .item:nth-of-type(2) {
+  animation-delay: 0.4s;
+  animation-duration: 0.5s;
+}
+.parent-element.example-04 .item:nth-of-type(3) {
+  animation-delay: 0.6s;
+  animation-duration: 0.5s;
+}
+.parent-element.example-04 .item:nth-of-type(4) {
+  animation-delay: 0.8s;
+  animation-duration: 0.5s;
+}
+.parent-element.example-04 .item:nth-of-type(5) {
+  animation-delay: 1s;
+  animation-duration: 0.5s;
+}
+.parent-element.example-04 .item:nth-of-type(6) {
+  animation-delay: 1.2s;
+  animation-duration: 0.5s;
+}
+.parent-element.example-04 .item:nth-of-type(7) {
+  animation-delay: 1.4s;
+  animation-duration: 0.5s;
+}
+.parent-element.example-04 .item:nth-of-type(8) {
+  animation-delay: 1.6s;
+  animation-duration: 0.5s;
+}
+.parent-element.example-05 .item:nth-of-type(1), .parent-element.example-05 .item:nth-of-type(2), .parent-element.example-05 .item:nth-of-type(3), .parent-element.example-05 .item:nth-of-type(4), .parent-element.example-05 .item:nth-of-type(5), .parent-element.example-05 .item:nth-of-type(6), .parent-element.example-05 .item:nth-of-type(7), .parent-element.example-05 .item:nth-of-type(8) {
+  opacity: 0;
+  visibility: hidden;
+  backface-visibility: hidden;
+  animation-name: loadify;
+  animation-fill-mode: forwards;
+}
+.parent-element.example-05 .item:nth-of-type(1) {
+  animation-delay: 0.2s;
+  animation-duration: 0.5s;
+}
+.parent-element.example-05 .item:nth-of-type(2) {
+  animation-delay: 1.2s;
+  animation-duration: 3s;
+}
+.parent-element.example-05 .item:nth-of-type(3) {
+  animation-delay: 0.6s;
+  animation-duration: 1.5s;
+}
+.parent-element.example-05 .item:nth-of-type(4) {
+  animation-delay: 1.6s;
+  animation-duration: 4s;
+}
+.parent-element.example-05 .item:nth-of-type(5) {
+  animation-delay: 1s;
+  animation-duration: 2.5s;
+}
+.parent-element.example-05 .item:nth-of-type(6) {
+  animation-delay: 0.4s;
+  animation-duration: 1s;
+}
+.parent-element.example-05 .item:nth-of-type(7) {
+  animation-delay: 1.4s;
+  animation-duration: 3.5s;
+}
+.parent-element.example-05 .item:nth-of-type(8) {
+  animation-delay: 0.8s;
+  animation-duration: 2s;
+}

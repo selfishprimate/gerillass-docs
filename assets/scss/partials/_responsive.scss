@@ -1,137 +1,139 @@
-@include breakpoint(max, large){
-    .book-toc{
-        display: none;
-    }
-    .book-page{
-        max-width: calc(100% - #{$menu-width});    
-    }
-    .main-header{
-        position: relative;
-        margin-bottom: $global-space * 2;
-        height: auto;
-        padding: $global-space 0;
-        .inner{
-            flex-direction: column;
-            .left,
-            .middle,
-            .right{
-                flex: 0 1 auto;
-                width: 100%;
-                text-align: center;
-            }
-            .left{
-                margin-bottom: $global-space;
-            }
-        }
-    }
-    .main-container{
-        padding-top: 0;
-    }
-    .book-search{
+@include breakpoint(max, xlarge) {
+  .book-toc {
+    display: none;
+  }
+  .book-page {
+    max-width: calc(100% - #{$menu-width});
+  }
+}
+@include breakpoint(max, large) {
+  .main-header {
+    position: relative;
+    margin-bottom: $global-space * 2;
+    height: auto;
+    padding: $global-space 0;
+    .inner {
+      flex-direction: column;
+      .left,
+      .middle,
+      .right {
+        flex: 0 1 auto;
         width: 100%;
-        ul{
-            li{
-                a{
-                    text-align: left;
-                }
-            }
-        }
+        text-align: center;
+      }
+      .left {
+        margin-bottom: $global-space;
+      }
     }
-}
-
-@include breakpoint(max, medium){
-    .book-menu{
-        margin-left: -$menu-width;
-    }
-    .main-container{
-        overflow: hidden;
-    }
-    .book-brand a img{
-        width: 190px;
-    }
-    .book-page{
-        max-width: calc(100% + #{$menu-width});    
-    }
-}
-
-@include breakpoint(max, small){
-    body{
-        font-size: .9rem;
-    }
-    .featured-content{
-        .subheader{
-            padding: $global-space / 2 0;
-            flex-direction: column;
-            align-items: flex-start;
-            .item{
-                &:not(:last-child){
-                    margin-right: 0;
-                }
-            }
-        }
-    }
-
-    .book-search{
-        .search-wrapper{
-            input{
-                height: 40px;
-            }
-        }
-    }
-}
-
-.menu-toggler{
-    position: absolute;
-    display: block;
-    left: 25px;
-    top: 25px;
-    width: 34px;
-    height: 34px;
-    z-index: 20;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    &::before {
-      content: "\e81c";
-      display: block;
-      font-family: $primary-icons;
-      font-size: 3rem;
-      transform: rotate(0deg);
-      transition: 0.3s;
-    }
-    @include breakpoint(min, medium){
-        display: none;
-    }
-}
-
-#menu-control{
-    &:checked ~ .main-header {
-      .menu-toggler {
-        &::before {
-          transform: rotate(180deg);
-          content: "\e80c";
-          color: $jelly-bean;
+  }
+  .main-container {
+    padding-top: 0;
+  }
+  .book-search {
+    width: 100%;
+    ul {
+      li {
+        a {
+          text-align: left;
         }
       }
     }
-    &:checked ~ .main-container {
-        .book-menu{
-            position: relative;
-            margin-left: 0;
-            z-index: 20;
-            &:after{
-                content: "";
-                display: block;
-                position: absolute;
-                height: 100%;
-                width: 200%;
-                background-color: transparentize($white, .2);
-                top: 0;
-                right: -200%;
-            }
+  }
+}
+
+@include breakpoint(max, medium) {
+  .book-menu {
+    margin-left: -$menu-width;
+  }
+  .main-container {
+    overflow: hidden;
+  }
+  .book-brand a img {
+    width: 190px;
+  }
+  .book-page {
+    max-width: calc(100% + #{$menu-width});
+  }
+}
+
+@include breakpoint(max, small) {
+  body {
+    font-size: 0.9rem;
+  }
+  .featured-content {
+    .subheader {
+      padding: $global-space / 2 0;
+      flex-direction: column;
+      align-items: flex-start;
+      .item {
+        &:not(:last-child) {
+          margin-right: 0;
         }
-        .book-page{
-            margin-right: -$menu-width;
-        }
+      }
     }
+  }
+
+  .book-search {
+    .search-wrapper {
+      input {
+        height: 40px;
+      }
+    }
+  }
+}
+
+.menu-toggler {
+  position: absolute;
+  display: block;
+  left: 25px;
+  top: 25px;
+  width: 34px;
+  height: 34px;
+  z-index: 20;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &::before {
+    content: "\e81c";
+    display: block;
+    font-family: $primary-icons;
+    font-size: 3rem;
+    transform: rotate(0deg);
+    transition: 0.3s;
+  }
+  @include breakpoint(min, medium) {
+    display: none;
+  }
+}
+
+#menu-control {
+  &:checked ~ .main-header {
+    .menu-toggler {
+      &::before {
+        transform: rotate(180deg);
+        content: "\e80c";
+        color: $jelly-bean;
+      }
+    }
+  }
+  &:checked ~ .main-container {
+    .book-menu {
+      position: relative;
+      margin-left: 0;
+      z-index: 20;
+      &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        height: 100%;
+        width: 200%;
+        background-color: transparentize($white, 0.2);
+        top: 0;
+        right: -200%;
+      }
+    }
+    .book-page {
+      margin-right: -$menu-width;
+    }
+  }
 }
