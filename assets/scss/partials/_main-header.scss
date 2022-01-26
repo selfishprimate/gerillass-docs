@@ -1,5 +1,4 @@
 .main-header{
-    @include loadify();
     height: $header-height;
     display: flex;
     align-items: center;

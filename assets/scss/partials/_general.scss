@@ -11,6 +11,10 @@ body {
     .book-menu {
       @include loadify(0.4s);
     }
+    .main-header,
+    .main-footer {
+      @include loadify();
+    }
   }
 }
 
