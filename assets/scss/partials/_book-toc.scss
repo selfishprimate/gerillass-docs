@@ -2,7 +2,6 @@
     flex: 0 1 $toc-width;
     min-width: $toc-width - 50px;
     padding-left: $global-space * 2;
-    @include loadify(0.4s);
     nav {
         > ul{
             li{

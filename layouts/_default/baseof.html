@@ -19,7 +19,8 @@
   
   </head>
 
-  <body>
+  <body class="{{ if .IsPage}}{{.File.ContentBaseName}}{{ else }}home{{ end }}">
+   
     <input type="checkbox" class="hidden" id="menu-control"/>
     
     {{ partial "main-header" . }}
