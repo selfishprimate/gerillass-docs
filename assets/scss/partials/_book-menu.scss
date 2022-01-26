@@ -1,6 +1,7 @@
 .book-menu {
   flex: 0 0 $menu-width;
   padding-right: $global-space * 2;
+  @include loadify(0.4s);
   nav {
     ul {
       li {

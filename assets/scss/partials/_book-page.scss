@@ -1,5 +1,6 @@
 .book-page {
-    flex: 1;
-    width: 100%;
-    max-width: calc(100% - (#{$menu-width} + #{$toc-width}));    
+  flex: 1;
+  width: 100%;
+  max-width: calc(100% - (#{$menu-width} + #{$toc-width}));
+  @include loadify(0.4s);
 }
