@@ -8,7 +8,11 @@ page_description: "Breakpointer Sass Mixin is a handy small tool that points whi
 
 {{< mixin type="Mixin" name="breakpointer" >}}
 
-**Breakpointer** Sass mixin is a handy small tool that points which breakpoint you are at so that you can write your styles for that specific device.
+**Breakpointer Sass mixin** is a handy small tool that points which breakpoint you are at so that you can write your styles for that specific screen size. 
+
+{{< hint info >}}
+This mixin has been applied to this very page only, to show you how **Breakpointer Sass mixin** works. You can see the result at the top right corner of your screen. **Please, resize the width of your browser to see which breakpoint you're at.**
+{{< /hint >}}
 
 {{< hint info >}}
 **Tip:** This mixin works best with the predefined breakpoint values in the `_map-for-breakpoints.scss` file. Ok, let me put it this way. **If the breakpoint mixin is the knight, the breakpointer is its squire.**

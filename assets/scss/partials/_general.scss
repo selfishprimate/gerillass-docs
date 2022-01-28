@@ -16,113 +16,139 @@ body {
       @include loadify();
     }
   }
+  &.breakpointer {
+    @include breakpointer {
+      position: fixed;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 80px;
+      width: 80px;
+      height: 80px;
+      top: 30px;
+      right: 30px;
+      color: white;
+      font-family: $primary-font-family;
+      font-size: 1em;
+      background-color: $primary-color;
+      z-index: 2000;
+      box-shadow: 0 0 0 10px transparentize($primary-color, 0.7);
+      box-sizing: inherit;
+    }
+  }
 }
 
 html {
-    font-size: $font-size-base;
-    letter-spacing: 0.33px;
-    scroll-behavior: smooth;
+  font-size: $font-size-base;
+  letter-spacing: 0.33px;
+  scroll-behavior: smooth;
 }
 
 html,
-body{
-    width: 100%;
-    font-family: $secondary-font-family;
-    text-rendering: optimizeLegibility;
-    color: $body-text-color;
-    margin: 0;
-    padding: 0;
+body {
+  width: 100%;
+  font-family: $secondary-font-family;
+  text-rendering: optimizeLegibility;
+  color: $body-text-color;
+  margin: 0;
+  padding: 0;
 }
 
-body{
-    background-color: $body-background-color;
+body {
+  background-color: $body-background-color;
 }
 
-h1{
-    font-size: 2.5em;
-    margin-bottom: $global-space;
+h1 {
+  font-size: 2.5em;
+  margin-bottom: $global-space;
 }
 
-h2, h3{
-    font-size: 1.8em;
-    margin-bottom: $global-space;
+h2,
+h3 {
+  font-size: 1.8em;
+  margin-bottom: $global-space;
 }
 
-h1, h2, h3, h4, h5, h6{
-    margin-top: $global-space * 3;
-    font-family: $primary-font-family;
-    font-weight: 400;
-    font-style: normal;
-    line-height: 1.3;
-    &[id]{
-        scroll-margin-top: $header-height + 50;
-    }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: $global-space * 3;
+  font-family: $primary-font-family;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.3;
+  &[id] {
+    scroll-margin-top: $header-height + 50;
+  }
 }
 
 code {
-    background: $code-background-color;
-    border-radius: $border-radius;
-    font-family: 'Roboto Mono', monospace;
-    font-size: .875em;
-    padding: 2px 4px;
+  background: $code-background-color;
+  border-radius: $border-radius;
+  font-family: "Roboto Mono", monospace;
+  font-size: 0.875em;
+  padding: 2px 4px;
 }
 
 pre {
-    padding: $padding-16;
-    background: #282a36;
-    border-radius: $border-radius;
-    overflow-x: auto;
-    code {
-        padding: 0;
-        background: none;
-        color: #f8f8f2;
-    }
+  padding: $padding-16;
+  background: #282a36;
+  border-radius: $border-radius;
+  overflow-x: auto;
+  code {
+    padding: 0;
+    background: none;
+    color: #f8f8f2;
+  }
 }
 
-strong{
-    font-weight: bold;
+strong {
+  font-weight: bold;
 }
 
-em{
-    font-style: italic;
+em {
+  font-style: italic;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
+  color: $body-text-color;
+  cursor: pointer;
+  &:visited {
     color: $body-text-color;
-    cursor: pointer;
-    &:visited {
-        color: $body-text-color;
-    }
-    &:hover{
-        text-decoration: underline;
-        color: $primary-color;
-    }
+  }
+  &:hover {
+    text-decoration: underline;
+    color: $primary-color;
+  }
 }
 
-aside{
-    .label{
-        font-weight: normal !important;
-        margin-bottom: $global-space * 2;
-        color: $label-color;
+aside {
+  .label {
+    font-weight: normal !important;
+    margin-bottom: $global-space * 2;
+    color: $label-color;
+  }
+  nav {
+    ul {
+      padding: 0;
+      margin: 0;
+      li {
+        margin-bottom: $global-space;
+      }
     }
-    nav{
-        ul{
-            padding: 0;
-            margin: 0;
-            li{
-                margin-bottom: $global-space;
-            }
-        }
-    }
+  }
 }
 
 img {
-    vertical-align: baseline;
+  vertical-align: baseline;
 }
 
-p{
-    margin-bottom: $global-space;
+p {
+  margin-bottom: $global-space;
 }
 
 .container {
@@ -132,8 +158,8 @@ p{
   padding: 0 $global-space * 2;
 }
 
-.main-container{
-    padding-top: 150px;
+.main-container {
+  padding-top: 150px;
 }
 
 aside nav,
@@ -175,4 +201,3 @@ ul.pagination {
     font-weight: bold;
   }
 }
-
