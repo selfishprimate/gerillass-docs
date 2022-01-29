@@ -26,7 +26,7 @@ Call the mixin in a selector and pass a number value (with unit) for the `$size`
 }
 {{< /highlight >}}
 {{< highlight css >}}
-// CSS Output
+//CSS Output
 .element {
   width: 150px;
   height: 150px;

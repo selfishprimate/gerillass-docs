@@ -26,7 +26,7 @@ Simply call the mixin to make the selected element and all its children visually
 }
 {{< /highlight >}}
 {{< highlight css >}}
-// CSS Output
+//CSS Output
 .element {
   position: absolute;
   width: 1px;
@@ -50,7 +50,7 @@ Now let's pass `unhide` value to reserve the affect.
 }
 {{< /highlight >}}
 {{< highlight css >}}
-// CSS Output
+//CSS Output
 .element {
   position: static;
   width: auto;

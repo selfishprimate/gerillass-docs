@@ -87,6 +87,45 @@ You can pass a CSS declaration block to customize the looking (as I did when I w
 
 {{< /highlightwrap >}}
 
+{{< highlightwrap class="example">}}
+Well, good news! You can call the Breakpointer Sass mixin in a selector if you wish.
+{{< highlight scss >}}
+.element {
+  @include breakpointer();
+}
+{{< /highlight >}}
+
+{{< highlight css >}}
+//CSS Output
+@media (min-width: 0) {
+  .element::before {
+    content: "xsmall";
+  }
+}
+@media (min-width: 576px) {
+  .element::before {
+    content: "small";
+  }
+}
+@media (min-width: 768px) {
+  .element::before {
+    content: "medium";
+  }
+}
+@media (min-width: 992px) {
+  .element::before {
+    content: "large";
+  }
+}
+@media (min-width: 1200px) {
+  .element::before {
+    content: "xlarge";
+  }
+}
+{{< /highlight >}}
+
+{{< /highlightwrap >}}
+
 {{< hint info >}}
 **Important:** This mixin is for development mode only. So don't forget to comment out or remove the code before going any further for the production.
 {{< /hint >}}

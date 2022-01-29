@@ -27,7 +27,7 @@ Simply pass a value as a string.
 }
 {{< /highlight >}}
 {{< highlight css >}}
-// CSS Output
+//CSS Output
 .element::before {
   content: "Text to use!";
 }
@@ -46,7 +46,7 @@ You can only target the `::before` pseudo-element and then pass a decleration bl
 }
 {{< /highlight >}}
 {{< highlight css >}}
-// CSS Output
+//CSS Output
 .element::before {
   content: "Easy to use!";
   font-style: italic;
@@ -67,7 +67,7 @@ You can fetch a given value by using custom property. One thing important to rem
 }
 {{< /highlight >}}
 {{< highlight css >}}
-// CSS Output
+//CSS Output
 .element::before {
   content: attr(data-currency);
 }
@@ -85,7 +85,7 @@ You can pass a value for CSS content property as a string and a decleration bloc
 }
 {{< /highlight >}}
 {{< highlight css >}}
-// CSS Output
+//CSS Output
 .element::before {
   content: attr(data-currency);
   font-size: .8em;

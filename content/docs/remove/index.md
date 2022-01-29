@@ -31,7 +31,7 @@ Simply call the mixin and pass the width value for which you want the selected e
 }
 {{< /highlight >}}
 {{< highlight css >}}
-// CSS Output
+//CSS Output
 @media (width: 500px) {
   .element {
     display: none;
@@ -48,7 +48,7 @@ You can **specify a range** where you don't want the selected element to appear.
 }
 {{< /highlight >}}
 {{< highlight css >}}
-// CSS Output
+//CSS Output
 @media (min-width: 500px) and (max-width: 1024px) {
   .element {
     display: none;
@@ -65,7 +65,7 @@ You can use `$mode` options to set the `width` media feature. Accepts `only`, `m
 }
 {{< /highlight >}}
 {{< highlight css >}}
-// CSS Output
+//CSS Output
 @media (min-width: 1200px) {
   .element {
     display: none;
@@ -82,7 +82,7 @@ You can use predefined breakpoint values which are: `xsmall`, `small`, `medium`,
 }
 {{< /highlight >}}
 {{< highlight css >}}
-// CSS Output
+//CSS Output
 @media (max-width: 768px) {
   .element {
     display: none;
@@ -99,7 +99,7 @@ You can set a range by using predefined values as well!
 }
 {{< /highlight >}}
 {{< highlight css >}}
-// CSS Output
+//CSS Output
 @media (min-width: 576px) and (max-width: 767px) {
   .element {
     display: none;
