@@ -161,7 +161,7 @@ Suppose you have a group of items like in the example below and you want to make
 {{< /highlight >}}
 
 {{< hint info >}}
-**Keep in mind!** You must called `loadify` mixin once at the root of your stylesheet as an initializer.
+**Keep in mind!** You must call `loadify` mixin once at the root of your stylesheet as an initializer.
 {{< /hint >}}
 
 {{< highlight scss >}}
@@ -237,9 +237,9 @@ It's getting more interesting, isn't it?
 
 {{< highlightwrap class="example">}}
 
-Now we're going to try a fantastic example to see how Gerillass Sass library can ease development processes and work best when you combine two or more mixins together.
+Now we're going to try a fantastic example to see how Gerillass Sass library can ease your frontend development processes and work best when you combine two or more mixins together.
 
-We'll be using `only` mixin to select items in the list based on their index numbers and then call the `loadify` mixin in each of the selectors to make elements appear in different time values (different delay and duration times) on the page.
+We'll be using `only` mixin to select items in the list based on their index positions and then call the `loadify` mixin in each of the selectors to make elements appear in different time values (different delay and duration times) on the page.
 
 **Scroll to the bottom of this example and refresh the page to see the effect.**
 
@@ -324,7 +324,7 @@ We'll be using `only` mixin to select items in the list based on their index num
 {{< /highlightwrap >}}
 
 {{< highlightwrap class="example">}}
-Now let's try another sexy example. This time we are going to **change the display order of the boxes** and **pass a value for secondary argument to manipulate the value of the `animation-duration` CSS property**.
+Now let's try another sexy example. This time we are going to **change the display order of the boxes (we'll be using a diagonal pattern)** and **pass a value for secondary argument to manipulate the value of the `animation-duration` CSS property**.
 
 The display order will be as following: "**1**", "**6**", "**3**", "**8**", "**5**", "**2**", "**7**", "**4**" 
 
