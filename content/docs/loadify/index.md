@@ -26,7 +26,7 @@ css: css/styles.css
 
 {{< highlightwrap >}}
 
-Ok. Let's call the Loadify mixin as an initializer first at the root level of your stylesheet and pass the `init` value as an argument. **This will generate some common style rules and the `loadify` animation itself**.
+Ok. Let's call the Loadify mixin as an initializer first at the root level of your stylesheet and pass the `init` value as an argument. **This will generate the `loadify` animation itself**.
 
 {{< hint info >}}
 **Tip:** When you call the mixin at the root of your stylesheet to initialize the effect you can either pass the `init` argument or leave it blank.
@@ -48,13 +48,6 @@ Ok. Let's call the Loadify mixin as an initializer first at the root level of yo
     visibility: visible;
     backface-visibility: visible;
   }
-}
-.loadify-static-rules {
-  opacity: 0;
-  visibility: hidden;
-  backface-visibility: hidden;
-  animation-name: loadify;
-  animation-fill-mode: forwards;
 }
 {{< /highlight >}}
 
@@ -78,7 +71,7 @@ Let's see the animation on an image element. Call the Loadify mixin inside the e
 {{< /highlight >}}
 {{< highlight css >}}
 //CSS Output
-.loadify-static-rules, .loadify-img {
+.loadify-img {
   opacity: 0;
   visibility: hidden;
   backface-visibility: hidden;
@@ -181,6 +174,13 @@ Suppose you have a group of items like in the example below and you want to make
 {{< highlight css >}}
 //CSS Output
 .parent-element .item {
+  opacity: 0;
+  visibility: hidden;
+  backface-visibility: hidden;
+  animation-name: loadify;
+  animation-fill-mode: forwards;
+}
+.parent-element .item {
   animation-delay: 0.2s;
   animation-duration: 0.5s;
 }
@@ -214,6 +214,13 @@ Now let's pass `1s` as a custom value for the `animation-delay` CSS property to 
 
 {{< highlight css >}}
 //CSS Output
+.parent-element .item {
+  opacity: 0;
+  visibility: hidden;
+  backface-visibility: hidden;
+  animation-name: loadify;
+  animation-fill-mode: forwards;
+}
 .parent-element .item {
   animation-delay: 1s;
   animation-duration: 0.5s;
@@ -276,6 +283,20 @@ We'll be using `only` mixin to select items in the list based on their index pos
 
 {{< highlight css >}}
 //CSS Output
+.parent-element .item:nth-of-type(1),
+.parent-element .item:nth-of-type(2),
+.parent-element .item:nth-of-type(3),
+.parent-element .item:nth-of-type(4),
+.parent-element .item:nth-of-type(5),
+.parent-element .item:nth-of-type(6),
+.parent-element .item:nth-of-type(7),
+.parent-element .item:nth-of-type(8) {
+  opacity: 0;
+  visibility: hidden;
+  backface-visibility: hidden;
+  animation-name: loadify;
+  animation-fill-mode: forwards;
+}
 .parent-element .item:nth-of-type(1) {
   animation-delay: 0.2s;
   animation-duration: 0.5s;
@@ -363,6 +384,20 @@ The display order will be as following: "**1**", "**6**", "**3**", "**8**", "**5
 
 {{< highlight css >}}
 //CSS Output
+.parent-element .item:nth-of-type(1),
+.parent-element .item:nth-of-type(2),
+.parent-element .item:nth-of-type(3),
+.parent-element .item:nth-of-type(4),
+.parent-element .item:nth-of-type(5),
+.parent-element .item:nth-of-type(6),
+.parent-element .item:nth-of-type(7),
+.parent-element .item:nth-of-type(8) {
+  opacity: 0;
+  visibility: hidden;
+  backface-visibility: hidden;
+  animation-name: loadify;
+  animation-fill-mode: forwards;
+}
 .parent-element .item:nth-of-type(1) {
   animation-delay: 0.2s;
   animation-duration: 0.5s;
