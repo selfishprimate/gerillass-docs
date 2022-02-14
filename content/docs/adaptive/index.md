@@ -77,7 +77,7 @@ Try passing an argument value with `em` unit (you can use any kind of length uni
 }
 @media (min-width: 576px) {
   .main-container {
-    ax-width: calc(576px - (2em * 2));
+    max-width: calc(576px - (2em * 2));
   }
 }
 @media (min-width: 768px) {
