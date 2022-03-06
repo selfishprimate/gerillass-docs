@@ -27,7 +27,7 @@ Hope you’ll enjoy using it!
 </div>
 
 ## Dart Sass Upgrade
-_We are saying goodbye to LibSass with version 1.3.0_ :cry:
+_We are saying goodbye to LibSass with version 1.3.0_
 
 Because LibSass and the packages built on it, including Node Sass, are deprecated, **Gerillass will no longer support LibSass since version 1.3.0** If you're having a problem running Gerillass v1.3.0 please consider using Dart Sass instead of LibSass. If you are running Dart Sass already, you can install and use Gerillass 1.3.0 and later versions safely. If not, however, please use the earlier versions.
 
