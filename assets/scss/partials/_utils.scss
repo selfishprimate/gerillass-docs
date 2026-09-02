@@ -46,15 +46,6 @@
   display: none;
 }
 
-// Brand utility classes
-.bg-brand-primary-100 {
-  background-color: $brand-primary-100;
-}
-
-.text-brand-primary-600 {
-  color: $brand-primary-600;
-}
-
 .clearfix::after {
   content: "";
   display: table;

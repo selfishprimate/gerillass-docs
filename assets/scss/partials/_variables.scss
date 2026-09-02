@@ -22,10 +22,6 @@ $primary-color: $steal-teal;
 $secondary-color: $light-sea-green;
 $tertiary-color: $artichoke;
 
-// Brand color system
-$brand-primary-100: color.scale($steal-teal, $lightness: 85%);
-$brand-primary-600: color.scale($steal-teal, $lightness: -20%);
-
 $link-color: $primary-color;
 $link-color-hover: $primary-color;
 $link-color-active: $primary-color;
