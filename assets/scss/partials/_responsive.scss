@@ -62,7 +62,7 @@
   }
   .featured-content {
     .subheader {
-      padding: $global-space / 2 0;
+      padding: math.div($global-space, 2) 0;
       flex-direction: column;
       align-items: flex-start;
       .item {
@@ -127,7 +127,7 @@
         position: absolute;
         height: 100%;
         width: 200%;
-        background-color: transparentize($white, 0.2);
+        background-color: color.scale($white, $alpha: -20%);
         top: 0;
         right: -200%;
       }

@@ -14,10 +14,10 @@
             font-size: $font-size-base;
             &:focus{
                 outline: 0;
-                box-shadow: 0 0 0 4px transparentize($body-text-color, .9);
+                box-shadow: 0 0 0 4px color.scale($body-text-color, $alpha: -90%);
                 border-width: $border-width;
                 & + ion-icon{
-                    color: transparentize($body-text-color, .2);
+                    color: color.scale($body-text-color, $alpha: -20%);
                 }
             }
             &:required + .book-search-spinner {

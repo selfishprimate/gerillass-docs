@@ -1,33 +1,61 @@
+# Shared across every deploy context. Dart Sass is NOT part of the Netlify build
+# image, so each build command installs it and puts it on PATH before running
+# Hugo — assets/scss/styles.scss is compiled through the `dartsass` transpiler
+# (see layouts/partials/docs/html-head.html).
+[build.environment]
+  HUGO_VERSION = "0.165.0"
+  DART_SASS_VERSION = "1.91.0"
+
 [build]
 publish = "public"
-command = "hugo --gc --minify"
+command = """
+  mkdir -p "${HOME}/.local" && \
+  curl -sfLO "https://github.com/sass/dart-sass/releases/download/${DART_SASS_VERSION}/dart-sass-${DART_SASS_VERSION}-linux-x64.tar.gz" && \
+  tar -C "${HOME}/.local" -xf "dart-sass-${DART_SASS_VERSION}-linux-x64.tar.gz" && \
+  rm "dart-sass-${DART_SASS_VERSION}-linux-x64.tar.gz" && \
+  export PATH="${HOME}/.local/dart-sass:${PATH}" && \
+  hugo --gc --minify
+  """
 
 [context.production.environment]
-HUGO_VERSION = "0.63.1"
-HUGO_ENV = "production"
-HUGO_ENABLEGITINFO = "true"
+  HUGO_ENV = "production"
+  HUGO_ENABLEGITINFO = "true"
 
 [context.split1]
-command = "hugo --gc --minify --enableGitInfo"
+command = """
+  mkdir -p "${HOME}/.local" && \
+  curl -sfLO "https://github.com/sass/dart-sass/releases/download/${DART_SASS_VERSION}/dart-sass-${DART_SASS_VERSION}-linux-x64.tar.gz" && \
+  tar -C "${HOME}/.local" -xf "dart-sass-${DART_SASS_VERSION}-linux-x64.tar.gz" && \
+  rm "dart-sass-${DART_SASS_VERSION}-linux-x64.tar.gz" && \
+  export PATH="${HOME}/.local/dart-sass:${PATH}" && \
+  hugo --gc --minify --enableGitInfo
+  """
 
 [context.split1.environment]
-HUGO_VERSION = "0.63.1"
-HUGO_ENV = "production"
+  HUGO_ENV = "production"
 
 [context.deploy-preview]
-command = "hugo --gc --minify --buildFuture -b $DEPLOY_PRIME_URL"
-
-[context.deploy-preview.environment]
-HUGO_VERSION = "0.63.1"
+command = """
+  mkdir -p "${HOME}/.local" && \
+  curl -sfLO "https://github.com/sass/dart-sass/releases/download/${DART_SASS_VERSION}/dart-sass-${DART_SASS_VERSION}-linux-x64.tar.gz" && \
+  tar -C "${HOME}/.local" -xf "dart-sass-${DART_SASS_VERSION}-linux-x64.tar.gz" && \
+  rm "dart-sass-${DART_SASS_VERSION}-linux-x64.tar.gz" && \
+  export PATH="${HOME}/.local/dart-sass:${PATH}" && \
+  hugo --gc --minify --buildFuture -b $DEPLOY_PRIME_URL
+  """
 
 [context.branch-deploy]
-command = "hugo --gc --minify -b $DEPLOY_PRIME_URL"
-
-[context.branch-deploy.environment]
-HUGO_VERSION = "0.63.1"
+command = """
+  mkdir -p "${HOME}/.local" && \
+  curl -sfLO "https://github.com/sass/dart-sass/releases/download/${DART_SASS_VERSION}/dart-sass-${DART_SASS_VERSION}-linux-x64.tar.gz" && \
+  tar -C "${HOME}/.local" -xf "dart-sass-${DART_SASS_VERSION}-linux-x64.tar.gz" && \
+  rm "dart-sass-${DART_SASS_VERSION}-linux-x64.tar.gz" && \
+  export PATH="${HOME}/.local/dart-sass:${PATH}" && \
+  hugo --gc --minify -b $DEPLOY_PRIME_URL
+  """
 
 [context.next.environment]
-HUGO_ENABLEGITINFO = "true"
+  HUGO_ENABLEGITINFO = "true"
 
 [[headers]]
   for = "/*"

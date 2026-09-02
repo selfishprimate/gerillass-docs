@@ -19,7 +19,7 @@
     }
     &__author {}
     &__link{
-        color: transparentize($body-text-color, 0.3);
+        color: color.scale($body-text-color, $alpha: -30%);
         text-decoration: underline;
         font-style: italic;
         font-weight: bold;

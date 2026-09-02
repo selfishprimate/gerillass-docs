@@ -10,7 +10,7 @@
       counter-increment: section;
       content: "Example " counter(section);
       font-weight: bold;
-      margin-bottom: $global-space / 2;
+      margin-bottom: math.div($global-space, 2);
     }
   }
   &.terminal {

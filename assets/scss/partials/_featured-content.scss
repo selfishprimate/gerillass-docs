@@ -8,17 +8,18 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-bottom: $global-space / 2;
+        margin-bottom: math.div($global-space, 2);
         .item{
+            background-color: $brand-primary-100;
+            padding: $global-space * 0.75;
+            border-radius: $border-radius;
             &:not(:last-of-type){
                 margin-right: $global-space;
             }
             .key{
                 font-weight: bold;
             }
-            .value{}
             .call{
-                .method{}
                 .name{
                     font-family: "Roboto Mono", monospace;
                     font-weight: bold;
@@ -26,6 +27,10 @@
             }
             &.source-link{
                 margin-left: auto;
+            }
+            // Style icons in items
+            ion-icon {
+                color: $brand-primary-600;
             }
         }
     }

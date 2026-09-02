@@ -28,7 +28,7 @@
     width: 100%;
     border-collapse: collapse;
     border-spacing: 0;
-    margin-bottom: $global-space / 2;
+    margin-bottom: math.div($global-space, 2);
     thead {
       th {
         text-align: left;

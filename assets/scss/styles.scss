@@ -1,6 +1,10 @@
+// Sass built-in modules (must come first)
+@use 'sass:math';
+@use 'sass:color';
+
 //Libraries
-@import "./node_modules/gerillass/scss/gerillass";
-// @import "../../../gerillass/scss/gerillass";
+@import "gerillass/scss/gerillass";
+// @import "./node_modules/gerillass/scss/gerillass";
 
 //Abstract
 @import "partials/variables";

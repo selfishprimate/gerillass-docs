@@ -32,7 +32,7 @@ body {
       font-size: 1em;
       background-color: $primary-color;
       z-index: 2000;
-      box-shadow: 0 0 0 10px transparentize($primary-color, 0.7);
+      box-shadow: 0 0 0 10px color.scale($primary-color, $alpha: -70%);
       box-sizing: inherit;
     }
   }

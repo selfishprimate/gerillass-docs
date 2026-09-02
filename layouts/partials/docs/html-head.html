@@ -28,7 +28,7 @@
 <link rel="icon" href="{{ "images/favicon.png" | relURL }}" type="image/x-icon">
 
 <!-- Theme stylesheet, you can customize scss by creating `assets/custom.scss` in your website -->
-{{- $styles := resources.Get "scss/styles.scss" | resources.ExecuteAsTemplate "scss/styles.scss" . | resources.ToCSS | resources.Minify | resources.Fingerprint }}
+{{- $styles := resources.Get "scss/styles.scss" | resources.ExecuteAsTemplate "scss/styles.scss" . | css.Sass (dict "transpiler" "dartsass" "includePaths" (slice "node_modules")) | resources.Minify | resources.Fingerprint }}
 <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}">
 
 {{ if .Params.css }}
@@ -41,7 +41,7 @@
   <script defer src="{{ $searchJS.RelPermalink }}" integrity="{{ $searchJS.Data.Integrity }}"></script>
 {{ end }}
 
-{{- template "_internal/google_analytics_async.html" . -}}
+{{- template "_internal/google_analytics.html" . -}}
 
 <!-- RSS -->
 {{ with .OutputFormats.Get "rss" -}}
