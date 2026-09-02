@@ -16,6 +16,13 @@
   &.terminal {
     pre {
       code {
+        // Chroma wraps every line in <span style="display:flex"> since Hugo
+        // 0.9x. That makes the line block-level and pushes the "$ " prompt
+        // onto its own line, so force the wrappers back to inline flow.
+        // Line breaks survive: the newline sits inside the span, in a <pre>.
+        > span {
+          display: inline !important;
+        }
         &::before {
           content: "$ ";
         }
