@@ -1,19 +1,19 @@
 ---
 title: "Reset Figure"
 page_title: "Reset Figure Sass Mixin"
-page_description: "Reset Figure Sass mixin helps you to reset the margin values of <figure> elements to zero and make the <img> element responsive in it."
+page_description: "The Reset Figure Sass mixin helps you reset the margin values of figure elements to zero and make the img element inside them responsive."
 page_keywords: "HTML Figure Element, Responsive Figure Element, Responsive Image, CSS Responsive Image, CSS Figure Responsive, Responsive Image CSS, Responsive Images"
 ---
 
 # Reset Figure
 {{< mixin type="Mixin" name="reset-figure" >}}
-**Reset Figure Sass mixin** helps you to reset the margin values of `<figure>` elements to `0` and make the `<img>` element responsive (fluid) in it, that is it sets the width CSS property of the `<img>` element to `100%`.
+The **Reset Figure Sass mixin** helps you reset the margin values of `<figure>` elements to `0` and make the `<img>` element inside them responsive (fluid). It does this by setting the width CSS property of the `<img>` element to `100%`.
 {{< /mixin >}}
 
 ## Examples
 
 {{< highlightwrap class="example">}}
-Simply call the mixin in a selector that targets the `<figure>` element itself.
+Simply call the mixin inside a selector that targets the `<figure>` element itself.
 {{< highlight scss >}}
 figure{
   @include reset-figure;
