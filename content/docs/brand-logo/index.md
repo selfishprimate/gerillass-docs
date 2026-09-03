@@ -1,15 +1,15 @@
 ---
 title: "Brand Logo"
 page_title: "Brand Logo Sass Mixin"
-page_description: "Brand Logo Sass Mixin helps you to create an SEO-friendly logo component for your brand's website by using CSS best practices."
+page_description: "The Brand Logo Sass mixin helps you create an SEO-friendly logo component for your brand's website using CSS best practices."
 ---
 
 # Brand Logo
 
 {{< mixin type="Mixin" name="brand-logo" >}}
-**Brand Logo** Sass Mixin helps you to create an SEO-friendly logo component for your brand's website by using CSS best practices.
+The **Brand Logo** Sass mixin helps you create an SEO-friendly logo component for your brand's website using CSS best practices.
 {{< hint info >}}
-This is a **Gerillass** technique for **image replacement**. There are other methodologies too, check out the links at the end of this article to find out more about the topic.
+This is a **Gerillass** technique for **image replacement**. There are other methods too. Check out the links at the end of this article to find out more.
 {{< /hint >}}
 {{< /mixin >}}
 
@@ -18,16 +18,16 @@ This is a **Gerillass** technique for **image replacement**. There are other met
 {{< arguments/table >}}
   {{< arguments/row name="$width" type="number (with unit)" description="Sets the width value of the logo image." >}}
   {{< arguments/row name="$height" type="number (with unit)" description="Sets the height value of the logo image." >}}
-  {{< arguments/row name="$image-url" type="string" description="Sets the url of the logo image. Works best with the absolute URL links. This argument is optional, so you can specify the image with style attribute." >}}
+  {{< arguments/row name="$image-url" type="string" description="Sets the URL of the logo image. Works best with absolute URLs. This argument is optional, so you can also specify the image with the style attribute." >}}
 {{< /arguments/table >}}
 
 ## Examples
 
 {{< highlightwrap class="example">}}
-It’s important to use a similar markup like in the below example. But the containing element doesn't necessarily to be a `<h1>` tag, so feel free to change it depending on the SEO strategy you are running on your site.
+It is important to use markup similar to the example below. The containing element does not have to be an `<h1>` tag, so feel free to change it depending on the SEO strategy you use on your site.
 
 {{< hint info >}}
-In this example, I create a logo for "**Coolors**". Well, you can use your own brand's logo file and change the logo text if you like.
+In this example, I create a logo for **Coolors**. You can use your own brand's logo file and change the logo text if you like.
 {{< /hint >}}
 {{< highlight html >}}
 <h1 class="brand-logo">
@@ -35,7 +35,7 @@ In this example, I create a logo for "**Coolors**". Well, you can use your own b
 </h1>
 {{< /highlight >}}
 
-Now, simply call the mixin as in the example below and change the argument values as they fit your brand logo.
+Now simply call the mixin as in the example below, and change the argument values to fit your brand logo.
 
 {{< highlight scss >}}
 .brand-logo{
@@ -117,9 +117,9 @@ Now, simply call the mixin as in the example below and change the argument value
 
 
 {{< highlightwrap class="example">}}
-As said before, the `$image-url` argument is optional. With that in mind, now let's try to specify the logo image by using the selected element's style attribute.
+As mentioned before, the `$image-url` argument is optional. With that in mind, let's specify the logo image using the selected element's style attribute.
 {{< hint info >}}
-Note that the `background-image` decleration has disappeared from the generated CSS code.
+Note that the `background-image` declaration has disappeared from the generated CSS.
 {{< /hint >}}
 {{< highlight html >}}
 <h1 class="brand-logo" style="background-image: url(https://coolors.co/assets/img/logo.svg);">
