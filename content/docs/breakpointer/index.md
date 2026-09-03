@@ -90,7 +90,7 @@ You can pass a CSS declaration block to customize how it looks (as I did when I 
 {{< highlightwrap class="example">}}
 Well, good news! You can call the Breakpointer Sass mixin in a selector if you wish.
 {{< highlight scss >}}
-.element {
+.element {
   @include breakpointer();
 }
 {{< /highlight >}}
