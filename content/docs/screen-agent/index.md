@@ -1,28 +1,28 @@
 ---
 title: "Screen Agent"
 page_title: "Screen Agent Sass Mixin"
-page_description: "Screen Agent Sass mixin helps you to target elements based on the various screen resolutions."
+page_description: "The Screen Agent Sass mixin helps you target elements based on different screen resolutions."
 ---
 
 # Screen Agent
 
 {{< mixin type="Mixin" name="screen-agent" >}}
-**Screen Agent Sass mixin** helps you to target elements based on the various screen resolutions.
+The **Screen Agent Sass mixin** helps you target elements based on different screen resolutions.
 {{< hint info >}}
-Suppose you have two types of photos loading on your site: one for the normal screens, the other one is twice in size for the retina screens. In such cases, you may want to use this mixin.
+Suppose you have two types of photos loading on your site: one for normal screens, and another one at twice the size for retina screens. In cases like that, you may want to use this mixin.
 {{< /hint >}}
 {{< /mixin >}}
 
 ## Arguments
 
-{{< arguments/table footnote="The string values must be wrapped with the quotation signs." >}}
-  {{< arguments/row name="$resolution" type="string,<br/>number (with unit)" description="Accepts only one argument and three different values which targets the screen resolution: `1x`, `2x` and `3x`. Or you can pass a custom numeric value with `dpi` and `dpcm` units." >}}
+{{< arguments/table footnote="String values must be wrapped in quotation marks." >}}
+  {{< arguments/row name="$resolution" type="string,<br/>number (with unit)" description="Accepts one argument with three possible values that target the screen resolution: `1x`, `2x`, and `3x`. You can also pass a custom numeric value with `dpi` or `dpcm` units." >}}
 {{< /arguments/table >}}
 
 ## Examples
 
 {{< highlightwrap class="example">}}
-Based on the assumption above, we can give the following example.
+Based on the case above, we can give the following example.
 {{< highlight scss >}}
 .element{
   background-image: url(https://sample-site.com/images/sample-image-1920x1080.jpg);
