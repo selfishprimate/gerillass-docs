@@ -1,25 +1,25 @@
 ---
 title: "Text Selection"
 page_title: "Text Selection Sass Mixin"
-page_description: "Text Selection Sass mixin helps you to style the portion of a text (or element) that is selected by a user."
+page_description: "The Text Selection Sass mixin helps you style the portion of text (or an element) that a user has selected."
 ---
 
 # Text Selection
 
 {{< mixin type="Mixin" name="text-selection" >}}
-**Text Selection** Sass mixin helps you to style the portion of a text (or element) that is selected by a user.
+The **Text Selection** Sass mixin helps you style the portion of text (or an element) that a user has selected.
 {{< /mixin >}}
 
 ## Arguments
 
 {{< arguments/table >}}
-  {{< arguments/row name="$value" type="string" description="Accepts `only` value. It is used only when it wants to be applied for one specific HTML element." >}}
+  {{< arguments/row name="$value" type="string" description="Accepts the `only` value. Use it when you want to apply the styles to one specific HTML element." >}}
 {{< /arguments/table >}}
 
 ## Examples
 
 {{< highlightwrap class="example">}}
-If you call it in a selector with no value passed the style rules will be applied to this element and its children.
+If you call it inside a selector without passing a value, the style rules apply to that element and its children.
 {{< highlight scss >}}
 .element{
   @include text-selection{
