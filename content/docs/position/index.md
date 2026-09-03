@@ -1,20 +1,20 @@
 ---
 title: "Position"
 page_title: "Position Sass Mixin"
-page_description: "Position Sass mixin provides a one-line method to rapidly set both the position and the offset properties of a selected element."
+page_description: "The Position Sass mixin provides a one-line method to quickly set both the position and the offset properties of a selected element."
 ---
 
 # Position
 
 {{< mixin type="Mixin" name="position" >}}
-**Position Sass mixin** provides a one-line method to rapidly set both the position and the offset properties of a selected element.
+The **Position Sass mixin** provides a one-line method to quickly set both the position and the offset properties of a selected element.
 {{< /mixin >}}
 
 ## Arguments
 
-{{< arguments/table footnote="To learn more about the CSS Shorthand Properties check out the links at the end of this page.">}}
-  {{< arguments/row name="$position" type="string" description="This option sets the `position` property of a selected element(s). Accepts `static`, `relative`, `fixed`, `absolute`, `sticky` CSS values. The default value is set to `absolute`." >}}
-  {{< arguments/row name="$offsets" type="list" description="Accepts a list of values to set the offset of the edges of the box. Uses CSS shorthand method. The default value is set to `0`." >}}
+{{< arguments/table footnote="To learn more about CSS shorthand properties, check out the links at the end of this page.">}}
+  {{< arguments/row name="$position" type="string" description="Sets the `position` property of the selected elements. Accepts the CSS values `static`, `relative`, `fixed`, `absolute`, and `sticky`. The default value is `absolute`." >}}
+  {{< arguments/row name="$offsets" type="list" description="Accepts a list of values to set the offsets of the box edges. It uses the CSS shorthand method. The default value is `0`." >}}
 {{< /arguments/table >}}
 
 ## Examples
@@ -58,7 +58,7 @@ Now let's set the position value to `fixed` and leave the offset values as they 
 {{< /highlightwrap >}}
 
 {{< highlightwrap class="example">}}
-Changin the offset values is easy. Note that the multiple offset values that you pass must be seperated by space.
+Changing the offset values is easy. Note that multiple offset values must be separated by a space.
 {{< highlight scss >}}
 .element{
   @include position(fixed, 10px 10px 10px 50px);
@@ -77,7 +77,7 @@ Changin the offset values is easy. Note that the multiple offset values that you
 {{< /highlightwrap >}}
 
 {{< highlightwrap class="example">}}
-You can use the `null` value to skip positioning some particular edges of an element.
+You can use the `null` value to skip positioning particular edges of an element.
 {{< highlight scss >}}
 .element{
   @include position(absolute, null 16px 16px 16px);
