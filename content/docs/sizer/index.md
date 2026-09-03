@@ -1,20 +1,20 @@
 ---
 title: "Sizer"
 page_title: "Sizer Sass Mixin"
-page_description: "Sizer Sass mixin helps you to size elements with one statement (or two). Size elements or create square or recangle shapes very easily."
+page_description: "The Sizer Sass mixin helps you size elements with one statement (or two). Size elements or create squares and rectangles very easily."
 ---
 
 # Sizer
 
 {{< mixin type="Mixin" name="sizer" >}}
-**Sizer Sass mixin** helps you to size elements with one statement (or two). Size elements or create square or recangle shapes very easily.
+The **Sizer Sass mixin** helps you size elements with one statement (or two). Size elements or create squares and rectangles very easily.
 {{< /mixin >}}
 
 ## Arguments
 
 {{< arguments/table footnote="">}}
-  {{< arguments/row name="$width" type="number (with unit),<br/>string" description="Sets the width of the selected element(s)." >}}
-  {{< arguments/row name="$height" type="number (with unit),<br/>string" description="Sets the height of the selected element(s). The default value is set to `$width` value." >}}
+  {{< arguments/row name="$width" type="number (with unit),<br/>string" description="Sets the width of the selected elements." >}}
+  {{< arguments/row name="$height" type="number (with unit),<br/>string" description="Sets the height of the selected elements. The default value is the `$width` value." >}}
 {{< /arguments/table >}}
 
 ## Examples
@@ -36,7 +36,7 @@ Call the mixin to adjust the `$width` and the `$height` of an element.
 {{< /highlightwrap >}}
 
 {{< highlightwrap class="example">}}
-To assign different values ​​to the width and height properties of an element, do the following:
+To assign different values to the width and height properties of an element, do the following:
 {{< highlight scss >}}
 .element{
   @include sizer(500px, 100px);
