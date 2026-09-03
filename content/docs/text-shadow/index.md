@@ -1,31 +1,31 @@
 ---
 title: "Text Shadow"
 page_title: "Text Shadow Sass Mixin"
-page_description: "Text Shadow Sass mixin helps you to add shadow to text elements. Accepts a comma-separated list of shadows or a single shadow value that can be multiplied optionally. It provides an easy-to-use one-line method."
-page_keywords: "CSS Text Shadow, Sass Text Sahadow, CSS Animated Text Shadow, CSS Text Shadow Generator, CSS Text Shadow Examples, CSS Text Shadow Blur, CSS Text Shadow Outline, CSS Text Shadow Opacity, CSS Text Shadow Inset, CSS Text Shadow Effects, CSS Text Shadow Spread"
+page_description: "The Text Shadow Sass mixin helps you add shadows to text elements. It accepts a comma separated list of shadows, or a single shadow value that can optionally be multiplied. It provides an easy one-line method."
+page_keywords: "CSS Text Shadow, Sass Text Shadow, CSS Animated Text Shadow, CSS Text Shadow Generator, CSS Text Shadow Examples, CSS Text Shadow Blur, CSS Text Shadow Outline, CSS Text Shadow Opacity, CSS Text Shadow Inset, CSS Text Shadow Effects, CSS Text Shadow Spread"
 ---
 
 # Text Shadow
 
 {{< mixin type="Mixin" name="text-shadow" >}}
-**Text Shadow Sass mixin** helps you to add shadow to text elements. Accepts comma-separated list of shadows or a single shadow value that can be multiplied optionally. **It provides an easy-to-use one-line method**.
+The **Text Shadow Sass mixin** helps you add shadows to text elements. It accepts a comma separated list of shadows, or a single shadow value that can optionally be multiplied. **It provides an easy one-line method.**
 {{< hint info >}}
-The first three (`$direction`, `$color`, `$size`) are the required arguments and they must be ordered as follow: @include text-shadow(**bottom red 20px**). You can't use these three interchangeably.
+The first three arguments (`$direction`, `$color`, `$size`) are required, and they must be given in that order: @include text-shadow(**bottom red 20px**). You cannot swap these three around.
 {{< /hint >}}
 {{< /mixin >}}
 
 ## Arguments
 
-{{< arguments/table footnote="**Design Tip:** You can add multi layered shadows to create more fancy stuff. Just seperate each shadow layer by comma. For more see the [examples](#examples).">}}
+{{< arguments/table footnote="**Design Tip:** You can add multi layered shadows to create fancier effects. Just separate each shadow layer with a comma. See the [examples](#examples) for more.">}}
   {{< arguments/row name="$direction" type="string" description="Sets the direction of the shadow. Accepts `top`, `top-right`, `right`, `bottom-right`, `bottom`, `bottom-left`, `left`, `top-left`." >}}
   {{< arguments/row name="$color" type="color value" description="Sets the color of the shadow." >}}
   {{< arguments/row name="$size" type="number (with unit)" description="Sets how far the shadow will be from the text. When used with `$fill`, it also determines how many times the shadow will be multiplied." >}}
-  {{< arguments/row name="$blur" type="number (with unit)" description="The `$blur` argument is optional. Sets the blur value of the shadow. Default value is set to `null`." >}}
-  {{< arguments/row name="$fill" type="boolean" description="This makes shadow fill the gap between the text and the shadow. It is optional and **should always be at the end**. The default value is set to `false`." >}}
+  {{< arguments/row name="$blur" type="number (with unit)" description="Optional. Sets the blur value of the shadow. The default value is `null`." >}}
+  {{< arguments/row name="$fill" type="boolean" description="Makes the shadow fill the gap between the text and the shadow. It is optional and **should always come last**. The default value is `false`." >}}
 {{< /arguments/table >}}
 
 {{< hint danger >}}
-**Important:** If used, the `$fill` argument should always be at the end.
+**Important:** If you use the `$fill` argument, it should always come last.
 {{< /hint >}}
 
 ## Examples
@@ -67,7 +67,7 @@ Now, let's **add some $blur** to the shadow.
 {{< /highlightwrap >}}
 
 {{< highlightwrap class="example">}}
-Now, to understand what `$fill` is for, let's try one more time without the `$fill` argument and examine the CSS output. 
+Now, to understand what `$fill` is for, let's try once more without the `$fill` argument and examine the CSS output. 
 {{< highlight scss >}}
 .element{
   @include text-shadow(bottom #5bc0bb 30px);
@@ -76,18 +76,18 @@ Now, to understand what `$fill` is for, let's try one more time without the `$fi
 {{< highlight css >}}
 //CSS Output
 .element {
-  text-shadow: 0 20px #5bc0bb;
+  text-shadow: 0 30px #5bc0bb;
 }
 {{< /highlight >}}
 <div class="text-shadow-container">
-  <h1 style="text-shadow: 0 20px #5bc0bb;">Text Shadow is Awesome!</h1>
+  <h1 style="text-shadow: 0 30px #5bc0bb;">Text Shadow is Awesome!</h1>
 </div>
 {{< /highlightwrap >}}
 
 {{< highlightwrap class="example">}}
-Now, let's pass the `true` value at the end of the argument list and watch the CSS output carefully. Because here's where the magic starts.
+Now let's pass the `true` value at the end of the argument list and watch the CSS output carefully, because this is where the magic starts.
 {{< hint info >}}
-It takes the shadow and increments it as much as the amount of the `$size` value to **fill the gap between the actual text and the shadow's end-point**.
+It repeats the shadow one step at a time, up to the `$size` value, to **fill the gap between the actual text and the end point of the shadow**.
 {{< /hint >}}
 {{< highlight scss >}}
 .element{
@@ -106,7 +106,7 @@ It takes the shadow and increments it as much as the amount of the `$size` value
 {{< /highlightwrap >}}
 
 {{< highlightwrap class="example">}}
-You can **add alpha value to the colors** to soften the shadow.
+You can **add an alpha value to the colors** to soften the shadow.
 {{< highlight scss >}}
 .element{
   @include text-shadow(bottom rgba(#5bc0bb, 0.04) 30px true);
@@ -124,7 +124,7 @@ You can **add alpha value to the colors** to soften the shadow.
 {{< /highlightwrap >}}
 
 {{< highlightwrap class="example">}}
-Now, let's **add multiple shadow values** with different `$direction`, `$color`, `$size` values.
+Now let's **add multiple shadow values** with different `$direction`, `$color`, and `$size` values.
 {{< highlight scss >}}
 .element{
   @include text-shadow(
@@ -147,7 +147,7 @@ Now, let's **add multiple shadow values** with different `$direction`, `$color`,
 {{< /highlightwrap >}}
 
 {{< highlightwrap class="example">}}
-Let's **add alpha value the colors** and set `$fill` option to `true` to make it look more sexy!
+Let's **add an alpha value to the colors** and set the `$fill` option to `true` to make it look sexier!
 {{< highlight scss >}}
 .element{
   @include text-shadow(
@@ -190,9 +190,9 @@ You can **use corners** as well.
 {{< /highlightwrap >}}
 
 {{< highlightwrap class="example">}}
-Here's a good example about how very easily you can create artistic effects by using **Gerillass**. Just hover over the text below and click on it to see the effect!
+Here's a good example of how easily you can create artistic effects with **Gerillass**. Just hover over the text below and click on it to see the effect!
 {{< hint info >}}
-Unless you overdo **Text Shadow** mixin, you can create marvelous effects.
+As long as you don't overdo it, the **Text Shadow** mixin can create marvelous effects.
 {{< /hint >}}
 {{< highlight scss >}}
 .element{
