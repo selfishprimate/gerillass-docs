@@ -1,17 +1,17 @@
 ---
 title: "Scissors"
 page_title: "Scissors Sass Mixin"
-page_description: "Scissors Sass mixin helps you to cut off the corners of an element. Provides an easy-to-use one-line method to set the size of the cut, and the corners that you want to apply the effect."
+page_description: "The Scissors Sass mixin helps you cut off the corners of an element. It provides an easy one-line method to set the size of the cut and choose the corners you want to apply it to."
 page_keywords: "CSS Cut Corner, CSS Cutted Edges, Cut Box Edges with CSS, Cut Corners Using CSS, Cut Corners Using Sass, Cut Corners Using SCSS, CSS Border Cut, CSS Cutted Edge, Cutout Corners with CSS, Cutout Corners with Sass, Cutout Corners with SCSS, CSS Cutting-Edge"
 ---
 
 # Scissors
 
 {{< mixin type="Mixin" name="scissors" >}}
-**Scissors** Sass mixin helps you to **cut off** the corners of an element. Provides an easy-to-use one-line method to set the size of the cut, and the corners that you want to apply the effect.
+The **Scissors** Sass mixin helps you **cut off** the corners of an element. It provides an easy one-line method to set the size of the cut and choose the corners you want to apply it to.
 
 {{< hint info >}}
-The **first** value helps you select `top-left`, the **second** value `top-right`, the **third** value `bottom-right` and the **fourth** value `bottom-left` corners.
+The **first** value selects the `top-left` corner, the **second** the `top-right`, the **third** the `bottom-right`, and the **fourth** the `bottom-left`.
 {{< /hint >}}
 
 {{< /mixin >}}
@@ -19,13 +19,13 @@ The **first** value helps you select `top-left`, the **second** value `top-right
 ## Arguments
 
 {{< arguments/table footnote="You can use `0` or `null` to skip styling the related corner.">}}
-  {{< arguments/row name="--" type="number (with unit)" description="Accepts `one` or `four` values. The values must be separated by space. Use `null` value to **skip** corners of the box." >}}
+  {{< arguments/row name="--" type="number (with unit)" description="Accepts one or four values. The values must be separated by a space. Use the `null` value to **skip** a corner of the box." >}}
 {{< /arguments/table >}}
 
 ## Examples
 
 {{< highlightwrap class="example">}}
-Simply call the mixin and pass just `one` value to affect all the corners evenly.
+Simply call the mixin and pass just one value to affect all the corners evenly.
 {{< highlight scss >}}
 .element{
   @include scissors(30px);
@@ -44,7 +44,7 @@ clip-path: polygon(0 30px, 30px 0, calc(100% - 30px) 0, 100% 30px, 100% calc(100
 {{< /highlightwrap >}}
 
 {{< highlightwrap class="example">}}
-Do as follow to target only the top corners.
+Do the following to target only the top corners.
 {{< highlight scss >}}
 .element{
   @include scissors(30px 30px 0 0);
@@ -93,7 +93,7 @@ For some reason, your design component might look different, but I'm sure you ge
 {{< /highlight >}}
 {{< highlight scss >}}
 .element{
-  height: 300px;
+  height: 200px;
   display: flex;
   justify-content: center;
   background-color: #5bc0bb;
