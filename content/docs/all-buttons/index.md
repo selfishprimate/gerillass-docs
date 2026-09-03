@@ -1,25 +1,25 @@
 ---
 title: "All Buttons"
 page_title: "All Buttons Sass Mixin"
-page_description: "All Buttons Sass mixin helps you to target all the HTML button elements in the DOM so you can easily apply your style rules."
+page_description: "The All Buttons Sass mixin helps you target all the HTML button elements in the DOM, so you can easily apply your style rules."
 ---
 
 # All Buttons
 
 {{< mixin type="Mixin" name="all-buttons" >}}
-**All Buttons** Sass mixin helps you to target all the HTML button elements in the DOM so you can easily apply your style rules.
+The **All Buttons** Sass mixin helps you target all the HTML button elements in the DOM, so you can easily apply your style rules.
 {{< /mixin >}}
 
 ## Arguments
 
-{{< arguments/table footnote="You can call the mixin either at the root level of your style sheet to target all the HTML button elements in the DOM or call it in a parent selector to target its children.">}}
-  {{< arguments/row name="$pseudo" type="string" description="Sets the pseudo-class selector of the selected button elements. Accepts `hover`, `focus`, `active`, `disabled` values." >}}
+{{< arguments/table footnote="You can call the mixin at the root level of your stylesheet to target all the HTML button elements in the DOM, or call it inside a parent selector to target only its children.">}}
+  {{< arguments/row name="$pseudo" type="string" description="Sets the pseudo-class selector for the selected button elements. Accepts the values `hover`, `focus`, `active`, and `disabled`." >}}
 {{< /arguments/table >}}
 
 ## Examples
 
 {{< highlightwrap class="example">}}
-Simply call the mixin at the root level of your style sheet **to target all the HTML button elements**.
+Simply call the mixin at the root level of your stylesheet **to target all the HTML button elements**.
 {{< highlight scss >}}
 @include all-buttons {
   background-color: teal;
@@ -39,7 +39,7 @@ button,
 {{< /highlightwrap >}}
 
 {{< highlightwrap class="example">}}
-Now pass the `hover` value as an argument to style all the text-based HTML inputs when they're in the **:hover** state.
+Now pass the `hover` value as an argument to style all the button elements when they are in the **:hover** state.
 {{< highlight scss >}}
 @include all-buttons(hover) {
   background-color: crimson;
@@ -123,7 +123,7 @@ button:disabled,
 {{< /highlightwrap >}}
 
 {{< highlightwrap class="example">}}
-Call the mixin in a selector to target only those button elements inside that selector.
+Call the mixin inside a selector to target only the button elements inside that selector.
 {{< highlight scss >}}
 .containing-element {
   @include all-buttons {
