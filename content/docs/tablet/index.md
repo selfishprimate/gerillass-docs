@@ -1,29 +1,29 @@
 ---
 title: "Tablet"
 page_title: "Tablet Sass Mixin"
-page_description: "There will be times when you need to style elements only for one particular tablet model. Tablet Sass mixin helps you to achieve that."
+page_description: "There will be times when you need to style elements for one particular tablet model only. The Tablet Sass mixin helps you do that."
 ---
 
 # Tablet
 
 {{< mixin type="Mixin" name="tablet" >}}
-There will be times when you need to style elements only for one particular tablet model. **Tablet** Sass mixin helps you to achieve that.
+There will be times when you need to style elements for one particular tablet model only. The **Tablet** Sass mixin helps you do that.
 {{< hint info >}}
-**Tip:** There are predefined values for commonly used tablet models in the `_map-for-tablets.scss` file. **You can add another model specifications here to expand the list if you like**.
+**Tip:** There are predefined values for commonly used tablet models in the `_map-for-tablets.scss` file. **You can add more model specifications here to expand the list if you like.**
 {{< /hint >}}
 {{< /mixin >}}
 
 ## Arguments
 
-{{< arguments/table footnote="The string values can be pass with or without the quotation marks." >}}
+{{< arguments/table footnote="String values can be passed with or without quotation marks." >}}
   {{< arguments/row name="$device" type="string" description="Accepts the name of a tablet model. Predefined values are `iPadMini`, `iPad`, `iPadAir`, `iPadPro`, `Nexus7`, `Nexus9`, `Nexus10`." >}}
-  {{< arguments/row name="$orientation" type="string" description="Accepts two values: `portrait` or `landscape`. The default value is set to `portrait`." >}}
+  {{< arguments/row name="$orientation" type="string" description="Accepts two values: `portrait` and `landscape`. The default value is `portrait`." >}}
 {{< /arguments/table >}}
 
 ## Examples
 
 {{< highlightwrap class="example">}}
-First, call the mixin and pass only one value for the `$device` model name. Unless you pass a value for `$orientation`, it will be `portrait`.
+First, call the mixin and pass only the `$device` model name. Unless you pass a value for `$orientation`, it will be `portrait`.
 {{< highlight scss >}}
 .element {
   @include tablet(iPad) {
@@ -42,7 +42,7 @@ First, call the mixin and pass only one value for the `$device` model name. Unle
 {{< /highlightwrap >}}
 
 {{< highlightwrap class="example">}}
-Now, let's try to pass two arguments: one for the name of the `$device` model, the other is for the `$orientation`.
+Now let's pass two arguments: one for the `$device` model name, and the other for the `$orientation`.
 {{< highlight scss >}}
 .element {
   @include tablet(Nexus10, landscape) {
