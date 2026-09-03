@@ -1,28 +1,28 @@
 ---
 title: "Except"
 page_title: "Exclude Elements in the list with Except Sass Mixin"
-page_description: "Except Sass mixin helps you to target elements that you do not want to apply style changes to that you want for other elements in the list. This Sass mixin uses not CSS property."
+page_description: "The Except Sass mixin helps you apply style changes to every element in a list except the ones you choose. It uses the :not() CSS pseudo-class."
 ---
 
 # Except
 
 {{< mixin type="Mixin" name="except" >}}
-**Except** Sass mixin helps you to target elements that you do not want to apply style changes to that you want for other elements in the list.
+The **Except** Sass mixin helps you apply style changes to every element in a list except the ones you choose.
 {{< hint info >}}
-You can pass a **string** value to target elements by their `id`, `class` and `pseudo-class` selector. Or you can pass a **number** (or **multiple numbers** seperated by comma) to get the items based on their index position in the list.
+You can pass a **string** value to target elements by their `id`, `class`, or `pseudo-class` selector. Or you can pass a **number** (or **multiple numbers** separated by commas) to target items by their index position in the list.
 {{< /hint >}}
 {{< /mixin >}}
 
 ## Arguments
 
-{{< arguments/table footnote="**Important:** Passing multiple arguments is only for numeric values and the values must be comma-separated.">}}
-  {{< arguments/row name="--" type="string" description="The pseudo-class, class or id selectors. Accepts `first`, `last`, `odd`, `even` and class or id selectors." >}}
-  {{< arguments/row name="--" type="number" description="The index number of the element(s) in the list. It is also possible to make multiple selections." >}}
+{{< arguments/table footnote="**Important:** Passing multiple arguments only works with numeric values, and the values must be separated by commas.">}}
+  {{< arguments/row name="--" type="string" description="The pseudo-class, class, or id selector. Accepts `first`, `last`, `odd`, `even`, and class or id selectors." >}}
+  {{< arguments/row name="--" type="number" description="The index number of the element in the list. You can also make multiple selections." >}}
 {{< /arguments/table >}}
 
 ## Examples
 
-Let's say you have a list of items wrapped by a container. Just like the example below. Now, you want to apply some style changes to all of them, however, **except** for one or more ...
+Let's say you have a list of items wrapped in a container, just like the example below. Now you want to apply some style changes to all of them, **except** for one or more.
 
 {{< highlight html >}}
 <div class="list-wrapper">
@@ -142,7 +142,7 @@ Now, let's exclude the **third** item in the list.
 {{< /highlightwrap >}}
 
 {{< highlightwrap class="example">}}
-Let’s exclude those elements whose numeric position is even (e.g. 2, 4, 6, ...).
+Let's exclude the elements whose position is even (e.g. 2, 4, 6, and so on).
 {{< highlight scss >}}
 .list-wrapper{
   .list-item{
@@ -179,7 +179,7 @@ Let’s exclude those elements whose numeric position is even (e.g. 2, 4, 6, ...
 {{< highlightwrap class="example">}}
 Now, let's try something really fancy and exclude multiple items!
 {{< hint info >}}
-Remember that when you target multiple items in the list, the arguments you pass must be numbers and separated by comma.
+Remember that when you target multiple items in the list, the arguments you pass must be numbers separated by commas.
 {{</ hint >}}
 {{< highlight scss >}}
 .list-wrapper{
@@ -217,7 +217,7 @@ Remember that when you target multiple items in the list, the arguments you pass
 {{< highlightwrap class="example">}}
 Let's exclude the items with class `exclude` on them.
 {{< hint info >}}
-When you pass arguments for `id` or `class` attributes of the items, don't forget to wrap your arguments with quotation. 
+When you pass arguments for the `id` or `class` attributes of the items, don't forget to wrap your arguments in quotes. 
 {{</ hint >}}
 
 {{< highlight html >}}
@@ -265,7 +265,7 @@ When you pass arguments for `id` or `class` attributes of the items, don't forge
 {{< /highlightwrap >}}
 
 {{< highlightwrap class="example">}}
-Now suppose you don't know the number of the items that will appear in the list, and that **you want to exclude the second item from the very end**. How can you achieve that? It's easy!
+Now suppose you don't know how many items will appear in the list, and **you want to exclude the second item from the end**. How can you do that? It's easy!
 
 {{< hint info >}}
 **Information:** You can pass negative values to exclude elements based on their position among a group of siblings, counting from the end.
@@ -341,7 +341,7 @@ Now let's pass multiple negative values.
 {{< /highlightwrap >}}
 
 {{< highlightwrap class="example">}}
-Now let's pass the **positive and negative values ​​together**.
+Now let's pass **positive and negative values together**.
 
 {{< highlight scss >}}
 .list-wrapper {
