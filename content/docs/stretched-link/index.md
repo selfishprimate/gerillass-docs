@@ -1,29 +1,29 @@
 ---
 title: "Stretched Link"
 page_title: "Stretched Link Sass Mixin"
-page_description: "Stretched Link Sass mixin helps you make any HTML element clickable by “stretching” a nested link to the entire area of itself."
+page_description: "The Stretched Link Sass mixin helps you make any HTML element clickable by stretching a nested link across its entire area."
 page_keywords: "Stretched Link, Bootstrap Stretched Link, Stretched Link without Bootstrap, Tailwind Stretched Link, Stretched Link Example, CSS Stretched Link, Sass Stretched Link, SCSS Stretched Link, Stretched Link Bootstrap 5"
 ---
 
 # Stretched Link
 
 {{< mixin type="Mixin" name="stretched-link" >}}
-Suppose you have a containing element and a link inside of it. You want entire surface of this containing block to be clickable with this link. How can you do that?
+Suppose you have a container element with a link inside it, and you want the entire surface of that container to be clickable through the link. How can you do that?
 
-**Stretched Link** Sass mixin helps you to achieve that. It spreads the clickability of a link to the entire area of its containing block. 
+The **Stretched Link** Sass mixin helps you do that. It spreads the clickable area of a link across the entire containing block. 
 
-**Important:** Note that the containing block must have `position: relative;` style rule and the mixin must be applied to only one of its children.
+**Important:** Note that the containing block must have the `position: relative;` style rule, and the mixin must be applied to only one of its children.
 
 {{< hint info >}}  
-It can be useful when you use this mixin with HTML radio buttons or a checkbox list design patterns to control the clickability of a `<label>` element.
+It can be useful with HTML radio buttons or checkbox list design patterns, to control the clickable area of a `<label>` element.
 {{< /hint >}}
 
 {{< /mixin >}}
 
 ## Arguments
 
-{{< arguments/table footnote="Sometimes there is a need to use both ::before and ::after pseudo-elements of a link. That is why the mixin provides a flexibility to choose where to apply the stretched link style rules.">}}
-    {{< arguments/row name="$value" type="string" description="Accepts `before` and `after` values. If not passed default is targeting the `::before` pseudo-element of a selected element(s)." >}}
+{{< arguments/table footnote="Sometimes you need to use both the ::before and ::after pseudo-elements of a link. That is why the mixin lets you choose where to apply the stretched link style rules.">}}
+    {{< arguments/row name="$value" type="string" description="Accepts the values `before` and `after`. If you do not pass a value, it targets the `::before` pseudo-element of the selected elements." >}}
 {{< /arguments/table >}}
 
 ## Examples
@@ -52,7 +52,7 @@ If no value is passed, the `::before` pseudo-element is targeted by default.
 {{< /highlightwrap >}}
 
 {{< highlightwrap class="example">}}
-Pass one of the `before` or `after` options as an argument to choose which pseudo-element that you want to target. 
+Pass either the `before` or the `after` option as an argument to choose which pseudo-element you want to target. 
 {{< highlight scss >}}
 .element{
   @include stretched-link(after);
@@ -76,7 +76,7 @@ Pass one of the `before` or `after` options as an argument to choose which pseud
 
 
 {{< highlightwrap class="example">}}
-Targeting the both `::before` and `::after` pseudo-elements of a selected element(s).
+Targeting both the `::before` and `::after` pseudo-elements of the selected elements.
 {{< highlight scss >}}
 .element{
   @include stretched-link(before);
@@ -107,7 +107,7 @@ Targeting the both `::before` and `::after` pseudo-elements of a selected elemen
 {{< /highlightwrap >}}
 
 {{< highlightwrap class="example">}}
-Don't forget that the containing block must have `position: relative;` style rule.
+Don't forget that the containing block must have the `position: relative;` style rule.
 
 {{< highlight html >}}
 <div class="containing-element">
