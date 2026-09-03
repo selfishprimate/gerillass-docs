@@ -1,28 +1,28 @@
 ---
 title: "Only"
-page_title: "Only Sass Mxin"
-page_description: "Only Sass mixin helps you to target elements based on their position among siblings of same type (tag name). This mixin uses :first-of-type, :last-of-type, and :nth-of-type CSS pseudo-classes."
+page_title: "Only Sass Mixin"
+page_description: "The Only Sass mixin helps you target elements based on their position among siblings of the same type (tag name). This mixin uses the :first-of-type, :last-of-type, and :nth-of-type CSS pseudo-classes."
 ---
 
 # Only
 
 {{< mixin type="Mixin" name="only" >}}
-**Only** Sass mixin helps you to filter elements that match based on their position among a group of siblings and apply your style rules to **only** those elements. This mixin uses `:first-of-type`, `:last-of-type`, and `:nth-of-type` CSS pseudo-classes.
+The **Only** Sass mixin helps you filter elements based on their position among a group of siblings and apply your style rules to **only** those elements. This mixin uses `:first-of-type`, `:last-of-type`, and `:nth-of-type` CSS pseudo-classes.
 {{< hint info >}}
-You can pass a **string** value to target elements by their `id`, `class` and `pseudo-class` selector. Or you can pass a **number** (or **multiple numbers** seperated by comma) to get the items based on their index position in the list.
+You can pass a **string** value to target elements by their `id`, `class`, or `pseudo-class` selector. Or you can pass a **number** (or **multiple numbers** separated by commas) to target items by their index position in the list.
 {{< /hint >}}
 {{< /mixin >}}
 
 ## Arguments
 
-{{< arguments/table footnote="**Important:** Passing multiple arguments is only for numeric values and the values must be comma-separated.">}}
-  {{< arguments/row name="--" type="string" description="The pseudo-class, class or id selectors. Accepts `first`, `last`, `odd`, `even` and class or id selectors." >}}
-  {{< arguments/row name="--" type="number" description="The index number of the element(s) in the list. It is also possible to make multiple selections." >}}
+{{< arguments/table footnote="**Important:** Passing multiple arguments only works with numeric values, and the values must be separated by commas.">}}
+  {{< arguments/row name="--" type="string" description="The pseudo-class, class, or id selector. Accepts `first`, `last`, `odd`, `even`, and class or id selectors." >}}
+  {{< arguments/row name="--" type="number" description="The index number of the element in the list. You can also make multiple selections." >}}
 {{< /arguments/table >}}
 
 ## Examples
 
-Suppose you have a group of items like in the example below and you want to make some style changes only for some of them.
+Suppose you have a group of items like the ones below, and you want to apply style changes to only some of them.
 
 {{< highlight html >}}
 <div class="list-wrapper">
@@ -120,7 +120,7 @@ Now, let's target the **second** item in the list.
 {{< /highlight >}}
 {{< highlight css >}}
 //CSS Output
-.list-wrapper .list-item:first-of-type {
+.list-wrapper .list-item:nth-of-type(2) {
   background-color: #5bc0bb;
   color: white;
 }
@@ -144,7 +144,7 @@ Now, let's target the **second** item in the list.
 
 
 {{< highlightwrap class="example">}}
-Let’s get those elements whose numeric position is odd (e.g. 1, 3, 5, ...).
+Let's get the elements whose position is odd (e.g. 1, 3, 5, and so on).
 {{< highlight scss >}}
 .list-wrapper{
   .list-item{
@@ -181,7 +181,7 @@ Let’s get those elements whose numeric position is odd (e.g. 1, 3, 5, ...).
 {{< highlightwrap class="example">}}
 Now, let's try something really fancy!
 {{< hint info >}}
-Remember that when you make a multiple selection the arguments you pass must be numbers and separated by comma.
+Remember that when you make a multiple selection, the arguments you pass must be numbers separated by commas.
 {{</ hint >}}
 {{< highlight scss >}}
 .list-wrapper{
@@ -221,7 +221,7 @@ Remember that when you make a multiple selection the arguments you pass must be 
 {{< /highlightwrap >}}
 
 {{< highlightwrap class="example">}}
-Now suppose you don't know the number of the items that will appear in the list, and that **you want to target only the third item from the very end**. How can you achieve that? It's surprisingly easy!
+Now suppose you don't know how many items will appear in the list, and **you want to target only the third item from the end**. How can you do that? It's surprisingly easy!
 
 {{< hint info >}}
 **Information:** You can pass negative values to target elements based on their position among a group of siblings, counting from the end.
@@ -300,7 +300,7 @@ Now let's pass multiple negative values.
 {{< /highlightwrap >}}
 
 {{< highlightwrap class="example">}}
-Now let's pass the **positive and negative values ​​together**.
+Now let's pass **positive and negative values together**.
 {{< highlight scss >}}
 .list-wrapper {
   .list-item {
