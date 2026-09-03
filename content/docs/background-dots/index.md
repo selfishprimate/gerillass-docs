@@ -1,24 +1,24 @@
 ---
 title: "Background Dots"
 page_title: "Background Dots Sass Mixin"
-page_description: "Background Dots Sass mixin allows you to create stylish colorful dotted background patterns (also known as polka dots)."
+page_description: "The Background Dots Sass mixin allows you to create stylish, colorful dotted background patterns (also known as polka dots)."
 page_keywords: "CSS Dotted Background Generator, CSS Background Dots, CSS Polka Dots, CSS Dotted Gradient, CSS Background Pattern, CSS Dotted Background Pattern, CSS Multiple Dots, CSS Dots, CSS Polka Dot Background, Dot Pattern CSS, Dot Pattern Art"
 ---
 
 # Background Dots
 
 {{< mixin type="Mixin" name="background-dots" >}}
-**Background Dots** Sass mixin allows you to easily create a stylish dotted background pattern (also known as **polka dots**).
+The **Background Dots** Sass mixin allows you to easily create a stylish dotted background pattern (also known as **polka dots**).
 {{< /mixin >}}
 
 ## Arguments
 
-{{< arguments/table footnote="Using two separate color values together only possible when the `$diagonal` option is true. For more see the examples.">}}
-  {{< arguments/row name="$color" type="list" description="The color(s) of the dots. Accepts not more than two color values. The default there is only one color and is set to opaque black." >}}
-  {{< arguments/row name="$size (1em)" type="number (with unit)" description="The size of the dots. The default value is set to 1em." >}}
-  {{< arguments/row name="$gutter ($size * 5)" type="number (with unit)" description="The size of the space between the dots. The default value is set to `$size * 5` which means 5em." >}}
-  {{< arguments/row name="$diagonal (true)" type="boolean" description="This option allows you to set line order of the dots. Default value is true." >}}
-  {{< arguments/row name="$image" type="string (quoted)" description="Accepts a URL of an image. This option helps you to add an image underneath the dots to create more stylish design elements." >}}
+{{< arguments/table footnote="Using two separate color values together is only possible when the `$diagonal` option is true. See the examples for more.">}}
+  {{< arguments/row name="$color" type="list" description="The color or colors of the dots. Accepts no more than two color values. By default there is only one color, a translucent black." >}}
+  {{< arguments/row name="$size (1em)" type="number (with unit)" description="The size of the dots. The default value is `1em`." >}}
+  {{< arguments/row name="$gutter ($size * 5)" type="number (with unit)" description="The size of the space between the dots. The default value is `$size * 5`, which means `5em`." >}}
+  {{< arguments/row name="$diagonal (true)" type="boolean" description="This option lets you set the line order of the dots. The default value is `true`." >}}
+  {{< arguments/row name="$image" type="string (quoted)" description="Accepts the URL of an image. This option helps you add an image underneath the dots to create more stylish design elements." >}}
 {{< /arguments/table >}}
 
 ## Examples
@@ -47,7 +47,7 @@ background-image: radial-gradient(rgba(0, 0, 0, 0.1) 1em, transparent 0), radial
 {{< /highlightwrap >}}
 
 {{< highlightwrap class="example">}}
-Let's play with the `$color` and the `$size` properties of the dots.
+Let's play with the `$color` and `$size` arguments.
 {{< highlight scss >}}
 .element{
   @include background-dots(
@@ -74,7 +74,7 @@ background-position: 25px 25px, 100px 100px;background-size: 50px 50px;backgroun
 {{< /highlightwrap >}}
 
 {{< highlightwrap class="example">}}
-You can increase or decrease the space between the dots. Compare the result with the example 2.
+You can increase or decrease the space between the dots. Compare the result with example 2.
 {{< highlight scss >}}
 .element{
   @include background-dots(
@@ -101,7 +101,7 @@ background-image: radial-gradient(pink 10px, transparent 0), radial-gradient(pin
 {{< /highlightwrap >}}
 
 {{< highlightwrap class="example">}}
-You can add a second color value as well. Note that the second color works only when `$diagonal` property is true and must be separated by space.
+You can add a second color value as well. Note that the second color only works when the `$diagonal` argument is `true`, and the two colors must be separated by a space.
 {{< highlight scss >}}
 .element{
   @include background-dots(
@@ -128,7 +128,7 @@ background-repeat: repeat;
 {{< /highlightwrap >}}
 
 {{< highlightwrap class="example">}}
-Set the `$diagonal` property to `false` to make the dots look more linear.
+Set the `$diagonal` argument to `false` to make the dots look more linear.
 {{< highlight scss >}}
 .element{
   @include background-dots(
