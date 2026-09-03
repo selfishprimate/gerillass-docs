@@ -1,7 +1,7 @@
 ---
 title: "Loadify"
 page_title: "Loadify Sass Mixin"
-page_description: "Loadify Sass mixin is a handy tool that can help you make a page element load with a smooth fade-in effect during the time of page loadings. It also allows you to create smooth image loading effects."
+page_description: "Loadify Sass mixin is a handy tool that helps you make a page element load with a smooth fade-in effect while the page is loading. It also allows you to create smooth image loading effects."
 page_keywords: "Smooth Image Loading with Sass, Smooth Page Loading, Medium Image Loading, Bootstrap Lazy Load Images, CSS Image Loading, Sass Image Loading, Lazy Load Content, Smooth Content Loading, CSS Smooth Content Loading, Defer Image Loading"
 css: css/styles.css
 ---
@@ -10,30 +10,30 @@ css: css/styles.css
 
 {{< mixin type="Mixin" name="loadify" >}}
 
-**Loadify** Sass mixin is a handy tool that can help you make a page element load with a smooth fade-in effect during the time of page loadings.
+The **Loadify** Sass mixin is a handy tool that helps you make a page element load with a smooth fade-in effect while the page is loading.
 
 {{< /mixin >}}
 
 ## Arguments
 
-{{< arguments/table footnote="The time value must be specified in either seconds (s) or milliseconds (ms). The value must be positive or zero and the unit is always required.">}}
+{{< arguments/table footnote="The time value must be given in either seconds (s) or milliseconds (ms). The value must be zero or positive, and the unit is always required.">}}
     {{< arguments/row name="$mode" type="string" description="Accepts `init` value. This initializes the whole effects for the selected elements. **It must be called once at the root of your stylesheet document.**" >}}
     {{< arguments/row name="$delay" type="time" description="Specifies the amount of time a design element must wait before it starts appearing on the page. The default value is set to `0.2s`." >}}
-    {{< arguments/row name="$duration" type="time" description="Sets the length of time that a page element takes to load. **This is the second argument and always must be at the end and cannot be used alone.** The deafult value is set to `0.5s`." >}}
+    {{< arguments/row name="$duration" type="time" description="Sets the length of time a page element takes to load. **This is the second argument. It must always come last and cannot be used on its own.** The default value is `0.5s`." >}}
 {{< /arguments/table >}}
 
 ## Examples
 
 {{< highlightwrap >}}
 
-Ok. Let's call the Loadify mixin as an initializer first at the root level of your stylesheet and pass the `init` value as an argument. **This will generate the `loadify` animation itself**.
+Let's start by calling the Loadify mixin as an initializer at the root level of your stylesheet, and pass the `init` value as an argument. **This will generate the `loadify` animation itself**.
 
 {{< hint info >}}
-**Tip:** When you call the mixin at the root of your stylesheet to initialize the effect you can either pass the `init` argument or leave it blank.
+**Tip:** When you call the mixin at the root of your stylesheet to initialize the effect, you can either pass the `init` argument or leave it blank.
 {{< /hint >}}
 
 {{< hint info >}}
-**Important:** Initializer must be called once at the root level of your stylesheet (**not in a selector**).
+**Important:** The initializer must be called once at the root level of your stylesheet (**not inside a selector**).
 {{< /hint >}}
 
 {{< highlight scss >}}
@@ -56,12 +56,12 @@ Now let's see some examples.
 {{< /highlightwrap >}}
 
 {{< highlightwrap class="example">}}
-Let's see the animation on an image element. Call the Loadify mixin inside the element selector and **do not pass any argument** yet just to see the loading effect with the default timing values. 
+Let's see the animation on an image element. Call the Loadify mixin inside the element's selector and **do not pass any arguments** yet, just to see the loading effect with the default timing values. 
 
 **Now scroll to the image and refresh the page to see how smooth the image appears on the page.**
 
 {{< hint info >}}
-**Keep in mind!** You are totally free to give whatever selector name you want to the element.
+**Keep in mind!** You are free to give the element any selector name you want.
 {{< /hint >}}
 
 {{< highlight scss >}}
@@ -136,9 +136,9 @@ Let's see the animation on an image element. Call the Loadify mixin inside the e
 {{< /highlightwrap >}}
 
 {{< highlightwrap class="example">}}
-Let's deep dive a bit more to understand what exaclty this handy tool is capable of.
+Let's dive a bit deeper to understand exactly what this handy tool can do.
 
-Suppose you have a group of items like in the example below and you want to make them smoothly appear on the page loading.
+Suppose you have a group of items like the ones below, and you want them to appear smoothly as the page loads.
 
 {{< highlight html >}}
 <div class="parent-element">
@@ -154,7 +154,7 @@ Suppose you have a group of items like in the example below and you want to make
 {{< /highlight >}}
 
 {{< hint info >}}
-**Keep in mind!** You must call `loadify` mixin once at the root of your stylesheet as an initializer.
+**Keep in mind!** You must call the `loadify` mixin once at the root of your stylesheet as an initializer.
 {{< /hint >}}
 
 {{< highlight scss >}}
@@ -166,7 +166,7 @@ Suppose you have a group of items like in the example below and you want to make
 {{< /highlight >}}
 
 {{< hint info >}}
-**Important!** When you call the mixin in a selector without passing any argument, it works differently as you see in the example below. Here, the `item` selector takes the default `animation-delay` and `animation-duration` values.
+**Important!** When you call the mixin inside a selector without passing any arguments, it works differently, as you can see in the example below. Here, the `item` selector takes the default `animation-delay` and `animation-duration` values.
 {{< /hint >}}
 
 **Now scroll to the elements and refresh the page to see how smooth the elements appear on the page.**
@@ -200,7 +200,7 @@ Suppose you have a group of items like in the example below and you want to make
 {{< /highlightwrap >}}
 
 {{< highlightwrap class="example">}}
-Now let's pass `1s` as a custom value for the `animation-delay` CSS property to specify the amount of time the selected element will wait before it start to appear.
+Now let's pass `1s` as a custom value for the `animation-delay` CSS property, to set how long the selected element waits before it starts to appear.
 
 **Refresh the page to see the effect.**
 
@@ -244,9 +244,9 @@ It's getting more interesting, isn't it?
 
 {{< highlightwrap class="example">}}
 
-Now we're going to try a fantastic example to see how Gerillass Sass library can ease your frontend development processes and work best when you combine two or more mixins together.
+Now we are going to try a fantastic example to see how the Gerillass Sass library can ease your frontend development, and how well it works when you combine two or more mixins.
 
-We'll be using `only` mixin to select items in the list based on their index positions and then call the `loadify` mixin in each of the selectors to make elements appear in different time values (different delay and duration times) on the page.
+We will use the `only` mixin to select items in the list based on their index positions, and then call the `loadify` mixin inside each of those selectors to make the elements appear at different times (with different delay and duration values).
 
 **Scroll to the bottom of this example and refresh the page to see the effect.**
 
@@ -345,9 +345,9 @@ We'll be using `only` mixin to select items in the list based on their index pos
 {{< /highlightwrap >}}
 
 {{< highlightwrap class="example">}}
-Now let's try another sexy example. This time we are going to **change the display order of the boxes (we'll be using a diagonal pattern)** and **pass a value for secondary argument to manipulate the value of the `animation-duration` CSS property**.
+Now let's try another sexy example. This time we are going to **change the display order of the boxes (we will be using a diagonal pattern)** and **pass a value for the second argument to control the value of the `animation-duration` CSS property**.
 
-The display order will be as following: "**1**", "**6**", "**3**", "**8**", "**5**", "**2**", "**7**", "**4**" 
+The display order will be as follows: "**1**", "**6**", "**3**", "**8**", "**5**", "**2**", "**7**", "**4**" 
 
 **Scroll to the bottom of this example and refresh the page to see the effect.**
 
