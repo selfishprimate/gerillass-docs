@@ -1,20 +1,20 @@
 ---
 title: "Border Radius"
 page_title: "Border Radius Sass Mixin"
-page_description: "Border Radius Sass mixin helps you to rounds the corner(s) of a selected element by using the border-radius CSS property. You can pass one value (with the unit) to style all the corners equally or you can use CSS shorthand property to style each corner differently."
+page_description: "The Border Radius Sass mixin helps you round the corners of a selected element using the border-radius CSS property. You can pass one value (with a unit) to style all the corners equally, or use the CSS shorthand to style each corner differently."
 ---
 
 # Border Radius
 
 {{< mixin type="Mixin" name="border-radius" >}}
-**Border Radius** Sass mixin helps you to rounds the corner(s) of a selected element by using the [border-radius CSS property](https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius). You can pass one value (with the unit) to style all the corners equally or you can use CSS shorthand property to style each corner differently. For more see [the examples.](#examples)
+The **Border Radius** Sass mixin helps you round the corners of a selected element using the [border-radius CSS property](https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius). You can pass one value (with a unit) to style all the corners equally, or use the CSS shorthand to style each corner differently. See [the examples](#examples) for more.
 {{< /mixin >}}
 
 ## Arguments
 
 {{< arguments/table >}}
-  {{< arguments/row name="$corner" type="string" description="It allows you to choose the corners of an element that you want to apply style rules. Accepts the following values: `top`, `top-right`, `right`, `bottom-right`, `bottom`, `bottom-left`, `left`, `top-left`, `cross-left`, `cross-right`, `all`." >}}
-  {{< arguments/row name="$value" type="number (with unit)" description="Size of the border radius that will be applied." >}}
+  {{< arguments/row name="$corner" type="string" description="Lets you choose which corners of an element you want to style. Accepts the following values: `top`, `top-right`, `right`, `bottom-right`, `bottom`, `bottom-left`, `left`, `top-left`, `cross-left`, `cross-right`, `all`." >}}
+  {{< arguments/row name="$value" type="number (with unit)" description="The size of the border radius that will be applied." >}}
 {{< /arguments/table >}}
 
 ## Examples
@@ -38,7 +38,7 @@ background-color: #5bc0bb;border-radius: 20px;
 {{< /highlightwrap >}}
 
 {{< highlightwrap class="example">}}
-Now, let's pass two values: first one is `top` to target only top corners of a selected element and second one is `40px` for the size of the radius. 
+Now let's pass two values. The first one is `top`, to target only the top corners of the selected element, and the second one is `40px`, for the size of the radius. 
 {{< highlight scss >}}
 .element{
   @include border-radius(top, 40px);
@@ -59,7 +59,7 @@ background-color:#5bc0bb;border-top-left-radius: 40px;border-top-right-radius: 4
 {{< highlightwrap class="example">}}
 Now, let's try to target right corners.
 {{< hint info >}}
-Just to remind you once more these are the predefined values to target the corners: `top`, `top-right`, `right`, `bottom-right`, `bottom`, `bottom-left`, `left`, `top-left`, `cross-left`, `cross-right`, `all`.
+Just to remind you once more, these are the predefined values you can use to target the corners: `top`, `top-right`, `right`, `bottom-right`, `bottom`, `bottom-left`, `left`, `top-left`, `cross-left`, `cross-right`, `all`.
 {{< /hint >}}
 {{< highlight scss >}}
 .element{
@@ -79,7 +79,7 @@ background-color:#5bc0bb;border-top-right-radius: 40px;border-bottom-right-radiu
 {{< /highlightwrap >}}
 
 {{< highlightwrap class="example">}}
-Now let's try the `cross-left` or `cross-right` values ​​so that you can target the corners diagonally.
+Now let's try the `cross-left` and `cross-right` values, which let you target the corners diagonally.
 {{< highlight scss >}}
 .element{
   @include border-radius(cross-left, 40px);
@@ -116,7 +116,7 @@ background-color:#5bc0bb;border-radius: 25px 50px 100px 150px;
 {{< /highlightwrap >}}
 
 {{< highlightwrap class="example">}}
-Now, let's **pass four values** again but this time we're going to **seperate them by comma** to try something different.
+Now let's **pass four values** again, but this time we are going to **separate them with commas** to try something different.
 {{< highlight scss >}}
 .element{
   @include border-radius(25px, 50px, 100px, 150px);
@@ -137,7 +137,7 @@ background-color:#5bc0bb;border-top-left-radius: 25px;border-top-right-radius: 5
 {{< /highlightwrap >}}
 
 {{< highlightwrap class="example">}}
-For each argument you can pass a second argument next to it to bend the curve.
+For each corner you can pass a second value next to the first one to bend the curve.
 {{< highlight scss >}}
 .element{
   @include border-radius(100px 40px, 50px 20%, 100px 30%, 150px 2rem);
