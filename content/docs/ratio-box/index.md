@@ -1,36 +1,36 @@
 ---
 title: "Ratio Box"
 page_title: "Ratio Box Sass Mixin"
-page_description: "Ratio Box Sass mixin helps you create proportional CSS boxes based on the aspect ratio values ​​you pass. This mixin is especially useful when you apply the background-image CSS property to the selected element: Whatever the width of the selected element, the aspect ratio will always be preserved."
+page_description: "The Ratio Box Sass mixin helps you create proportional CSS boxes based on the aspect ratio values you pass. It is especially useful when you apply the background-image CSS property to the selected element, because whatever the width of the element, the aspect ratio is always preserved."
 ---
 
 # Ratio Box
 
 {{< mixin type="Mixin" name="ratio-box" >}}
-**Ratio Box Sass mixin** helps you create **proportional CSS boxes** based on the aspect ratio values ​​you pass. This mixin is especially useful when you apply the background-image CSS property to the selected element: **Whatever the width of the selected element, the aspect ratio will always be preserved**.
+The **Ratio Box Sass mixin** helps you create **proportional CSS boxes** based on the aspect ratio values you pass. It is especially useful when you apply the background-image CSS property to the selected element, because **whatever the width of the element, the aspect ratio is always preserved**.
 
-**Ratio Box** mixin works based on the same principles as the **Responsive Video** mixin. The usage is the same too.
+The **Ratio Box** mixin works on the same principles as the **Responsive Video** mixin, and the usage is the same too.
 
 {{< hint info >}}
-**Important:** Any direct child element that you put inside the **ratio box container** will be **absolutely positioned** and take up as much space as the container's itself. 
+**Important:** Any direct child element you put inside the **ratio box container** will be **absolutely positioned** and take up as much space as the container itself. 
 {{< /hint >}}
 
 {{< hint danger >}}
-**Danger:** Do not put more than one direct child element inside the ratio box containers.
+**Danger:** Do not put more than one direct child element inside a ratio box container.
 {{< /hint >}}
 
 {{< /mixin >}}
 
 ## Arguments
 
-{{< arguments/table footnote="The value you pass can be with or without the quotation marks." >}}
-  {{< arguments/row name="$ratio" type="string, number" description="The aspect ratio of the selected item. Accepts either `number` or `string` type of values. You can pass any aspect ratio value you want in the following formats: `16/9`, `4/3`, `1/1`. The default ratio value is set to `16/9`." >}}
+{{< arguments/table footnote="The value you pass can be written with or without quotation marks." >}}
+  {{< arguments/row name="$ratio" type="string, number" description="The aspect ratio of the selected item. Accepts either `number` or `string` values. You can pass any aspect ratio you want, in formats such as `16/9`, `4/3`, and `1/1`. The default value is `16/9`." >}}
 {{< /arguments/table >}}
 
 ## Examples
 
 {{< highlightwrap class="example">}}
-Simply call the mixin without passing any argument. **The default value is set to `16/9`**.
+Simply call the mixin without passing any arguments. **The default value is `16/9`**.
 {{< highlight scss >}}
 .element{
   @include ratio-box;
@@ -61,7 +61,7 @@ Simply call the mixin without passing any argument. **The default value is set t
 
 
 {{< highlightwrap class="example">}}
-Now let's change the aspect ratio, and try it with a real world example and use one more mixin from the library just to apply a background image to the selected element.
+Now let's change the aspect ratio and try it with a real world example, using one more mixin from the library to apply a background image to the selected element.
 {{< highlight scss >}}
 .element{
   @include ratio-box(4/3);
@@ -81,7 +81,7 @@ Now let's change the aspect ratio, and try it with a real world example and use 
 .element::before {
   content: "";
   display: block;
-  padding-top: 56.25%;
+  padding-top: 75%;
 }
 .element > * {
   width: 100%;
@@ -155,9 +155,9 @@ Now **let's pass a string** value! I guarantee the result will be the same.
 {{< /highlightwrap >}}
 
 {{< highlightwrap class="example">}}
-You can use the **`:`** sign to seperate two numbers instead of **`"/"`**.
+You can use the **`:`** sign to separate the two numbers instead of **`/`**.
 {{< hint info >}}
-**Important:** If you use **colon sign** inside the argument, the entire value should always be wrapped with quotation signs just like in the below example.
+**Important:** If you use the **colon sign** inside the argument, the entire value must always be wrapped in quotation marks, just like in the example below.
 {{< /hint >}}
 {{< highlight scss >}}
 .element{
@@ -188,9 +188,9 @@ You can use the **`:`** sign to seperate two numbers instead of **`"/"`**.
 {{< /highlightwrap >}}
 
 {{< highlightwrap class="example">}}
-Now let's try again with a very bizarre aspect ratio, give the selected element a `max-width` value and put a direct child element in it that contains some dummy text.
+Now let's try again with an unusual aspect ratio, give the selected element a `max-width` value, and put a direct child element inside it that contains some dummy text.
 {{< hint info >}}
-**Important:** If you use **colon sign** inside the argument, the entire value should always be wrapped with quotation signs just like in the below example.
+**Important:** If you use the **colon sign** inside the argument, the entire value must always be wrapped in quotation marks, just like in the example below.
 {{< /hint >}}
 {{< highlight html >}}
 <div class="element">
