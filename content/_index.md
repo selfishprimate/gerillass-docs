@@ -34,28 +34,184 @@ LibSass and the packages built on it, including Node Sass, are deprecated, so **
 ## Installation
 
 {{< highlightwrap class="terminal">}}
-
+Install the library as a development dependency with npm:
 {{< highlight nix >}}
-npm install gerillass
+npm install gerillass --save-dev
+{{< /highlight >}}
+{{< /highlightwrap >}}
+
+{{< highlightwrap class="terminal">}}
+Or with Yarn:
+{{< highlight nix >}}
+yarn add gerillass --dev
 {{< /highlight >}}
 {{< /highlightwrap >}}
 
 {{< highlightwrap >}}
-You can **import** Gerillass with the **node_modules** path.
+Then load it. If your setup resolves packages from **node_modules**, which Vite, webpack, Next.js and most modern bundlers do, this is all you need:
 {{< highlight scss >}}
-@import '{node_modules_path}/gerillass/scss/gerillass';
+@use 'gerillass' as *;
 {{< /highlight >}}
 {{< /highlightwrap >}}
 
-**To include the library without using the {node_modules_path}, see the examples below.**
+### Using the pkg: importer
 
 {{< highlightwrap >}}
-If you're working with an **eyeglass** setup, simply import it without providing the **node_modules** path.
+If you call Dart Sass yourself rather than through a bundler, turn on its package importer and use a `pkg:` URL.
 {{< highlight scss >}}
-@import 'gerillass';
+@use 'pkg:gerillass' as *;
 {{< /highlight >}}
 {{< /highlightwrap >}}
-    
+
+{{< highlightwrap >}}
+In your build script:
+{{< highlight js >}}
+// Dart Sass 1.71.0 or later
+import * as sass from 'sass';
+import { NodePackageImporter } from 'sass';
+
+sass.compile('style.scss', { importers: [new NodePackageImporter()] });
+{{< /highlight >}}
+{{< /highlightwrap >}}
+
+{{< highlightwrap class="terminal">}}
+Or from the command line:
+{{< highlight nix >}}
+sass --pkg-importer=node style.scss style.css
+{{< /highlight >}}
+{{< /highlightwrap >}}
+
+{{< highlightwrap >}}
+Pointing straight at the file always works too:
+{{< highlight scss >}}
+@use '{node_modules_path}/gerillass/scss/gerillass' as *;
+{{< /highlight >}}
+{{< /highlightwrap >}}
+
+{{< hint warning >}}
+**A note on eyeglass.** Gerillass still ships eyeglass module metadata, but eyeglass has not been released since June 2022 and its importer is broken with current Dart Sass. Any `@import` fails with `doneImporting is not a function`, whether Gerillass is involved or not. It also relies on the legacy JS API, which Dart Sass removes in 2.0.0. Use the `pkg:` importer above instead, which is the built-in equivalent.
+{{< /hint >}}
+
+{{< hint info >}}
+The per-tool recipes below were each verified against a real build of Gerillass v1.5.0. The versions used are listed at the [end of this section](#versions-these-examples-were-tested-with).
+{{< /hint >}}
+
+### Using with Vite
+
+{{< highlightwrap >}}
+Vite resolves the package by name, so there is nothing to configure. This covers anything built on Vite, including React, Vue, Svelte, SvelteKit and Astro.
+{{< highlight scss >}}
+@use 'gerillass' as *;
+{{< /highlight >}}
+{{< /highlightwrap >}}
+
+### Using with webpack
+
+{{< highlightwrap >}}
+`sass-loader` also resolves the package by name, with no extra options.
+{{< highlight scss >}}
+@use 'gerillass' as *;
+{{< /highlight >}}
+{{< /highlightwrap >}}
+
+### Using with Next.js
+
+{{< highlightwrap >}}
+Next.js needs to be told where the library lives. In `next.config.mjs`:
+{{< highlight js >}}
+export default {
+  sassOptions: {
+    loadPaths: ["node_modules/gerillass/scss"],
+  },
+};
+{{< /highlight >}}
+{{< /highlightwrap >}}
+
+{{< highlightwrap >}}
+Then, in any `.scss` file:
+{{< highlight scss >}}
+@use 'gerillass' as *;
+{{< /highlight >}}
+{{< /highlightwrap >}}
+
+### Using with Angular
+
+{{< highlightwrap >}}
+Add the library folder to the build target's options in `angular.json`. Angular calls this option `includePaths`, not `loadPaths`.
+{{< highlight js >}}
+"stylePreprocessorOptions": {
+  "includePaths": ["node_modules/gerillass/scss"]
+}
+{{< /highlight >}}
+{{< /highlightwrap >}}
+
+{{< highlightwrap >}}
+Then, in `src/styles.scss`:
+{{< highlight scss >}}
+@use 'gerillass' as *;
+{{< /highlight >}}
+{{< /highlightwrap >}}
+
+### Using with Gulp
+
+{{< hint info >}}
+**Important:** `gulp-sass` hands its options straight to Dart Sass, so the option is **`loadPaths`**. The old `includePaths` name came from Node Sass and no longer resolves.
+{{< /hint >}}
+
+{{< highlightwrap >}}
+{{< highlight js >}}
+const { src, dest } = require("gulp");
+const sass = require("gulp-sass")(require("sass"));
+
+function styles() {
+  return src("assets/sass/**/*.scss")
+    .pipe(sass({ loadPaths: ["node_modules/gerillass/scss"] }).on("error", sass.logError))
+    .pipe(dest("assets/css"));
+}
+
+exports.styles = styles;
+{{< /highlight >}}
+{{< /highlightwrap >}}
+
+{{< highlightwrap >}}
+Then:
+{{< highlight scss >}}
+@use 'gerillass' as *;
+{{< /highlight >}}
+{{< /highlightwrap >}}
+
+### Using with Grunt
+
+{{< hint info >}}
+**Important:** Use `grunt-sass` with Dart Sass as the implementation. The option here is **`loadPaths`** as well, not `loadPath` and not `includePaths`.
+{{< /hint >}}
+
+{{< highlightwrap >}}
+{{< highlight js >}}
+module.exports = function (grunt) {
+  grunt.loadNpmTasks("grunt-sass");
+  grunt.initConfig({
+    sass: {
+      dist: {
+        options: {
+          implementation: require("sass"),
+          loadPaths: ["node_modules/gerillass/scss"],
+        },
+        files: { "css/main.css": "src/main.scss" },
+      },
+    },
+  });
+};
+{{< /highlight >}}
+{{< /highlightwrap >}}
+
+{{< highlightwrap >}}
+Then:
+{{< highlight scss >}}
+@use 'gerillass' as *;
+{{< /highlight >}}
+{{< /highlightwrap >}}
+
 ### Cloning the repository from GitHub
 
 {{< highlightwrap class="terminal">}}
@@ -75,95 +231,48 @@ git submodule add https://github.com/selfishprimate/gerillass.git
 {{< highlightwrap >}}
 Including it in your project:
 {{< highlight scss >}}
-@import 'gerillass/scss/gerillass';
+@use '{folder_path}/gerillass/scss/gerillass' as *;
 {{< /highlight >}}
 {{< /highlightwrap >}}
 
-### Node.js Installation
+### Versions these examples were tested with
 
-If you are working on a Node project, you can install Gerillass as a dependency.
+<div class="table">
+  <table>
+    <thead>
+      <tr>
+        <th>Tool</th>
+        <th>Version</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td class="name">Dart Sass</td><td class="type">1.103.1</td></tr>
+      <tr><td class="name">Vite</td><td class="type">8.2.2</td></tr>
+      <tr><td class="name">webpack / sass-loader</td><td class="type">5.110.3 / 17.0.1</td></tr>
+      <tr><td class="name">Next.js</td><td class="type">16.3.4</td></tr>
+      <tr><td class="name">Angular CLI</td><td class="type">20.3.36</td></tr>
+      <tr><td class="name">Gulp / gulp-sass</td><td class="type">5.0.1 / 6.0.1</td></tr>
+      <tr><td class="name">Grunt / grunt-sass</td><td class="type">1.6.3 / 4.1.0</td></tr>
+    </tbody>
+  </table>
+</div>
 
-{{< highlightwrap class="terminal">}}
-**npm installation**
-{{< highlight nix >}}
-npm install gerillass
-{{< /highlight >}}
-{{< /highlightwrap >}}
+## Namespace Usage
 
-{{< highlightwrap class="terminal">}}
-**Yarn installation**
-{{< highlight nix >}}
-yarn add gerillass
-{{< /highlight >}}
-{{< /highlightwrap >}}
+You can use Gerillass with or without the `gls-` namespace. It is optional, but I strongly recommend using it to prevent conflicts with other Sass libraries or frameworks such as Bootstrap.
 
-### Using with React.js
+## Vendor Prefix Support
 
-{{< highlightwrap >}}
-Simply `@import` the library at the beginning of your App.scss file without using the **node_modules** path.
-{{< highlight scss >}}
-@import 'gerillass';
-{{< /highlight >}}
-{{< /highlightwrap >}}
+Bundlers such as [Gulp](https://gulpjs.com/), [Grunt](https://gruntjs.com/) and [webpack](https://webpack.js.org/) are so widely used, and they run plugins like Autoprefixer to handle vendor prefixes, that Gerillass does not provide vendor prefix support of its own.
 
-### Using with Gulp
-
-{{< highlightwrap >}}
-You can add a new Gulp task like the one below, or simply add the `includePaths: ['node_modules/gerillass/scss']` option to a task you already have.
-{{< highlight js >}}
-function sassify(done) {
-  return (
-    src("assets/sass/**/*.scss")
-    .pipe(sass({
-      outputStyle: "expanded",
-      includePaths: ["node_modules/gerillass/scss"],
-    }).on('error', sass.logError))
-    .pipe(dest("assets/css"))
-  );
-  done()
-}
-{{< /highlight >}}
-{{< /highlightwrap >}}
-
-{{< highlightwrap >}}
-Including it in your project:
-{{< highlight scss >}}
-@import 'gerillass';
-{{< /highlight >}}
-{{< /highlightwrap >}}
-    
-### Using with Grunt
-
-{{< highlightwrap >}}
-You can add the Gerillass library by editing your Gruntfile.js at the root level of your project. Simply find the rules for Sass and add `loadPath: ['node_modules/gerillass/scss']` inside the `options` object.
-{{< highlight js >}}
-sass: {
-  dist: {
-    options: {
-      style: "expanded",
-      loadPath: ['node_modules/gerillass/scss']
-    },
-    files: {
-      "main.css": "main.scss"
-    }
-  }
-}
-{{< /highlight >}}
-{{< /highlightwrap >}}
-
-{{< highlightwrap >}}
-Including it in your project:
-{{< highlight scss >}}
-@import 'gerillass';
-{{< /highlight >}}
-{{< /highlightwrap >}}
+Feel free to use any tool for that. My suggestion is Autoprefixer. If you are not using one of the bundlers mentioned above, you can also add vendor prefixes by hand with the [Autoprefixer CSS Online](https://autoprefixer.github.io/) tool.
 
 ## Experimenting
 
-Experimenting with Gerillass is easy. If you already process Sass files on your computer, [download the Gerillass Sass library](https://github.com/selfishprimate/gerillass/archive/refs/tags/v1.2.2.zip), include it in your project, and start using it. If not, use [Gerillass Play](https://github.com/selfishprimate/gerillass-play)! Gerillass Play is a Gulp-based playground that helps you get started with [Sass](https://sass-lang.com/) and [Gerillass](https://gerillass.com/) quickly.
+Experimenting with Gerillass is easy. If you already process Sass files on your computer, [download the Gerillass Sass library](https://github.com/selfishprimate/gerillass/archive/main.zip), include it in your project, and start using it. If not, use [Gerillass Play](https://github.com/selfishprimate/gerillass-play)! Gerillass Play is a Gulp-based playground that helps you get started with [Sass](https://sass-lang.com/) and [Gerillass](https://gerillass.com/) quickly.
 
 {{< hint info >}}
-**Important Note**: Don't forget that you must have [**Node.js**](https://nodejs.org/en/) and [**Gulp**](https://gulpjs.com/docs/en/getting-started/quick-start) installed globally on your machine.
+**Important Note**: Don't forget that you must have [**Node.js**](https://nodejs.org/en/) and [**Gulp CLI**](https://gulpjs.com/docs/en/getting-started/quick-start) installed on your machine to work with Gerillass Play.
 {{< /hint >}}
 
 ## Testing
@@ -177,4 +286,3 @@ You can find two test examples in the `test` folder. Take your time, examine the
 npm test
 {{< /highlight >}}
 {{< /highlightwrap >}}
-
