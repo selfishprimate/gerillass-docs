@@ -1,29 +1,29 @@
 ---
 title: "Radial Gradient"
 page_title: "Radial Gradient Sass Mixin"
-page_description: "Radial Gradient Sass mixin helps you generate beautiful radial CSS gradients. It uses the radial-gradient CSS property."
+page_description: "The Radial Gradient Sass mixin helps you generate beautiful radial CSS gradients. It uses the radial-gradient CSS function."
 ---
 
 # Radial Gradient
 
 {{< mixin type="Mixin" name="radial-gradient" >}}
 
-**Radial Gradient Sass mixin** helps you generate beautiful radial CSS gradients. It uses the radial-gradient CSS property.
+The **Radial Gradient Sass mixin** helps you generate beautiful radial CSS gradients. It uses the radial-gradient CSS function.
 
-The one-line method makes it very easy to use. To generate a radial gradient you must pass values for gradient's angle of `$direction`, `$shape` of the gradient and `$colors` (at least two color values must have). You can also add color-stop points (starting and ending positions of colors).
+The one-line method makes it very easy to use. To generate a radial gradient, you must pass values for the `$shape` and `$position` of the gradient, and for `$colors` (you need at least two color values). You can also add color stop points (the starting and ending positions of the colors).
 
 {{< hint info >}}
-A color-stop points can be defined by `length` or a `percentage` units.
+Color stop points can be defined with `length` or `percentage` units.
 {{< /hint >}}
 
 {{< /mixin >}}
 
 ## Arguments
 
-{{< arguments/table footnote="**Important:** When you use the color-stop points together with the color values, each group of values must be wrapped with parentheses and separated by space. For more see the <a href='#examples'>examples</a>.">}}
-  {{< arguments/row name="$shape" type="string" description="This option sets the shape of the gradient. Accepts `circle` or `ellipse` values. The default value is set to `ellipse`. To skip this argument use `null`." >}}
+{{< arguments/table footnote="**Important:** When you use color stop points together with the color values, each group of values must be wrapped in parentheses and separated by a space. See the <a href='#examples'>examples</a> for more.">}}
+  {{< arguments/row name="$shape" type="string" description="Sets the shape of the gradient. Accepts the values `circle` and `ellipse`. The default value is `ellipse`. To skip this argument, use `null`." >}}
   {{< arguments/row name="$position" type="string, number" description="Sets the position of the gradient's shape. Accepts the following values: `top`, `top-right`, `right`, `bottom-right`, `bottom`, `bottom-left`, `left`, `top-left`, `center`, `closest-side`, `farthest-side`, `closest-corner`, `farthest-corner`." >}}
-  {{< arguments/row name="$colors" type="list" description="Accepts a list of colors with or without the color-stop points. You can pass as many color values ​​as you want." >}}
+  {{< arguments/row name="$colors" type="list" description="Accepts a list of colors, with or without color stop points. You can pass as many color values as you want." >}}
 {{< /arguments/table >}}
 
 ## Examples
@@ -77,7 +77,7 @@ Now change the position of the gradient's shape.
 {{< /highlightwrap >}}
 
 {{< highlightwrap class="example">}}
-Use color-stops to make sharp transitions between the colors.
+Use color stops to make sharp transitions between the colors.
 {{< highlight scss >}}
 .element{
   @include radial-gradient(circle, center, (darkslateblue 0 10%) (white 10% 20%) (dodgerblue 20% 30%) (powderblue 30% 100%));
@@ -95,7 +95,7 @@ Use color-stops to make sharp transitions between the colors.
 {{< highlightwrap class="example">}}
 Now let's try it with the named arguments.
 {{< hint info >}}
-To use **named arguments** may be time-consuming compared to using **ordinal arguments** but it is definitely easier to use, especially if the number of arguments that you pass is too many.
+Using **named arguments** may take a little longer than using **positional arguments**, but it is definitely easier, especially when you pass a lot of arguments.
 {{< /hint >}}
 {{< highlight scss >}}
 .element{
