@@ -1,34 +1,34 @@
 ---
 title: "Linear Gradient"
 page_title: "Linear Gradient Sass Mixin"
-page_description: "Linear Gradient Sass mixin helps you to generate colorful CSS gradients, and it combines them with image and text elements. In this way, you can create beautiful page components."
+page_description: "The Linear Gradient Sass mixin helps you generate colorful CSS gradients and combine them with image and text elements. This way, you can create beautiful page components."
 ---
 
 # Linear Gradient
 
 {{< mixin type="Mixin" name="linear-gradient" >}}
 
-**Linear Gradient Sass mixin** helps you to generate colorful CSS gradients, and it combines them with image and text elements. In this way, you can create beautiful page components.
+The **Linear Gradient Sass mixin** helps you generate colorful CSS gradients and combine them with image and text elements. This way, you can create beautiful page components.
 
-The one-line method makes it very easy to use. To generate a linear gradient you must pass values for gradient's angle of `$direction` and at least two color values. You can also add color-stop points (starting and ending positions of colors).
+The one-line method makes it very easy to use. To generate a linear gradient, you must pass a value for the `$direction` angle and at least two color values. You can also add color stop points (the starting and ending positions of the colors).
 
 {{< hint info >}}
-A color-stop points can be defined by `length` or a `percentage` units.
+Color stop points can be defined with `length` or `percentage` units.
 {{< /hint >}}
 
 {{< /mixin >}}
 
 ## Arguments
 
-{{< arguments/table footnote="**Important:** When you use the color-stop points together with the color values, each group of values must be wrapped with parentheses and separated by space. For more see the <a href='#examples'>examples</a>.">}}
-  {{< arguments/row name="$direction" type="string, number" description="Sets the gradient line's direction of angle. Accepts `top`, `top-right`, `right`, `bottom-right`, `bottom`, `bottom-left`, `left`, `top-left` values as a string. Or you can pass a custom value as a number followed by a `deg` unit." >}}
-  {{< arguments/row name="$colors" type="list" description="Accepts a list of colors with or without the color-stop points. You can pass as many color values ​​as you want." >}}
+{{< arguments/table footnote="**Important:** When you use color stop points together with the color values, each group of values must be wrapped in parentheses and separated by a space. See the <a href='#examples'>examples</a> for more.">}}
+  {{< arguments/row name="$direction" type="string, number" description="Sets the direction of the gradient line. Accepts the string values `top`, `top-right`, `right`, `bottom-right`, `bottom`, `bottom-left`, `left`, and `top-left`. You can also pass a custom value as a number followed by a `deg` unit." >}}
+  {{< arguments/row name="$colors" type="list" description="Accepts a list of colors, with or without color stop points. You can pass as many color values as you want." >}}
 {{< /arguments/table >}}
 
 ## Examples
 
 {{< highlightwrap class="example">}}
-Simply call the mixin in a selector pass some values both for `$direction` and `$color` parameters.
+Simply call the mixin inside a selector and pass values for both the `$direction` and `$colors` arguments.
 {{< highlight scss >}}
 .element{
   @include linear-gradient(right, #43c6ac #191654);
@@ -44,7 +44,7 @@ Simply call the mixin in a selector pass some values both for `$direction` and `
 {{< /highlightwrap >}}
 
 {{< highlightwrap class="example">}}
-Let's try it with the named arguments and add one more color-stop.
+Let's try it with named arguments and add one more color stop.
 {{< highlight scss >}}
 .element{
   @include linear-gradient(
@@ -63,7 +63,7 @@ Let's try it with the named arguments and add one more color-stop.
 {{< /highlightwrap >}}
 
 {{< highlightwrap class="example">}}
-We can use the color-stop positioning to adjust the transition between the colors.
+We can use color stop positioning to adjust the transition between the colors.
 {{< highlight scss >}}
 .element{
   @include linear-gradient(
@@ -82,7 +82,7 @@ We can use the color-stop positioning to adjust the transition between the color
 {{< /highlightwrap >}}
 
 {{< highlightwrap class="example">}}
-Let's sharpen the transition between the color-stops.
+Let's sharpen the transition between the color stops.
 {{< highlight scss >}}
 .element{
   @include linear-gradient(
