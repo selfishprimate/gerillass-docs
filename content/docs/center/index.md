@@ -1,25 +1,25 @@
 ---
 title: "Center"
 page_title: "Center Sass Mixin"
-page_description: "Center Sass Mixin allows you to center selected elements both on the horizontal and vertical axes by using absolute positioning in CSS and Sass."
+page_description: "The Center Sass mixin allows you to center selected elements on both the horizontal and vertical axes using absolute positioning in CSS and Sass."
 ---
 
 # Center
 
 {{< mixin type="Mixin" name="center" >}}
-**Center** Sass mixin allows you to center elements (**the elements that have `position` value either `absolute` or `fixed`**) on both the horizontal and vertical axes.
+The **Center** Sass mixin allows you to center elements (**those with a `position` value of either `absolute` or `fixed`**) on both the horizontal and vertical axes.
 {{< hint info >}}
-**Important:** You must declare either `position: absolute` or `position: fixed` style rule to the selected element to make this mixin work correctly. **The parent element's `position` value, which you'll be centering within must be other than `static`**.
+**Important:** You must set either `position: absolute` or `position: fixed` on the selected element to make this mixin work correctly. **The parent element you are centering within must have a `position` value other than `static`.**
 {{< /hint >}}
 {{< hint warning >}}
-**Note that in mind** that because this mixin uses the CSS ‘**transform**’ property, this property will no longer be available for the selected element!
+**Keep in mind** that because this mixin uses the CSS **transform** property, that property will no longer be available for the selected element!
 {{< /hint >}}
 {{< /mixin >}}
 
 ## Arguments
 
-{{< arguments/table footnote="Pass `both` value to center an element on both the horizontal and vertical axes, or do not pass at all.">}}
-  {{< arguments/row name="$axis" type="string" description="Sets the axis of the alingment. Accepts `horizontal`, `vertical` and `both` values. The default value is set to `both`." >}}
+{{< arguments/table footnote="Pass the `both` value to center an element on both the horizontal and vertical axes, or pass nothing at all.">}}
+  {{< arguments/row name="$axis" type="string" description="Sets the axis of the alignment. Accepts the values `horizontal`, `vertical`, and `both`. The default value is `both`." >}}
 {{< /arguments/table >}}
 
 
@@ -64,7 +64,7 @@ Simply call the mixin without passing any arguments **to center the selected ele
 
 
 {{< highlightwrap class="example">}}
-Let's **center** the selected element on **horizontal axis only**.
+Let's **center** the selected element on the **horizontal axis only**.
 {{< highlight scss >}}
 .parent-element {
   position: relative;
@@ -99,7 +99,7 @@ Let's **center** the selected element on **horizontal axis only**.
 {{< /highlightwrap >}}
 
 {{< highlightwrap class="example">}}
-Now let's **center** the selected element on **vertical axis only**.
+Now let's **center** the selected element on the **vertical axis only**.
 {{< highlight scss >}}
 .parent-element {
   position: relative;
@@ -134,7 +134,7 @@ Now let's **center** the selected element on **vertical axis only**.
 {{< /highlightwrap >}}
 
 {{< highlightwrap class="example">}}
-Now let's pass `both` value to **center** the selected element **on both the horizontal and vertical axes**.
+Now let's pass the `both` value to **center** the selected element **on both the horizontal and vertical axes**.
 {{< highlight scss >}}
 .parent-element {
   position: relative;
