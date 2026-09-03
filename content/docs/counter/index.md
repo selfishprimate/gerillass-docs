@@ -1,18 +1,18 @@
 ---
 title: "Counter"
 page_title: "Counter Sass Mixin"
-page_description: "Counter Sass mixin allows you to present your content in a listicle format by using CSS Counter Properties. With Sass and Gerillass it is now very easy to create automatically counting elements."
+page_description: "The Counter Sass mixin allows you to present your content in a listicle format using CSS counter properties. With Sass and Gerillass it is now very easy to create elements that count automatically."
 ---
 
 # Counter
 
 {{< mixin type="Mixin" name="counter" >}}
-**Counter** Sass mixin allows you to present your content in a **listicle** format. 
+The **Counter** Sass mixin allows you to present your content in a **listicle** format. 
 {{< hint info >}}
-**Important:** The mixin must be applied to the parent element that has `counter-start` class on it, so all the children that have `counter-item` class will be affected.
+**Important:** The mixin must be applied to the parent element that has the `counter-start` class on it, so that all the children with the `counter-item` class are affected.
 {{< /hint >}}
 {{< hint warning >}}
-**Tip:** Somehow, **if you want to continue a list** that is interrupted by another content, simply give the containing element **'counter-continue'** class instead of **'counter-start'**.
+**Tip:** **If you want to continue a list** that is interrupted by other content, simply give the containing element the **'counter-continue'** class instead of **'counter-start'**.
 {{< /hint >}}
 The markup should look like the example below:
 {{< highlight html >}}
@@ -26,16 +26,16 @@ The markup should look like the example below:
 
 ## Arguments
 
-{{< arguments/table footnote="Pass `both` value to center an element on both the horizontal and vertical axes, or do not pass at all.">}}
-  {{< arguments/row name="$counter" type="string" description="Sets the style of the counter. Default value is `decimal`. Check out the [links](#related-links) at the end of the article to learn more about the counter styles." >}}
-  {{< arguments/row name="$counter-before" type="string" description="It helps you add a string before the counter." >}}
-  {{< arguments/row name="$counter-after" type="string" description="It helps you add a string after the counter." >}}
+{{< arguments/table footnote="See the [examples](#examples) to learn how these arguments behave.">}}
+  {{< arguments/row name="$counter" type="string" description="Sets the style of the counter. The default value is `decimal`. Check out the [links](#related-links) at the end of the article to learn more about counter styles." >}}
+  {{< arguments/row name="$counter-before" type="string" description="Adds a string before the counter." >}}
+  {{< arguments/row name="$counter-after" type="string" description="Adds a string after the counter." >}}
 {{< /arguments/table >}}
 
 
 ## Examples
 
-Suppose you have a markup like in the below and you want to present it in a listicle format (the following markup will be used for all examples).
+Suppose you have markup like the one below and you want to present it in a listicle format. (The same markup is used for all the examples.)
 
 {{< highlight html >}}
 
@@ -50,7 +50,7 @@ Suppose you have a markup like in the below and you want to present it in a list
 {{< /highlight >}}
 
 {{< highlightwrap class="example">}}
-Simply call the mixin in a parent element's selector without passing any arguments.
+Simply call the mixin inside the parent element's selector without passing any arguments.
 {{< highlight scss >}}
 .listicle-wrapper {
   @include counter;
@@ -94,7 +94,7 @@ Simply call the mixin in a parent element's selector without passing any argumen
 {{< /highlightwrap >}}
 
 {{< highlightwrap class="example">}}
-Now let's highlight the counter a little more. **You can pass a decleration block into the mixin** to achieve that easily.
+Now let's highlight the counter a little more. **You can pass a declaration block into the mixin** to do that easily.
 {{< highlight scss >}}
 .listicle-wrapper {
   @include counter {
@@ -144,7 +144,7 @@ Now let's highlight the counter a little more. **You can pass a decleration bloc
 {{< /highlightwrap >}}
 
 {{< highlightwrap class="example">}}
-Now let's **change the counter style from `decimal` to `upper-roman`** (default is always `decimal`).
+Now let's **change the counter style from `decimal` to `upper-roman`** (the default is always `decimal`).
 {{< highlight scss >}}
 .listicle-wrapper {
   @include counter(upper-roman) {
@@ -196,7 +196,7 @@ Now let's **change the counter style from `decimal` to `upper-roman`** (default 
 {{< highlightwrap class="example">}}
 Now let's try something different.
 {{< hint info >}}
-**Important:** Values ​​that you pass outside the predefined values ​​for **counter style** will be placed either **in front** or **behind** of the counter. If you pass **only one** value **it will be placed behind the counter**. If you pass **two values**, the **first one** will be placed **in front** of the counter and the **second** is **behind**.
+**Important:** Values that you pass outside the predefined **counter style** values are placed either **before** or **after** the counter. If you pass **only one** value, **it is placed after the counter**. If you pass **two values**, the **first one** is placed **before** the counter and the **second one after** it.
 {{< /hint >}}
 {{< highlight scss >}}
 .listicle-wrapper {
@@ -247,7 +247,7 @@ Now let's try something different.
 {{< /highlightwrap >}}
 
 {{< highlightwrap class="example">}}
-Now let's pass two values, one for the front of the counter the other one is for behind.
+Now let's pass two values, one for before the counter and the other for after it.
 {{< highlight scss >}}
 .listicle-wrapper {
   @include counter("( ", " ) ") {
@@ -297,7 +297,7 @@ Now let's pass two values, one for the front of the counter the other one is for
 {{< /highlightwrap >}}
 
 {{< highlightwrap class="example">}}
-Now let's change the counter style to `decimal` again and add a string behind it!
+Now let's change the counter style to `decimal` again and add a string after it!
 {{< highlight scss >}}
 .listicle-wrapper {
   @include counter(decimal, "th ") {
@@ -347,7 +347,7 @@ Now let's change the counter style to `decimal` again and add a string behind it
 {{< /highlightwrap >}}
 
 {{< highlightwrap class="example">}}
-Now let's **add a string in front of the counter** and pass `decimal-leading-zero` value for counter style.
+Now let's **add a string before the counter** and pass the `decimal-leading-zero` value for the counter style.
 {{< highlight scss >}}
 .listicle-wrapper {
   @include counter("Section ", decimal-leading-zero) {
@@ -397,7 +397,7 @@ Now let's **add a string in front of the counter** and pass `decimal-leading-zer
 {{< /highlightwrap >}}
 
 {{< highlightwrap class="example">}}
-Now let's add a string to both the front and behind of the counter.
+Now let's add a string both before and after the counter.
 {{< highlight scss >}}
 .listicle-wrapper {
   @include counter("[ Section ", decimal-leading-zero, " ]") {
@@ -550,7 +550,7 @@ The examples shown so far were about how to use this mixin. **So where can you g
 {{< /highlightwrap >}}
 
 {{< highlightwrap class="example">}}
-If you want **to continue a list that is interrupted by another content (for example, an unpleasant ugly add banner)**, simply give the continuing parent element **‘counter-continue’** class instead of **‘counter-start’**.
+If you want **to continue a list that is interrupted by other content (for example, an ugly ad banner)**, simply give the continuing parent element the **'counter-continue'** class instead of **'counter-start'**.
 {{< highlight html >}}
 <div class="listicle-wrapper counter-start">
   <div class="item counter-item">The passage experienced a surge in popularity during the 1960s when Letraset used it on their dry-transfer sheets, and again during the 90s as desktop publishers bundled the text with their software. Today it's seen all around the web; on templates, websites, and stock designs. Use our generator to get your own, or read on for the authoritative history of lorem ipsum.</div>
