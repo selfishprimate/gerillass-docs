@@ -1,26 +1,26 @@
 ---
 title: "Font Face"
 page_title: "Font Face Sass Mixin"
-page_description: "Font Face Sass mixin helps you to generate a cross-browser compatible @font-face CSS at-rule in CSS and SCSS."
+page_description: "The Font Face Sass mixin helps you generate a cross-browser compatible @font-face CSS at-rule in CSS and SCSS."
 ---
 
 # Font Face
 
 {{< mixin type="Mixin" name="font-face" >}}
-**Font Face** Sass mixin helps you to generate a cross-browser compatible @font-face decleration.
+The **Font Face** Sass mixin helps you generate a cross-browser compatible @font-face declaration.
 {{< hint info >}}
-**Important:** The mixin must be called at the root level of your style sheet.
+**Important:** The mixin must be called at the root level of your stylesheet.
 {{< /hint >}}
 {{< /mixin >}}
 
 ## Arguments
 
-{{< arguments/table footnote="To learn more about the **font-weight** property values checkout the [links](#related-articles) at the end of the article.">}}
+{{< arguments/table footnote="To learn more about the **font-weight** property values, check out the [links](#related-articles) at the end of the article.">}}
   {{< arguments/row name="$font-family" type="string" description="Sets the name of the `font-family`." >}}
   {{< arguments/row name="$file-path" type="string" description="Sets the path and the name of the font file. The file name must be written without the extension." >}}
-  {{< arguments/row name="$font-style" type="string" description="Sets the `font-style` property. the default value is set to `normal`. If there is an `italic` version of the font you can set the value to `italic` or `oblique`." >}}
-  {{< arguments/row name="$font-weight" type="number" description="Sets the weight of the fonts. The default value is set to `400`. Accepts `100`, `200`, `300`, `400`, `500`, `600`, `700`, `800`, `900`." >}}
-  {{< arguments/row name="$file-formats" type="string | list" description="Sets the font file formats that you would like to include. The default value is set to `eot woff2 woff ttf svg`." >}}
+  {{< arguments/row name="$font-style" type="string" description="Sets the `font-style` property. The default value is `normal`. If there is an `italic` version of the font, you can set the value to `italic` or `oblique`." >}}
+  {{< arguments/row name="$font-weight" type="number" description="Sets the weight of the font. The default value is `400`. Accepts `100`, `200`, `300`, `400`, `500`, `600`, `700`, `800`, and `900`." >}}
+  {{< arguments/row name="$file-formats" type="string | list" description="Sets the font file formats you want to include. The default value is `eot woff2 woff ttf svg`." >}}
 {{< /arguments/table >}}
 
 ## Examples
@@ -89,7 +89,7 @@ Now let's add the `bold` version of the `Fanwood Text` font-family (if there is 
 {{< /highlightwrap >}}
 
 {{< highlightwrap class="example">}}
-If you pass values for both `$font-style` and `$font-weight` arguments, the value for `$font-weight` argument should always be at the end unless you pass values for the `$file-formats`.
+If you pass values for both the `$font-style` and `$font-weight` arguments, the `$font-weight` value should always come last, unless you also pass a value for `$file-formats`.
 {{< highlight scss >}}
 @include font-face("Fanwood Text", "fonts/fanwood-text/fanwood-text-bold-italic", italic, 700);
 {{< /highlight >}}
@@ -110,7 +110,7 @@ If you pass values for both `$font-style` and `$font-weight` arguments, the valu
 {{< /highlightwrap >}}
 
 {{< hint info >}}
-Things are getting trickier when you want to pass a value for `$file-formats`. In the below examples you can see the ways to pass a value for `$file-formats`.
+Things get trickier when you want to pass a value for `$file-formats`. The examples below show the ways to do it.
 {{< /hint >}}
 
 {{< highlightwrap class="example">}}
@@ -132,7 +132,7 @@ Suppose you only have three file formats: `woff2`, `woff`, and `ttf`.
 {{< /highlightwrap >}}
 
 {{< highlightwrap class="example">}}
-If you want to pass values for all the arguments the order must be like this: `$font-name`, `$file-path`, `font-style`, `$font-weight`, `$file-formats` like in the example below.
+If you want to pass values for all the arguments, the order must be `$font-family`, `$file-path`, `$font-style`, `$font-weight`, `$file-formats`, like in the example below.
 {{< highlight scss >}}
 @include font-face("Fanwood Text", "fonts/fanwood-text/fanwood-text-bold-italic", italic, 700, woff2 woff);
 {{< /highlight >}}
@@ -149,9 +149,9 @@ If you want to pass values for all the arguments the order must be like this: `$
 {{< /highlightwrap >}}
 
 {{< highlightwrap class="example">}}
-If you are having trouble with passing the arguments by their position try `named arguments`.
+If you are having trouble passing the arguments by position, try **named arguments**.
 {{< hint info >}}
-**Tip:** Do you know what's beautiful about named arguments? **They're order-independent**, therefore so useful in such cases where it is difficult to stick to the order of arguments.
+**Tip:** Do you know what is beautiful about named arguments? **They are order-independent**, which makes them very useful when it is hard to stick to the argument order.
 {{< /hint >}}
 {{< highlight scss >}}
 @include font-face (
@@ -177,7 +177,7 @@ If you are having trouble with passing the arguments by their position try `name
 {{< /highlightwrap >}}
 
 {{< highlightwrap class="example">}}
-Try to change the order of the arguments (whatever the order you use, the result will be the same).
+Try changing the order of the arguments. Whatever order you use, the result is the same.
 {{< highlight scss >}}
 @include font-face (
   $font-weight: 700,
@@ -225,7 +225,7 @@ Now let's use the `@content` directive to pass a content block into the mixin.
 {{< /highlight >}}
 {{< /highlightwrap >}}
 
-If you don't have all the font varieties, or you have a font and you want to convert it to a **web font** (@font-face embeddable), try **Font Squirrel**'s [Webfont Generator](https://www.fontsquirrel.com/tools/webfont-generator).
+If you don't have all the font varieties, or you have a font you want to convert into a **web font** (embeddable with @font-face), try **Font Squirrel**'s [Webfont Generator](https://www.fontsquirrel.com/tools/webfont-generator).
 
 ## Related Articles
 * [Font Face](https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face)  
