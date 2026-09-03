@@ -1,35 +1,35 @@
 ---
 title: "Adaptive"
 page_title: "Adaptive Sass Mixin"
-page_description: "Adaptive Sass mixin helps you set a max-width value to the containing elements. It is useful when you wish to apply adaptive design concepts to your responsive designs."
+page_description: "The Adaptive Sass mixin helps you set a max-width value on your container elements. It is useful when you want to apply adaptive design concepts to your responsive designs."
 page_keywords: "Adaptive Design, CSS Adaptive Design, Bootstrap Adaptive Design, Adaptive Design with Sass, SCSS Adaptive Design, What is Adaptive Design?"
 ---
 
 # Adaptive
 
 {{< mixin type="Mixin" name="adaptive" >}}
-**Adaptive Sass mixin** helps you to set `max-width` value to the containing elements based on the `breakpoint` values defined in the `_map-for-breakpoints.scss` file, and also specifies a `$gutter` value, where the edges of a browser screen can most closely get to the edges of the selected element.
+The **Adaptive Sass mixin** helps you set a `max-width` value on your container elements, based on the `breakpoint` values defined in the `_map-for-breakpoints.scss` file. It also takes a `$gutter` value, which sets how close the edges of the browser screen can get to the edges of the selected element.
 {{< hint info >}}
-**Tip:** Adaptive mixin works best with the `percentage` values.
+**Tip:** The Adaptive mixin works best with `percentage` values.
 {{< /hint >}}
 {{< /mixin >}}
 
 ## What is Adaptive Design?
 
-**Adaptive design** is a graphical user interface design that responds differently to various device screen sizes. Adaptive design typically uses multiple fixed layout sizes and when it detects the device size, it selects the best layout for this specific screen size.
+**Adaptive design** is a graphical user interface design approach that responds differently to various device screen sizes. It typically uses several fixed layout sizes, and when it detects the device size, it selects the best layout for that specific screen size.
 
-As for the **Adaptive Sass mixin**, it provides the fastest and most consistent adaptive design option for you.
+The **Adaptive Sass mixin** gives you the fastest and most consistent way to apply adaptive design.
 
 ## Arguments
 
-{{< arguments/table footnote="Apply this mixin to your containing element of your layout, and then narrow or widen your browser screen to test it!">}}
-  {{< arguments/row name="$gutter" type="number (with unit)" description="Accepts only one value and sets it for all the breakpoints. The default value is set to `30px`." >}}
+{{< arguments/table footnote="Apply this mixin to the container element of your layout, then narrow or widen your browser window to test it!">}}
+  {{< arguments/row name="$gutter" type="number (with unit)" description="Accepts one value and applies it to all the breakpoints. The default value is `30px`." >}}
 {{< /arguments/table >}}
 
 ## Examples
 
 {{< highlightwrap class="example">}}
-Simply call the mixin without passing any arguments. Default `$gutter` value is `30px`.
+Simply call the mixin without passing any arguments. The default `$gutter` value is `30px`.
 {{< highlight scss >}}
 .main-container{
   @include adaptive;
@@ -64,7 +64,7 @@ Simply call the mixin without passing any arguments. Default `$gutter` value is 
 {{< /highlightwrap >}}
 
 {{< highlightwrap class="example">}}
-Try passing an argument value with `em` unit (you can use any kind of length units here: `px`, `em`, `rem`, `percentage` etc. will be just fine).
+Try passing a value with an `em` unit. You can use any length unit here, so `px`, `em`, `rem`, and percentages all work.
 {{< highlight scss >}}
 .main-container{
   @include adaptive(2em);
