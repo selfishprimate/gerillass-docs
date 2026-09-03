@@ -1,23 +1,23 @@
 ---
 title: "Background Stripes"
 page_title: "Background Stripes Sass Mixin"
-page_description: "Background Stripes Sass mixin allows you to create stylish and colorful background stripes using repeating-linear-gradient CSS property. You can easily create colorful background lines that are difficult to create with vanilla CSS."
+page_description: "The Background Stripes Sass mixin allows you to create stylish and colorful background stripes using the repeating-linear-gradient CSS function. You can easily create colorful background lines that are difficult to create with vanilla CSS."
 page_keywords: "CSS Background Lines, CSS Vertical Background Lines, CSS Horizontal Background Lines, CSS Background Stripes, CSS Animated Background Lines, SCSS to CSS"
 ---
 
 # Background Stripes
 
 {{< mixin type="Mixin" name="background-stripes" >}}
-**Background Stripes** Sass mixin allows you to create stylish and colorful background stripes.
+The **Background Stripes** Sass mixin allows you to create stylish and colorful background stripes.
 {{< /mixin >}}
 
 ## Arguments
 
-{{< arguments/table footnote="Multiple color values must be space-separated (e.g. $color: red blue green).">}}
-  {{< arguments/row name="$color" type="list" description="The color(s) of the stripes. The default there is only one color and is set to opaque black. Accepts one or more color values to create multiple color-stops." >}}
-  {{< arguments/row name="$thickness" type="number<br/>(with unit)" description="The thickness of the stripes. The default thickness value is 1em." >}}
-  {{< arguments/row name="$rotation" type="number</br>(with deg unit)" description="The rotation of the stripes. The default value is set to `-45deg`. This option allows you to create diagonal or straight stripes very easily." >}}
-  {{< arguments/row name="$image" type="string<br/>(quoted)" description="Accepts a URL of an image. This option helps you to add an image underneath the stripes to create more stylish design elements." >}}
+{{< arguments/table footnote="Multiple color values must be separated by a space (e.g. `$color: red blue green`).">}}
+  {{< arguments/row name="$color" type="list" description="The color or colors of the stripes. By default there is only one color, a translucent black. Accepts one or more color values to create multiple color stops." >}}
+  {{< arguments/row name="$thickness" type="number<br/>(with unit)" description="The thickness of the stripes. The default value is `1em`." >}}
+  {{< arguments/row name="$rotation" type="number<br/>(with deg unit)" description="The rotation of the stripes. The default value is `-45deg`. This option lets you create diagonal or straight stripes very easily." >}}
+  {{< arguments/row name="$image" type="string<br/>(quoted)" description="Accepts the URL of an image. This option helps you add an image underneath the stripes to create more stylish design elements." >}}
 {{< /arguments/table >}}
 
 ## Examples
@@ -73,7 +73,7 @@ background-image: repeating-linear-gradient(-45deg, pink 0, pink 1em, transparen
 {{< /highlightwrap >}}
 
 {{< highlightwrap class="example">}}
-Now let's add more colors and change the `$thickness` and `$rotation` values. **Important:** Don't forget that the multiple color values must be seperated by space!
+Now let's add more colors and change the `$thickness` and `$rotation` values. **Important:** Don't forget that multiple color values must be separated by a space!
 {{< highlight scss >}}
 .element{
   @include background-stripes(
@@ -134,7 +134,7 @@ background-image: repeating-linear-gradient(45deg, rgba(0, 0, 255, 0.4) 0, rgba(
 {{< /highlightwrap >}}
 
 {{< highlightwrap class="example">}}
-You can create an old fashioned tv screen effect as well.
+You can create an old-fashioned TV screen effect as well.
 {{< highlight scss >}}
 .element{
   @include background-stripes(
