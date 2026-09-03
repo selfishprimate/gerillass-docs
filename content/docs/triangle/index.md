@@ -1,30 +1,30 @@
 ---
 title: "Triangle"
 page_title: "Triangle Sass Mixin"
-page_description: "Triangle Sass mixin helps you generate triangles by using ::before or ::after CSS pseudo-elements."
+page_description: "The Triangle Sass mixin helps you generate triangles using the ::before or ::after CSS pseudo-elements."
 ---
 
 # Triangle
 
 {{< mixin type="Mixin" name="triangle" >}}
-**Triangle** Sass mixin helps you to generate triangles by using `::before` or `::after` CSS pseudo-elements.
+The **Triangle** Sass mixin helps you generate triangles using the `::before` or `::after` CSS pseudo-elements.
 {{< hint info >}}
-**Tip:** Works best with the text based elements to point a direction to make user take action (e.g. dropdown menu labels). Especially very useful when you apply it to the selected element's `::before` or `::after` pseudo-elements.
+**Tip:** It works best with text based elements, where it points in a direction to invite the user to take action (for example, dropdown menu labels). It is especially useful when you apply it to the selected element's `::before` or `::after` pseudo-elements.
 {{< /hint >}}
 {{< /mixin >}}
 
 ## Arguments
 
-{{< arguments/table footnote="When you pass `top`, `right`, `bottom`, `left` values for **`$direction`** argument you can pass two values to resize the triangle. **The first value controls the width of the triangle while the second controls the height**. ">}}
-  {{< arguments/row name="$direction" type="string" description="Sets the direction of the triangle. Accepts `top`, `top-right`, `right`, `bottom-right`, `bottom`, `bottom-left`, `left`, `top-left` values." >}}
+{{< arguments/table footnote="When you pass the `top`, `right`, `bottom`, or `left` values for the **`$direction`** argument, you can pass two values to resize the triangle. **The first value controls the width of the triangle and the second controls the height.**">}}
+  {{< arguments/row name="$direction" type="string" description="Sets the direction of the triangle. Accepts the values `top`, `top-right`, `right`, `bottom-right`, `bottom`, `bottom-left`, `left`, and `top-left`." >}}
   {{< arguments/row name="$color" type="color" description="The color of the triangle." >}}
-  {{< arguments/row name="$size" type="number (with unit)" description="The size of the triangle. Multiple values must be seperated by space." >}}
+  {{< arguments/row name="$size" type="number (with unit)" description="The size of the triangle. Multiple values must be separated by a space." >}}
 {{< /arguments/table >}}
 
 ## Examples
 
 {{< highlightwrap class="example">}}
-Suppose you have an expandable box and you want users to click a label to expand it! **Let's apply the mixin to the `::after` pseudo-element of the selected element**.
+Suppose you have an expandable box and you want users to click a label to expand it. **Let's apply the mixin to the `::after` pseudo-element of the selected element.**
 
 {{< highlight html >}}
 <div class="element">Click here to expand it!</div>
@@ -64,7 +64,7 @@ Suppose you have an expandable box and you want users to click a label to expand
 {{< /highlightwrap >}}
 
 {{< highlightwrap class="example">}}
-Now let's **change the `$color` and the `$size`** of the triangle, and seperate it from the text by **passing a decleration block into the mixin**.
+Now let's **change the `$color` and the `$size`** of the triangle, and separate it from the text by **passing a declaration block into the mixin**.
 
 {{< highlight scss >}}
 .element {
@@ -107,7 +107,7 @@ Now let's **change the `$color` and the `$size`** of the triangle, and seperate 
 {{< /highlightwrap >}}
 
 {{< highlightwrap class="example">}}
-When you pass one of the `top`, `right`, `bottom` or `left` values for `$direction` argument, you can pass secondary value to resize the triangle. First value controls the width of the triangle and the second is for height.
+When you pass one of the `top`, `right`, `bottom`, or `left` values for the `$direction` argument, you can pass a second value to resize the triangle. The first value controls the width of the triangle and the second controls the height.
 {{< highlight scss >}}
 .element{
   &::after {
@@ -156,7 +156,7 @@ When you pass one of the `top`, `right`, `bottom` or `left` values for `$directi
 {{< /highlightwrap >}}
 
 {{< highlightwrap class="example">}}
-You can apply the mixin not only to the pseudo-elements but to the selected element's itself.
+You can apply the mixin not only to the pseudo-elements, but to the selected element itself.
 {{< highlight scss >}}
 .element{
   @include triangle(
