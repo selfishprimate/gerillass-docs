@@ -1,22 +1,22 @@
 ---
 title: "Remify"
 page_title: "Remify Sass Function"
-page_description: "Remify Sass function is a handy SCSS function to help you convert the pixel values to rem."
+page_description: "The Remify Sass function is a handy SCSS function that helps you convert pixel values to rem."
 page_keywords: "Rem Sass Function, Sass pixel to rem, pixel to rem with Sass, SCSS pixel to rem, pixel to rem, How to convert pixel to rem, CSS rem unit, Sass, SCSS, Sass Library, Sass Libraries"
 ---
 
 # Remify
 
 {{< function type="Function" name="remify" >}}
-**Remify Sass function** is a handy tool to help you convert the `pixel` values to `rem`. 
+The **Remify Sass function** is a handy tool that helps you convert `pixel` values to `rem`. 
 {{< hint info >}}
-**Tip:** It's especially useful when you work with rem units and having hard times to calculate how many rems that a pixel value you pass.
+**Tip:** It is especially useful when you work with rem units and have a hard time calculating how many rems a pixel value comes to.
 {{< /hint >}}
 {{< /function >}}
 ## Arguments
 
 {{< arguments/table >}}
-  {{< arguments/row name="$value" type="number (with unit)" description="The pixel value that you want it to be converted to `rem`." >}}
+  {{< arguments/row name="$value" type="number (with unit)" description="The pixel value you want to convert to `rem`." >}}
 {{< /arguments/table >}}
 
 ## Examples
