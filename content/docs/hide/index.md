@@ -1,25 +1,25 @@
 ---
 title: "Hide"
 page_title: "Hide Sass Mixin"
-page_description: "You can improve web accessibility by hiding elements with Hide Sass mixin. This will help you to hide some content visually on a web page, while it makes the content to be accessible to assistive technologies like a screen reader."
+page_description: "You can improve web accessibility by hiding elements with the Hide Sass mixin. It hides content visually on a web page while keeping it accessible to assistive technologies such as screen readers."
 ---
 
 # Hide
 
 {{< mixin type="Mixin" name="hide" >}}
-**Hide** Sass mixin will allow you to improve web accessibility by hiding elements. This will help you to hide some content visually on a web page, while it makes the content to be accessible to assistive technologies like a screen reader.
+The **Hide** Sass mixin allows you to improve web accessibility by hiding elements. It hides content visually on a web page while keeping it accessible to assistive technologies such as screen readers.
 {{< /mixin >}}
 
 ## Arguments
 
 {{< arguments/table >}}
-  {{< arguments/row name="$toggle" type="string" description="Accepts `hide` or `unhide` values. Default value is set to `hide`. Use `unhide` to reserve the affect." >}}
+  {{< arguments/row name="$toggle" type="string" description="Accepts the values `hide` and `unhide`. The default value is `hide`. Use `unhide` to reverse the effect." >}}
 {{< /arguments/table >}}
 
 ## Examples
 
 {{< highlightwrap class="example">}}
-Simply call the mixin to make the selected element and all its children visually hidden (but accessible for screen readers).
+Simply call the mixin to make the selected element and all of its children visually hidden (but still accessible to screen readers).
 {{< highlight scss >}}
 .element {
   @include hide;
@@ -43,7 +43,7 @@ Simply call the mixin to make the selected element and all its children visually
 {{< /highlightwrap >}}
 
 {{< highlightwrap class="example">}}
-Now let's pass `unhide` value to reserve the affect.
+Now let's pass the `unhide` value to reverse the effect.
 {{< highlight scss >}}
 .element {
   @include hide(unhide);
