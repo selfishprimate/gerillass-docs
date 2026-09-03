@@ -1,21 +1,21 @@
 ---
 title: "Background Image"
 page_title: "Background Image Sass Mixin"
-page_description: "Background Image Sass mixin allows you to apply background-image CSS property to the selected element(s)."
+page_description: "The Background Image Sass mixin allows you to apply the background-image CSS property to the selected elements."
 ---
 
 # Background Image
 
 {{< mixin type="Mixin" name="background-image" >}}
-**Background Image** Sass mixin allows you to apply background images to the selected element(s). Provides an easy to use one-line method.
+The **Background Image** Sass mixin allows you to apply background images to the selected elements. It gives you an easy, one-line method.
 {{< /mixin >}}
 
 ## Arguments
 
-{{< arguments/table footnote="Use `null` if you want to skip an argument. For more see [the examples](#examples).">}}
-  {{< arguments/row name="$image-url" type="string" description="The URL link of the background image." >}}
-  {{< arguments/row name="$filter-color" type="color | list" description="The color or the list of colors you may want to apply as a filter over the background image. **Multiple color values must be seperated by space.**" >}}
-  {{< arguments/row name="$filter-direction" type="string" description="The angle of gradient's direction. **It can be activated only when you pass multiple color values for `$filter-color` argument**. Accpets `top`, `top-right`, `right`, `bottom-right`, `bottom`, `bottom-left`, `left`, `top-left` values. The default value is set `to top`." >}}
+{{< arguments/table footnote="Use `null` if you want to skip an argument. See [the examples](#examples) for more.">}}
+  {{< arguments/row name="$image-url" type="string" description="The URL of the background image." >}}
+  {{< arguments/row name="$filter-color" type="color | list" description="The color or list of colors you want to apply as a filter over the background image. **Multiple color values must be separated by a space.**" >}}
+  {{< arguments/row name="$filter-direction" type="string" description="The direction of the gradient. **It only works when you pass multiple color values for the `$filter-color` argument.** Accepts the values `top`, `top-right`, `right`, `bottom-right`, `bottom`, `bottom-left`, `left`, and `top-left`. The default value is `top`." >}}
 {{< /arguments/table >}}
 
 
@@ -44,7 +44,7 @@ position: relative;background-image: url("/images/backgrounds/07.jpg");backgroun
 {{< /highlightwrap >}}
 
 {{< highlightwrap class="example">}}
-Now let's apply a color filter to it by passing a color value for $filter-color argument.
+Now let's apply a color filter to it by passing a color value for the `$filter-color` argument.
 {{< highlight scss >}}
 .element{
   @include background-image("/images/backgrounds/07.jpg", rgba(255, 204, 153, 0.5));
@@ -66,9 +66,9 @@ position: relative;background-image: -webkit-gradient(linear, left bottom, left 
 {{< /highlightwrap >}}
 
 {{< highlightwrap class="example">}}
-Now let's pass multiple color values for `$filter-color` to make background image look even more interesting.
+Now let's pass multiple color values for `$filter-color` to make the background image look even more interesting.
 {{< hint info >}}
-**Important:** Multiple color values must be seperated by space.
+**Important:** Multiple color values must be separated by a space.
 {{< /hint >}}
 {{< highlight scss >}}
 .element{
@@ -91,9 +91,9 @@ position: relative;background-image: -webkit-gradient(linear, left bottom, left 
 {{< /highlightwrap >}}
 
 {{< highlightwrap class="example">}}
-Now let's try `$filter-direction` option, and while trying it, let's use sharper color transitions to see the effect clearly.
+Now let's try the `$filter-direction` option. While we do, let's use sharper color transitions to see the effect clearly.
 {{< hint info >}}
-**Tip:** The value you pass for `$filter-direction` indicates the final color-stop value.
+**Tip:** The value you pass for `$filter-direction` indicates the position of the final color stop.
 {{< /hint >}}
 {{< highlight scss >}}
 .element{
@@ -117,9 +117,9 @@ position: relative;background-image: -webkit-gradient(linear, left top, right to
 {{< /highlightwrap >}}
 
 {{< highlightwrap class="example">}}
-There will be times when you would like to **add a background image on an element by using style attribute** like in the example below. **In such cases just use `null` to skip `$image-url` argument**.
+There will be times when you want to **add a background image to an element using the style attribute**, like in the example below. **In those cases, just use `null` to skip the `$image-url` argument.**
 {{< hint info >}}
-**Important:** Please examine the CSS output. When you add a background image on an element by using style attribute, the CSS output will be different then the others. This is to prevent `background-image` declerations that made on both sides from overriding each other.
+**Important:** Please examine the CSS output. When you add a background image to an element using the style attribute, the CSS output is different from the others. This prevents the `background-image` declarations on both sides from overriding each other.
 {{< /hint >}}
 {{< highlight html >}}
 <div class="element" style="background-image: url(/images/backgrounds/07.jpg)"></div>
@@ -178,9 +178,9 @@ There will be times when you would like to **add a background image on an elemen
 {{< /highlightwrap >}}
 
 {{< highlightwrap class="example">}}
-Probably you're asking why those `"position: relative"` and `"z-index: 1"` style rules applied to the direct children of the selected element. **These style rules are exist to prevent color filters from overlying the direct children when you add the background-image on an element by using the style attribute**.
+You are probably wondering why those `position: relative` and `z-index: 1` style rules are applied to the direct children of the selected element. **These rules exist to prevent the color filter from covering the direct children when you add the background image to an element using the style attribute.**
 
-Let's try with a title text that placed inside the selected element to see it in action. 
+Let's try it with a title placed inside the selected element to see it in action. 
 {{< highlight html >}}
 <div class="element" style="background-image: url(/images/backgrounds/07.jpg)">
   <h2>A beautiful title text standing over the color filter.</h2>
