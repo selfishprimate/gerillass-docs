@@ -1,21 +1,21 @@
 ---
 title: "Breakpointer"
 page_title: "Breakpointer Sass Mixin"
-page_description: "Breakpointer Sass Mixin is a handy small tool that points which breakpoint you are at so that you can write your styles for that specific device."
+page_description: "The Breakpointer Sass mixin is a handy little tool that shows which breakpoint you are at, so you can write your styles for that specific device."
 ---
 
 # Breakpointer
 
 {{< mixin type="Mixin" name="breakpointer" >}}
 
-**Breakpointer Sass mixin** is a handy small tool that points which breakpoint you are at so that you can write your styles for that specific screen size. 
+The **Breakpointer Sass mixin** is a handy little tool that shows which breakpoint you are at, so you can write your styles for that specific screen size. 
 
 {{< hint info >}}
-This mixin has been applied to this very page only, to show you how **Breakpointer Sass mixin** works. You can see the result at the top right corner of your screen. **Please, resize the width of your browser to see which breakpoint you're at.**
+This mixin has been applied to this page only, to show you how the **Breakpointer Sass mixin** works. You can see the result in the top right corner of your screen. **Please, resize the width of your browser to see which breakpoint you're at.**
 {{< /hint >}}
 
 {{< hint info >}}
-**Tip:** This mixin works best with the predefined breakpoint values in the `_map-for-breakpoints.scss` file. Ok, let me put it this way. **If the breakpoint mixin is the knight, the breakpointer is its squire.**
+**Tip:** This mixin works best with the predefined breakpoint values in the `_map-for-breakpoints.scss` file. OK, let me put it this way. **If the breakpoint mixin is the knight, the breakpointer is its squire.**
 {{< /hint >}}
 
 {{< /mixin >}}
@@ -23,13 +23,13 @@ This mixin has been applied to this very page only, to show you how **Breakpoint
 ## Arguments
 
 {{< arguments/table footnote="You can pass a declaration block to change its appearance cosmetically.">}}
-    {{< arguments/row name="$selector" type="string" description="Help you to target one specific selector. Default it is targeting the `::before` pseudo-element of the `<body>` tag." >}}
+    {{< arguments/row name="$selector" type="string" description="Helps you target one specific selector. By default it targets the `::before` pseudo-element of the `<body>` tag." >}}
 {{< /arguments/table >}}
 
 ## Examples
 
 {{< highlightwrap class="example">}}
-Call the mixin at the root level of your style sheet without passing any argument.
+Call the mixin at the root level of your stylesheet without passing any arguments.
 {{< highlight scss >}}
 @include breakpointer;
 {{< /highlight >}}
@@ -67,7 +67,7 @@ Call the mixin at the root level of your style sheet without passing any argumen
 {{< /highlightwrap >}}
 
 {{< highlightwrap class="example">}}
-You can pass a CSS declaration block to customize the looking (as I did when I was developing the Gerillass' site itself).
+You can pass a CSS declaration block to customize how it looks (as I did when I was developing the Gerillass site itself).
 {{< highlight scss >}}
 @include breakpointer {
   position: fixed;
@@ -127,5 +127,5 @@ Well, good news! You can call the Breakpointer Sass mixin in a selector if you w
 {{< /highlightwrap >}}
 
 {{< hint info >}}
-**Important:** This mixin is for development mode only. So don't forget to comment out or remove the code before going any further for the production.
+**Important:** This mixin is for development only, so don't forget to comment out or remove the code before you go to production.
 {{< /hint >}}
