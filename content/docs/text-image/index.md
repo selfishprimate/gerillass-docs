@@ -1,26 +1,26 @@
 ---
 title: "Text Image"
 page_title: "Text Image Sass Mixin"
-page_description: "Text Image Sass mixin helps you to clip the background image of a selected element to the shape of its foreground text."
+page_description: "The Text Image Sass mixin helps you clip the background image of a selected element to the shape of its foreground text."
 page_keywords: "CSS Text Image Mask, CSS Text Image, CSS Text Image Background, CSS Text Image Wrap, CSS Text Image Side by Side, CSS Text Image Generator, Text Image with Sass, Sass Text Image Mask, CSS Image Text Fallback Color"
 ---
 
 # Text Image
 
 {{< mixin type="Mixin" name="text-image" >}}
-**Text Image** Sass mixin helps you to clip the background image of a selected element to the shape of its foreground text. 
+The **Text Image** Sass mixin helps you clip the background image of a selected element to the shape of its foreground text. 
 {{< /mixin >}}
 
 ## Arguments
 
 {{< arguments/table footnote="**Important:** Note that the URL of the image must be passed in quotation marks.">}}
-  {{< arguments/row name="$image" type="string (quoted)" description="The URL of a clipping image." >}}
+  {{< arguments/row name="$image" type="string (quoted)" description="The URL of the clipping image." >}}
 {{< /arguments/table >}}
 
 ## Examples
 
 {{< highlightwrap class="example">}}
-Simply call the mixin in the selector and pass the URL of an image.
+Simply call the mixin inside the selector and pass the URL of an image.
 {{< highlight html >}}
 <h2 class="element">Text Image is Awesome!</h2>
 {{< /highlight >}}
@@ -45,7 +45,7 @@ Simply call the mixin in the selector and pass the URL of an image.
 {{< /highlightwrap >}}
 
 {{< highlightwrap class="example">}}
-The `$image` parameter is optional. This is very useful especially in the cases of loading images from the front face.
+The `$image` argument is optional. This is especially useful when the image is loaded from the markup, as in the example below.
 {{< highlight html >}}
 <h2 class="element" style="background-image: url(https://i.picsum.photos/id/225/1500/979.jpg)">Text Image is Awesome!</h2>
 {{< /highlight >}}
