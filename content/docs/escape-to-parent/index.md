@@ -1,25 +1,25 @@
 ---
 title: "Escape to Parent"
 page_title: "Escape to Parent Sass Mixin"
-page_description: "Escape to Parent Sass Mixin allows you to escape to the parent element and use multiple class or id selectors with it."
+page_description: "The Escape to Parent Sass mixin allows you to escape to the parent element and use multiple class or id selectors with it."
 ---
 
 # Escape to Parent
 
 {{< mixin type="Mixin" name="escape-to-parent" >}}
-**Escape to Parent** Sass mixin allows you to **escape to the parent** element and use multiple class or id selectors with it. Therefore you can easily control how the selected child element(s) response differently on various cases.
+The **Escape to Parent** Sass mixin allows you to **escape to the parent** element and use multiple class or id selectors with it. This makes it easy to control how the selected child elements respond in different cases.
 {{< /mixin >}}
 
 ## Arguments
 
-{{< arguments/table footnote="Note that you have to use quoted string!">}}
-    {{< arguments/row name="$selector" type="string (quoted)" description="Acceps a value as a `class` or `id` selector." >}}
+{{< arguments/table footnote="Note that you have to use a quoted string!">}}
+    {{< arguments/row name="$selector" type="string (quoted)" description="Accepts a value as a `class` or `id` selector." >}}
 {{< /arguments/table >}}
 
 ## Examples
 
 {{< highlightwrap class="example">}}
-Call the mixin as many as the number of cases that you want the element response to and pass the related argument for each.
+Call the mixin once for each case you want the element to respond to, and pass the matching argument each time.
 {{< highlight scss >}}
 .parent-element{
   .element{
