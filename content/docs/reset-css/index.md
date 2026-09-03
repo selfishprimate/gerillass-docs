@@ -1,23 +1,23 @@
 ---
 title: "Reset CSS"
 page_title: "Reset CSS Sass Mixin"
-page_description: "Reset CSS Sass mixin (also known as CSS Reset) helps you reset the browser default styles of all HTML elements to a consistent baseline."
+page_description: "The Reset CSS Sass mixin (also known as CSS Reset) helps you reset the browser default styles of all HTML elements to a consistent baseline."
 page_keywords: "Sass CSS Reset, Reset CSS in Sass, SCSS Reset CSS, SCSS to CSS, Eric Meyer's CSS Reset, Modern CSS Reset, What is CSS Reset, CSS Reset Code, CSS Reset 2020, CSS Reset 2021, CSS Reset 2022, Normalize CSS, Bootstrap CSS Reset, Universal CSS Reset, CSS Reset to Default"
 ---
 
 # Reset CSS
 
 {{< mixin type="Mixin" name="reset-css" >}}
-**Reset CSS** Sass mixin (also known as **CSS Reset**) helps you to reset the browser default styles of all HTML elements to a consistent baseline.
+The **Reset CSS** Sass mixin (also known as **CSS Reset**) helps you reset the browser default styles of all HTML elements to a consistent baseline.
 {{< hint info >}}
-Endless thanks to [**Eric Meyer**](https://meyerweb.com/) for his legendary [**Reset CSS**](https://meyerweb.com/eric/tools/css/reset/) code that used for years and allowing us to include it to this library.
+Endless thanks to [**Eric Meyer**](https://meyerweb.com/) for his legendary [**Reset CSS**](https://meyerweb.com/eric/tools/css/reset/) code, which has been used for years, and for letting us include it in this library.
 {{< /hint >}}
 {{< /mixin >}}
 
 ## Examples
 
 {{< highlightwrap class="example">}}
-Simply call the mixin at the root of your style sheet to override browser default styles.
+Simply call the mixin at the root of your stylesheet to override the browser default styles.
 {{< highlight scss >}}
 @include reset-css;
 {{< /highlight >}}
