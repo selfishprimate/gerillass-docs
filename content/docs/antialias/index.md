@@ -1,25 +1,25 @@
 ---
 title: "Antialias"
 page_title: "Antialias Sass Mixin"
-page_description: "Antialias Sass mixin provides smooth font rendering which means smooth the font on the level of pixel and prevents the subpixels-rendering."
+page_description: "The Antialias Sass mixin provides smooth font rendering. It smooths fonts at the pixel level and prevents subpixel rendering."
 ---
 
 # Antialias
 
 {{< mixin type="Mixin" name="antialias" >}}
-**Antialias** Sass mixin provides smooth font rendering which means smooth the font on the level of pixel and prevents the subpixels-rendering.
+The **Antialias** Sass mixin provides smooth font rendering. It smooths fonts at the pixel level and prevents subpixel rendering.
 {{< /mixin >}}
 
 ## Arguments
 
-{{< arguments/table footnote="Please check out the links at the end of the page for more information about Font Smoothing.">}}
-    {{< arguments/row name="$value" type="string" description="Accepts `only` value. It is used only when it wants to be applied for one specific HTML element." >}}
+{{< arguments/table footnote="Please check out the links at the end of the page for more information about font smoothing.">}}
+    {{< arguments/row name="$value" type="string" description="Accepts the `only` value. Use it when you want to apply the styles to one specific HTML element." >}}
 {{< /arguments/table >}}
 
 ## Examples
 
 {{< highlightwrap class="example">}}
-If you call it in a selector with no value passed the style rules will be applied to this very element and all its children.
+If you call it inside a selector without passing a value, the style rules apply to that element and all of its children.
 {{< highlight scss >}}
 .element{
   @include antialias;
