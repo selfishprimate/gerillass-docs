@@ -1,13 +1,13 @@
 ---
 title: "Placeholder Shown"
 page_title: "Placeholder Shown Sass Mixin"
-page_description: "Placeholder Shown Sass mixin helps you to style input or textarea element that is currently displaying placeholder text by using :placeholder-shown CSS pseudo-class."
+page_description: "The Placeholder Shown Sass mixin helps you style an input or textarea element that is currently displaying placeholder text, using the :placeholder-shown CSS pseudo-class."
 ---
 
 # Placeholder Shown
 
 {{< mixin type="Mixin" name="placeholder-shown" >}}
-**Placeholder Shown Sass mixin** helps you to style `<input>` or `<textarea>` element that is currently displaying placeholder text. As soon as the placeholder text disappears (that is, when the user starts typing), the applied style rules will also go away.
+The **Placeholder Shown Sass mixin** helps you style an `<input>` or `<textarea>` element that is currently displaying placeholder text. As soon as the placeholder text disappears (that is, when the user starts typing), the applied style rules go away too.
 {{< /mixin >}}
 
 ## Examples
@@ -30,7 +30,7 @@ input:placeholder-shown {
 {{< /highlightwrap >}}
 
 {{< highlightwrap class="example">}}
-When you call the mixin at the root of your stylesheet it will target all the `<input>` and `<textarea>` elements.
+When you call the mixin at the root of your stylesheet, it targets all the `<input>` and `<textarea>` elements.
 {{< highlight scss >}}
 @include placeholder-shown{
   background-color: yellow;
