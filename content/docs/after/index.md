@@ -1,7 +1,7 @@
 ---
 title: "After"
 page_title: "After Sass Mixin"
-page_description: "After Sass mixin is an easy way to use ::after CSS property. You can easily insert some text or design elements after the content of each selected element."
+page_description: "The After Sass mixin is an easy way to use the ::after CSS pseudo-element. You can insert text or design elements after the content of each selected element."
 page_keywords: "CSS After Before, CSS After Icon, CSS After Usage, CSS Pseudo Classes, CSS After Selector"
 ---
 
@@ -9,14 +9,14 @@ page_keywords: "CSS After Before, CSS After Icon, CSS After Usage, CSS Pseudo Cl
 
 {{< mixin type="Mixin" name="after" >}}
 
-**After** Sass mixin helps you to generate some content or a style element after the actual content of a selected element(s).
+The **After** Sass mixin helps you generate content or a style element after the actual content of the selected element or elements.
 
 {{< /mixin >}}
 
 ## Arguments
 
-{{< arguments/table footnote="When you want to fetch a given value by using custom property the name of the property must start with 'data-' prefix. For more please see the examples.">}}
-  {{< arguments/row name="$content" type="string" description="You can pass a content as a string or fetch the given value using custom property like `data-content`." >}}
+{{< arguments/table footnote="When you want to fetch a value using a custom property, the name of the property must start with the 'data-' prefix. See the examples for more.">}}
+  {{< arguments/row name="$content" type="string" description="You can pass content as a string, or fetch a value using a custom property such as `data-content`." >}}
 {{< /arguments/table >}}
 
 ## Examples
@@ -37,7 +37,7 @@ Simply pass a value as a string.
 {{< /highlightwrap >}}
 
 {{< highlightwrap class="example">}}
-You can only target the `::after` pseudo-element and then pass a decleration block.
+You can target the `::after` pseudo-element on its own and pass a declaration block.
 {{< highlight scss >}}
 .element{
   @include after{
@@ -58,7 +58,7 @@ You can only target the `::after` pseudo-element and then pass a decleration blo
 {{< /highlightwrap >}}
 
 {{< highlightwrap class="example">}}
-You can fetch a given value by using custom property. One thing important to remember here is the name of the property must start with 'data-' prefix.
+You can fetch a value using a custom property. One important thing to remember is that the name of the property must start with the 'data-' prefix.
 {{< highlight html>}}
 <div class="element" data-currency="TL">200</div>
 {{< /highlight >}}
@@ -76,7 +76,7 @@ You can fetch a given value by using custom property. One thing important to rem
 {{< /highlightwrap >}}
 
 {{< highlightwrap class="example">}}
-You can pass a value for CSS content property as a string and a decleration block between the opening and closing curly braces.
+You can pass a value for the CSS content property as a string, and a declaration block between the opening and closing curly braces.
 {{< highlight scss >}}
 .element{
   @include after("data-currency"){
