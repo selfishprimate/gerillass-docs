@@ -1,13 +1,13 @@
 ---
 title: "Placeholder"
 page_title: "Placeholder Sass Mixin"
-page_description: "Placeholder Sass mixin will help you to style the placeholder text in an `<input>` or `<textarea>` element and generate cross-browser compatible CSS code."
+page_description: "The Placeholder Sass mixin helps you style the placeholder text in an input or textarea element and generate cross-browser compatible CSS code."
 ---
 
 # Placeholder
 
 {{< mixin type="Mixin" name="placeholder" >}}
-**Placeholder Sass mixin** will help you to style the **placeholder text** in an `<input>` or `<textarea>` element and generate cross-browser compatible CSS code.
+The **Placeholder Sass mixin** helps you style the **placeholder text** in an `<input>` or `<textarea>` element and generate cross-browser compatible CSS code.
 {{< /mixin >}}
 
 ## Examples
@@ -42,7 +42,7 @@ Simply call the mixin and write your style rules.
 {{< /highlightwrap >}}
 
 {{< highlightwrap class="example">}}
-When you call the mixin at the root of your stylesheet it will target all the `<input>` and `<textarea>` elements.
+When you call the mixin at the root of your stylesheet, it targets all the `<input>` and `<textarea>` elements.
 {{< highlight scss >}}
 @include placeholder{
   color: orange;
