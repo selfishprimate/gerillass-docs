@@ -1,17 +1,17 @@
 ---
 title: "Columnizer"
 page_title: "Columnizer Sass Mixin"
-page_description: "Columnizer Sass Mixin helps you to create beautiful responsive card-based design layouts in CSS and Sass."
+page_description: "The Columnizer Sass mixin helps you create beautiful, responsive, card-based design layouts in CSS and Sass."
 ---
 
 # Columnizer
 
 {{< mixin type="Mixin" name="columnizer" >}}
-**Columnizer** Sass mixin helps you to **create evenly divided hypothetical columns** in a containing element, as many as the value you pass for the `$columns` argument. Thus, you can show all the children inside the parent element like they are lined up in a column. 
+The **Columnizer** Sass mixin helps you **create evenly divided hypothetical columns** inside a container element, as many as the value you pass for the `$columns` argument. This lets you show all the children of the parent element as if they were lined up in columns. 
 
-**Important:** Columnizer mixin **must be aplied to the parent** element to **align the children** inside of it!
+**Important:** The Columnizer mixin **must be applied to the parent** element to **align the children** inside it!
 {{< hint info >}}
-**Tip:** This mixin is very useful when you want to create a **card-based design layouts**.
+**Tip:** This mixin is very useful when you want to create **card-based design layouts**.
 {{< /hint >}}
 {{< /mixin >}}
 
@@ -20,13 +20,13 @@ page_description: "Columnizer Sass Mixin helps you to create beautiful responsiv
 {{< arguments/table >}}
   {{< arguments/row name="$columns" type="number" description="Sets the number of the hypothetical columns." >}}
   {{< arguments/row name="$gutter" type="number (with unit)" description="Sets the value of the space between the columns." >}}
-  {{< arguments/row name="$fill" type="boolean" description="It is for orphans to fill the remaining gap at the end of the list. This argument is optional and **should always be at the end**. The default value is set to false." >}}
+  {{< arguments/row name="$fill" type="boolean" description="Lets the orphans fill the remaining gap at the end of the list. This argument is optional and **should always come last**. The default value is `false`." >}}
 {{< /arguments/table >}}
 
 ## Examples
 
 {{< highlightwrap >}}
-Suppose you have a group of items like in the example below and you want to make them look lined up in columns (**There are predefined style rules for items to show the differences more easily**).
+Suppose you have a group of items like the ones below, and you want to make them look like they are lined up in columns. (**The items have predefined style rules so the differences are easier to see.**)
 {{< highlight html >}}
 <div class="parent-element">
   <div class="item">01</div>
@@ -42,7 +42,7 @@ Suppose you have a group of items like in the example below and you want to make
 {{< /highlightwrap >}}
 
 {{< highlightwrap class="example">}}
-Now let's get cracking. Just call the mixin in the `.parent-element{}` selector and pass a value for the number of columns.
+Now let's get cracking. Just call the mixin inside the `.parent-element{}` selector and pass a value for the number of columns.
 {{< highlight scss >}}
 .parent-element{
   @include columnizer(3);
@@ -89,7 +89,7 @@ Now let's get cracking. Just call the mixin in the `.parent-element{}` selector 
 {{< /highlightwrap >}}
 
 {{< highlightwrap class="example">}}
-Let's pass a value for `$gutter` argument to separate every item from each other.
+Let's pass a value for the `$gutter` argument to put space between the items.
 {{< highlight scss >}}
 .parent-element{
   @include columnizer(3, 20px);
@@ -145,7 +145,7 @@ Let's pass a value for `$gutter` argument to separate every item from each other
 
 
 {{< highlightwrap class="example">}}
-To make the orphans fill the gap let's pass `true` value at the end.
+To make the orphans fill the gap, let's pass the `true` value at the end.
 {{< highlight scss >}}
 .parent-element{
   @include columnizer(3, 20px, true);
@@ -200,7 +200,7 @@ To make the orphans fill the gap let's pass `true` value at the end.
 {{< /highlightwrap >}}
 
 {{< highlightwrap class="example">}}
-You can use either `$gutter` or `$fill` arguments optionallt. But remember, **the $fill argument should always be at the end**.
+You can use either the `$gutter` or the `$fill` argument optionally. But remember, **the `$fill` argument should always come last**.
 {{< highlight scss >}}
 .parent-element{
   @include columnizer(3, true);
