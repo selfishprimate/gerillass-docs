@@ -1,25 +1,25 @@
 ---
 title: "Border Box"
 page_title: "Border Box Sass Mixin"
-page_description: "Border Box Sass mixin sets the box-sizing CSS property value to border-box for selected HTML elements."
+page_description: "The Border Box Sass mixin sets the box-sizing CSS property to border-box for the selected HTML elements."
 ---
 
 # Border Box
 
 {{< mixin type="Mixin" name="border-box" >}}
-**Border Box** Sass mixin sets the [box-sizing CSS property](https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing) value to `border-box` for selected HTML element(s). Thus the padding and the border will be inside of the selected element.
+The **Border Box** Sass mixin sets the [box-sizing CSS property](https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing) to `border-box` for the selected HTML elements. This keeps the padding and the border inside the element.
 {{< /mixin >}}
 
 ## Arguments
 
-{{< arguments/table footnote="Please check out the links at the end of the page to learn more about Box Sizing">}}
-  {{< arguments/row name="$value" type="string" description="Accepts `only` value. It is used only when it wants to be applied for one specific HTML element." >}}
+{{< arguments/table footnote="Please check out the links at the end of the page to learn more about box sizing.">}}
+  {{< arguments/row name="$value" type="string" description="Accepts the `only` value. Use it when you want to apply the styles to one specific HTML element." >}}
 {{< /arguments/table >}}
 
 ## Examples
 
 {{< highlightwrap class="example">}}
-If you call the mixin in a selector with no value passed the style rules will be applied to this very element and all the children in it.
+If you call the mixin inside a selector without passing a value, the style rules apply to that element and all of its children.
 {{< highlight scss >}}
 .element {
   @include border-box;
@@ -39,7 +39,7 @@ If you call the mixin in a selector with no value passed the style rules will be
 {{< /highlightwrap >}}
 
 {{< highlightwrap class="example">}}
-Pass the `only` value as an argument to apply the style rules to only to the selected element.
+Pass the `only` value as an argument to apply the style rules only to the selected element.
 {{< highlight scss >}}
 .element {
   @include border-box("only");
