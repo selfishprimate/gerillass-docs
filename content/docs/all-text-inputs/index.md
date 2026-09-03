@@ -1,25 +1,25 @@
 ---
 title: "All Text Inputs"
 page_title: "All Text Inputs Sass Mixin"
-page_description: "All Text Inputs Sass mixin helps you to target all the text-based HTML input elements in the DOM, thus you can easily apply your style rules."
+page_description: "The All Text Inputs Sass mixin helps you target all the text-based HTML input elements in the DOM, so you can easily apply your style rules."
 ---
 
 # All Text Inputs
 
 {{< mixin type="Mixin" name="all-text-inputs" >}}
-**All Text Inputs** Sass mixin helps you to target all the text-based HTML input elements in the DOM, thus you can easily apply your style rules.
+The **All Text Inputs** Sass mixin helps you target all the text-based HTML input elements in the DOM, so you can easily apply your style rules.
 {{< /mixin >}}
 
 ## Arguments
 
-{{< arguments/table footnote="You can call the mixin either at the root level of your style sheet to target all the text-based input elements in the DOM or call it in a selector to target only some particular elements as children of the given selector.">}}
-    {{< arguments/row name="$pseudo" type="string" description="Sets the pleudo-class selector of the selected text-based input elements. Accepts `hover`, `focus`, `active`, `invalid`, `required`, `disabled` values." >}}
+{{< arguments/table footnote="You can call the mixin at the root level of your stylesheet to target all the text-based input elements in the DOM, or call it inside a selector to target only the elements that are children of that selector.">}}
+    {{< arguments/row name="$pseudo" type="string" description="Sets the pseudo-class selector for the selected text-based input elements. Accepts the values `hover`, `focus`, `active`, `invalid`, `required`, and `disabled`." >}}
 {{< /arguments/table >}}
 
 ## Examples
 
 {{< highlightwrap class="example">}}
-Simply call the mixin at the root level of your style sheet **to target all the text-based input elements**.
+Simply call the mixin at the root level of your stylesheet **to target all the text-based input elements**.
 {{< highlight scss >}}
 @include all-text-inputs {
   background-color: #e6e6e6;
@@ -211,7 +211,7 @@ Now let's try it with the **:required** pseudo-class selector applied.
 {{< /highlightwrap >}}
 
 {{< highlightwrap class="example">}}
-Now let's try it with **:disabled** pseudo-class selector applied. 
+Now let's try it with the **:disabled** pseudo-class selector applied. 
 {{< highlight scss >}}
 .element {
   @include all-text-inputs(disabled) {
@@ -239,13 +239,13 @@ Now let's try it with **:disabled** pseudo-class selector applied.
 .element input:not([type]):disabled, 
 .element textarea:disabled {
   background-color: gray;
-  color: white;
+  color: black;
 }
 {{< /highlight >}}
 {{< /highlightwrap >}}
 
 {{< highlightwrap class="example">}}
-Call the mixin in a selector to target only those text-based input elements inside that selector.
+Call the mixin inside a selector to target only the text-based input elements inside that selector.
 {{< highlight scss >}}
 .containing-element {
   @include all-text-inputs {
