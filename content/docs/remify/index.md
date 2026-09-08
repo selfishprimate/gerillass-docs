@@ -12,6 +12,9 @@ The **Remify Sass function** is a handy tool that helps you convert `pixel` valu
 {{< hint info >}}
 **Tip:** It is especially useful when you work with rem units and have a hard time calculating how many rems a pixel value comes to.
 {{< /hint >}}
+{{< hint warning >}}
+**Changed in Gerillass 2.0.0:** this function used to be called `__remify`. The `__` prefix has been dropped from every utility function. Note that the old name does not raise an error, because Sass passes an unknown function through as literal CSS, so check your stylesheets for any `__` names left over.
+{{< /hint >}}
 {{< /function >}}
 ## Arguments
 
@@ -25,7 +28,7 @@ The **Remify Sass function** is a handy tool that helps you convert `pixel` valu
 Simply call the function and pass a `pixel` value to it!
 {{< highlight scss >}}
 .element {
-  font-size: __remify(30px);
+  font-size: remify(30px);
 }
 {{< /highlight >}}
 {{< highlight css >}}
