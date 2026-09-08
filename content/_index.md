@@ -257,9 +257,74 @@ Including it in your project:
   </table>
 </div>
 
-## Namespace Usage
+## Using Gerillass with an AI coding agent
 
-You can use Gerillass with or without the `gls-` namespace. It is optional, but I strongly recommend using it to prevent conflicts with other Sass libraries or frameworks such as Bootstrap.
+Gerillass ships two files that let a coding agent use the library correctly instead of guessing at it. Both are inside the installed package, so an agent working in your project can read them straight out of `node_modules/gerillass/`.
+
+**`gerillass.json`** describes every mixin and function: its signature, what each argument accepts, examples that compile, and inputs that are refused.
+
+{{< highlightwrap >}}
+{{< highlight js >}}
+const api = require("gerillass/gerillass.json");
+{{< /highlight >}}
+{{< /highlightwrap >}}
+
+**`SKILL.md`** is a written guide generated from that manifest: how to load the library, the full catalogue, and the argument forms that are easy to get wrong. If your agent supports [Agent Skills](https://code.claude.com/docs/en/skills), copy it into your skills folder.
+
+{{< highlightwrap class="terminal">}}
+{{< highlight nix >}}
+mkdir -p .claude/skills/gerillass
+{{< /highlight >}}
+{{< /highlightwrap >}}
+
+{{< highlightwrap class="terminal">}}
+{{< highlight nix >}}
+cp node_modules/gerillass/SKILL.md .claude/skills/gerillass/
+{{< /highlight >}}
+{{< /highlightwrap >}}
+
+Otherwise, point your agent at the file and it will read it as plain Markdown.
+
+Neither file is written by hand. Signatures are parsed from the Sass sources, and every example and refusal in the manifest is executed by the test suite, so what the manifest says the library does is what the library does.
+
+## Three ways to call the same mixin
+
+None of them is required. Pick whichever reads best in your project, and stay with it in a given file. All three produce identical CSS.
+
+{{< highlightwrap >}}
+**Bare.** The shortest, and fine unless another library defines the same name.
+{{< highlight scss >}}
+@use 'gerillass' as *;
+
+.avatar {
+  @include circle(50px);
+}
+{{< /highlight >}}
+{{< /highlightwrap >}}
+
+{{< highlightwrap >}}
+**With the `gls-` prefix.** Every mixin also answers to a prefixed name, which avoids collisions with Bootstrap and friends.
+{{< highlight scss >}}
+@use 'gerillass' as *;
+
+.avatar {
+  @include gls-circle(50px);
+}
+{{< /highlight >}}
+{{< /highlightwrap >}}
+
+{{< highlightwrap >}}
+**Through a namespace.** This is Sass's own mechanism and the tidiest of the three, because nothing enters your global scope at all, so a collision is impossible. The name after `as` is yours to choose.
+{{< highlight scss >}}
+@use 'gerillass' as gls;
+
+.avatar {
+  @include gls.circle(50px);
+}
+{{< /highlight >}}
+{{< /highlightwrap >}}
+
+The `gls-` prefix predates the Sass module system. If you are starting fresh, the namespace does the same job without the extra name.
 
 ## Vendor Prefix Support
 
