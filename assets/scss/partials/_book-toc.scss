@@ -1,3 +1,6 @@
+@use "sass:math";
+@use "variables" as *;
+
 .book-toc {
     flex: 0 1 $toc-width;
     min-width: $toc-width - 50px;

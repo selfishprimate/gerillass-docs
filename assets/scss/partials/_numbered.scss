@@ -1,3 +1,4 @@
+@use "sass:string";
 .book-page {
   .markdown {
     @for $h from 1 through 6 {
@@ -11,7 +12,7 @@
         }
 
         &::before {
-          content: unquote($content) " ";
+          content: string.unquote($content) " ";
         }
       }
     }

@@ -1,3 +1,6 @@
+@use "gerillass/scss/gerillass" as *;
+@use "variables" as *;
+
 .book-channels {
   display: flex;
   justify-content: center;

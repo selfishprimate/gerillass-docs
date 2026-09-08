@@ -40,26 +40,29 @@ Netlify's build image does not ship Dart Sass either, so every build command in
 pinned once in `[build.environment]` (`HUGO_VERSION`, `DART_SASS_VERSION`) and shared by all
 contexts — bump them there, not per-context.
 
-`includePaths: node_modules` is what lets `assets/scss/styles.scss` write
-`@import "gerillass/scss/gerillass"` without a `./node_modules/` prefix. Don't
+`includePaths: node_modules` is what lets the partials write
+`@use "gerillass/scss/gerillass" as *` without a `./node_modules/` prefix. Don't
 reintroduce the prefixed form.
 ## Sass architecture
 
-- Single entry point: `assets/scss/styles.scss`. It imports the Gerillass library first,
-  then every partial from `assets/scss/partials/` **explicitly** — a new `_foo.scss`
-  partial does nothing until it is registered there.
-- `@use 'sass:math'` / `@use 'sass:color'` sit at the very top; Sass requires all `@use`
-  rules to precede `@import`, so new module loads go above the library import.
+- The stylesheet is on the Sass **module system** throughout. There is not a single
+  `@import` left, and the build emits **zero** deprecation warnings.
+- Every partial declares its own dependencies at the top with `@use`. Nothing is global any
+  more, so a partial that needs something must ask for it: `"variables" as *` for the site's
+  variables, `"icons" as *` for the icon font names, `"utils" as *` for the local `spin`
+  mixin, `"gerillass/scss/gerillass" as *` for the library, and `sass:math` / `sass:color`
+  for the built-ins. Sass will name the file and line if you forget one.
+- `assets/scss/styles.scss` only loads the partials, in the order their CSS should appear in
+  the output. A new `_foo.scss` does nothing until it is registered there. (`_numbered.scss`
+  is not registered and is therefore dead.)
 - The site is on **Gerillass 2.0.0**, which is Dart-Sass-only and built on the Sass module
   system. Version 2.0.0 dropped the `__` prefix from every utility function, so the partials
   call `remify()`, not `__remify()`. Get this wrong and it fails **silently**: Sass passes an
   unknown function through as literal CSS instead of raising an error, so the build still
   succeeds and the declaration is simply invalid. `grep -rn '__remify' assets/` should stay
   empty. BEM class names like `&__link` are unrelated and must not be touched.
-- Builds emit `@import` deprecation warnings, and as of 2.0.0 every one of them comes from
-  `assets/scss/styles.scss` itself, not from inside `node_modules/gerillass`. Dart Sass
-  removes `@import` in 3.0.0, so the entry point and its partials will need to move to `@use`
-  before then.
+- If you ever see a deprecation warning from a build, it is new. The count was 142 on
+  Gerillass 1.3.1 with `@import`, and is 0 now.
 
 ## Content model
 

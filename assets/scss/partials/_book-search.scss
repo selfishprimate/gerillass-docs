@@ -1,3 +1,8 @@
+@use "sass:color";
+@use "gerillass/scss/gerillass" as *;
+@use "variables" as *;
+@use "utils" as *;
+
 .book-search{
     position: relative;
     width: 90%;

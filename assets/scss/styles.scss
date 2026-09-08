@@ -1,45 +1,40 @@
-// Sass built-in modules (must come first)
-@use 'sass:math';
-@use 'sass:color';
-
-//Libraries
-@import "gerillass/scss/gerillass";
-// @import "./node_modules/gerillass/scss/gerillass";
+// Each partial declares its own dependencies with @use, so this file only loads
+// them, in the order their CSS should appear in the output.
 
 //Abstract
-@import "partials/variables";
-@import "partials/icons";
+@use "partials/variables";
+@use "partials/icons";
 
-@import "partials/utils";
-@import "partials/print";
-@import "partials/markdown";
-@import "partials/shortcodes";
+@use "partials/utils";
+@use "partials/print";
+@use "partials/markdown";
+@use "partials/shortcodes";
 
-@import "partials/book-brand";
-@import "partials/book-channels";
-@import "partials/book-footer";
-@import "partials/book-highlight";
-@import "partials/book-hint";
-@import "partials/book-languages";
-@import "partials/book-menu";
-@import "partials/book-page";
-@import "partials/book-search";
-@import "partials/book-toc";
+@use "partials/book-brand";
+@use "partials/book-channels";
+@use "partials/book-footer";
+@use "partials/book-highlight";
+@use "partials/book-hint";
+@use "partials/book-languages";
+@use "partials/book-menu";
+@use "partials/book-page";
+@use "partials/book-search";
+@use "partials/book-toc";
 
-@import "partials/github-buttons";
-@import "partials/main-footer";
-@import "partials/main-header";
+@use "partials/github-buttons";
+@use "partials/main-footer";
+@use "partials/main-header";
 
-@import "partials/buttons";
-@import "partials/examples";
-@import "partials/tables";
-@import "partials/featured-content";
-@import "partials/fonts";
+@use "partials/buttons";
+@use "partials/examples";
+@use "partials/tables";
+@use "partials/featured-content";
+@use "partials/fonts";
 
-@import "partials/general";
+@use "partials/general";
 
-@import "partials/responsive";
-@import "partials/sandbox";
+@use "partials/responsive";
+@use "partials/sandbox";
 
 
 

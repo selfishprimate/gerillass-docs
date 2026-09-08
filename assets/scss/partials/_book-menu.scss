@@ -1,3 +1,5 @@
+@use "variables" as *;
+
 .book-menu {
   flex: 0 0 $menu-width;
   padding-right: $global-space * 2;

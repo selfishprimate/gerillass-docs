@@ -1,3 +1,7 @@
+@use "sass:color";
+@use "gerillass/scss/gerillass" as *;
+@use "variables" as *;
+
 .main-footer{
     margin-top: $global-space * 4;
     background-color: $body-background-color;

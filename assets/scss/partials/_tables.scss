@@ -1,3 +1,7 @@
+@use "sass:math";
+@use "gerillass/scss/gerillass" as *;
+@use "variables" as *;
+
 .table {
   margin: 0 0 80px;
   @include breakpoint(max, medium) {

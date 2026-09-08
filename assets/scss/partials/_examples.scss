@@ -1,3 +1,6 @@
+@use "gerillass/scss/gerillass" as *;
+@use "variables" as *;
+
 .list-wrapper{
     display: flex;
     .list-item {
