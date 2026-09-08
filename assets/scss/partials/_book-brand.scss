@@ -15,12 +15,12 @@
     align-items: center;
     position: relative;
     font-family: $primary-font-family;
-    font-size: __remify(39px);
+    font-size: remify(39px);
   }
   &__description {
     display: flex;
     align-items: center;
-    font-size: __remify(11px);
+    font-size: remify(11px);
     text-align: center;
     .gls-icon {
       margin-right: 4px;

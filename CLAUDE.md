@@ -50,10 +50,16 @@ reintroduce the prefixed form.
   partial does nothing until it is registered there.
 - `@use 'sass:math'` / `@use 'sass:color'` sit at the very top; Sass requires all `@use`
   rules to precede `@import`, so new module loads go above the library import.
-- Gerillass ≥ 1.3.0 is Dart-Sass-only (LibSass/Node Sass support was dropped). The repo is
-  mid-migration off deprecated global Sass built-ins — builds emit `global-builtin` and
-  `@import` deprecation warnings from inside `node_modules/gerillass`; these are upstream,
-  not local defects.
+- The site is on **Gerillass 2.0.0**, which is Dart-Sass-only and built on the Sass module
+  system. Version 2.0.0 dropped the `__` prefix from every utility function, so the partials
+  call `remify()`, not `__remify()`. Get this wrong and it fails **silently**: Sass passes an
+  unknown function through as literal CSS instead of raising an error, so the build still
+  succeeds and the declaration is simply invalid. `grep -rn '__remify' assets/` should stay
+  empty. BEM class names like `&__link` are unrelated and must not be touched.
+- Builds emit `@import` deprecation warnings, and as of 2.0.0 every one of them comes from
+  `assets/scss/styles.scss` itself, not from inside `node_modules/gerillass`. Dart Sass
+  removes `@import` in 3.0.0, so the entry point and its partials will need to move to `@use`
+  before then.
 
 ## Content model
 

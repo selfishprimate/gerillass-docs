@@ -15,19 +15,19 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      height: __remify(28px);
-      font-size: __remify(13px);
+      height: remify(28px);
+      font-size: remify(13px);
       padding: 0 0.8rem;
-      border: __remify(2px) solid $body-text-color;
-      border-radius: __remify(4px);
+      border: remify(2px) solid $body-text-color;
+      border-radius: remify(4px);
       &:not(:last-of-type) {
-        margin-right: __remify(6px);
+        margin-right: remify(6px);
         &::after {
           content: "";
           position: absolute;
-          height: __remify(2px);
-          width: __remify(8px);
-          right: __remify(-8px);
+          height: remify(2px);
+          width: remify(8px);
+          right: remify(-8px);
           @include center(vertical);
           background-color: $body-text-color;
         }
