@@ -80,9 +80,19 @@ Frontmatter fields that actually drive templates:
 | `page_keywords` | overrides `<meta name="keywords">` |
 | `css` | injects an extra stylesheet, path relative to the bundle (see `docs/loadify`) |
 
-No page sets `weight`, so the sidebar is generated from the file tree
-(`BookSection = "docs"` in `config.toml`) and ordered alphabetically. Use
-`hugo new docs/<name>/index.md -k docs` for the docs archetype.
+The sidebar is **not** generated from the file tree. `BookMenuBundle = '/menu'` in
+`config.toml` renders `content/menu/index.md` instead, a headless page holding one nested
+list that groups every page under **Mixins** and **Utilities**. So a new page needs two
+edits: the page itself, and a line in that list. Miss the second and the page exists but
+cannot be reached from the sidebar. Keep the list tight, with no blank lines between items,
+or Goldmark wraps each group label in a `<p>` and the styling in `_book-menu.scss` stops
+matching. Use `hugo new docs/<name>/index.md -k docs` for the docs archetype.
+
+There are 72 pages, one per library member: 50 mixins and 22 utility functions. The utility
+pages were generated from `node_modules/gerillass/gerillass.json`, and every example and
+every refusal on them was compiled against the published package rather than written by
+hand. If you regenerate or extend them, do the same: an unknown function name does not
+error in Sass, it is emitted as literal CSS, so a wrong example looks fine on the page.
 
 ## Shortcodes — the docs authoring API
 
@@ -92,7 +102,9 @@ Content pages are written almost entirely with shortcodes in `layouts/shortcodes
   is used to build a GitHub source link to
   `gerillass/scss/library/_<name>.scss`, so it **must match the library filename**.
 - `{{< function type="Function" name="<name>" >}}` — same idea, but links into
-  `gerillass/scss/utilities/_<name>.scss`.
+  `gerillass/scss/utilities/_<name>.scss`. Functions are camelCase while their files are
+  kebab-case, so pass `file="clear-unit"` alongside `name="clearUnit"` whenever the two
+  differ; `name` is what the page prints, `file` is what the link points at.
 - `{{< arguments/table footnote="…" >}}` wrapping one `{{< arguments/row name= type= description= >}}`
   per argument — the arguments reference table.
 - `{{< highlightwrap class="terminal|example" >}}` wrapping Hugo's built-in
@@ -119,6 +131,13 @@ When adding a new mixin page, copy the structure of an existing one (e.g.
   self-hosted icon font in `static/icons/gerillass/`.
 - `i18n/` carries translations for six languages, but only English is configured; the
   language switcher partial is inert while the site is monolingual.
+- `static/llms.txt` is **generated in the library repo**, not here. The library builds it
+  from the same manifest as `gerillass.json` and `SKILL.md`, and the docs site only serves
+  it, at `/llms.txt`. Do not hand-edit it; copy the file from `selfishprimate/gerillass`
+  when it changes. It currently links mixins to this site and functions to their `.scss`
+  sources on GitHub, which predates the utility pages existing here.
+- `opengraph.html` falls back to the site-wide image when a page bundle has no
+  `images/gerillass-<name>.jpg` of its own, which is the case for every utility page.
 - Google Analytics runs off a **hardcoded** gtag snippet in `layouts/_default/baseof.html`
   (`UA-171697118-2`). `html-head.html` also calls `_internal/google_analytics.html`, but that
   renders nothing because no analytics ID is set in `config.toml`.
