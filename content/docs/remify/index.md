@@ -1,11 +1,11 @@
 ---
-title: "Remify"
-page_title: "Remify Sass Function"
+title: "remify"
+page_title: "remify Sass Function"
 page_description: "The Remify Sass function is a handy SCSS function that helps you convert pixel values to rem."
 page_keywords: "Rem Sass Function, Sass pixel to rem, pixel to rem with Sass, SCSS pixel to rem, pixel to rem, How to convert pixel to rem, CSS rem unit, Sass, SCSS, Sass Library, Sass Libraries"
 ---
 
-# Remify
+# remify
 
 {{< function type="Function" name="remify" >}}
 The **Remify Sass function** is a handy tool that helps you convert `pixel` values to `rem`. 
