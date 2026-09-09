@@ -1,11 +1,11 @@
 ---
-title: "isGutter"
-page_title: "isGutter Sass Function"
+title: "Is Gutter"
+page_title: "Is Gutter Sass Function"
 page_description: "True for anything that can sit where a CSS length is expected: a number, a calculation, or a CSS function such as var()."
 page_keywords: "Gerillass isGutter, Sass isGutter, Sass Functions, SCSS Functions, Sass Utility Functions, Gerillass Utilities"
 ---
 
-# isGutter
+# Is Gutter
 
 {{< function type="Function" name="isGutter" file="is-gutter" >}}
 True for anything that can sit where a CSS length is expected: a number, a calculation, or a CSS function such as var().

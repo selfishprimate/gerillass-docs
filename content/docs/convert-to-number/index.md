@@ -1,11 +1,11 @@
 ---
-title: "convertToNumber"
-page_title: "convertToNumber Sass Function"
+title: "Convert To Number"
+page_title: "Convert To Number Sass Function"
 page_description: "Parses a string of digits into a number."
 page_keywords: "Gerillass convertToNumber, Sass convertToNumber, Sass Functions, SCSS Functions, Sass Utility Functions, Gerillass Utilities"
 ---
 
-# convertToNumber
+# Convert To Number
 
 {{< function type="Function" name="convertToNumber" file="convert-to-number" >}}
 Parses a string of digits into a number.

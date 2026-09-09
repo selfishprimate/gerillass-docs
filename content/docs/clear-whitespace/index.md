@@ -1,11 +1,11 @@
 ---
-title: "clearWhitespace"
-page_title: "clearWhitespace Sass Function"
+title: "Clear Whitespace"
+page_title: "Clear Whitespace Sass Function"
 page_description: "Removes every space from a string."
 page_keywords: "Gerillass clearWhitespace, Sass clearWhitespace, Sass Functions, SCSS Functions, Sass Utility Functions, Gerillass Utilities"
 ---
 
-# clearWhitespace
+# Clear Whitespace
 
 {{< function type="Function" name="clearWhitespace" file="clear-whitespace" >}}
 Removes every space from a string.

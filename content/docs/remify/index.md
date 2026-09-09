@@ -1,11 +1,11 @@
 ---
-title: "remify"
-page_title: "remify Sass Function"
+title: "Remify"
+page_title: "Remify Sass Function"
 page_description: "Converts a pixel length to rem, against a 16px root."
 page_keywords: "Gerillass remify, Sass remify, Sass Functions, SCSS Functions, Sass Utility Functions, Gerillass Utilities"
 ---
 
-# remify
+# Remify
 
 {{< function type="Function" name="remify" file="remify" >}}
 Converts a pixel length to rem, against a 16px root.

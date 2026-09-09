@@ -1,11 +1,11 @@
 ---
-title: "isNumber"
-page_title: "isNumber Sass Function"
+title: "Is Number"
+page_title: "Is Number Sass Function"
 page_description: "Returns the value if it is a number."
 page_keywords: "Gerillass isNumber, Sass isNumber, Sass Functions, SCSS Functions, Sass Utility Functions, Gerillass Utilities"
 ---
 
-# isNumber
+# Is Number
 
 {{< function type="Function" name="isNumber" file="is-number" >}}
 Returns the value if it is a number.

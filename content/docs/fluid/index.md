@@ -1,11 +1,11 @@
 ---
-title: "fluid"
-page_title: "fluid Sass Function"
+title: "Fluid"
+page_title: "Fluid Sass Function"
 page_description: "The fluid Sass function returns a clamp() value that grows with the viewport between two widths, then stops. It keeps a rem term so the value still responds to browser text zoom."
 page_keywords: "Fluid Typography Sass, CSS clamp Function, Fluid Type Scale, Sass clamp, Responsive Font Size, WCAG 1.4.4 Resize Text, vw Font Size Accessibility, Fluid Spacing CSS"
 ---
 
-# fluid
+# Fluid
 
 {{< function type="Function" name="fluid" file="fluid" >}}
 A value that grows with the viewport between two widths and then stops. `fluid(24px, 48px)` is `24px` on a small screen, `48px` on a large one, and a straight line between the two.

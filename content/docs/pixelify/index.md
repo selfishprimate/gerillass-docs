@@ -1,11 +1,11 @@
 ---
-title: "pixelify"
-page_title: "pixelify Sass Function"
+title: "Pixelify"
+page_title: "Pixelify Sass Function"
 page_description: "Returns the value with a px unit, adding one if it is missing."
 page_keywords: "Gerillass pixelify, Sass pixelify, Sass Functions, SCSS Functions, Sass Utility Functions, Gerillass Utilities"
 ---
 
-# pixelify
+# Pixelify
 
 {{< function type="Function" name="pixelify" file="pixelify" >}}
 Returns the value with a px unit, adding one if it is missing.

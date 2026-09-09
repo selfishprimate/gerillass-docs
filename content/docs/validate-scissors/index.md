@@ -1,11 +1,11 @@
 ---
-title: "validateScissors"
-page_title: "validateScissors Sass Function"
+title: "Validate Scissors"
+page_title: "Validate Scissors Sass Function"
 page_description: "Normalises corner values for the scissors mixin, adding px where missing."
 page_keywords: "Gerillass validateScissors, Sass validateScissors, Sass Functions, SCSS Functions, Sass Utility Functions, Gerillass Utilities"
 ---
 
-# validateScissors
+# Validate Scissors
 
 {{< function type="Function" name="validateScissors" file="validate-scissors" >}}
 Normalises corner values for the scissors mixin, adding px where missing.

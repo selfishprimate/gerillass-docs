@@ -1,11 +1,11 @@
 ---
-title: "pseudoSelector"
-page_title: "pseudoSelector Sass Function"
+title: "Pseudo Selector"
+page_title: "Pseudo Selector Sass Function"
 page_description: "Appends a pseudo-class to every selector in a list."
 page_keywords: "Gerillass pseudoSelector, Sass pseudoSelector, Sass Functions, SCSS Functions, Sass Utility Functions, Gerillass Utilities"
 ---
 
-# pseudoSelector
+# Pseudo Selector
 
 {{< function type="Function" name="pseudoSelector" file="pseudo-selector" >}}
 Appends a pseudo-class to every selector in a list.

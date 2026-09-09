@@ -1,11 +1,11 @@
 ---
-title: "mapDeepGet"
-page_title: "mapDeepGet Sass Function"
+title: "Map Deep Get"
+page_title: "Map Deep Get Sass Function"
 page_description: "Reads a value out of a nested map by following a chain of keys."
 page_keywords: "Gerillass mapDeepGet, Sass mapDeepGet, Sass Functions, SCSS Functions, Sass Utility Functions, Gerillass Utilities"
 ---
 
-# mapDeepGet
+# Map Deep Get
 
 {{< function type="Function" name="mapDeepGet" file="map-deep-get" >}}
 Reads a value out of a nested map by following a chain of keys.

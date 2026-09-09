@@ -1,11 +1,11 @@
 ---
-title: "isColor"
-page_title: "isColor Sass Function"
+title: "Is Color"
+page_title: "Is Color Sass Function"
 page_description: "Returns the value if every item in it is a colour, and errors otherwise."
 page_keywords: "Gerillass isColor, Sass isColor, Sass Functions, SCSS Functions, Sass Utility Functions, Gerillass Utilities"
 ---
 
-# isColor
+# Is Color
 
 {{< function type="Function" name="isColor" file="is-color" >}}
 Returns the value if every item in it is a colour, and errors otherwise.

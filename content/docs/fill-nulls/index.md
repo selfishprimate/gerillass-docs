@@ -1,11 +1,11 @@
 ---
-title: "fillNulls"
-page_title: "fillNulls Sass Function"
+title: "Fill Nulls"
+page_title: "Fill Nulls Sass Function"
 page_description: "Replaces null entries in a list with 0, or drops them."
 page_keywords: "Gerillass fillNulls, Sass fillNulls, Sass Functions, SCSS Functions, Sass Utility Functions, Gerillass Utilities"
 ---
 
-# fillNulls
+# Fill Nulls
 
 {{< function type="Function" name="fillNulls" file="fill-nulls" >}}
 Replaces null entries in a list with 0, or drops them.

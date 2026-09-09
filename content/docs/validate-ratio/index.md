@@ -1,11 +1,11 @@
 ---
-title: "validateRatio"
-page_title: "validateRatio Sass Function"
+title: "Validate Ratio"
+page_title: "Validate Ratio Sass Function"
 page_description: "Turns an aspect ratio into a value for the CSS aspect-ratio property."
 page_keywords: "Gerillass validateRatio, Sass validateRatio, Sass Functions, SCSS Functions, Sass Utility Functions, Gerillass Utilities"
 ---
 
-# validateRatio
+# Validate Ratio
 
 {{< function type="Function" name="validateRatio" file="validate-ratio" >}}
 Turns an aspect ratio into a value for the CSS aspect-ratio property.

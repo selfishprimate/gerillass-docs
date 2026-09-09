@@ -1,11 +1,11 @@
 ---
-title: "fontSizer"
-page_title: "fontSizer Sass Function"
+title: "Font Sizer"
+page_title: "Font Sizer Sass Function"
 page_description: "Multiplies a size by a factor. Handy for a modular scale."
 page_keywords: "Gerillass fontSizer, Sass fontSizer, Sass Functions, SCSS Functions, Sass Utility Functions, Gerillass Utilities"
 ---
 
-# fontSizer
+# Font Sizer
 
 {{< function type="Function" name="fontSizer" file="font-sizer" >}}
 Multiplies a size by a factor. Handy for a modular scale.

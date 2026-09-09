@@ -1,11 +1,11 @@
 ---
-title: "fontSource"
-page_title: "fontSource Sass Function"
+title: "Font Source"
+page_title: "Font Source Sass Function"
 page_description: "Builds one src entry for an @font-face rule."
 page_keywords: "Gerillass fontSource, Sass fontSource, Sass Functions, SCSS Functions, Sass Utility Functions, Gerillass Utilities"
 ---
 
-# fontSource
+# Font Source
 
 {{< function type="Function" name="fontSource" file="font-source" >}}
 Builds one src entry for an @font-face rule.

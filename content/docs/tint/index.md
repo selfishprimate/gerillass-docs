@@ -1,11 +1,11 @@
 ---
-title: "tint"
-page_title: "tint Sass Function"
+title: "Tint"
+page_title: "Tint Sass Function"
 page_description: "Mixes a colour towards white by a percentage."
 page_keywords: "Gerillass tint, Sass tint, Sass Functions, SCSS Functions, Sass Utility Functions, Gerillass Utilities"
 ---
 
-# tint
+# Tint
 
 {{< function type="Function" name="tint" file="tint" >}}
 Mixes a colour towards white by a percentage.

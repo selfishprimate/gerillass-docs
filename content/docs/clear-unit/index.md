@@ -1,11 +1,11 @@
 ---
-title: "clearUnit"
-page_title: "clearUnit Sass Function"
+title: "Clear Unit"
+page_title: "Clear Unit Sass Function"
 page_description: "Strips the unit off a number, returning it unitless."
 page_keywords: "Gerillass clearUnit, Sass clearUnit, Sass Functions, SCSS Functions, Sass Utility Functions, Gerillass Utilities"
 ---
 
-# clearUnit
+# Clear Unit
 
 {{< function type="Function" name="clearUnit" file="clear-unit" >}}
 Strips the unit off a number, returning it unitless.

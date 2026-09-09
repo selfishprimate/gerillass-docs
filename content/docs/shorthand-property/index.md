@@ -1,11 +1,11 @@
 ---
-title: "shorthandProperty"
-page_title: "shorthandProperty Sass Function"
+title: "Shorthand Property"
+page_title: "Shorthand Property Sass Function"
 page_description: "Expands one to four values into the four-value CSS shorthand order."
 page_keywords: "Gerillass shorthandProperty, Sass shorthandProperty, Sass Functions, SCSS Functions, Sass Utility Functions, Gerillass Utilities"
 ---
 
-# shorthandProperty
+# Shorthand Property
 
 {{< function type="Function" name="shorthandProperty" file="shorthand-property" >}}
 Expands one to four values into the four-value CSS shorthand order.

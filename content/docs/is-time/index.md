@@ -1,11 +1,11 @@
 ---
-title: "isTime"
-page_title: "isTime Sass Function"
+title: "Is Time"
+page_title: "Is Time Sass Function"
 page_description: "Returns the value if it is a time in s or ms, and errors otherwise."
 page_keywords: "Gerillass isTime, Sass isTime, Sass Functions, SCSS Functions, Sass Utility Functions, Gerillass Utilities"
 ---
 
-# isTime
+# Is Time
 
 {{< function type="Function" name="isTime" file="is-time" >}}
 Returns the value if it is a time in s or ms, and errors otherwise.

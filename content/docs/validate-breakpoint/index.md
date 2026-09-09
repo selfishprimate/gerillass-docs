@@ -1,11 +1,11 @@
 ---
-title: "validateBreakpoint"
-page_title: "validateBreakpoint Sass Function"
+title: "Validate Breakpoint"
+page_title: "Validate Breakpoint Sass Function"
 page_description: "Resolves a breakpoint name to its width, passing other values through."
 page_keywords: "Gerillass validateBreakpoint, Sass validateBreakpoint, Sass Functions, SCSS Functions, Sass Utility Functions, Gerillass Utilities"
 ---
 
-# validateBreakpoint
+# Validate Breakpoint
 
 {{< function type="Function" name="validateBreakpoint" file="validate-breakpoint" >}}
 Resolves a breakpoint name to its width, passing other values through.

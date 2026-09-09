@@ -1,11 +1,11 @@
 ---
-title: "shade"
-page_title: "shade Sass Function"
+title: "Shade"
+page_title: "Shade Sass Function"
 page_description: "Mixes a colour towards black by a percentage."
 page_keywords: "Gerillass shade, Sass shade, Sass Functions, SCSS Functions, Sass Utility Functions, Gerillass Utilities"
 ---
 
-# shade
+# Shade
 
 {{< function type="Function" name="shade" file="shade" >}}
 Mixes a colour towards black by a percentage.

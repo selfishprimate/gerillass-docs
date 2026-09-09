@@ -1,11 +1,11 @@
 ---
-title: "validateLength"
-page_title: "validateLength Sass Function"
+title: "Validate Length"
+page_title: "Validate Length Sass Function"
 page_description: "Returns the value if it is a length or one of auto, inherit, initial, 0."
 page_keywords: "Gerillass validateLength, Sass validateLength, Sass Functions, SCSS Functions, Sass Utility Functions, Gerillass Utilities"
 ---
 
-# validateLength
+# Validate Length
 
 {{< function type="Function" name="validateLength" file="validate-length" >}}
 Returns the value if it is a length or one of auto, inherit, initial, 0.
