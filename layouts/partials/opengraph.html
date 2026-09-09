@@ -8,7 +8,15 @@
     <meta property="og:image" content="{{ .Permalink }}images/gerillass-sass-mixins-library.jpg" />
     <meta property="og:image:alt" content="Gerillass: Learn how to use Gerillass Sass Mixins Library!" />
   {{ else }}
-    <meta property="og:image" content="{{ .Permalink }}images/gerillass-{{ with .File }}{{ .ContentBaseName }}{{ end }}.jpg" />
+    {{ $name := "" }}
+    {{ with .File }}{{ $name = printf "images/gerillass-%s.jpg" .ContentBaseName }}{{ end }}
+    {{ $own := "" }}
+    {{ with $name }}{{ with $.Resources.GetMatch . }}{{ $own = .Permalink }}{{ end }}{{ end }}
+    {{ if $own }}
+      <meta property="og:image" content="{{ $own }}" />
+    {{ else }}
+      <meta property="og:image" content="{{ $.Site.Home.Permalink }}images/gerillass-sass-mixins-library.jpg" />
+    {{ end }}
     <meta property="og:image:alt" content="Gerillass: Learn How to Use {{ .Params.page_title }}!" />
   {{ end }}
 
