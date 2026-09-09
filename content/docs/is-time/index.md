@@ -48,8 +48,7 @@ A length where a duration is expected.
   transition-duration: isTime(400px);
 }
 {{< /highlight >}}
+{{< highlight text >}}
+Error: '400px' is not a valid time value. Time values must be specified in either seconds (s) or milliseconds (ms). Please try one of the following forms: '1s', '0.2s', or '3ms'
+{{< /highlight >}}
 {{< /highlightwrap >}}
-
-{{< hint danger >}}
-`'400px' is not a valid time value. Time values must be specified in either seconds (s) or milliseconds (ms). Please try one of the following forms: '1s', '0.2s', or '3ms'`
-{{< /hint >}}

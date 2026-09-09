@@ -47,8 +47,7 @@ A quoted string where a number is expected.
   width: pixelify("24");
 }
 {{< /highlight >}}
+{{< highlight text >}}
+Error: `24` is not a valid $value for `pixelify`. Pass a number, with or without a unit.
+{{< /highlight >}}
 {{< /highlightwrap >}}
-
-{{< hint danger >}}
-``24` is not a valid $value for `pixelify`. Pass a number, with or without a unit.`
-{{< /hint >}}

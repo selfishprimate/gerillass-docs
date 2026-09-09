@@ -55,8 +55,7 @@ $brand: crimson;
   background-color: shade(brand, 20%);
 }
 {{< /highlight >}}
+{{< highlight text >}}
+Error: 'brand' is not a color value, please replace it with a valid one.
+{{< /highlight >}}
 {{< /highlightwrap >}}
-
-{{< hint danger >}}
-`'brand' is not a color value, please replace it with a valid one.`
-{{< /hint >}}

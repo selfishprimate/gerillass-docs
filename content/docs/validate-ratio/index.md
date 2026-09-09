@@ -52,8 +52,7 @@ A space between the numbers. Use a slash or a colon inside a string.
   aspect-ratio: validateRatio(16 9);
 }
 {{< /highlight >}}
+{{< highlight text >}}
+Error: `16 9` is not a valid ratio. Pass a string like `"16/9"` or `"16:9"`, a unitless number like `1.77`, or no argument at all for the 16/9 default. You passed a list.
+{{< /highlight >}}
 {{< /highlightwrap >}}
-
-{{< hint danger >}}
-``16 9` is not a valid ratio. Pass a string like `"16/9"` or `"16:9"`, a unitless number like `1.77`, or no argument at all for the 16/9 default. You passed a list.`
-{{< /hint >}}

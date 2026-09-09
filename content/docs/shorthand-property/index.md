@@ -45,8 +45,7 @@ Five values. CSS shorthand takes at most four.
   padding: shorthandProperty(1px 2px 3px 4px 5px);
 }
 {{< /highlight >}}
+{{< highlight text >}}
+Error: You've passed 5 arguments. Please do not pass more than 4.
+{{< /highlight >}}
 {{< /highlightwrap >}}
-
-{{< hint danger >}}
-`You've passed 5 arguments. Please do not pass more than 4.`
-{{< /hint >}}

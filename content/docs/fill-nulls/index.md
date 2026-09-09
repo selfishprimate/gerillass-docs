@@ -47,8 +47,7 @@ A misspelled separator.
   margin: fillNulls(24px null, spaces);
 }
 {{< /highlight >}}
+{{< highlight text >}}
+Error: `spaces` is not a valid $seperation for `fillNulls`. Pass `comma`, `space` or `slash`.
+{{< /highlight >}}
 {{< /highlightwrap >}}
-
-{{< hint danger >}}
-``spaces` is not a valid $seperation for `fillNulls`. Pass `comma`, `space` or `slash`.`
-{{< /hint >}}

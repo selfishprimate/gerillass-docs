@@ -48,8 +48,7 @@ $size: 16;
   background-image: url("/fonts/#{clearWhitespace($size)}.svg");
 }
 {{< /highlight >}}
+{{< highlight text >}}
+Error: `16` is not a valid $string for `clearWhitespace`. Pass a string.
+{{< /highlight >}}
 {{< /highlightwrap >}}
-
-{{< hint danger >}}
-``16` is not a valid $string for `clearWhitespace`. Pass a string.`
-{{< /hint >}}

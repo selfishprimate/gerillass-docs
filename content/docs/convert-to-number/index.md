@@ -45,8 +45,7 @@ A number that is already a number. The function parses strings.
   width: convertToNumber(50) * 1%;
 }
 {{< /highlight >}}
+{{< highlight text >}}
+Error: `50` is not a valid $value for `convertToNumber`. Pass a string made only of digits, such as `"42"`.
+{{< /highlight >}}
 {{< /highlightwrap >}}
-
-{{< hint danger >}}
-``50` is not a valid $value for `convertToNumber`. Pass a string made only of digits, such as `"42"`.`
-{{< /hint >}}
