@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/selfishprimate/gerillass-docs#readme",
   "dependencies": {
-    "gerillass": "2.0.1"
+    "gerillass": "2.1.0"
   }
 }
