@@ -20,27 +20,32 @@ Returns the value if it is a time in s or ms, and errors otherwise.
 ## Examples
 
 {{< highlightwrap class="example">}}
+Validating a duration argument in a mixin of your own.
 {{< highlight scss >}}
-.element {
-  animation-duration: isTime(0.4s);
+@mixin fade($duration) {
+  transition: opacity isTime($duration) ease;
+}
+.panel {
+  @include fade(0.4s);
 }
 {{< /highlight >}}
 {{< highlight css >}}
 //CSS Output
-.element {
-  animation-duration: 0.4s;
+.panel {
+  transition: opacity 0.4s ease;
 }
 {{< /highlight >}}
 {{< /highlightwrap >}}
 
 ## What it refuses
 
-The function checks its arguments and stops the build with a message, rather than letting a wrong value through into your CSS.
+Arguments are checked, so a wrong value stops the build with a message instead of quietly producing the wrong CSS.
 
 {{< highlightwrap >}}
+A length where a duration is expected.
 {{< highlight scss >}}
-.element {
-  animation-duration: isTime(400px);
+.panel {
+  transition-duration: isTime(400px);
 }
 {{< /highlight >}}
 {{< /highlightwrap >}}

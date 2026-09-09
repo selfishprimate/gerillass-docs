@@ -20,31 +20,33 @@ Parses a string of digits into a number.
 ## Examples
 
 {{< highlightwrap class="example">}}
+A numeric string turned into a number you can do arithmetic with.
 {{< highlight scss >}}
-.element {
-  z-index: convertToNumber("42");
+.column {
+  width: convertToNumber("50") * 1%;
 }
 {{< /highlight >}}
 {{< highlight css >}}
 //CSS Output
-.element {
-  z-index: 42;
+.column {
+  width: 50%;
 }
 {{< /highlight >}}
 {{< /highlightwrap >}}
 
 ## What it refuses
 
-The function checks its arguments and stops the build with a message, rather than letting a wrong value through into your CSS.
+Arguments are checked, so a wrong value stops the build with a message instead of quietly producing the wrong CSS.
 
 {{< highlightwrap >}}
+A number that is already a number. The function parses strings.
 {{< highlight scss >}}
-.element {
-  --x: #{convertToNumber(42)};
+.column {
+  width: convertToNumber(50) * 1%;
 }
 {{< /highlight >}}
 {{< /highlightwrap >}}
 
 {{< hint danger >}}
-`42` is not a valid $value for `convertToNumber`. Pass a string made only of digits, such as `"42"`.
+``50` is not a valid $value for `convertToNumber`. Pass a string made only of digits, such as `"42"`.`
 {{< /hint >}}

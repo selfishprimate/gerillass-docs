@@ -21,15 +21,18 @@ Appends a pseudo-class to every selector in a list.
 ## Examples
 
 {{< highlightwrap class="example">}}
+One rule applied to several selectors in the same state.
 {{< highlight scss >}}
-.element {
-  content: "#{pseudoSelector(("button", "a"), "hover")}";
+#{pseudoSelector(("button", ".btn", "a"), "focus-visible")} {
+  outline: 2px solid crimson;
+  outline-offset: 2px;
 }
 {{< /highlight >}}
 {{< highlight css >}}
 //CSS Output
-.element {
-  content: "button:hover, a:hover";
+button:focus-visible, .btn:focus-visible, a:focus-visible {
+  outline: 2px solid crimson;
+  outline-offset: 2px;
 }
 {{< /highlight >}}
 {{< /highlightwrap >}}

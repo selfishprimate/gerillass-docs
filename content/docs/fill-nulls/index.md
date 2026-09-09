@@ -22,31 +22,33 @@ Replaces null entries in a list with 0, or drops them.
 ## Examples
 
 {{< highlightwrap class="example">}}
+Shorthand where only some sides are given.
 {{< highlight scss >}}
-.element {
-  margin: fillNulls(1px null 3px null, space);
+.card {
+  margin: fillNulls(24px null null null, space);
 }
 {{< /highlight >}}
 {{< highlight css >}}
 //CSS Output
-.element {
-  margin: 1px 0 3px 0;
+.card {
+  margin: 24px 0 0 0;
 }
 {{< /highlight >}}
 {{< /highlightwrap >}}
 
 ## What it refuses
 
-The function checks its arguments and stops the build with a message, rather than letting a wrong value through into your CSS.
+Arguments are checked, so a wrong value stops the build with a message instead of quietly producing the wrong CSS.
 
 {{< highlightwrap >}}
+A misspelled separator.
 {{< highlight scss >}}
-.element {
-  --x: #{fillNulls(1px null, nonsense)};
+.card {
+  margin: fillNulls(24px null, spaces);
 }
 {{< /highlight >}}
 {{< /highlightwrap >}}
 
 {{< hint danger >}}
-`nonsense` is not a valid $seperation for `fillNulls`. Pass `comma`, `space` or `slash`.
+``spaces` is not a valid $seperation for `fillNulls`. Pass `comma`, `space` or `slash`.`
 {{< /hint >}}

@@ -21,14 +21,17 @@ Reads a value out of a nested map by following a chain of keys.
 ## Examples
 
 {{< highlightwrap class="example">}}
+Reading two values out of one of the library's own maps.
 {{< highlight scss >}}
-.element {
+.tablet-frame {
+  width: mapDeepGet($map-for-tablets, "iPadPro", "width");
   height: mapDeepGet($map-for-tablets, "iPadPro", "height");
 }
 {{< /highlight >}}
 {{< highlight css >}}
 //CSS Output
-.element {
+.tablet-frame {
+  width: 1024px;
   height: 1366px;
 }
 {{< /highlight >}}

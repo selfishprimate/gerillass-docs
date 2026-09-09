@@ -20,15 +20,19 @@ Returns the value if it is a length or one of auto, inherit, initial, 0.
 ## Examples
 
 {{< highlightwrap class="example">}}
+Validating a length argument in a mixin of your own.
 {{< highlight scss >}}
-.element {
-  width: validateLength(20px);
+@mixin inset($amount) {
+  padding: validateLength($amount);
+}
+.panel {
+  @include inset(2rem);
 }
 {{< /highlight >}}
 {{< highlight css >}}
 //CSS Output
-.element {
-  width: 20px;
+.panel {
+  padding: 2rem;
 }
 {{< /highlight >}}
 {{< /highlightwrap >}}

@@ -20,15 +20,18 @@ Converts a pixel length to em, against a 16px base.
 ## Examples
 
 {{< highlightwrap class="example">}}
+Spacing written in px, emitted in em.
 {{< highlight scss >}}
-.element {
-  margin: convertToEm(24px);
+.card {
+  padding: convertToEm(24px);
+  border-radius: convertToEm(8px);
 }
 {{< /highlight >}}
 {{< highlight css >}}
 //CSS Output
-.element {
-  margin: 1.5em;
+.card {
+  padding: 1.5em;
+  border-radius: 0.5em;
 }
 {{< /highlight >}}
 {{< /highlightwrap >}}

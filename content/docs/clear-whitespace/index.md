@@ -20,31 +20,36 @@ Removes every space from a string.
 ## Examples
 
 {{< highlightwrap class="example">}}
+Turning a font family name into a filename.
 {{< highlight scss >}}
-.element {
-  content: clearWhitespace("a b c");
+.brand {
+  font-family: "Fanwood Text", serif;
+  background-image: url("/fonts/#{clearWhitespace("Fanwood Text")}.svg");
 }
 {{< /highlight >}}
 {{< highlight css >}}
 //CSS Output
-.element {
-  content: "abc";
+.brand {
+  font-family: "Fanwood Text", serif;
+  background-image: url("/fonts/FanwoodText.svg");
 }
 {{< /highlight >}}
 {{< /highlightwrap >}}
 
 ## What it refuses
 
-The function checks its arguments and stops the build with a message, rather than letting a wrong value through into your CSS.
+Arguments are checked, so a wrong value stops the build with a message instead of quietly producing the wrong CSS.
 
 {{< highlightwrap >}}
+A number where a string is expected.
 {{< highlight scss >}}
-.element {
-  --x: #{clearWhitespace(42)};
+$size: 16;
+.brand {
+  background-image: url("/fonts/#{clearWhitespace($size)}.svg");
 }
 {{< /highlight >}}
 {{< /highlightwrap >}}
 
 {{< hint danger >}}
-`42` is not a valid $string for `clearWhitespace`. Pass a string.
+``16` is not a valid $string for `clearWhitespace`. Pass a string.`
 {{< /hint >}}

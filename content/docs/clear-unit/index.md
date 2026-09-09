@@ -20,15 +20,19 @@ Strips the unit off a number, returning it unitless.
 ## Examples
 
 {{< highlightwrap class="example">}}
+A unitless line-height computed from two pixel sizes.
 {{< highlight scss >}}
-.element {
-  line-height: clearUnit(24px);
+@use "sass:math";
+.title {
+  font-size: 24px;
+  line-height: math.div(clearUnit(36px), clearUnit(24px));
 }
 {{< /highlight >}}
 {{< highlight css >}}
 //CSS Output
-.element {
-  line-height: 24;
+.title {
+  font-size: 24px;
+  line-height: 1.5;
 }
 {{< /highlight >}}
 {{< /highlightwrap >}}

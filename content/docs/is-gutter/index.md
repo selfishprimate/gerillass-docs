@@ -20,29 +20,24 @@ True for anything that can sit where a CSS length is expected: a number, a calcu
 ## Examples
 
 {{< highlightwrap class="example">}}
+Accepting var() and calc() where a length is expected.
 {{< highlight scss >}}
-.element {
-  --x: #{isGutter(20px)};
+@mixin stack($gap) {
+  @if not isGutter($gap) {
+    @error "`#{$gap}` cannot be used as a gap.";
+  }
+  display: grid;
+  gap: $gap;
+}
+.stack {
+  @include stack(var(--gap));
 }
 {{< /highlight >}}
 {{< highlight css >}}
 //CSS Output
-.element {
-  --x: true;
-}
-{{< /highlight >}}
-{{< /highlightwrap >}}
-
-{{< highlightwrap class="example">}}
-{{< highlight scss >}}
-.element {
-  --x: #{isGutter(var(--gap))};
-}
-{{< /highlight >}}
-{{< highlight css >}}
-//CSS Output
-.element {
-  --x: true;
+.stack {
+  display: grid;
+  gap: var(--gap);
 }
 {{< /highlight >}}
 {{< /highlightwrap >}}

@@ -20,15 +20,16 @@ Normalises corner values for the scissors mixin, adding px where missing.
 ## Examples
 
 {{< highlightwrap class="example">}}
+Corner values normalised the way the scissors mixin does it internally.
 {{< highlight scss >}}
 .element {
-  content: "#{validateScissors(12px)}";
+  --corners: #{validateScissors(12px 0)};
 }
 {{< /highlight >}}
 {{< highlight css >}}
 //CSS Output
 .element {
-  content: "12px";
+  --corners: 12px, 0px;
 }
 {{< /highlight >}}
 {{< /highlightwrap >}}

@@ -21,31 +21,37 @@ Mixes a colour towards white by a percentage.
 ## Examples
 
 {{< highlightwrap class="example">}}
+A pale background derived from the same brand colour.
 {{< highlight scss >}}
-.element {
-  color: tint(red, 20%);
+$brand: crimson;
+.notice {
+  border: 1px solid $brand;
+  background-color: tint($brand, 80%);
 }
 {{< /highlight >}}
 {{< highlight css >}}
 //CSS Output
-.element {
-  color: #ff3333;
+.notice {
+  border: 1px solid crimson;
+  background-color: #f8d0d8;
 }
 {{< /highlight >}}
 {{< /highlightwrap >}}
 
 ## What it refuses
 
-The function checks its arguments and stops the build with a message, rather than letting a wrong value through into your CSS.
+Arguments are checked, so a wrong value stops the build with a message instead of quietly producing the wrong CSS.
 
 {{< highlightwrap >}}
+The dollar sign left off a variable.
 {{< highlight scss >}}
-.element {
-  color: tint(notacolor, 20%);
+$brand: crimson;
+.notice {
+  background-color: tint(brand, 85%);
 }
 {{< /highlight >}}
 {{< /highlightwrap >}}
 
 {{< hint danger >}}
-`'notacolor' is not a color value, please replace it with a valid one.`
+`'brand' is not a color value, please replace it with a valid one.`
 {{< /hint >}}

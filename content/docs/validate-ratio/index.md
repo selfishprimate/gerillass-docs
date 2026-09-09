@@ -20,45 +20,40 @@ Turns an aspect ratio into a value for the CSS aspect-ratio property.
 ## Examples
 
 {{< highlightwrap class="example">}}
+The ratio on its own, without the aspect-ratio mixin.
 {{< highlight scss >}}
-.element {
-  aspect-ratio: validateRatio("16/9");
+.hero {
+  aspect-ratio: validateRatio("16:9");
+}
+.avatar {
+  aspect-ratio: validateRatio(1);
 }
 {{< /highlight >}}
 {{< highlight css >}}
 //CSS Output
-.element {
+.hero {
   aspect-ratio: 16 / 9;
 }
-{{< /highlight >}}
-{{< /highlightwrap >}}
 
-{{< highlightwrap class="example">}}
-{{< highlight scss >}}
-.element {
-  aspect-ratio: validateRatio(1.5);
-}
-{{< /highlight >}}
-{{< highlight css >}}
-//CSS Output
-.element {
-  aspect-ratio: 1.5;
+.avatar {
+  aspect-ratio: 1;
 }
 {{< /highlight >}}
 {{< /highlightwrap >}}
 
 ## What it refuses
 
-The function checks its arguments and stops the build with a message, rather than letting a wrong value through into your CSS.
+Arguments are checked, so a wrong value stops the build with a message instead of quietly producing the wrong CSS.
 
 {{< highlightwrap >}}
+A space between the numbers. Use a slash or a colon inside a string.
 {{< highlight scss >}}
-.element {
+.hero {
   aspect-ratio: validateRatio(16 9);
 }
 {{< /highlight >}}
 {{< /highlightwrap >}}
 
 {{< hint danger >}}
-`16 9` is not a valid ratio. Pass a string like `"16/9"` or `"16:9"`, a unitless number like `1.77`, or no argument at all for the 16/9 default. You passed a list.
+``16 9` is not a valid ratio. Pass a string like `"16/9"` or `"16:9"`, a unitless number like `1.77`, or no argument at all for the 16/9 default. You passed a list.`
 {{< /hint >}}

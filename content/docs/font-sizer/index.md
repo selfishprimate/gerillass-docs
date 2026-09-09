@@ -21,14 +21,15 @@ Multiplies a size by a factor. Handy for a modular scale.
 ## Examples
 
 {{< highlightwrap class="example">}}
+A size scaled by a factor.
 {{< highlight scss >}}
-.element {
+.title {
   font-size: fontSizer(16px, 1.5);
 }
 {{< /highlight >}}
 {{< highlight css >}}
 //CSS Output
-.element {
+.title {
   font-size: 24px;
 }
 {{< /highlight >}}

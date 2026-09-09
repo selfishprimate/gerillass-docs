@@ -20,31 +20,39 @@ Returns the value if every item in it is a colour, and errors otherwise.
 ## Examples
 
 {{< highlightwrap class="example">}}
+Validating a colour argument in a mixin of your own.
 {{< highlight scss >}}
-.element {
-  color: isColor(red);
+@mixin badge($color) {
+  background-color: isColor($color);
+  color: white;
+}
+.badge {
+  @include badge(crimson);
 }
 {{< /highlight >}}
 {{< highlight css >}}
 //CSS Output
-.element {
-  color: red;
+.badge {
+  background-color: crimson;
+  color: white;
 }
 {{< /highlight >}}
 {{< /highlightwrap >}}
 
 ## What it refuses
 
-The function checks its arguments and stops the build with a message, rather than letting a wrong value through into your CSS.
+Arguments are checked, so a wrong value stops the build with a message instead of quietly producing the wrong CSS.
 
 {{< highlightwrap >}}
+The dollar sign left off a variable, so a bare word arrives instead of a colour.
 {{< highlight scss >}}
-.element {
-  color: isColor(nonsense);
+$brand: crimson;
+.badge {
+  background-color: isColor(brand);
 }
 {{< /highlight >}}
 {{< /highlightwrap >}}
 
 {{< hint danger >}}
-`'nonsense' is not a color value, please replace it with a valid one.`
+`'brand' is not a color value, please replace it with a valid one.`
 {{< /hint >}}

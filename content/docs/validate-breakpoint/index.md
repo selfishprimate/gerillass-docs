@@ -20,15 +20,18 @@ Resolves a breakpoint name to its width, passing other values through.
 ## Examples
 
 {{< highlightwrap class="example">}}
+A breakpoint name used as a length.
 {{< highlight scss >}}
-.element {
-  width: validateBreakpoint("medium");
+.container {
+  max-width: validateBreakpoint("large");
+  margin: 0 auto;
 }
 {{< /highlight >}}
 {{< highlight css >}}
 //CSS Output
-.element {
-  width: 768px;
+.container {
+  max-width: 992px;
+  margin: 0 auto;
 }
 {{< /highlight >}}
 {{< /highlightwrap >}}

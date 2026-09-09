@@ -20,27 +20,29 @@ Expands one to four values into the four-value CSS shorthand order.
 ## Examples
 
 {{< highlightwrap class="example">}}
+One to four values expanded to the full four-value shorthand.
 {{< highlight scss >}}
-.element {
-  margin: shorthandProperty(10px 20px);
+.card {
+  padding: shorthandProperty(16px 24px);
 }
 {{< /highlight >}}
 {{< highlight css >}}
 //CSS Output
-.element {
-  margin: 10px 20px 10px 20px;
+.card {
+  padding: 16px 24px 16px 24px;
 }
 {{< /highlight >}}
 {{< /highlightwrap >}}
 
 ## What it refuses
 
-The function checks its arguments and stops the build with a message, rather than letting a wrong value through into your CSS.
+Arguments are checked, so a wrong value stops the build with a message instead of quietly producing the wrong CSS.
 
 {{< highlightwrap >}}
+Five values. CSS shorthand takes at most four.
 {{< highlight scss >}}
-.element {
-  margin: shorthandProperty(1px 2px 3px 4px 5px);
+.card {
+  padding: shorthandProperty(1px 2px 3px 4px 5px);
 }
 {{< /highlight >}}
 {{< /highlightwrap >}}

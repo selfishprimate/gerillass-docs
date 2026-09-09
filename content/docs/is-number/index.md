@@ -20,15 +20,21 @@ Returns the value if it is a number.
 ## Examples
 
 {{< highlightwrap class="example">}}
+Validating a numeric argument in a mixin of your own.
 {{< highlight scss >}}
-.element {
-  z-index: isNumber(5);
+@mixin z($layer) {
+  position: relative;
+  z-index: isNumber($layer);
+}
+.modal {
+  @include z(100);
 }
 {{< /highlight >}}
 {{< highlight css >}}
 //CSS Output
-.element {
-  z-index: 5;
+.modal {
+  position: relative;
+  z-index: 100;
 }
 {{< /highlight >}}
 {{< /highlightwrap >}}

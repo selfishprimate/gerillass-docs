@@ -21,31 +21,42 @@ Mixes a colour towards black by a percentage.
 ## Examples
 
 {{< highlightwrap class="example">}}
+A darker hover state derived from one brand colour.
 {{< highlight scss >}}
-.element {
-  color: shade(red, 20%);
+$brand: crimson;
+.button {
+  background-color: $brand;
+}
+.button:hover {
+  background-color: shade($brand, 20%);
 }
 {{< /highlight >}}
 {{< highlight css >}}
 //CSS Output
-.element {
-  color: #cc0000;
+.button {
+  background-color: crimson;
+}
+
+.button:hover {
+  background-color: #b01030;
 }
 {{< /highlight >}}
 {{< /highlightwrap >}}
 
 ## What it refuses
 
-The function checks its arguments and stops the build with a message, rather than letting a wrong value through into your CSS.
+Arguments are checked, so a wrong value stops the build with a message instead of quietly producing the wrong CSS.
 
 {{< highlightwrap >}}
+The dollar sign left off a variable.
 {{< highlight scss >}}
-.element {
-  color: shade(notacolor, 20%);
+$brand: crimson;
+.button:hover {
+  background-color: shade(brand, 20%);
 }
 {{< /highlight >}}
 {{< /highlightwrap >}}
 
 {{< hint danger >}}
-`'notacolor' is not a color value, please replace it with a valid one.`
+`'brand' is not a color value, please replace it with a valid one.`
 {{< /hint >}}
