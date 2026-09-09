@@ -2,7 +2,7 @@
 # yarn lockfile v1
 
 
-gerillass@2.0.0:
-  version "2.0.0"
-  resolved "https://registry.npmjs.org/gerillass/-/gerillass-2.0.0.tgz"
-  integrity sha512-Qz7jT2h2PvjXwonsyLy4Btayu14VRGgBY4fSL2u0kRTErR6weR/zWXNQu5RcPkCm4Eoud9nmZrAIFRadEG2j5g==
+gerillass@2.0.1:
+  version "2.0.1"
+  resolved "https://registry.npmjs.org/gerillass/-/gerillass-2.0.1.tgz"
+  integrity sha512-pv1pgId1AEOzESVqYBTkV1Rc4pBsV9CQb7ex6beU980LjMGvYmvQzYi8fVAcjebDyoOAVKAvl9oCjjRgv+9JYg==
