@@ -4,6 +4,22 @@
   flex: 0 0 $menu-width;
   padding-right: $global-space * 2;
   nav {
+    // Group labels ("Mixins", "Utilities") come from the menu bundle in
+    // content/menu/index.md, rendered as <strong> at the top level.
+    > ul > li {
+      &:not(:last-child) {
+        margin-bottom: $global-space * 1.5;
+      }
+      > strong {
+        display: block;
+        margin-bottom: $global-space * 0.5;
+        font-size: 12px;
+        font-weight: bold;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: $label-color;
+      }
+    }
     ul {
       li {
         &.book-section-flat {
