@@ -10,7 +10,13 @@ css: css/styles.css
 
 {{< mixin type="Mixin" name="loadify" >}}
 
-The **Loadify** Sass mixin is a handy tool that helps you make a page element load with a smooth fade-in effect while the page is loading.
+The The **Loadify Sass mixin** is a handy tool that helps you make a page element load with a smooth fade-in effect while the page is loading.
+
+{{< hint info >}}
+**Reduced motion is handled for you.** Under `prefers-reduced-motion: reduce` the end state is applied directly and no animation runs, so the content is simply there.
+
+Note that **switching the animation off would not have worked.** The element starts at `opacity: 0` with `visibility: hidden`, and the animation is the thing that reveals it. Turning the animation off and doing nothing else would have left the content invisible for good. That is why the mixin sets the end state instead, and only then sets `animation: none`.
+{{< /hint >}}
 
 {{< /mixin >}}
 
@@ -78,6 +84,15 @@ Let's see the animation on an image element. Call the Loadify mixin inside the e
   animation-name: loadify;
   animation-fill-mode: forwards;
 }
+@media (prefers-reduced-motion: reduce) {
+  .loadify-img {
+    opacity: 1;
+    visibility: visible;
+    backface-visibility: visible;
+    animation: none;
+  }
+}
+
 .loadify-img {
   animation-delay: 0.2s;
   animation-duration: 0.5s;
@@ -180,6 +195,15 @@ Suppose you have a group of items like the ones below, and you want them to appe
   animation-name: loadify;
   animation-fill-mode: forwards;
 }
+@media (prefers-reduced-motion: reduce) {
+  .parent-element .item {
+    opacity: 1;
+    visibility: visible;
+    backface-visibility: visible;
+    animation: none;
+  }
+}
+
 .parent-element .item {
   animation-delay: 0.2s;
   animation-duration: 0.5s;
@@ -221,6 +245,15 @@ Now let's pass `1s` as a custom value for the `animation-delay` CSS property, to
   animation-name: loadify;
   animation-fill-mode: forwards;
 }
+@media (prefers-reduced-motion: reduce) {
+  .parent-element .item {
+    opacity: 1;
+    visibility: visible;
+    backface-visibility: visible;
+    animation: none;
+  }
+}
+
 .parent-element .item {
   animation-delay: 1s;
   animation-duration: 0.5s;
@@ -283,20 +316,22 @@ We will use the `only` mixin to select items in the list based on their index po
 
 {{< highlight css >}}
 //CSS Output
-.parent-element .item:nth-of-type(1),
-.parent-element .item:nth-of-type(2),
-.parent-element .item:nth-of-type(3),
-.parent-element .item:nth-of-type(4),
-.parent-element .item:nth-of-type(5),
-.parent-element .item:nth-of-type(6),
-.parent-element .item:nth-of-type(7),
-.parent-element .item:nth-of-type(8) {
+.parent-element .item:nth-of-type(8), .parent-element .item:nth-of-type(7), .parent-element .item:nth-of-type(6), .parent-element .item:nth-of-type(5), .parent-element .item:nth-of-type(4), .parent-element .item:nth-of-type(3), .parent-element .item:nth-of-type(2), .parent-element .item:nth-of-type(1) {
   opacity: 0;
   visibility: hidden;
   backface-visibility: hidden;
   animation-name: loadify;
   animation-fill-mode: forwards;
 }
+@media (prefers-reduced-motion: reduce) {
+  .parent-element .item:nth-of-type(8), .parent-element .item:nth-of-type(7), .parent-element .item:nth-of-type(6), .parent-element .item:nth-of-type(5), .parent-element .item:nth-of-type(4), .parent-element .item:nth-of-type(3), .parent-element .item:nth-of-type(2), .parent-element .item:nth-of-type(1) {
+    opacity: 1;
+    visibility: visible;
+    backface-visibility: visible;
+    animation: none;
+  }
+}
+
 .parent-element .item:nth-of-type(1) {
   animation-delay: 0.2s;
   animation-duration: 0.5s;
@@ -384,20 +419,22 @@ The display order will be as follows: "**1**", "**6**", "**3**", "**8**", "**5**
 
 {{< highlight css >}}
 //CSS Output
-.parent-element .item:nth-of-type(1),
-.parent-element .item:nth-of-type(2),
-.parent-element .item:nth-of-type(3),
-.parent-element .item:nth-of-type(4),
-.parent-element .item:nth-of-type(5),
-.parent-element .item:nth-of-type(6),
-.parent-element .item:nth-of-type(7),
-.parent-element .item:nth-of-type(8) {
+.parent-element .item:nth-of-type(8), .parent-element .item:nth-of-type(7), .parent-element .item:nth-of-type(6), .parent-element .item:nth-of-type(5), .parent-element .item:nth-of-type(4), .parent-element .item:nth-of-type(3), .parent-element .item:nth-of-type(2), .parent-element .item:nth-of-type(1) {
   opacity: 0;
   visibility: hidden;
   backface-visibility: hidden;
   animation-name: loadify;
   animation-fill-mode: forwards;
 }
+@media (prefers-reduced-motion: reduce) {
+  .parent-element .item:nth-of-type(8), .parent-element .item:nth-of-type(7), .parent-element .item:nth-of-type(6), .parent-element .item:nth-of-type(5), .parent-element .item:nth-of-type(4), .parent-element .item:nth-of-type(3), .parent-element .item:nth-of-type(2), .parent-element .item:nth-of-type(1) {
+    opacity: 1;
+    visibility: visible;
+    backface-visibility: visible;
+    animation: none;
+  }
+}
+
 .parent-element .item:nth-of-type(1) {
   animation-delay: 0.2s;
   animation-duration: 0.5s;
